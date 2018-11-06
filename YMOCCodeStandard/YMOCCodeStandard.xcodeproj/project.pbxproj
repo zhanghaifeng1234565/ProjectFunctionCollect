@@ -114,7 +114,7 @@
 		81EEC0C8219177610087EA72 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C2219177610087EA72 /* 3.jpg */; };
 		81EEC0C9219177610087EA72 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C3219177610087EA72 /* 1.jpg */; };
 		81EEC0CD21917CA80087EA72 /* NSString+YMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0CC21917CA80087EA72 /* NSString+YMImage.m */; };
-		81EEC0CF219188BB0087EA72 /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0CE219188BB0087EA72 /* timg.gif */; };
+		81EEC0D1219191150087EA72 /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0D0219191150087EA72 /* timg.gif */; };
 		DAD33FBFD5D6F131DA50A2C3 /* libPods-YMOCCodeStandard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */; };
 /* End PBXBuildFile section */
 
@@ -345,7 +345,7 @@
 		81EEC0C3219177610087EA72 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		81EEC0CB21917CA80087EA72 /* NSString+YMImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YMImage.h"; sourceTree = "<group>"; };
 		81EEC0CC21917CA80087EA72 /* NSString+YMImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMImage.m"; sourceTree = "<group>"; };
-		81EEC0CE219188BB0087EA72 /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
+		81EEC0D0219191150087EA72 /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = timg.gif; path = ../../../../../../../timg.gif; sourceTree = "<group>"; };
 		86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMOCCodeStandard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -589,7 +589,7 @@
 				81621704219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib */,
 				8162171421903E170001FC5E /* YMPictureTestView.h */,
 				8162171521903E170001FC5E /* YMPictureTestView.m */,
-				81EEC0CE219188BB0087EA72 /* timg.gif */,
+				81EEC0D0219191150087EA72 /* timg.gif */,
 			);
 			path = "图片预览 demo";
 			sourceTree = "<group>";
@@ -1308,6 +1308,7 @@
 				81EEC0C9219177610087EA72 /* 1.jpg in Resources */,
 				81E77EA521870D94007CE3FD /* YMOrganizationViewController.xib in Resources */,
 				81621701219018320001FC5E /* YMPictureViewerDemoViewController.xib in Resources */,
+				81EEC0D1219191150087EA72 /* timg.gif in Resources */,
 				8193D25D2149FF7300EB225D /* YMMineViewController.xib in Resources */,
 				81E77EB021870DD8007CE3FD /* YMOrganizationTableViewCell.xib in Resources */,
 				81EEC0C7219177610087EA72 /* 2.jpg in Resources */,
@@ -1321,7 +1322,6 @@
 				8193D25F2149FF7300EB225D /* YMNewsViewController.xib in Resources */,
 				81BF54FF2145ED1F004BC70A /* Assets.xcassets in Resources */,
 				81BF55002145ED1F004BC70A /* LaunchScreen.storyboard in Resources */,
-				81EEC0CF219188BB0087EA72 /* timg.gif in Resources */,
 				8193D2632149FF7300EB225D /* YMWorkbenchViewController.xib in Resources */,
 				8193D2612149FF7300EB225D /* YMHomeViewController.xib in Resources */,
 			);
