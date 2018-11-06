@@ -28,11 +28,34 @@
         self.imageMArr = [NSMutableArray array];
         
         UIImageView *imageView = [self createImageView];
-        if ([type isEqualToString:@"1"]) {
-            imageView.image = [UIImage imageNamed:@"1.jpg"];
-        } else {
-            [imageView sd_setImageWithURL:[NSURL URLWithString:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
+        
+        NSString *gifPath = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541501024814&di=468b91018f102112e7ce25e0d6ccb20d&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201603%2F08%2F20160308174903_X2Vnc.gif";
+        //判断是否是gif
+        NSString *extensionName = gifPath.pathExtension;
+        if ([extensionName.lowercaseString isEqualToString:@"gif"]) {
+            if ([type isEqualToString:@"1"]) {
+                dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                    NSData *imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"timg" ofType:@"gif"]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        imageView.image = [YYImage yy_imageWithSmallGIFData:imageData scale:1.0];
+                    });
+                });
+            } else {
+                dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                    NSURL *imageUrl = [NSURL URLWithString:gifPath];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        imageView.image = [YYImage yy_imageWithSmallGIFData:[NSData dataWithContentsOfURL:imageUrl] scale:1.0f];
+                    });
+                });
+            }
+        } else{
+            if ([type isEqualToString:@"1"]) {
+                imageView.image = [UIImage imageNamed:@"1.jpg"];
+            } else {
+                [imageView sd_setImageWithURL:[NSURL URLWithString:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
+            }
         }
+        
         imageView.frame = CGRectMake(15, 15, (MainScreenWidth - 20 - 30) / 3, 100);
         [self addSubview:imageView];
         [self.imageMArr addObject:imageView];

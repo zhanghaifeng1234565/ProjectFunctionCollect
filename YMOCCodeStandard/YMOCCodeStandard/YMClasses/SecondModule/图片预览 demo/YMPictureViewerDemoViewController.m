@@ -72,11 +72,32 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     YMPictureTestCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"YMPictureTestCollectionViewCellId" forIndexPath:indexPath];
     
-    if ([self.imageType isEqualToString:@"1"]) {
-        cell.imageV.image = [UIImage imageNamed:self.dataMArr[indexPath.item]];
+    NSString *gifPath = self.dataMArr[indexPath.item];
+    NSString *extensionName = gifPath.pathExtension;
+    if ([extensionName.lowercaseString isEqualToString:@"gif"]) {
+        if ([self.imageType isEqualToString:@"1"]) {
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                NSData *imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"timg" ofType:@"gif"]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.imageV.image = [YYImage yy_imageWithSmallGIFData:imageData scale:0.5f];
+                });
+            });
+        } else {
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                NSURL *imageUrl = [NSURL URLWithString:self.dataMArr[indexPath.item]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.imageV.image  = [YYImage yy_imageWithSmallGIFData:[NSData dataWithContentsOfURL:imageUrl] scale:0.5f];
+                });
+            });
+        }
     } else {
-        [cell.imageV sd_setImageWithURL:[NSURL URLWithString:self.dataMArr[indexPath.item]]];
+        if ([self.imageType isEqualToString:@"1"]) {
+            cell.imageV.image = [UIImage imageNamed:self.dataMArr[indexPath.item]];
+        } else {
+            [cell.imageV sd_setImageWithURL:[NSURL URLWithString:self.dataMArr[indexPath.item]]];
+        }
     }
+    
     
     return cell;
 }
@@ -100,17 +121,29 @@
 - (void)initData {
     [self.dataMArr removeAllObjects];
     
-    if ([self.imageType isEqualToString:@"1"]) {
-        for (int i = 0; i < 6; i++) {
-            [self.dataMArr addObject:[NSString stringWithFormat:@"%d.jpg", i + 1]];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSString *gifPath = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541501024814&di=468b91018f102112e7ce25e0d6ccb20d&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201603%2F08%2F20160308174903_X2Vnc.gif";
+        if ([self.imageType isEqualToString:@"1"]) {
+            for (int i = 0; i < 6; i++) {
+                if (i % 2 == 0) {
+                    [self.dataMArr addObject:gifPath];
+                } else {
+                    [self.dataMArr addObject:[NSString stringWithFormat:@"%d.jpg", i + 1]];
+                }
+            }
+        } else {
+            for (int i = 0; i < 9; i++) {
+                if (i % 2 == 0) {
+                    [self.dataMArr addObject:gifPath];
+                } else {
+                    [self.dataMArr addObject:[NSString stringWithFormat:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
+                }
+            }
         }
-    } else {
-        for (int i = 0; i < 9; i++) {
-            [self.dataMArr addObject:[NSString stringWithFormat:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
-        }
-    }
-    
-    [self.collectionView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
+    });
 }
 
 #pragma mark - - lazyLoadUI

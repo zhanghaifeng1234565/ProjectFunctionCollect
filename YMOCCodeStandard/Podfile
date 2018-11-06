@@ -4,5 +4,6 @@ target 'YMOCCodeStandard' do
 
 pod 'MLeaksFinder'
 pod 'SDWebImage'
+pod 'YYWebImage'
 
 end

@@ -243,7 +243,7 @@
     if(error != nil) {
         if (error.code == -3310) {
             __weak typeof(self) weakSelf = self;
-            [YMSureCancelAlert alertText:@"请在“设置->隐私->照片”中确定“猿马 OA 系统”是否为开启状态！" sureBtnTitle:@"我知道了！" maxHeight:100 alertStyle:YMAlertButtonTypeStyleAlone sureBtnClick:^(UIButton * _Nonnull sureBtn) {
+            [YMSureCancelAlert alertText:@"请在“设置->隐私->照片”中确定“代码规范”是否为开启状态！" sureBtnTitle:@"我知道了！" maxHeight:100 alertStyle:YMAlertButtonTypeStyleAlone sureBtnClick:^(UIButton * _Nonnull sureBtn) {
                 [YMMBProgressHUD ymShowBlackAlert:weakSelf text:@"图片保存出错！" afterDelay:2.0f];
             } cancelBtnClick:^(UIButton * _Nonnull cancelBtn) {
 

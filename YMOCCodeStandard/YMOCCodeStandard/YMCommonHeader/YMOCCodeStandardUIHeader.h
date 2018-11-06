@@ -18,6 +18,7 @@
 #import <CoreImage/CoreImage.h>
 #import <CoreText/CoreText.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <YYWebImage.h>
 
 #import "UIColor+Hex.h"
 #import "UIImage+Tools.h"
@@ -25,6 +26,7 @@
 #import "NSString+HelpeTools.h"
 #import "UIScrollView+UITouch.h"
 #import "UIView+YMParentController.h"
+#import "NSString+YMImage.h"
 
 #import "AFNetworking.h"
 #import "Masonry.h"

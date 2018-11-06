@@ -113,6 +113,8 @@
 		81EEC0C7219177610087EA72 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C1219177610087EA72 /* 2.jpg */; };
 		81EEC0C8219177610087EA72 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C2219177610087EA72 /* 3.jpg */; };
 		81EEC0C9219177610087EA72 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C3219177610087EA72 /* 1.jpg */; };
+		81EEC0CD21917CA80087EA72 /* NSString+YMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0CC21917CA80087EA72 /* NSString+YMImage.m */; };
+		81EEC0CF219188BB0087EA72 /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0CE219188BB0087EA72 /* timg.gif */; };
 		DAD33FBFD5D6F131DA50A2C3 /* libPods-YMOCCodeStandard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */; };
 /* End PBXBuildFile section */
 
@@ -341,6 +343,9 @@
 		81EEC0C1219177610087EA72 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		81EEC0C2219177610087EA72 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		81EEC0C3219177610087EA72 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		81EEC0CB21917CA80087EA72 /* NSString+YMImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YMImage.h"; sourceTree = "<group>"; };
+		81EEC0CC21917CA80087EA72 /* NSString+YMImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMImage.m"; sourceTree = "<group>"; };
+		81EEC0CE219188BB0087EA72 /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
 		86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMOCCodeStandard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -409,6 +414,7 @@
 		8126EB5B2150E811001647D6 /* NSString 分类 */ = {
 			isa = PBXGroup;
 			children = (
+				81EEC0CA21917C780087EA72 /* 处理图片 */,
 				8126EB8B2150E836001647D6 /* 处理日期时间 */,
 				8126EB5C2150E811001647D6 /* NSString 分类1 */,
 			);
@@ -496,8 +502,8 @@
 		8126EB722150E811001647D6 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
-				8126EB732150E811001647D6 /* UIImage+Tools.m */,
 				8126EB742150E811001647D6 /* UIImage+Tools.h */,
+				8126EB732150E811001647D6 /* UIImage+Tools.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				81621704219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib */,
 				8162171421903E170001FC5E /* YMPictureTestView.h */,
 				8162171521903E170001FC5E /* YMPictureTestView.m */,
+				81EEC0CE219188BB0087EA72 /* timg.gif */,
 			);
 			path = "图片预览 demo";
 			sourceTree = "<group>";
@@ -1167,6 +1174,15 @@
 			path = "图片预览 image";
 			sourceTree = "<group>";
 		};
+		81EEC0CA21917C780087EA72 /* 处理图片 */ = {
+			isa = PBXGroup;
+			children = (
+				81EEC0CB21917CA80087EA72 /* NSString+YMImage.h */,
+				81EEC0CC21917CA80087EA72 /* NSString+YMImage.m */,
+			);
+			path = "处理图片";
+			sourceTree = "<group>";
+		};
 		AA28EB3A2249A79ACBB2E7B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1305,6 +1321,7 @@
 				8193D25F2149FF7300EB225D /* YMNewsViewController.xib in Resources */,
 				81BF54FF2145ED1F004BC70A /* Assets.xcassets in Resources */,
 				81BF55002145ED1F004BC70A /* LaunchScreen.storyboard in Resources */,
+				81EEC0CF219188BB0087EA72 /* timg.gif in Resources */,
 				8193D2632149FF7300EB225D /* YMWorkbenchViewController.xib in Resources */,
 				8193D2612149FF7300EB225D /* YMHomeViewController.xib in Resources */,
 			);
@@ -1415,6 +1432,7 @@
 				81BF56BF2145F01E004BC70A /* YMBaseRootViewController.m in Sources */,
 				8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */,
 				81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */,
+				81EEC0CD21917CA80087EA72 /* NSString+YMImage.m in Sources */,
 				81BF56BB2145F012004BC70A /* UIViewController+JTNavigationExtension.m in Sources */,
 				81E41A14217EFAF000DC9A4A /* YMWKWebView.m in Sources */,
 				81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */,
