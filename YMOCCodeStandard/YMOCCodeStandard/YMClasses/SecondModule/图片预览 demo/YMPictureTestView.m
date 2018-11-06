@@ -14,7 +14,7 @@
 @interface YMPictureTestView ()
 
 /** 图片控件数组 */
-@property (nonatomic, strong) NSMutableArray *array;
+@property (nonatomic, strong) NSMutableArray *imageMArr;
 
 @end
 
@@ -25,7 +25,7 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor colorWithHexString:@"f0f0f0"];
         
-        self.array = [NSMutableArray array];
+        self.imageMArr = [NSMutableArray array];
         
         UIImageView *imageView = [self createImageView];
         if ([type isEqualToString:@"1"]) {
@@ -35,7 +35,7 @@
         }
         imageView.frame = CGRectMake(15, 15, (MainScreenWidth - 20 - 30) / 3, 100);
         [self addSubview:imageView];
-        [self.array addObject:imageView];
+        [self.imageMArr addObject:imageView];
         
         UIImageView *imageView2 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
@@ -45,7 +45,7 @@
         }
         imageView2.frame = CGRectMake(imageView.right + 10, imageView.top, imageView.width, imageView.height);
         [self addSubview:imageView2];
-        [self.array addObject:imageView2];
+        [self.imageMArr addObject:imageView2];
         
         UIImageView *imageView3 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
@@ -55,7 +55,7 @@
         }
         imageView3.frame = CGRectMake(imageView2.right + 10, imageView2.top, imageView2.width, imageView2.height);
         [self addSubview:imageView3];
-        [self.array addObject:imageView3];
+        [self.imageMArr addObject:imageView3];
         
         UIImageView *imageView4 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
@@ -65,7 +65,7 @@
         }
         imageView4.frame = CGRectMake(imageView.left, imageView.bottom + 10, imageView.width, imageView.height);
         [self addSubview:imageView4];
-        [self.array addObject:imageView4];
+        [self.imageMArr addObject:imageView4];
         
         UIImageView *imageView5 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
@@ -75,7 +75,7 @@
         }
         imageView5.frame = CGRectMake(imageView4.right + 10, imageView4.top, imageView4.width, imageView4.height);
         [self addSubview:imageView5];
-        [self.array addObject:imageView5];
+        [self.imageMArr addObject:imageView5];
         
         UIImageView *imageView6 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
@@ -85,7 +85,7 @@
         }
         imageView6.frame = CGRectMake(imageView5.right + 10, imageView5.top, imageView5.width, imageView5.height);
         [self addSubview:imageView6];
-        [self.array addObject:imageView6];
+        [self.imageMArr addObject:imageView6];
     }
     return self;
 }
@@ -106,8 +106,8 @@
 #pragma mark -- 点击图片
 - (void)click:(UITapGestureRecognizer *)tgr {
     YMPictureViewer *browserView = [[YMPictureViewer alloc] init];
-    browserView.originalViews = self.array;
-    browserView.currentIndex = [self.array indexOfObject:tgr.view];
+    browserView.originalViews = self.imageMArr;
+    browserView.currentIndex = [self.imageMArr indexOfObject:tgr.view];
     [browserView show];
 }
 
