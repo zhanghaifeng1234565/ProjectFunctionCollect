@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8101293A214F41D600725BAF /* YMNetworkingSecondaryPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81012939214F41D600725BAF /* YMNetworkingSecondaryPackage.m */; };
-		8101293E214F4A1500725BAF /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8101293C214F4A1500725BAF /* CommonFunc.m */; };
 		81012946214F7E2900725BAF /* YMNetworkJudgeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 81012945214F7E2900725BAF /* YMNetworkJudgeUtils.m */; };
 		8101294E214F81BB00725BAF /* YMLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8101294D214F81BB00725BAF /* YMLoadingView.m */; };
 		81012952214F87A000725BAF /* YMLoadingViewNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 81012951214F87A000725BAF /* YMLoadingViewNetworkUtils.m */; };
@@ -113,6 +112,7 @@
 		81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E77EA921870DD8007CE3FD /* YMOrganizationSectionHeaderView.m */; };
 		81E77EB021870DD8007CE3FD /* YMOrganizationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E77EAC21870DD8007CE3FD /* YMOrganizationTableViewCell.xib */; };
 		81E77EB321870FD6007CE3FD /* YMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E77EB221870FD6007CE3FD /* YMBaseViewController.m */; };
+		81EEC0B8219173BA0087EA72 /* YMCommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0B7219173BA0087EA72 /* YMCommonFunc.m */; };
 		DAD33FBFD5D6F131DA50A2C3 /* libPods-YMOCCodeStandard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */; };
 /* End PBXBuildFile section */
 
@@ -138,8 +138,6 @@
 		4B0C89B5E1B2F67C717A1110 /* Pods-YMOCCodeStandard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMOCCodeStandard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMOCCodeStandard/Pods-YMOCCodeStandard.debug.xcconfig"; sourceTree = "<group>"; };
 		81012938214F41D600725BAF /* YMNetworkingSecondaryPackage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMNetworkingSecondaryPackage.h; sourceTree = "<group>"; };
 		81012939214F41D600725BAF /* YMNetworkingSecondaryPackage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNetworkingSecondaryPackage.m; sourceTree = "<group>"; };
-		8101293C214F4A1500725BAF /* CommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunc.m; sourceTree = "<group>"; };
-		8101293D214F4A1500725BAF /* CommonFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunc.h; sourceTree = "<group>"; };
 		81012944214F7E2900725BAF /* YMNetworkJudgeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkJudgeUtils.h; sourceTree = "<group>"; };
 		81012945214F7E2900725BAF /* YMNetworkJudgeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkJudgeUtils.m; sourceTree = "<group>"; };
 		8101294C214F81BB00725BAF /* YMLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLoadingView.h; sourceTree = "<group>"; };
@@ -341,6 +339,8 @@
 		81E77EB221870FD6007CE3FD /* YMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBaseViewController.m; sourceTree = "<group>"; };
 		81EEC0B4219142C10087EA72 /* YMOCCodeStandardPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOCCodeStandardPrefixHeader.pch; sourceTree = "<group>"; };
 		81EEC0B5219143340087EA72 /* YMOCCodeStandardUIHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOCCodeStandardUIHeader.h; sourceTree = "<group>"; };
+		81EEC0B6219173BA0087EA72 /* YMCommonFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCommonFunc.h; sourceTree = "<group>"; };
+		81EEC0B7219173BA0087EA72 /* YMCommonFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCommonFunc.m; sourceTree = "<group>"; };
 		86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMOCCodeStandard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -373,8 +373,8 @@
 		8101293B214F4A1500725BAF /* Base64+DES */ = {
 			isa = PBXGroup;
 			children = (
-				8101293D214F4A1500725BAF /* CommonFunc.h */,
-				8101293C214F4A1500725BAF /* CommonFunc.m */,
+				81EEC0B6219173BA0087EA72 /* YMCommonFunc.h */,
+				81EEC0B7219173BA0087EA72 /* YMCommonFunc.m */,
 			);
 			path = "Base64+DES";
 			sourceTree = "<group>";
@@ -1382,7 +1382,6 @@
 				8193D2B5214A008800EB225D /* ViewController+MASAdditions.m in Sources */,
 				8126EB812150E811001647D6 /* NSString+HelpeTools.m in Sources */,
 				81012946214F7E2900725BAF /* YMNetworkJudgeUtils.m in Sources */,
-				8101293E214F4A1500725BAF /* CommonFunc.m in Sources */,
 				81E41A1E217F0DC900DC9A4A /* MBProgressHUD.m in Sources */,
 				8193D2BA214A008800EB225D /* View+MASAdditions.m in Sources */,
 				8126EB8A2150E811001647D6 /* UIButton+touch.m in Sources */,
@@ -1408,6 +1407,7 @@
 				8193D27B214A000E00EB225D /* MJPropertyType.m in Sources */,
 				81CA788E21884006005EFA1A /* YMOrganizationSearchTableViewCell.m in Sources */,
 				81BF56B82145F012004BC70A /* YMUITabBarController.m in Sources */,
+				81EEC0B8219173BA0087EA72 /* YMCommonFunc.m in Sources */,
 				81E77EB321870FD6007CE3FD /* YMBaseViewController.m in Sources */,
 				8126EB8E2150E9AA001647D6 /* NSString+YMTimeDate.m in Sources */,
 				8101294E214F81BB00725BAF /* YMLoadingView.m in Sources */,

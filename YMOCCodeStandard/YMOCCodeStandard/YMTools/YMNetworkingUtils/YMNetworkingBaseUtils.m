@@ -8,16 +8,16 @@
 
 #import "YMNetworkingBaseUtils.h"
 #import "AFNetworking.h"
-#import "CommonFunc.h"
+#import "YMCommonFunc.h"
 
 /** 网络请求 JSON 类型 */
 #define RESQUEST_JSON_TYPE [NSSet setWithObjects:@"application/json",@"text/plain", @"text/json", @"text/javascript",@"text/html", nil]
 /** 加密秘钥 */
 #define ENCRYPTION_KEY @"1QRsTs"
 /** 加密 */
-#define COMMONFUNC_ENCODE_DESKEY(known, key) [CommonFunc encode:known withKey:key]
+#define COMMONFUNC_ENCODE_DESKEY(known, key) [YMCommonFunc encode:known withKey:key]
 /** 解密 */
-#define COMMONFUNC_DECODE_DESKEY(known, key) [CommonFunc decode:known withKey:key]
+#define COMMONFUNC_DECODE_DESKEY(known, key) [YMCommonFunc decode:known withKey:key]
 /** 加密字符串键 */
 #define ENCRYPTION_STRING_PARAMDATA_KEY @"paramData"
 
