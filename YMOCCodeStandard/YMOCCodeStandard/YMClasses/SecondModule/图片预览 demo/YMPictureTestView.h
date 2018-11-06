@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YMPictureTestView : UIView
 
+/**
+ 初始化方法
+
+ @param frame  frame
+ @param type 1 是本地图片 否则 网络图片
+ @return self
+ */
 - (instancetype)initWithFrame:(CGRect)frame imageType:(NSString *)type;
 @end
 

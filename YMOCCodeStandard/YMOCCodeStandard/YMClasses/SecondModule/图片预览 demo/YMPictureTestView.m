@@ -13,12 +13,14 @@
 
 @interface YMPictureTestView ()
 
+/** 图片控件数组 */
 @property (nonatomic, strong) NSMutableArray *array;
 
 @end
 
 @implementation YMPictureTestView
 
+#pragma mark -- init
 - (instancetype)initWithFrame:(CGRect)frame imageType:(nonnull NSString *)type {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor colorWithHexString:@"f0f0f0"];
@@ -88,6 +90,7 @@
     return self;
 }
 
+#pragma mark -- 创建图片
 - (UIImageView *)createImageView {
     UIImageView *imgView = [[UIImageView alloc] init];
     imgView.userInteractionEnabled = YES;
@@ -100,6 +103,7 @@
     return imgView;
 }
 
+#pragma mark -- 点击图片
 - (void)click:(UITapGestureRecognizer *)tgr {
     YMPictureViewer *browserView = [[YMPictureViewer alloc] init];
     browserView.originalViews = self.array;
