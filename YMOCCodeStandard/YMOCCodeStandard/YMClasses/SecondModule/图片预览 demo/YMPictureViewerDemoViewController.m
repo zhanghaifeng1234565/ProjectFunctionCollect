@@ -76,6 +76,7 @@
     NSString *extensionName = gifPath.pathExtension;
     if ([extensionName.lowercaseString isEqualToString:@"gif"]) {
         if ([self.imageType isEqualToString:@"1"]) {
+            cell.imageV.image = [UIImage yy_imageWithColor:[UIColor colorWithHexString:@"f0f0f0"]];
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
                 NSData *imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"timg" ofType:@"gif"]];
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -83,6 +84,7 @@
                 });
             });
         } else {
+            cell.imageV.image = [UIImage yy_imageWithColor:[UIColor colorWithHexString:@"f0f0f0"]];
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
                 NSURL *imageUrl = [NSURL URLWithString:self.dataMArr[indexPath.item]];
                 dispatch_async(dispatch_get_main_queue(), ^{
