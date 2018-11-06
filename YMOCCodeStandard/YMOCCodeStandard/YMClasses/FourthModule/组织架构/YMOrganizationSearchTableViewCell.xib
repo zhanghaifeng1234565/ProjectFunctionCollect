@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YMOrganizationSearchTableViewCellId" id="KGk-i7-Jjw" customClass="YMOrganizationSearchTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csp-xu-cgj">
+                        <rect key="frame" x="0.0" y="5" width="43" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="43" id="HaA-QY-g4L"/>
+                            <constraint firstAttribute="height" constant="33" id="p4Z-pv-bYP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" image="forward_resumes_blue_btn">
+                            <color key="titleColor" red="0.1647058824" green="0.62352941179999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="selectBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gfi-8F-p3X"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-9z-HLp">
+                        <rect key="frame" x="43" y="12.5" width="262" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oID-kw-bEk">
+                        <rect key="frame" x="0.0" y="43" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="1xM-on-4Ya"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xfH-9z-HLp" secondAttribute="trailing" constant="15" id="3Hv-ym-oaQ"/>
+                    <constraint firstItem="Csp-xu-cgj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="42W-DX-bcM"/>
+                    <constraint firstItem="xfH-9z-HLp" firstAttribute="leading" secondItem="Csp-xu-cgj" secondAttribute="trailing" id="5yq-rk-Idd"/>
+                    <constraint firstAttribute="bottom" secondItem="oID-kw-bEk" secondAttribute="bottom" id="Ls4-5b-pcj"/>
+                    <constraint firstItem="Csp-xu-cgj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PHe-Q5-YXm"/>
+                    <constraint firstAttribute="bottom" secondItem="Csp-xu-cgj" secondAttribute="bottom" constant="5.5" id="UNi-hg-wx2"/>
+                    <constraint firstAttribute="trailing" secondItem="oID-kw-bEk" secondAttribute="trailing" id="kLb-Kk-Ng0"/>
+                    <constraint firstItem="xfH-9z-HLp" firstAttribute="centerY" secondItem="Csp-xu-cgj" secondAttribute="centerY" id="lFV-1G-YSI"/>
+                    <constraint firstItem="oID-kw-bEk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pDT-bL-pqa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="selectBtn" destination="Csp-xu-cgj" id="43P-zN-frG"/>
+                <outlet property="titleLabel" destination="xfH-9z-HLp" id="WvO-Ku-KvX"/>
+            </connections>
+            <point key="canvasLocation" x="-99.200000000000003" y="85.457271364317847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="forward_resumes_blue_btn" width="23" height="23"/>
+    </resources>
+</document>

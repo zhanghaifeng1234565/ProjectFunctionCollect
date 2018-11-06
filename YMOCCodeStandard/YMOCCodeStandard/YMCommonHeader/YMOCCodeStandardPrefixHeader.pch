@@ -1,0 +1,58 @@
+//
+//  YMOCCodeStandardPrefixHeader.pch
+//  YMOCCodeStandard
+//
+//  Created by iOS on 2018/11/6.
+//  Copyright © 2018年 iOS. All rights reserved.
+//
+
+#ifndef YMOCCodeStandardPrefixHeader_pch
+#define YMOCCodeStandardPrefixHeader_pch
+
+#import "YMOCCodeStandardUIHeader.h"
+#import "YMLocalStoreHeader.h"
+#import "NetworkPortHeader.h"
+
+#define TableViewAlertDismissNoti @"TableViewAlertDismissNoti"
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+/// 手机系统
+#define IS_IOS6 [[[UIDevice currentDevice] systemVersion] doubleValue] < 7.0
+#define IS_IOS7 [[[UIDevice currentDevice] systemVersion] doubleValue] >= 7.0
+#define IS_IOS8 [[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0
+#define IS_IOS9 [[[UIDevice currentDevice] systemVersion] doubleValue] > 9.0
+#define IS_IOSMIN10 [[[UIDevice currentDevice] systemVersion] doubleValue] < 10.0
+#define IS_IOS10 [[[UIDevice currentDevice] systemVersion] doubleValue] >= 10.0
+
+#define IPHONE4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ?            CGSizeEqualToSize(CGSizeMake(640,960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IPHONE5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640,1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IPHONE6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(750,1334), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(640,1136), [[UIScreen mainScreen] currentMode].size)) : NO)
+#define IPHONE6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125,2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242,2208), [[UIScreen mainScreen] currentMode].size)) : NO)
+/** X 或 Xs */
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhoneXsMax ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhoneXr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size)) : NO)
+
+#define STATUSBAR_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height
+#define iPhoneXLater (STATUSBAR_HEIGHT > 20 ? YES : NO)
+
+#define NavBarHeight       (iPhoneXLater ? 88:64)
+#define TabBarHeight       (iPhoneXLater ? 83:49)
+#define StatusBarHeight    (iPhoneXLater ? 44:20)
+
+#define MainScreenWidth [UIScreen mainScreen].bounds.size.width
+#define MainScreenHeight [UIScreen mainScreen].bounds.size.height
+#define MainScreenWidth_Scale    ([UIScreen mainScreen].bounds.size.width/375.0f)
+#define MainScreenHeight_Scale   ([UIScreen mainScreen].bounds.size.height/667.0f)
+
+/** 当导航是一张图的时候为 0，当导航是颜色的时候是  NavBarHeight*/
+#define YMSCROLLVIEW_TOP_MARGIN 0
+
+#endif /* YMOCCodeStandardPrefixHeader_pch */
