@@ -29,7 +29,7 @@
         
         UIImageView *imageView = [self createImageView];
         
-        NSString *gifPath = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541501024814&di=6a88252f864e4fd83a3f6e5d341037f8&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F-Po3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F91529822720e0cf324d43c1d0c46f21fbe09aa31.jpg";
+        NSString *gifPath = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541501024814&di=468b91018f102112e7ce25e0d6ccb20d&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201603%2F08%2F20160308174903_X2Vnc.gif";
         //判断是否是gif
         NSString *extensionName = gifPath.pathExtension;
         if ([extensionName.lowercaseString isEqualToString:@"gif"]) {
