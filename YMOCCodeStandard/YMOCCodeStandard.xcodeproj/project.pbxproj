@@ -97,7 +97,6 @@
 		81CA7892218844A8005EFA1A /* YMOrganizationSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CA7891218844A8005EFA1A /* YMOrganizationSearchModel.m */; };
 		81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */; };
 		81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A07217EAC6E00DC9A4A /* YMSureCancelAlert.m */; };
-		81E41A0C217EBEB000DC9A4A /* YMSystemAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A0B217EBEB000DC9A4A /* YMSystemAlertViewController.m */; };
 		81E41A10217EECD100DC9A4A /* YMActiveAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A0F217EECD100DC9A4A /* YMActiveAlertView.m */; };
 		81E41A14217EFAF000DC9A4A /* YMWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A13217EFAF000DC9A4A /* YMWKWebView.m */; };
 		81E41A17217EFB2200DC9A4A /* YMWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A15217EFB2200DC9A4A /* YMWKWebViewViewController.m */; };
@@ -113,6 +112,7 @@
 		81E77EB021870DD8007CE3FD /* YMOrganizationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E77EAC21870DD8007CE3FD /* YMOrganizationTableViewCell.xib */; };
 		81E77EB321870FD6007CE3FD /* YMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E77EB221870FD6007CE3FD /* YMBaseViewController.m */; };
 		81EEC0B8219173BA0087EA72 /* YMCommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0B7219173BA0087EA72 /* YMCommonFunc.m */; };
+		81EEC0BC219175EC0087EA72 /* YMSystemAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0BA219175EC0087EA72 /* YMSystemAlertViewController.m */; };
 		DAD33FBFD5D6F131DA50A2C3 /* libPods-YMOCCodeStandard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */; };
 /* End PBXBuildFile section */
 
@@ -309,8 +309,6 @@
 		81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBlackSmallAlert.m; sourceTree = "<group>"; };
 		81E41A06217EAC6E00DC9A4A /* YMSureCancelAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSureCancelAlert.h; sourceTree = "<group>"; };
 		81E41A07217EAC6E00DC9A4A /* YMSureCancelAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSureCancelAlert.m; sourceTree = "<group>"; };
-		81E41A0A217EBEB000DC9A4A /* YMSystemAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSystemAlertViewController.h; sourceTree = "<group>"; };
-		81E41A0B217EBEB000DC9A4A /* YMSystemAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSystemAlertViewController.m; sourceTree = "<group>"; };
 		81E41A0E217EECD100DC9A4A /* YMActiveAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMActiveAlertView.h; sourceTree = "<group>"; };
 		81E41A0F217EECD100DC9A4A /* YMActiveAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMActiveAlertView.m; sourceTree = "<group>"; };
 		81E41A12217EFAF000DC9A4A /* YMWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMWKWebView.h; sourceTree = "<group>"; };
@@ -341,6 +339,8 @@
 		81EEC0B5219143340087EA72 /* YMOCCodeStandardUIHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOCCodeStandardUIHeader.h; sourceTree = "<group>"; };
 		81EEC0B6219173BA0087EA72 /* YMCommonFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCommonFunc.h; sourceTree = "<group>"; };
 		81EEC0B7219173BA0087EA72 /* YMCommonFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCommonFunc.m; sourceTree = "<group>"; };
+		81EEC0BA219175EC0087EA72 /* YMSystemAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSystemAlertViewController.m; sourceTree = "<group>"; };
+		81EEC0BB219175EC0087EA72 /* YMSystemAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSystemAlertViewController.h; sourceTree = "<group>"; };
 		86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMOCCodeStandard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1065,9 +1065,9 @@
 		81E41A00217EAA1600DC9A4A /* 弹窗 */ = {
 			isa = PBXGroup;
 			children = (
+				81EEC0B9219175EC0087EA72 /* 基于系统的弹窗 */,
 				81E41A1F217F0DE700DC9A4A /* 基于 MBProgressHUD */,
 				81E41A0D217EEB2600DC9A4A /* 活动弹窗 */,
-				81E41A09217EBE7E00DC9A4A /* 基于体统的弹窗 */,
 				81E41A05217EAA3400DC9A4A /* 确定取消弹窗 */,
 				81E41A01217EAA1600DC9A4A /* 黑色小弹窗 */,
 			);
@@ -1090,15 +1090,6 @@
 				81E41A07217EAC6E00DC9A4A /* YMSureCancelAlert.m */,
 			);
 			path = "确定取消弹窗";
-			sourceTree = "<group>";
-		};
-		81E41A09217EBE7E00DC9A4A /* 基于体统的弹窗 */ = {
-			isa = PBXGroup;
-			children = (
-				81E41A0A217EBEB000DC9A4A /* YMSystemAlertViewController.h */,
-				81E41A0B217EBEB000DC9A4A /* YMSystemAlertViewController.m */,
-			);
-			path = "基于体统的弹窗";
 			sourceTree = "<group>";
 		};
 		81E41A0D217EEB2600DC9A4A /* 活动弹窗 */ = {
@@ -1165,6 +1156,15 @@
 				81CA7891218844A8005EFA1A /* YMOrganizationSearchModel.m */,
 			);
 			path = "组织架构";
+			sourceTree = "<group>";
+		};
+		81EEC0B9219175EC0087EA72 /* 基于系统的弹窗 */ = {
+			isa = PBXGroup;
+			children = (
+				81EEC0BB219175EC0087EA72 /* YMSystemAlertViewController.h */,
+				81EEC0BA219175EC0087EA72 /* YMSystemAlertViewController.m */,
+			);
+			path = "基于系统的弹窗";
 			sourceTree = "<group>";
 		};
 		AA28EB3A2249A79ACBB2E7B9 /* Frameworks */ = {
@@ -1435,8 +1435,8 @@
 				81012955214FABEF00725BAF /* YMHomeModel.m in Sources */,
 				81937FF5214F370000EEA717 /* AFURLResponseSerialization.m in Sources */,
 				8193D2CA214A013F00EB225D /* YMUIPlaceholderTextView.m in Sources */,
-				81E41A0C217EBEB000DC9A4A /* YMSystemAlertViewController.m in Sources */,
 				81CA788A21883115005EFA1A /* YMOrganizationSearchTableView.m in Sources */,
+				81EEC0BC219175EC0087EA72 /* YMSystemAlertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
