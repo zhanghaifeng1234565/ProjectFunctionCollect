@@ -152,7 +152,7 @@
         [tgr requireGestureRecognizerToFail:doubleRecognizer];
         
         UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGester:)];
-        [self addGestureRecognizer:longPress];
+        [self addGestureRecognizer:longPress]; // 长按
     }
     return self;
 }
@@ -220,6 +220,7 @@
     if (gester.state == UIGestureRecognizerStateBegan) {
         __weak typeof(self) weakSelf = self;
         [YMSureCancelAlert alertText:@"是否要保存照片到相册" sureBtnTitle:@"确定保存" maxHeight:100 alertStyle:YMAlertButtonTypeStyleDefault sureBtnClick:^(UIButton * _Nonnull sureBtn) {
+            
             [weakSelf savePicture:weakSelf.imgView];
         } cancelBtnClick:^(UIButton * _Nonnull cancelBtn) {
             
@@ -229,30 +230,28 @@
 
 #pragma mark -- 保存图片
 - (void)savePicture:(UIImageView *)imageV {
-    NSLog(@"imageV === %@", imageV);
     if (imageV.image != nil) {
         [YMMBProgressHUD ymShowCustomLoadingAlert:self text:@"保存中..."];
-        UIImageWriteToSavedPhotosAlbum(imageV.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        [library writeImageDataToSavedPhotosAlbum:imageV.image.ym_imageData metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
+            [YMMBProgressHUD ymHideLoadingAlert:self];
+            if(error != nil) {
+                if (error.code == -3310) {
+                    __weak typeof(self) weakSelf = self;
+                    [YMSureCancelAlert alertText:@"请在“设置->隐私->照片”中确定“代码规范”是否为开启状态！" sureBtnTitle:@"我知道了！" maxHeight:100 alertStyle:YMAlertButtonTypeStyleAlone sureBtnClick:^(UIButton * _Nonnull sureBtn) {
+                        [YMMBProgressHUD ymShowBlackAlert:weakSelf text:@"图片保存出错！" afterDelay:2.0f];
+                    } cancelBtnClick:^(UIButton * _Nonnull cancelBtn) {
+                        
+                    }];
+                } else {
+                    [YMMBProgressHUD ymShowBlackAlert:self text:@"图片保存出错！" afterDelay:2.0f];
+                }
+            } else {
+                [YMMBProgressHUD ymShowBlackAlert:self text:@"图片已保存！" afterDelay:2.0f];
+            }
+        }];
     } else {
         [YMMBProgressHUD ymShowBlackAlert:self text:@"保存失败！" afterDelay:2.0f];
-    }
-}
-
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    [YMMBProgressHUD ymHideLoadingAlert:self];
-    if(error != nil) {
-        if (error.code == -3310) {
-            __weak typeof(self) weakSelf = self;
-            [YMSureCancelAlert alertText:@"请在“设置->隐私->照片”中确定“代码规范”是否为开启状态！" sureBtnTitle:@"我知道了！" maxHeight:100 alertStyle:YMAlertButtonTypeStyleAlone sureBtnClick:^(UIButton * _Nonnull sureBtn) {
-                [YMMBProgressHUD ymShowBlackAlert:weakSelf text:@"图片保存出错！" afterDelay:2.0f];
-            } cancelBtnClick:^(UIButton * _Nonnull cancelBtn) {
-
-            }];
-        } else {
-            [YMMBProgressHUD ymShowBlackAlert:self text:@"图片保存出错！" afterDelay:2.0f];
-        }
-    } else {
-        [YMMBProgressHUD ymShowBlackAlert:self text:@"图片已保存！" afterDelay:2.0f];
     }
 }
 

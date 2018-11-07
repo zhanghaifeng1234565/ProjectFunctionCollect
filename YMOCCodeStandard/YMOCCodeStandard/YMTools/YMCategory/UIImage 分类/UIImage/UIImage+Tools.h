@@ -10,6 +10,10 @@
 
 @interface UIImage (Tools)
 
+/** 图片二进制 */
+@property (nonatomic, strong) NSData *ym_imageData;
+
+
 /**
  生成一张图片
 
@@ -80,4 +84,5 @@
  @return 压缩后的图片
  */
 + (UIImage *)imageByScalingToMaxSize:(UIImage *)sourceImage;
+
 @end

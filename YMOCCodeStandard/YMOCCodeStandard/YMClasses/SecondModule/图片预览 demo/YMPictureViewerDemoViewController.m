@@ -81,6 +81,7 @@
                 NSData *imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"timg" ofType:@"gif"]];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     cell.imageV.image = [YYImage yy_imageWithSmallGIFData:imageData scale:0.5f];
+                    cell.imageV.image.ym_imageData = imageData;
                 });
             });
         } else {
@@ -89,14 +90,17 @@
                 NSURL *imageUrl = [NSURL URLWithString:self.dataMArr[indexPath.item]];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     cell.imageV.image  = [YYImage yy_imageWithSmallGIFData:[NSData dataWithContentsOfURL:imageUrl] scale:0.5f];
+                    cell.imageV.image.ym_imageData = [NSData dataWithContentsOfURL:imageUrl];
                 });
             });
         }
     } else {
         if ([self.imageType isEqualToString:@"1"]) {
             cell.imageV.image = [UIImage imageNamed:self.dataMArr[indexPath.item]];
+            cell.imageV.image.ym_imageData = UIImagePNGRepresentation(cell.imageV.image);
         } else {
             [cell.imageV sd_setImageWithURL:[NSURL URLWithString:self.dataMArr[indexPath.item]]];
+            cell.imageV.image.ym_imageData = UIImagePNGRepresentation(cell.imageV.image);
         }
     }
     

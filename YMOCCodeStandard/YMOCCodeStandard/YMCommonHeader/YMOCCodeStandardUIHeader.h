@@ -19,6 +19,8 @@
 #import <CoreText/CoreText.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <YYWebImage.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <Photos/Photos.h>
 
 #import "UIColor+Hex.h"
 #import "UIImage+Tools.h"

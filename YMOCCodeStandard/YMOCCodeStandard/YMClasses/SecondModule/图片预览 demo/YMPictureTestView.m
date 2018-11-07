@@ -39,6 +39,7 @@
                     NSData *imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"timg" ofType:@"gif"]];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         imageView.image = [YYImage yy_imageWithSmallGIFData:imageData scale:1.0];
+                        imageView.image.ym_imageData = imageData;
                     });
                 });
             } else {
@@ -47,14 +48,17 @@
                     NSURL *imageUrl = [NSURL URLWithString:gifPath];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         imageView.image = [YYImage yy_imageWithSmallGIFData:[NSData dataWithContentsOfURL:imageUrl] scale:1.0f];
+                        imageView.image.ym_imageData = [NSData dataWithContentsOfURL:imageUrl];
                     });
                 });
             }
         } else{
             if ([type isEqualToString:@"1"]) {
                 imageView.image = [UIImage imageNamed:@"1.jpg"];
+                imageView.image.ym_imageData = UIImagePNGRepresentation(imageView.image);
             } else {
                 [imageView sd_setImageWithURL:[NSURL URLWithString:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
+                imageView.image.ym_imageData = UIImagePNGRepresentation(imageView.image);
             }
         }
         
@@ -68,6 +72,7 @@
         } else {
             [imageView2 sd_setImageWithURL:[NSURL URLWithString:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
         }
+        imageView2.image.ym_imageData = UIImagePNGRepresentation(imageView2.image);
         imageView2.frame = CGRectMake(imageView.right + 10, imageView.top, imageView.width, imageView.height);
         [self addSubview:imageView2];
         [self.imageMArr addObject:imageView2];
@@ -78,6 +83,7 @@
         } else {
             [imageView3 sd_setImageWithURL:[NSURL URLWithString:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
         }
+        imageView3.image.ym_imageData = UIImagePNGRepresentation(imageView3.image);
         imageView3.frame = CGRectMake(imageView2.right + 10, imageView2.top, imageView2.width, imageView2.height);
         [self addSubview:imageView3];
         [self.imageMArr addObject:imageView3];
@@ -88,6 +94,7 @@
         } else {
             [imageView4 sd_setImageWithURL:[NSURL URLWithString:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
         }
+        imageView4.image.ym_imageData = UIImagePNGRepresentation(imageView4.image);
         imageView4.frame = CGRectMake(imageView.left, imageView.bottom + 10, imageView.width, imageView.height);
         [self addSubview:imageView4];
         [self.imageMArr addObject:imageView4];
@@ -98,6 +105,7 @@
         } else {
             [imageView5 sd_setImageWithURL:[NSURL URLWithString:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
         }
+        imageView5.image.ym_imageData = UIImagePNGRepresentation(imageView5.image);
         imageView5.frame = CGRectMake(imageView4.right + 10, imageView4.top, imageView4.width, imageView4.height);
         [self addSubview:imageView5];
         [self.imageMArr addObject:imageView5];
@@ -108,6 +116,7 @@
         } else {
             [imageView6 sd_setImageWithURL:[NSURL URLWithString:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
         }
+        imageView6.image.ym_imageData = UIImagePNGRepresentation(imageView6.image);
         imageView6.frame = CGRectMake(imageView5.right + 10, imageView5.top, imageView5.width, imageView5.height);
         [self addSubview:imageView6];
         [self.imageMArr addObject:imageView6];

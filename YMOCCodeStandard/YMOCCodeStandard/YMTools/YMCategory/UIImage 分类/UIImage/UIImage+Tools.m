@@ -7,8 +7,19 @@
 //
 
 #import "UIImage+Tools.h"
+#import <objc/runtime.h>
 
 @implementation UIImage (Tools)
+
+#pragma mark - - 增加 ym_imageData 属性
+- (NSData *)ym_imageData {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setYm_imageData:(NSData *)ym_imageData {
+    objc_setAssociatedObject(self, @selector(ym_imageData), ym_imageData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 #pragma mark -- 生成一张图片
 + (UIImage *)imageWithColor:(UIColor *)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
