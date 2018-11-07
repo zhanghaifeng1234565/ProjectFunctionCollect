@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>NSCameraUsageDescription</key>
-    <string>修改用户头像或财务申请的上传图片功能需要使用图片,可能需要使用照相机进行拍摄,您是否允许使用相机?</string>
+    <string>上传图片功能需要使用图片,可能需要使用照相机进行拍摄,您是否允许使用相机?</string>
     <key>NSPhotoLibraryAddUsageDescription</key>
     <string>保存图片需要访问您的相册,您是否允许访问相册？</string>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>修改用户头像或财务申请的上传图片功能需要使用您相册里的图片,您是否允许访问相册？</string>
+    <string>上传图片功能需要使用您相册里的图片,您是否允许访问相册？</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
