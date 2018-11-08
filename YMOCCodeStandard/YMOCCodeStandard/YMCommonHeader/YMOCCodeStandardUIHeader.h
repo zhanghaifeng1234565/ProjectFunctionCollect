@@ -43,5 +43,6 @@
 #import "YMSystemAlertViewController.h"
 #import "YMSureCancelAlert.h"
 #import "YMMBProgressHUD.h"
+#import "YMHighlightImageView.h"
 
 #endif /* YMOCCodeStandardUIHeader_h */

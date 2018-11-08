@@ -65,7 +65,7 @@ UITableViewDataSource>
         cell = [[YMBaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELLID"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    
+
     cell.textLabel.text = self.dataArr[indexPath.row];
     return cell;
 }

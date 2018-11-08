@@ -27,7 +27,7 @@
         
         self.imageMArr = [NSMutableArray array];
         
-        UIImageView *imageView = [self createImageView];
+        YMHighlightImageView *imageView = [self createImageView];
         
         NSString *gifPath = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541501024814&di=468b91018f102112e7ce25e0d6ccb20d&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201603%2F08%2F20160308174903_X2Vnc.gif";
         //判断是否是gif
@@ -66,7 +66,7 @@
         [self addSubview:imageView];
         [self.imageMArr addObject:imageView];
         
-        UIImageView *imageView2 = [self createImageView];
+        YMHighlightImageView *imageView2 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
             imageView2.image = [UIImage imageNamed:@"2.jpg"];
         } else {
@@ -77,7 +77,7 @@
         [self addSubview:imageView2];
         [self.imageMArr addObject:imageView2];
         
-        UIImageView *imageView3 = [self createImageView];
+        YMHighlightImageView *imageView3 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
             imageView3.image = [UIImage imageNamed:@"3.jpg"];
         } else {
@@ -88,7 +88,7 @@
         [self addSubview:imageView3];
         [self.imageMArr addObject:imageView3];
         
-        UIImageView *imageView4 = [self createImageView];
+        YMHighlightImageView *imageView4 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
             imageView4.image = [UIImage imageNamed:@"4.jpg"];
         } else {
@@ -99,7 +99,7 @@
         [self addSubview:imageView4];
         [self.imageMArr addObject:imageView4];
         
-        UIImageView *imageView5 = [self createImageView];
+        YMHighlightImageView *imageView5 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
             imageView5.image = [UIImage imageNamed:@"5.jpg"];
         } else {
@@ -110,7 +110,7 @@
         [self addSubview:imageView5];
         [self.imageMArr addObject:imageView5];
         
-        UIImageView *imageView6 = [self createImageView];
+        YMHighlightImageView *imageView6 = [self createImageView];
         if ([type isEqualToString:@"1"]) {
             imageView6.image = [UIImage imageNamed:@"6.jpg"];
         } else {
@@ -125,8 +125,8 @@
 }
 
 #pragma mark -- 创建图片
-- (UIImageView *)createImageView {
-    UIImageView *imgView = [[UIImageView alloc] init];
+- (YMHighlightImageView *)createImageView {
+    YMHighlightImageView *imgView = [[YMHighlightImageView alloc] init];
     imgView.userInteractionEnabled = YES;
     imgView.contentMode = UIViewContentModeScaleAspectFill;
     imgView.clipsToBounds = YES;

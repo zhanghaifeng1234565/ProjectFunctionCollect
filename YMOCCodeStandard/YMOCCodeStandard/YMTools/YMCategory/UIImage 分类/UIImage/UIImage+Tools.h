@@ -21,6 +21,8 @@
  @return 图片
  */
 + (UIImage *)imageWithColor:(UIColor *)color;
+
+
 /**
  设置图片的透明度
 
@@ -28,6 +30,7 @@
  @return 图片
  */
 - (UIImage *)imageByScrollAlpha:(CGFloat)alpha;
+
 
 /**
  *  创建纯色图片
@@ -38,6 +41,8 @@
  *  @return 纯色图片
  */
 + (UIImage *)js_createImageWithColor:(UIColor *)color withSize:(CGSize)imageSize;
+
+
 /**
  *  创建圆角图片
  *
@@ -46,6 +51,8 @@
  *  @return 带圆角的图片
  */
 + (UIImage *)js_imageWithOriginalImage:(UIImage *)originalImage;
+
+
 /**
  *  创建圆角纯色图片
  *
@@ -55,6 +62,8 @@
  *  @return 圆角纯色图片
  */
 + (UIImage *)js_createRoundedImageWithColor:(UIColor *)color withSize:(CGSize)imageSize;
+
+
 /**
  *  生成带圆环的圆角图片
  *
@@ -65,6 +74,7 @@
  *  @return 带圆环的圆角图片
  */
 + (UIImage *)js_imageWithOriginalImage:(UIImage *)originalImage withBorderColor:(UIColor *)borderColor withBorderWidth:(CGFloat)borderWidth;
+
 
 /**
  创建任意圆角纯色图片
