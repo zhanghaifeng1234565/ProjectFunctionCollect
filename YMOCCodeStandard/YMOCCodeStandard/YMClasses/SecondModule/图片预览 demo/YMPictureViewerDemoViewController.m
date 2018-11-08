@@ -47,7 +47,6 @@
 
 #pragma mark - - 初始化导航
 - (void)initNavData {
-//    self.title = @"collectionView 图片预览";
     self.view.backgroundColor = [UIColor colorWithHexString:@"f0f0f0"];
 }
 
@@ -60,7 +59,7 @@
     }
 }
 
-#pragma mark - - delegate - dataSource
+#pragma mark - - delegate && dataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -103,7 +102,6 @@
             cell.imageV.image.ym_imageData = UIImagePNGRepresentation(cell.imageV.image);
         }
     }
-    
     
     return cell;
 }
