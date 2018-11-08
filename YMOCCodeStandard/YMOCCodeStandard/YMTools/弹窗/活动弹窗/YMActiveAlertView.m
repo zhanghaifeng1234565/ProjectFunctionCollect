@@ -57,8 +57,10 @@
     [self.alphaView addTarget:self action:@selector(hiddenAlert) forControlEvents:UIControlEventTouchUpInside];
     
     self.contentView.backgroundColor = [UIColor whiteColor];
-    self.contentView.layer.masksToBounds = YES;
-    self.contentView.layer.cornerRadius = 6.0f;
+    self.contentView.layer.shadowColor = [UIColor redColor].CGColor;
+    self.contentView.layer.shadowOffset = CGSizeMake(0, 3);
+    self.contentView.layer.shadowOpacity = 0.8;
+    self.contentView.layer.shadowRadius = 3;
     [self.contentView addTarget:self action:@selector(keyboardHidden) forControlEvents:UIControlEventTouchUpInside];
 }
 
