@@ -17,26 +17,7 @@
 
 @implementation YMHighlightImageView
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self addSubview:self.alphaView];
-}
-
-- (instancetype)init {
-    if (self = [super init]) {
-        [self addSubview:self.alphaView];
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self addSubview:self.alphaView];
-    }
-    return self;
-}
-
+#pragma mark - - init
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
