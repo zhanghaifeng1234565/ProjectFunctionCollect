@@ -70,6 +70,9 @@
 		8193D2C9214A013F00EB225D /* YMUIConstumButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8193D2C4214A013F00EB225D /* YMUIConstumButton.m */; };
 		8193D2CA214A013F00EB225D /* YMUIPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8193D2C5214A013F00EB225D /* YMUIPlaceholderTextView.m */; };
 		8193D2CD214A6F6300EB225D /* YMDataSaveSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8193D2CC214A6F6300EB225D /* YMDataSaveSingleton.m */; };
+		81A593C2219980F70009669C /* YMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C1219980F70009669C /* YMBasePickerView.m */; };
+		81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C4219983B50009669C /* YMPickerToolBarView.m */; };
+		81A593CB21998DFB0009669C /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81A593CA21998DFB0009669C /* timg.gif */; };
 		81BF54D32145EC15004BC70A /* YMOCCodeStandardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54D22145EC15004BC70A /* YMOCCodeStandardTests.m */; };
 		81BF54DE2145EC15004BC70A /* YMOCCodeStandardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54DD2145EC15004BC70A /* YMOCCodeStandardUITests.m */; };
 		81BF54FE2145ED1F004BC70A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54F22145ED1F004BC70A /* AppDelegate.m */; };
@@ -115,7 +118,6 @@
 		81EEC0C8219177610087EA72 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C2219177610087EA72 /* 3.jpg */; };
 		81EEC0C9219177610087EA72 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C3219177610087EA72 /* 1.jpg */; };
 		81EEC0CD21917CA80087EA72 /* NSString+YMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0CC21917CA80087EA72 /* NSString+YMImage.m */; };
-		81EEC0D1219191150087EA72 /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0D0219191150087EA72 /* timg.gif */; };
 		DAD33FBFD5D6F131DA50A2C3 /* libPods-YMOCCodeStandard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */; };
 /* End PBXBuildFile section */
 
@@ -266,6 +268,11 @@
 		8193D2C6214A013F00EB225D /* YMUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUITextField.h; sourceTree = "<group>"; };
 		8193D2CB214A6F6300EB225D /* YMDataSaveSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDataSaveSingleton.h; sourceTree = "<group>"; };
 		8193D2CC214A6F6300EB225D /* YMDataSaveSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDataSaveSingleton.m; sourceTree = "<group>"; };
+		81A593C0219980F70009669C /* YMBasePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBasePickerView.h; sourceTree = "<group>"; };
+		81A593C1219980F70009669C /* YMBasePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBasePickerView.m; sourceTree = "<group>"; };
+		81A593C3219983B50009669C /* YMPickerToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPickerToolBarView.h; sourceTree = "<group>"; };
+		81A593C4219983B50009669C /* YMPickerToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPickerToolBarView.m; sourceTree = "<group>"; };
+		81A593CA21998DFB0009669C /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
 		81BF54B32145EC13004BC70A /* YMOCCodeStandard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMOCCodeStandard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BF54CE2145EC15004BC70A /* YMOCCodeStandardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMOCCodeStandardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BF54D22145EC15004BC70A /* YMOCCodeStandardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMOCCodeStandardTests.m; sourceTree = "<group>"; };
@@ -348,7 +355,6 @@
 		81EEC0C3219177610087EA72 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		81EEC0CB21917CA80087EA72 /* NSString+YMImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YMImage.h"; sourceTree = "<group>"; };
 		81EEC0CC21917CA80087EA72 /* NSString+YMImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMImage.m"; sourceTree = "<group>"; };
-		81EEC0D0219191150087EA72 /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = timg.gif; path = ../../../../../../../timg.gif; sourceTree = "<group>"; };
 		86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMOCCodeStandard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -601,7 +607,7 @@
 				81621704219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib */,
 				8162171421903E170001FC5E /* YMPictureTestView.h */,
 				8162171521903E170001FC5E /* YMPictureTestView.m */,
-				81EEC0D0219191150087EA72 /* timg.gif */,
+				81A593CA21998DFB0009669C /* timg.gif */,
 			);
 			path = "图片预览 demo";
 			sourceTree = "<group>";
@@ -873,6 +879,17 @@
 			path = "公共 UI 的处理";
 			sourceTree = "<group>";
 		};
+		81A593BF219980B10009669C /* PickView */ = {
+			isa = PBXGroup;
+			children = (
+				81A593C0219980F70009669C /* YMBasePickerView.h */,
+				81A593C1219980F70009669C /* YMBasePickerView.m */,
+				81A593C3219983B50009669C /* YMPickerToolBarView.h */,
+				81A593C4219983B50009669C /* YMPickerToolBarView.m */,
+			);
+			path = PickView;
+			sourceTree = "<group>";
+		};
 		81BF54AA2145EC13004BC70A = {
 			isa = PBXGroup;
 			children = (
@@ -1072,6 +1089,7 @@
 		81E41A00217EAA1600DC9A4A /* 弹窗 */ = {
 			isa = PBXGroup;
 			children = (
+				81A593BF219980B10009669C /* PickView */,
 				81EEC0B9219175EC0087EA72 /* 基于系统的弹窗 */,
 				81E41A1F217F0DE700DC9A4A /* 基于 MBProgressHUD */,
 				81E41A0D217EEB2600DC9A4A /* 活动弹窗 */,
@@ -1321,7 +1339,6 @@
 				81EEC0C9219177610087EA72 /* 1.jpg in Resources */,
 				81E77EA521870D94007CE3FD /* YMOrganizationViewController.xib in Resources */,
 				81621701219018320001FC5E /* YMPictureViewerDemoViewController.xib in Resources */,
-				81EEC0D1219191150087EA72 /* timg.gif in Resources */,
 				8193D25D2149FF7300EB225D /* YMMineViewController.xib in Resources */,
 				81E77EB021870DD8007CE3FD /* YMOrganizationTableViewCell.xib in Resources */,
 				81EEC0C7219177610087EA72 /* 2.jpg in Resources */,
@@ -1335,6 +1352,7 @@
 				8193D25F2149FF7300EB225D /* YMNewsViewController.xib in Resources */,
 				81BF54FF2145ED1F004BC70A /* Assets.xcassets in Resources */,
 				81BF55002145ED1F004BC70A /* LaunchScreen.storyboard in Resources */,
+				81A593CB21998DFB0009669C /* timg.gif in Resources */,
 				8193D2632149FF7300EB225D /* YMWorkbenchViewController.xib in Resources */,
 				8193D2612149FF7300EB225D /* YMHomeViewController.xib in Resources */,
 			);
@@ -1404,6 +1422,7 @@
 				81937FF8214F370000EEA717 /* AFURLRequestSerialization.m in Sources */,
 				81E77EA421870D94007CE3FD /* YMOrganizationViewController.m in Sources */,
 				8126EB822150E811001647D6 /* UIColor+Hex.m in Sources */,
+				81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */,
 				81937FF9214F370000EEA717 /* AFNetworkReachabilityManager.m in Sources */,
 				81621705219018CB0001FC5E /* YMPictureTestCollectionViewCell.m in Sources */,
 				8193D2622149FF7300EB225D /* YMWorkbenchViewController.m in Sources */,
@@ -1445,6 +1464,7 @@
 				8126EB842150E811001647D6 /* UIView+YMParentController.m in Sources */,
 				81BF56BF2145F01E004BC70A /* YMBaseRootViewController.m in Sources */,
 				8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */,
+				81A593C2219980F70009669C /* YMBasePickerView.m in Sources */,
 				81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */,
 				81EEC0CD21917CA80087EA72 /* NSString+YMImage.m in Sources */,
 				81BF56BB2145F012004BC70A /* UIViewController+JTNavigationExtension.m in Sources */,

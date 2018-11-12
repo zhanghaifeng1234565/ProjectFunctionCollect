@@ -12,12 +12,13 @@
 #import "YMSureCancelAlert.h"
 #import "YMActiveAlertView.h"
 #import "YMMBProgressHUD.h"
+#import "YMBasePickerView.h"
 
 #import "YMBaseTableViewCell.h"
 
 @interface YMNewsViewController ()
-<UITableViewDelegate,
-UITableViewDataSource>
+<UITableViewDelegate, UITableViewDataSource,
+YMBasePickerViewDelegate>
 
 /** 列表 */
 @property (nonatomic, strong) UITableView *tableView;
@@ -159,6 +160,31 @@ UITableViewDataSource>
             [YMMBProgressHUD ymShowLoadingAlert:self.view];
         }
             break;
+        case 10:
+        {
+            // pickView
+            YMBasePickerView *pickerView = [[YMBasePickerView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, MainScreenHeight) delegate:self title:@"日期" leftBtnTitle:@"完成" rightBtnTitle:@"确定"];
+            [pickerView show];
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - - YMBasePickerViewDelegate
+- (void)actionWithButton:(UIButton *)sender {
+    switch (sender.tag) {
+        case 100:
+        {
+            [YMBlackSmallAlert showAlertWithMessage:sender.titleLabel.text time:2.0f];
+        }
+            break;
+        case 101:
+        {
+            [YMBlackSmallAlert showAlertWithMessage:sender.titleLabel.text time:2.0f];
+        }
+            break;
         default:
             break;
     }
@@ -200,7 +226,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"系统富文本【中间】", @"系统富文本【底部】", @"自定义确定取消", @"自定义确定", @"webView 活动页", @"自定义黑色小弹窗", @"基于 HUD 黑色小弹窗", @"基于 HUD loading 有文字", @"基于 HUD loading 无文字", @"基于 HUD 系统菊花 loading", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"系统富文本【中间】", @"系统富文本【底部】", @"自定义确定取消", @"自定义确定", @"webView 活动页", @"自定义黑色小弹窗", @"基于 HUD 黑色小弹窗", @"基于 HUD loading 有文字", @"基于 HUD loading 无文字", @"基于 HUD 系统菊花 loading", @"pickerView", nil];
     }
     return _dataArr;
 }

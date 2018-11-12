@@ -59,8 +59,6 @@ UITableViewDataSource>
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    
-    
     cell.textLabel.text = self.dataArr[indexPath.row];
     return cell;
 }
