@@ -68,6 +68,12 @@
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     
+    for (UIView *lineView in pickerView.subviews) {
+        if (lineView.height < 1) {
+            lineView.backgroundColor = [UIColor colorWithHexString:@"03abff"];
+        }
+    }
+    
     YMUniversalSingleDataModel *model = self.dataMarr[row];
     UILabel *label = [[UILabel alloc] init];
     label.text = model.title;
