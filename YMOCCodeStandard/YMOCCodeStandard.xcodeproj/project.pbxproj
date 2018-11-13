@@ -95,6 +95,7 @@
 		81CA7892218844A8005EFA1A /* YMOrganizationSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CA7891218844A8005EFA1A /* YMOrganizationSearchModel.m */; };
 		81DAA58D219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */; };
 		81DAA594219A70AD00705A1A /* YMUniversalSingleSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */; };
+		81DAA599219AA15400705A1A /* CityProperty List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81DAA598219AA15400705A1A /* CityProperty List.plist */; };
 		81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */; };
 		81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A07217EAC6E00DC9A4A /* YMSureCancelAlert.m */; };
 		81E41A10217EECD100DC9A4A /* YMActiveAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A0F217EECD100DC9A4A /* YMActiveAlertView.m */; };
@@ -317,6 +318,7 @@
 		81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUniversalSingleSelectionPickerView.m; sourceTree = "<group>"; };
 		81DAA592219A70AD00705A1A /* YMUniversalSingleSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUniversalSingleSelectModel.h; sourceTree = "<group>"; };
 		81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUniversalSingleSelectModel.m; sourceTree = "<group>"; };
+		81DAA598219AA15400705A1A /* CityProperty List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CityProperty List.plist"; sourceTree = "<group>"; };
 		81E41A02217EAA1600DC9A4A /* YMBlackSmallAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBlackSmallAlert.h; sourceTree = "<group>"; };
 		81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBlackSmallAlert.m; sourceTree = "<group>"; };
 		81E41A06217EAC6E00DC9A4A /* YMSureCancelAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSureCancelAlert.h; sourceTree = "<group>"; };
@@ -888,6 +890,7 @@
 		81A593BF219980B10009669C /* PickView */ = {
 			isa = PBXGroup;
 			children = (
+				81DAA595219A9FD100705A1A /* 省市区 */,
 				81DAA58A219A5AF100705A1A /* 通用单选 pickerView */,
 				81A593C0219980F70009669C /* YMBasePickerView.h */,
 				81A593C1219980F70009669C /* YMBasePickerView.m */,
@@ -1102,6 +1105,14 @@
 				81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */,
 			);
 			path = "通用单选 pickerView";
+			sourceTree = "<group>";
+		};
+		81DAA595219A9FD100705A1A /* 省市区 */ = {
+			isa = PBXGroup;
+			children = (
+				81DAA598219AA15400705A1A /* CityProperty List.plist */,
+			);
+			path = "省市区";
 			sourceTree = "<group>";
 		};
 		81E41A00217EAA1600DC9A4A /* 弹窗 */ = {
@@ -1368,6 +1379,7 @@
 				81EEC0C4219177610087EA72 /* 4.jpg in Resources */,
 				81EEC0C6219177610087EA72 /* 6.jpg in Resources */,
 				8193D25F2149FF7300EB225D /* YMNewsViewController.xib in Resources */,
+				81DAA599219AA15400705A1A /* CityProperty List.plist in Resources */,
 				81BF54FF2145ED1F004BC70A /* Assets.xcassets in Resources */,
 				81BF55002145ED1F004BC70A /* LaunchScreen.storyboard in Resources */,
 				81A593CB21998DFB0009669C /* timg.gif in Resources */,
