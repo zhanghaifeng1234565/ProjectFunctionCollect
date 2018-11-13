@@ -12,7 +12,7 @@
 #import "YMSureCancelAlert.h"
 #import "YMActiveAlertView.h"
 #import "YMMBProgressHUD.h"
-#import "YMBasePickerView.h"
+#import "YMUniversalSingleSelectionPickerView.h"
 
 #import "YMBaseTableViewCell.h"
 
@@ -26,6 +26,8 @@ YMBasePickerViewDelegate>
 @property (nonatomic, strong) NSArray *dataArr;
 /** 右侧按钮 */
 @property (nonatomic, strong) UIButton *rightBtn;
+/** 确定回调 */
+@property (nonatomic, strong) NSDictionary *resultDict;
 
 @end
 
@@ -163,7 +165,12 @@ YMBasePickerViewDelegate>
         case 10:
         {
             // pickView
-            YMBasePickerView *pickerView = [[YMBasePickerView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, MainScreenHeight) delegate:self title:@"日期" leftBtnTitle:@"完成" rightBtnTitle:@"确定"];
+            YMUniversalSingleSelectionPickerView *pickerView = [[YMUniversalSingleSelectionPickerView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, MainScreenHeight) delegate:self title:@"日期" leftBtnTitle:@"完成" rightBtnTitle:@"确定"];
+            self.resultDict = pickerView.resultDict;
+            __weak typeof(&*self) ws = self;
+            pickerView.resultBlock = ^(NSDictionary * _Nonnull dict) {
+                ws.resultDict = [[NSDictionary alloc] initWithDictionary:dict];
+            };
             [pickerView show];
         }
             break;
@@ -182,7 +189,9 @@ YMBasePickerViewDelegate>
             break;
         case 101:
         {
-            [YMBlackSmallAlert showAlertWithMessage:sender.titleLabel.text time:2.0f];
+            NSLog(@"self.resultDict-- == %@", self.resultDict);
+            NSString *title = self.resultDict[@"pickerViewTitle"];
+            [YMBlackSmallAlert showAlertWithMessage:title time:2.0f];
         }
             break;
         default:

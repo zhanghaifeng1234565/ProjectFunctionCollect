@@ -9,17 +9,12 @@
 #import "YMBasePickerView.h"
 #import "YMPickerToolBarView.h"
 
-/** 内容视图高度 */
-static CGFloat kContentViewHeight = 300;
-/** 工具栏高度 */
-static CGFloat kToolBarViewHeight = 48;
-
 @interface YMBasePickerView ()
 
 /** 透明视图 */
 @property (nonatomic, strong) UIControl *alphaView;
 /** 内容视图 */
-@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong, readwrite) UIView *contentView;
 /** 工具栏 */
 @property (nonatomic, strong) YMPickerToolBarView *toolBarView;
 

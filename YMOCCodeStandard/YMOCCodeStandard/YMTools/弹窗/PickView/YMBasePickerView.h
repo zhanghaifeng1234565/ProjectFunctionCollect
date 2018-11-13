@@ -10,10 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/** 内容视图高度 */
+static CGFloat kContentViewHeight = 300;
+/** 工具栏高度 */
+static CGFloat kToolBarViewHeight = 48;
+
 /** 协议方法 */
 @protocol YMBasePickerViewDelegate <NSObject>
 
 @optional;
+/** 按钮点击代理方法 */
 - (void)actionWithButton:(UIButton *)sender;
 
 @end
@@ -22,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 代理 */
 @property (nonatomic, weak) id<YMBasePickerViewDelegate> delegate;
+
+/** 内容视图 */
+@property (nonatomic, strong, readonly) UIView *contentView;
 
 /**
  析构函数
@@ -34,6 +43,18 @@ NS_ASSUME_NONNULL_BEGIN
  @return self
  */
 - (instancetype)initWithFrame:(CGRect)frame delegate:(id<YMBasePickerViewDelegate>)delegate title:(NSString *)title leftBtnTitle:(NSString *)leftBtnTitle rightBtnTitle:(NSString *)rightBtnTitle;
+
+/**
+ 加载视图
+ */
+- (void)loadSubviews;
+
+
+/**
+ 配置属性
+ */
+- (void)configProprty;
+
 
 /**
  显示
