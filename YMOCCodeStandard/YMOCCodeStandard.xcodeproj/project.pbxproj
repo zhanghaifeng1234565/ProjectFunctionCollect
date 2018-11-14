@@ -22,6 +22,7 @@
 		8126EB892150E811001647D6 /* UIScrollView+UITouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126EB7B2150E811001647D6 /* UIScrollView+UITouch.m */; };
 		8126EB8A2150E811001647D6 /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126EB802150E811001647D6 /* UIButton+touch.m */; };
 		8126EB8E2150E9AA001647D6 /* NSString+YMTimeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126EB8D2150E9AA001647D6 /* NSString+YMTimeDate.m */; };
+		81595ED3219C0D2100F91316 /* UIFont+YMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 81595ED2219C0D2100F91316 /* UIFont+YMCategory.m */; };
 		816054582194047900AF1E18 /* YMHighlightImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 816054572194047800AF1E18 /* YMHighlightImageView.m */; };
 		816216FB21900FA80001FC5E /* YMPictureViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 816216FA21900FA80001FC5E /* YMPictureViewer.m */; };
 		81621700219018320001FC5E /* YMPictureViewerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816216FE219018320001FC5E /* YMPictureViewerDemoViewController.m */; };
@@ -177,6 +178,8 @@
 		8126EB802150E811001647D6 /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
 		8126EB8C2150E9AA001647D6 /* NSString+YMTimeDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YMTimeDate.h"; sourceTree = "<group>"; };
 		8126EB8D2150E9AA001647D6 /* NSString+YMTimeDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMTimeDate.m"; sourceTree = "<group>"; };
+		81595ED1219C0D2100F91316 /* UIFont+YMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+YMCategory.h"; sourceTree = "<group>"; };
+		81595ED2219C0D2100F91316 /* UIFont+YMCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YMCategory.m"; sourceTree = "<group>"; };
 		816054562194047800AF1E18 /* YMHighlightImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMHighlightImageView.h; sourceTree = "<group>"; };
 		816054572194047800AF1E18 /* YMHighlightImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMHighlightImageView.m; sourceTree = "<group>"; };
 		816216F921900FA80001FC5E /* YMPictureViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPictureViewer.h; sourceTree = "<group>"; };
@@ -592,6 +595,15 @@
 				8126EB8D2150E9AA001647D6 /* NSString+YMTimeDate.m */,
 			);
 			path = "处理日期时间";
+			sourceTree = "<group>";
+		};
+		81595ED0219C0D0C00F91316 /* UIFont 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				81595ED1219C0D2100F91316 /* UIFont+YMCategory.h */,
+				81595ED2219C0D2100F91316 /* UIFont+YMCategory.m */,
+			);
+			path = "UIFont 分类";
 			sourceTree = "<group>";
 		};
 		816054552194046E00AF1E18 /* 图片高亮点击控件 */ = {
@@ -1084,6 +1096,7 @@
 		81BF56C02145F264004BC70A /* YMCategory */ = {
 			isa = PBXGroup;
 			children = (
+				81595ED0219C0D0C00F91316 /* UIFont 分类 */,
 				8126EB5B2150E811001647D6 /* NSString 分类 */,
 				8126EB7D2150E811001647D6 /* UIButton 分类 */,
 				8126EB5F2150E811001647D6 /* UIColor 分类 */,
@@ -1467,6 +1480,7 @@
 				8193D27C214A000E00EB225D /* NSObject+MJKeyValue.m in Sources */,
 				81937FF8214F370000EEA717 /* AFURLRequestSerialization.m in Sources */,
 				81E77EA421870D94007CE3FD /* YMOrganizationViewController.m in Sources */,
+				81595ED3219C0D2100F91316 /* UIFont+YMCategory.m in Sources */,
 				8126EB822150E811001647D6 /* UIColor+Hex.m in Sources */,
 				81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */,
 				81937FF9214F370000EEA717 /* AFNetworkReachabilityManager.m in Sources */,

@@ -97,28 +97,28 @@ static CGFloat kRowHeight = 48.0f;
     if (component == 0) {
         label.text = self.model.province[row].name;
         if (row == _firstComponentCurrentRow) {
-            label.font = [UIFont systemFontOfSize:17];
+            label.font = [UIFont selectFont];
             label.textColor = [UIColor colorWithHexString:@"03abff"];
         } else {
-            label.font = [UIFont systemFontOfSize:14];
+            label.font = [UIFont normalFont];
             label.textColor = [UIColor colorWithHexString:@"999999"];
         }
     } else if (component == 1) {
         label.text = self.model.province[_firstComponentCurrentRow].city[row].name;
         if (row == _secondComponentCurrentRow) {
-            label.font = [UIFont systemFontOfSize:17];
+            label.font = [UIFont selectFont];
             label.textColor = [UIColor colorWithHexString:@"03abff"];
         } else {
-            label.font = [UIFont systemFontOfSize:14];
+            label.font = [UIFont normalFont];
             label.textColor = [UIColor colorWithHexString:@"999999"];
         }
     } else {
         label.text = self.model.province[_firstComponentCurrentRow].city[_secondComponentCurrentRow].county[row].name;
         if (row == _thirdComponentCurrentRow) {
-            label.font = [UIFont systemFontOfSize:17];
+            label.font = [UIFont selectFont];
             label.textColor = [UIColor colorWithHexString:@"03abff"];
         } else {
-            label.font = [UIFont systemFontOfSize:14];
+            label.font = [UIFont normalFont];
             label.textColor = [UIColor colorWithHexString:@"999999"];
         }
     }
