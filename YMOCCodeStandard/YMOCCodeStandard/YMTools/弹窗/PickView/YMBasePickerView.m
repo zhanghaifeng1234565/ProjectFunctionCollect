@@ -138,7 +138,7 @@
         if ([ws.delegate respondsToSelector:@selector(actionWithButton:)]) {
             [ws.delegate actionWithButton:sender];
         }
-//        [ws hide];
+        [ws hide];
     };
 }
 
