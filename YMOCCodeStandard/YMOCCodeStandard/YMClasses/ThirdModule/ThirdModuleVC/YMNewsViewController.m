@@ -13,6 +13,7 @@
 #import "YMActiveAlertView.h"
 #import "YMMBProgressHUD.h"
 #import "YMUniversalSingleSelectionPickerView.h"
+#import "YMCountryPickerView.h"
 
 #import "YMBaseTableViewCell.h"
 
@@ -174,6 +175,18 @@ YMBasePickerViewDelegate>
             [pickerView show];
         }
             break;
+        case 11:
+        {
+            // pickView
+            YMCountryPickerView *pickerView = [[YMCountryPickerView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, MainScreenHeight) delegate:self title:@"地区选择" leftBtnTitle:@"取消" rightBtnTitle:@"确定"];
+            self.resultDict = pickerView.resultDict;
+            __weak typeof(&*self) ws = self;
+            pickerView.resultBlock = ^(NSDictionary * _Nonnull dict) {
+                ws.resultDict = [[NSDictionary alloc] initWithDictionary:dict];
+            };
+            [pickerView show];
+        }
+            break;
         default:
             break;
     }
@@ -235,7 +248,7 @@ YMBasePickerViewDelegate>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"系统富文本【中间】", @"系统富文本【底部】", @"自定义确定取消", @"自定义确定", @"webView 活动页", @"自定义黑色小弹窗", @"基于 HUD 黑色小弹窗", @"基于 HUD loading 有文字", @"基于 HUD loading 无文字", @"基于 HUD 系统菊花 loading", @"pickerView", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"系统富文本【中间】", @"系统富文本【底部】", @"自定义确定取消", @"自定义确定", @"webView 活动页", @"自定义黑色小弹窗", @"基于 HUD 黑色小弹窗", @"基于 HUD loading 有文字", @"基于 HUD loading 无文字", @"基于 HUD 系统菊花 loading", @"pickerView", @"省市区 pickerView", nil];
     }
     return _dataArr;
 }

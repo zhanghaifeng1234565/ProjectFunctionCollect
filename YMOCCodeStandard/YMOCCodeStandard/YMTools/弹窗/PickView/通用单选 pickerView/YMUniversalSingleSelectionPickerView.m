@@ -38,8 +38,6 @@
     
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
-    NSInteger index =  [self.pickerView selectedRowInComponent:0];
-    [self pickerView:self.pickerView didSelectRow:index inComponent:0];
 }
 
 #pragma mark - - 布局视图
@@ -110,6 +108,32 @@
     [self.pickerView reloadComponent:component];
 }
 
+#pragma mark - - 加载数据
+- (void)loadData {
+    [super loadData];
+    
+    NSArray *listArr = [[NSArray alloc] initWithObjects:@"中国", @"美国", @"英国", @"德国", @"法国", @"俄罗斯", nil];
+    NSMutableArray *dataM = [[NSMutableArray alloc] init];
+    for (int i = 0; i < listArr.count; i++) {
+        NSMutableDictionary *dictM = [[NSMutableDictionary alloc] init];
+        [dictM setValue:listArr[i] forKey:@"title"];
+        [dictM setValue:@(i + 1).description forKey:@"titleId"];
+        [dictM setValue:@"0" forKey:@"select"];
+        [dataM addObject:dictM];
+    }
+    
+    NSDictionary *result = @{@"status" : @"1", @"time" : @"2018-11-13", @"list" : dataM, @"msg" : @"获取成功"};
+    
+    YMUniversalSingleSelectModel *model = [YMUniversalSingleSelectModel mj_objectWithKeyValues:result];
+    for (int i = 0; i < model.list.count; i++) {
+        [self.dataMarr addObject:model.list[i]];
+    }
+    
+    [self.pickerView reloadAllComponents];
+    NSInteger index =  [self.pickerView selectedRowInComponent:0];
+    [self pickerView:self.pickerView didSelectRow:index inComponent:0];
+}
+
 #pragma mark - - lazyLoadUI
 - (UIPickerView *)pickerView {
     if (_pickerView == nil) {
@@ -122,23 +146,6 @@
 - (NSMutableArray *)dataMarr {
     if (_dataMarr == nil) {
         _dataMarr = [[NSMutableArray alloc] init];
-        
-        NSArray *listArr = [[NSArray alloc] initWithObjects:@"中国", @"美国", @"英国", @"德国", @"法国", @"俄罗斯", nil];
-        NSMutableArray *dataM = [[NSMutableArray alloc] init];
-        for (int i = 0; i < listArr.count; i++) {
-            NSMutableDictionary *dictM = [[NSMutableDictionary alloc] init];
-            [dictM setValue:listArr[i] forKey:@"title"];
-            [dictM setValue:@(i + 1).description forKey:@"titleId"];
-            [dictM setValue:@"0" forKey:@"select"];
-            [dataM addObject:dictM];
-        }
-        
-        NSDictionary *result = @{@"status" : @"1", @"time" : @"2018-11-13", @"list" : dataM, @"msg" : @"获取成功"};
-        
-        YMUniversalSingleSelectModel *model = [YMUniversalSingleSelectModel mj_objectWithKeyValues:result];
-        for (int i = 0; i < model.list.count; i++) {
-            [_dataMarr addObject:model.list[i]];
-        }
     }
     return _dataMarr;
 }

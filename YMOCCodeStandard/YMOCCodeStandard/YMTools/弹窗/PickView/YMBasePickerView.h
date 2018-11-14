@@ -57,6 +57,12 @@ static CGFloat kToolBarViewHeight = 48;
 
 
 /**
+ 加载数据
+ */
+- (void)loadData;
+
+
+/**
  显示
  */
 - (void)show;

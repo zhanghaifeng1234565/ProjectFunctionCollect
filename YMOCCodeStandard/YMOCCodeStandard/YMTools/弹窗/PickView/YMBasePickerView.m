@@ -40,6 +40,8 @@
         [self layoutIfNeeded];
         // MARK: 按钮点击调用
         [self buttonClickMethod];
+        // MARK: 加载数据
+        [self loadData];
     }
     return self;
 }
@@ -58,6 +60,8 @@
         [self layoutIfNeeded];
         // MARK: 按钮点击调用
         [self buttonClickMethod];
+        // MARK: 加载数据
+        [self loadData];
         
         self.delegate = delegate;
     }
@@ -134,8 +138,13 @@
         if ([ws.delegate respondsToSelector:@selector(actionWithButton:)]) {
             [ws.delegate actionWithButton:sender];
         }
-        [ws hide];
+//        [ws hide];
     };
+}
+
+#pragma mark - - 加载数据
+- (void)loadData {
+    
 }
 
 #pragma mark - - 显示

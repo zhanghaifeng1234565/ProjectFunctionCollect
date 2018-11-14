@@ -30,6 +30,9 @@
 		81621706219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81621704219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib */; };
 		8162171621903E170001FC5E /* YMPictureTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162171521903E170001FC5E /* YMPictureTestView.m */; };
 		8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8178E933214B443900D16102 /* YMTouchMoveView.m */; };
+		817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61D6219BC85700DE3B52 /* YMCountryModel.m */; };
+		817A61DA219BCC4900DE3B52 /* YMCountryPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61D9219BCC4900DE3B52 /* YMCountryPickerView.m */; };
+		817A61DD219BCEEF00DE3B52 /* YMCountryDataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61DC219BCEEF00DE3B52 /* YMCountryDataTools.m */; };
 		81937FF5214F370000EEA717 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 81937FEC214F370000EEA717 /* AFURLResponseSerialization.m */; };
 		81937FF6214F370000EEA717 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81937FED214F370000EEA717 /* AFHTTPSessionManager.m */; };
 		81937FF7214F370000EEA717 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81937FEF214F370000EEA717 /* AFURLSessionManager.m */; };
@@ -95,7 +98,7 @@
 		81CA7892218844A8005EFA1A /* YMOrganizationSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CA7891218844A8005EFA1A /* YMOrganizationSearchModel.m */; };
 		81DAA58D219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */; };
 		81DAA594219A70AD00705A1A /* YMUniversalSingleSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */; };
-		81DAA599219AA15400705A1A /* CityProperty List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81DAA598219AA15400705A1A /* CityProperty List.plist */; };
+		81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81DAA598219AA15400705A1A /* CityPropertyList.plist */; };
 		81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */; };
 		81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A07217EAC6E00DC9A4A /* YMSureCancelAlert.m */; };
 		81E41A10217EECD100DC9A4A /* YMActiveAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A0F217EECD100DC9A4A /* YMActiveAlertView.m */; };
@@ -188,6 +191,12 @@
 		8162171521903E170001FC5E /* YMPictureTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPictureTestView.m; sourceTree = "<group>"; };
 		8178E932214B443900D16102 /* YMTouchMoveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMTouchMoveView.h; sourceTree = "<group>"; };
 		8178E933214B443900D16102 /* YMTouchMoveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMTouchMoveView.m; sourceTree = "<group>"; };
+		817A61D5219BC85700DE3B52 /* YMCountryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCountryModel.h; sourceTree = "<group>"; };
+		817A61D6219BC85700DE3B52 /* YMCountryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCountryModel.m; sourceTree = "<group>"; };
+		817A61D8219BCC4900DE3B52 /* YMCountryPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCountryPickerView.h; sourceTree = "<group>"; };
+		817A61D9219BCC4900DE3B52 /* YMCountryPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCountryPickerView.m; sourceTree = "<group>"; };
+		817A61DB219BCEEF00DE3B52 /* YMCountryDataTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCountryDataTools.h; sourceTree = "<group>"; };
+		817A61DC219BCEEF00DE3B52 /* YMCountryDataTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCountryDataTools.m; sourceTree = "<group>"; };
 		81937FE8214F370000EEA717 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		81937FE9214F370000EEA717 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		81937FEA214F370000EEA717 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -318,7 +327,7 @@
 		81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUniversalSingleSelectionPickerView.m; sourceTree = "<group>"; };
 		81DAA592219A70AD00705A1A /* YMUniversalSingleSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUniversalSingleSelectModel.h; sourceTree = "<group>"; };
 		81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUniversalSingleSelectModel.m; sourceTree = "<group>"; };
-		81DAA598219AA15400705A1A /* CityProperty List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CityProperty List.plist"; sourceTree = "<group>"; };
+		81DAA598219AA15400705A1A /* CityPropertyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CityPropertyList.plist; sourceTree = "<group>"; };
 		81E41A02217EAA1600DC9A4A /* YMBlackSmallAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBlackSmallAlert.h; sourceTree = "<group>"; };
 		81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBlackSmallAlert.m; sourceTree = "<group>"; };
 		81E41A06217EAC6E00DC9A4A /* YMSureCancelAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSureCancelAlert.h; sourceTree = "<group>"; };
@@ -1110,7 +1119,13 @@
 		81DAA595219A9FD100705A1A /* 省市区 */ = {
 			isa = PBXGroup;
 			children = (
-				81DAA598219AA15400705A1A /* CityProperty List.plist */,
+				81DAA598219AA15400705A1A /* CityPropertyList.plist */,
+				817A61D5219BC85700DE3B52 /* YMCountryModel.h */,
+				817A61D6219BC85700DE3B52 /* YMCountryModel.m */,
+				817A61D8219BCC4900DE3B52 /* YMCountryPickerView.h */,
+				817A61D9219BCC4900DE3B52 /* YMCountryPickerView.m */,
+				817A61DB219BCEEF00DE3B52 /* YMCountryDataTools.h */,
+				817A61DC219BCEEF00DE3B52 /* YMCountryDataTools.m */,
 			);
 			path = "省市区";
 			sourceTree = "<group>";
@@ -1379,7 +1394,7 @@
 				81EEC0C4219177610087EA72 /* 4.jpg in Resources */,
 				81EEC0C6219177610087EA72 /* 6.jpg in Resources */,
 				8193D25F2149FF7300EB225D /* YMNewsViewController.xib in Resources */,
-				81DAA599219AA15400705A1A /* CityProperty List.plist in Resources */,
+				81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */,
 				81BF54FF2145ED1F004BC70A /* Assets.xcassets in Resources */,
 				81BF55002145ED1F004BC70A /* LaunchScreen.storyboard in Resources */,
 				81A593CB21998DFB0009669C /* timg.gif in Resources */,
@@ -1442,6 +1457,7 @@
 				8193D285214A000E00EB225D /* MJFoundation.m in Sources */,
 				81E77EAD21870DD8007CE3FD /* YMOrganizationModel.m in Sources */,
 				81CA788721882EC6005EFA1A /* YMUISearchBar.m in Sources */,
+				817A61DD219BCEEF00DE3B52 /* YMCountryDataTools.m in Sources */,
 				8193D2BD214A008800EB225D /* MASViewAttribute.m in Sources */,
 				8193D2C8214A013F00EB225D /* YMUITextField.m in Sources */,
 				816216FB21900FA80001FC5E /* YMPictureViewer.m in Sources */,
@@ -1468,6 +1484,7 @@
 				81E41A1A217F051A00DC9A4A /* YMWeakScriptMessageDelegate.m in Sources */,
 				8162171621903E170001FC5E /* YMPictureTestView.m in Sources */,
 				8193D2B8214A008800EB225D /* MASLayoutConstraint.m in Sources */,
+				817A61DA219BCC4900DE3B52 /* YMCountryPickerView.m in Sources */,
 				81012952214F87A000725BAF /* YMLoadingViewNetworkUtils.m in Sources */,
 				816054582194047900AF1E18 /* YMHighlightImageView.m in Sources */,
 				81E41A22217F0E0D00DC9A4A /* YMMBProgressHUD.m in Sources */,
@@ -1508,6 +1525,7 @@
 				8193D27E214A000E00EB225D /* NSObject+MJCoding.m in Sources */,
 				81937FF6214F370000EEA717 /* AFHTTPSessionManager.m in Sources */,
 				81E77EAE21870DD8007CE3FD /* YMOrganizationTableViewCell.m in Sources */,
+				817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */,
 				81CA7892218844A8005EFA1A /* YMOrganizationSearchModel.m in Sources */,
 				8193D27F214A000E00EB225D /* MJExtensionConst.m in Sources */,
 				8193D282214A000E00EB225D /* NSString+MJExtension.m in Sources */,
