@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@class YMAreaModel;
+@class YMTownshipModel;
 /** 区 */
 @interface YMCountyModel : NSObject
 
@@ -64,14 +64,14 @@ NS_ASSUME_NONNULL_BEGIN
 /** id */
 @property (nonatomic, copy) NSString *nameId;
 /** 乡镇 */
-@property (nonatomic, copy) NSArray <YMAreaModel *> *Area;
+@property (nonatomic, copy) NSArray <YMTownshipModel *> *township;
 
 @end
 
 
 @class YMVillageModel;
 /** 乡镇 */
-@interface YMAreaModel : NSObject
+@interface YMTownshipModel : NSObject
 
 /** 名字 */
 @property (nonatomic, copy) NSString *name;

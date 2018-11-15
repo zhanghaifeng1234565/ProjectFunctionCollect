@@ -34,13 +34,13 @@
 /** 区 */
 @implementation YMCountyModel
 + (NSDictionary *)mj_objectClassInArray {
-    return @{@"Area" : @"YMAreaModel"};
+    return @{@"township" : @"YMTownshipModel"};
 }
 @end
 
 
 /** 乡镇 */
-@implementation YMAreaModel
+@implementation YMTownshipModel
 + (NSDictionary *)mj_objectClassInArray {
     return @{@"village" : @"YMVillageModel"};
 }
