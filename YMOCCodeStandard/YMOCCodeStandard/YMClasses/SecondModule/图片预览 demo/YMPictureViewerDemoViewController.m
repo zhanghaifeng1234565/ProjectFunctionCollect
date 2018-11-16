@@ -37,12 +37,6 @@
     
     // MARK: 初始化导航
     [self initNavData];
-    
-    // MARK: 加载视图
-    [self loadSubviews];
-    
-    // MARK: 初始化数据
-    [self initData];
 }
 
 #pragma mark - - 初始化导航
@@ -52,6 +46,8 @@
 
 #pragma mark - - 加载视图
 - (void)loadSubviews {
+    [super loadSubviews];
+    
     if ([self.isCollectionView isEqualToString:@"1"]) {
         [self.view addSubview:self.testView];
     } else {
@@ -122,7 +118,9 @@
 }
 
 #pragma mark -- 初始化数据
-- (void)initData {
+- (void)loadData {
+    [super loadData];
+    
     [self.dataMArr removeAllObjects];
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{

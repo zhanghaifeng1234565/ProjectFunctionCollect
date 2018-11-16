@@ -8,6 +8,20 @@
 
 /**
  
+ // 一定要将图片转成 二进制 否则不能保存图片
+ 
+ 普通 PNG 图
+ self.QRImageView.image.ym_imageData = UIImagePNGRepresentation(self.QRImageView.image);
+ 
+ gif 图
+ dispatch_async(dispatch_get_global_queue(0, 0), ^{
+ NSURL *imageUrl = [NSURL URLWithString:self.dataMArr[indexPath.item]];
+ dispatch_async(dispatch_get_main_queue(), ^{
+ cell.imageV.image  = [YYImage yy_imageWithSmallGIFData:[NSData dataWithContentsOfURL:imageUrl] scale:0.5f];
+ cell.imageV.image.ym_imageData = [NSData dataWithContentsOfURL:imageUrl];
+ });
+ });
+ 
  YMPictureViewer *browserView = [[YMPictureViewer alloc] init];
  browserView.originalViews = imageMArr;
  browserView.currentIndex = indexPath.item;

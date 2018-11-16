@@ -30,6 +30,7 @@
 #import "UIView+YMParentController.h"
 #import "NSString+YMImage.h"
 #import "UIFont+YMCategory.h"
+#import "UIImage+YMHDQRcode.h"
 
 #import "AFNetworking.h"
 #import "Masonry.h"

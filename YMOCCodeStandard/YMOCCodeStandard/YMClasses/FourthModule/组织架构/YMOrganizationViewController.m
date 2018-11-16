@@ -247,10 +247,6 @@ static NSString *kYMOrganizationSectionHeaderViewId = @"YMOrganizationSectionHea
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // MARK: 加载视图
-    [self loadSubviews];
-    // MARK: 获取数据
-    [self initData];
 }
 
 #pragma mark -- 导航
@@ -269,6 +265,7 @@ static NSString *kYMOrganizationSectionHeaderViewId = @"YMOrganizationSectionHea
 
 #pragma mark - - 添加视图
 - (void)loadSubviews {
+    [super loadSubviews];
     
     [self.view addSubview:self.searchBar];
     [self.view addSubview:self.tableView];
@@ -332,7 +329,9 @@ static NSString *kYMOrganizationSectionHeaderViewId = @"YMOrganizationSectionHea
 }
 
 #pragma mark - - 请求数据
-- (void)initData {
+- (void)loadData {
+    [super loadData];
+    
     WS(ws);
     [YMOrganizationViewModel obtainOrganizationDataOnTheView:self.view success:^(id  _Nonnull result) {
         // MARK: 得到的数据结果转成模型

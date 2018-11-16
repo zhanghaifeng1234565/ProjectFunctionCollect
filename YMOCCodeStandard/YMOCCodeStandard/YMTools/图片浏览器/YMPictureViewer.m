@@ -233,6 +233,7 @@
     if (imageV.image != nil) {
         [YMMBProgressHUD ymShowCustomLoadingAlert:self text:@"保存中..."];
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        NSLog(@"imageV.image.ym_imageData == %@ --- %@", imageV.image.ym_imageData, imageV.image);
         [library writeImageDataToSavedPhotosAlbum:imageV.image.ym_imageData metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
             [YMMBProgressHUD ymHideLoadingAlert:self];
             if(error != nil) {
