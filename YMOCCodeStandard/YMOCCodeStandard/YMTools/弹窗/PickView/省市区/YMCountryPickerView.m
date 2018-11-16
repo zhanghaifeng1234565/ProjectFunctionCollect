@@ -133,13 +133,27 @@ static CGFloat kRowHeight = 48.0f;
         _firstComponentCurrentRow = row;
         _secondComponentCurrentRow = 0;
         _thirdComponentCurrentRow = 0;
+        
+        [self.pickerView reloadAllComponents];
+        [self.pickerView selectRow:_firstComponentCurrentRow inComponent:0 animated:YES];
+        [self.pickerView selectRow:_secondComponentCurrentRow inComponent:1 animated:YES];
+        [self.pickerView selectRow:_thirdComponentCurrentRow inComponent:2 animated:YES];
     } else if (component == 1) {
         _secondComponentCurrentRow = row;
         _thirdComponentCurrentRow = 0;
+        
+        [self.pickerView reloadComponent:1];
+        [self.pickerView reloadComponent:2];
+        [self.pickerView selectRow:_secondComponentCurrentRow inComponent:1 animated:YES];
+        [self.pickerView selectRow:_thirdComponentCurrentRow inComponent:2 animated:YES];
     } else {
         _thirdComponentCurrentRow = row;
+        
+        [self.pickerView reloadComponent:2];
+        [self.pickerView selectRow:_thirdComponentCurrentRow inComponent:2 animated:YES];
     }
     
+    // 回传值
     NSString *title = [NSString stringWithFormat:@"%@-%@-%@", self.model.province[_firstComponentCurrentRow].name, self.model.province[_firstComponentCurrentRow].city[_secondComponentCurrentRow].name, self.model.province[_firstComponentCurrentRow].city[_secondComponentCurrentRow].county[_thirdComponentCurrentRow].name];
     NSString *titleId = [NSString stringWithFormat:@"%@-%@-%@", self.model.province[_firstComponentCurrentRow].nameId, self.model.province[_firstComponentCurrentRow].city[_secondComponentCurrentRow].nameId, self.model.province[_firstComponentCurrentRow].city[_secondComponentCurrentRow].county[_thirdComponentCurrentRow].nameId];
     NSDictionary *resultD = @{@"pickerViewTitle" : title, @"pickerViewTitleId" : titleId};
@@ -148,20 +162,6 @@ static CGFloat kRowHeight = 48.0f;
         self.resultBlock(resultD);
     } else {
         self.resultDict = [[NSDictionary alloc] initWithDictionary:resultD];
-    }
-    
-    if (component == 0) {
-        [self.pickerView reloadAllComponents];
-        [self.pickerView selectRow:_firstComponentCurrentRow inComponent:0 animated:YES];
-        [self.pickerView selectRow:_secondComponentCurrentRow inComponent:1 animated:YES];
-        [self.pickerView selectRow:_thirdComponentCurrentRow inComponent:2 animated:YES];
-    } else if (component == 1) {
-        [self.pickerView reloadComponent:1];
-        [self.pickerView reloadComponent:2];
-        [self.pickerView selectRow:_secondComponentCurrentRow inComponent:1 animated:YES];
-    } else {
-        [self.pickerView reloadComponent:3];
-        [self.pickerView selectRow:_thirdComponentCurrentRow inComponent:2 animated:YES];
     }
 }
 
