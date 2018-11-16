@@ -150,10 +150,19 @@ static CGFloat kRowHeight = 48.0f;
         self.resultDict = [[NSDictionary alloc] initWithDictionary:resultD];
     }
     
-    [self.pickerView reloadAllComponents];
-    [self.pickerView selectRow:_firstComponentCurrentRow inComponent:0 animated:YES];
-    [self.pickerView selectRow:_secondComponentCurrentRow inComponent:1 animated:YES];
-    [self.pickerView selectRow:_thirdComponentCurrentRow inComponent:2 animated:YES];
+    if (component == 0) {
+        [self.pickerView reloadAllComponents];
+        [self.pickerView selectRow:_firstComponentCurrentRow inComponent:0 animated:YES];
+        [self.pickerView selectRow:_secondComponentCurrentRow inComponent:1 animated:YES];
+        [self.pickerView selectRow:_thirdComponentCurrentRow inComponent:2 animated:YES];
+    } else if (component == 1) {
+        [self.pickerView reloadComponent:1];
+        [self.pickerView reloadComponent:2];
+        [self.pickerView selectRow:_secondComponentCurrentRow inComponent:1 animated:YES];
+    } else {
+        [self.pickerView reloadComponent:3];
+        [self.pickerView selectRow:_thirdComponentCurrentRow inComponent:2 animated:YES];
+    }
 }
 
 #pragma mark - - 加载数据
