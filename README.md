@@ -10,7 +10,7 @@ ProjectFunctionCollect 将一些平时的常用功能整合起来现在包含有
 
 ## 效果图
 ### 整体
-![image](https://github.com/zhanghaifeng1234565/ProjectFunctionCollect/raw/master/lAHPDgQ9qVDcClbM8M0BaA_360_240c.gif)
+![image](https://github.com/zhanghaifeng1234565/ProjectFunctionCollect/raw/master/整体.gif)
 
 ### 弹窗
 ![image](https://github.com/zhanghaifeng1234565/ProjectFunctionCollect/raw/master/弹窗.gif)
