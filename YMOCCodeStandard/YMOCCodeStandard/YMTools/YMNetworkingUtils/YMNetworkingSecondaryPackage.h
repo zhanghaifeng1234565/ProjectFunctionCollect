@@ -47,7 +47,7 @@ typedef void(^YMNetworkingSecondaryPackageFailureBlcok)(NSError *error);
  @param dictMData 请求参数 不加密
  @param paramData 请求参数加密
  @param imageArr 图片数组
- @param imageKey 图片上传 key 如果为空 默认 thumb 上传头像传入 avatar
+ @param imageKey 图片上传 key 如果为空 默认 thumb 上传头像传入 avatar【上传之前把图片转成 NSData】
  @param success 成功回调
  @param failure 失败回调
  */
@@ -66,7 +66,7 @@ typedef void(^YMNetworkingSecondaryPackageFailureBlcok)(NSError *error);
  @param suffixUrl 请求 url 后缀
  @param dictMData 请求参数 不加密
  @param paramData 请求参数加密
- @param imageDict 图片字典
+ @param imageDict 图片字典 【上传之前把图片转成 NSData】
  @param success 成功回调
  @param failure 失败回调
  */

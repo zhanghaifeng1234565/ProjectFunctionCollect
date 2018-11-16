@@ -160,7 +160,7 @@ static const CGFloat kNetworkingRequestTimeOutPeriod = 20;
         if (imageDict.count>0) {
             for (NSString *keys in imageDict) {
                 // 上传文件
-                [formData appendPartWithFileData:[imageDict objectForKey:keys] name:keys fileName:[NSString stringWithFormat:@"%@.jpg",keys] mimeType:@"image/jpg"];
+                [formData appendPartWithFileData:[imageDict objectForKey:keys] name:keys fileName:[NSString stringWithFormat:@"%@.jpg", keys] mimeType:@"image/jpg"];
             }
         }
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
