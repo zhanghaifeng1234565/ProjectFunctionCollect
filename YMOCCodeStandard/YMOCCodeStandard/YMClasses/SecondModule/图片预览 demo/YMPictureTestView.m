@@ -52,7 +52,7 @@
                     });
                 });
             }
-        } else{
+        } else {
             if ([type isEqualToString:@"1"]) {
                 imageView.image = [UIImage imageNamed:@"1.jpg"];
                 imageView.image.ym_imageData = UIImagePNGRepresentation(imageView.image);

@@ -11,11 +11,13 @@
 
 
 @interface YMMineViewController ()
+<UITableViewDelegate,
+UITableViewDataSource>
 
-/** 组织架构多选 */
-@property (nonatomic, strong) UIButton *organizationBtn;
-/** 组织架构单选 */
-@property (nonatomic, strong) UIButton *organizationSingleBtn;
+/** 列表 */
+@property (nonatomic, strong) UITableView *tableView;
+/** 数据 */
+@property (nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -25,62 +27,99 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view addSubview:self.organizationBtn];
-    [self.view addSubview:self.organizationSingleBtn];
+    // 加载导航数据
+    [self loadNavUIData];
+    // 加载视图
+    [self loadSubviews];
 }
 
-#pragma mark -- 组织架构多选按钮点击调用
-- (void)organizationBtnClick {
-    // 获取外界传来的员工状态数组
-    NSMutableArray *staffMArr = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 15; i++) {
-        NSMutableDictionary *staffMDict = [[NSMutableDictionary alloc] init];
-        [staffMDict setObject:[NSString stringWithFormat:@"张%d", i + 1] forKey:@"name"];
-        [staffMDict setObject:[NSString stringWithFormat:@"%d", i + 1] forKey:@"nameId"];
-        [staffMDict setObject:[NSString stringWithFormat:@"%d", arc4random_uniform(3)] forKey:@"isSelect"];
-        [staffMDict setObject:@"0" forKey:@"isShow"];
-        [staffMArr addObject:staffMDict];
+#pragma mark -- 加载导航数据
+- (void)loadNavUIData {
+    
+}
+
+#pragma mark -- 加载视图
+- (void)loadSubviews {
+    [self.view addSubview:self.tableView];
+}
+
+#pragma mark -- tableViewDelegate --- dataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    YMBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELLID"];
+    if (cell == nil) {
+        cell = [[YMBaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELLID"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    YMOrganizationViewController *vc = [[YMOrganizationViewController alloc] init];
-    vc.singleSelect = NO;
-    vc.staffMArr = [[NSMutableArray alloc] initWithArray:staffMArr];
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    cell.textLabel.text = self.dataArr[indexPath.row];
+    return cell;
 }
 
-#pragma mark -- 组织架构单选按钮点击调用
-- (void)organizationSingleBtnClick {
-    YMOrganizationViewController *vc = [[YMOrganizationViewController alloc] init];
-    vc.singleSelect = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0:
+        {
+            // 获取外界传来的员工状态数组
+            NSMutableArray *staffMArr = [[NSMutableArray alloc] init];
+            for (int i = 0; i < 15; i++) {
+                NSMutableDictionary *staffMDict = [[NSMutableDictionary alloc] init];
+                [staffMDict setObject:[NSString stringWithFormat:@"张%d", i + 1] forKey:@"name"];
+                [staffMDict setObject:[NSString stringWithFormat:@"%d", i + 1] forKey:@"nameId"];
+                [staffMDict setObject:[NSString stringWithFormat:@"%d", arc4random_uniform(3)] forKey:@"isSelect"];
+                [staffMDict setObject:@"0" forKey:@"isShow"];
+                [staffMArr addObject:staffMDict];
+            }
+            YMOrganizationViewController *vc = [[YMOrganizationViewController alloc] init];
+            vc.singleSelect = NO;
+            vc.staffMArr = [[NSMutableArray alloc] initWithArray:staffMArr];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:
+        {
+            YMOrganizationViewController *vc = [[YMOrganizationViewController alloc] init];
+            vc.singleSelect = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark -- lazyLoadUI
-- (UIButton *)organizationBtn {
-    if (_organizationBtn == nil) {
-        _organizationBtn = [[UIButton alloc] initWithFrame:CGRectMake((MainScreenWidth - 200) / 2, 200, 200, 40)];
-        [_organizationBtn setTitle:@"组织架构【多选】" forState:UIControlStateNormal];
-        [_organizationBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_organizationBtn setBackgroundColor:[UIColor magentaColor]];
-        _organizationBtn.titleLabel.font = [UIFont systemFontOfSize:17];
-        _organizationBtn.layer.masksToBounds = YES;
-        _organizationBtn.layer.cornerRadius = 3.0f;
-        [_organizationBtn addTarget:self action:@selector(organizationBtnClick) forControlEvents:UIControlEventTouchUpInside];
+- (UITableView *)tableView {
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, YMSCROLLVIEW_TOP_MARGIN, MainScreenWidth, MainScreenHeight - NavBarHeight - TabBarHeight) style:UITableViewStylePlain];
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever; //UIScrollView也适用
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.rowHeight = 55;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
-    return _organizationBtn;
+    return _tableView;
 }
 
-- (UIButton *)organizationSingleBtn {
-    if (_organizationSingleBtn == nil) {
-        _organizationSingleBtn = [[UIButton alloc] initWithFrame:CGRectMake((MainScreenWidth - 200) / 2, self.organizationBtn.bottom + 30, 200, 40)];
-        [_organizationSingleBtn setTitle:@"组织架构【单选】" forState:UIControlStateNormal];
-        [_organizationSingleBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_organizationSingleBtn setBackgroundColor:[UIColor magentaColor]];
-        _organizationSingleBtn.titleLabel.font = [UIFont systemFontOfSize:17];
-        _organizationSingleBtn.layer.masksToBounds = YES;
-        _organizationSingleBtn.layer.cornerRadius = 3.0f;
-        [_organizationSingleBtn addTarget:self action:@selector(organizationSingleBtnClick) forControlEvents:UIControlEventTouchUpInside];
+#pragma mark -- getter
+- (NSArray *)dataArr {
+    if (_dataArr == nil) {
+        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", nil];
     }
-    return _organizationSingleBtn;
+    return _dataArr;
 }
+
 
 @end

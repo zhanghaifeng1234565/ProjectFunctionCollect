@@ -645,6 +645,8 @@
     // MARK: 金额
     self.moneyLabel.text = [NSString formatDecimalNumber:[NSString stringWithFormat:@"%lu", (long)arc4random_uniform(1000000000)]];
     
+    self.moneyLabel.text = [self.moneyLabel.text stringByAppendingString:[NSString stringWithFormat:@" - %@", [self.moneyLabel.text stringByReplacingOccurrencesOfString:@"," withString:@""]]];
+    
     // MARK: 打印网络请求后部分数据
     NSLog(@"active_url == %@", self.model.active_url);
     NSLog(@"active_introduce == %@", self.model.active_introduce);
