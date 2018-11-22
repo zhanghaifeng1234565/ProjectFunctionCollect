@@ -5,5 +5,9 @@ target 'YMOCCodeStandard' do
 pod 'MLeaksFinder'
 pod 'SDWebImage'
 pod 'YYWebImage'
+pod 'MJRefresh'
+pod 'YYModel'
+pod 'WechatOpenSDK'
+pod 'lottie-ios'
 
 end

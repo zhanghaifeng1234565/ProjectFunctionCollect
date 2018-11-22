@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "YMUITabBarController.h"
+#import <WXApi.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -20,6 +21,8 @@
     
     // MARK: 加载 windows
     [self loadWindows];
+    // MARK: 向微信注册
+    [WXApi registerApp:@"wx14fa72d3ae5fb6ce" enableMTA:YES];
     
     return YES;
 }
@@ -33,6 +36,57 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }
+
+#pragma mark - - iOS9 之后使用的方法
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+    
+    if ([url.scheme isEqualToString:@"wx2355549c49f5cf73"]) {
+        return  [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)self];
+    }
+    return YES;
+}
+
+#pragma mark - - iOS9 之前使用的方法
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if ([url.scheme isEqualToString:@"wx2355549c49f5cf73"]) {
+        return  [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)self];
+    }
+    return YES;
+}
+
+#pragma mark - - iOS9 之前使用的方法
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    if ([url.scheme isEqualToString:@"wx2355549c49f5cf73"]) {
+        return  [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)self];
+    }
+    return YES;
+}
+
+#pragma mark - - 微信支付回调
+- (void)onResp:(BaseResp *)resp {
+    if([resp isKindOfClass:[PayResp class]]) {
+        switch (resp.errCode) {
+            case WXSuccess:
+            {
+                NSNotification *notification = [NSNotification notificationWithName:@"ORDER_PAY_NOTIFICATION" object:@"success"];
+                [[NSNotificationCenter defaultCenter] postNotification:notification];
+            }
+                break;
+                
+            default:
+            {
+                NSNotification *notification = [NSNotification notificationWithName:@"ORDER_PAY_NOTIFICATION"object:@"fail"];
+                [[NSNotificationCenter defaultCenter] postNotification:notification];
+            }
+                break;
+        }
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

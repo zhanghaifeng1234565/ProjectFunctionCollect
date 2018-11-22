@@ -16,9 +16,12 @@
 UITableViewDataSource>
 
 /** 列表 */
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) YMBaseTableView *tableView;
 /** 数据 */
 @property (nonatomic, strong) NSArray *dataArr;
+
+/** gif */
+@property (nonatomic, strong) YMGifImageView *gifImageV;
 
 @end
 
@@ -36,7 +39,9 @@ UITableViewDataSource>
 
 #pragma mark -- 加载导航数据
 - (void)loadNavUIData {
-    
+    self.gifImageV.frame = CGRectMake(0, 0, 146, 65);
+    self.navigationItem.titleView = self.gifImageV;
+    [self.gifImageV setAnimationFileName:@"OARefreshHeader"];
 }
 
 #pragma mark -- 加载视图
@@ -50,7 +55,7 @@ UITableViewDataSource>
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArr.count;
+    return self.tableView.dataMarr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,7 +65,7 @@ UITableViewDataSource>
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.textLabel.text = self.dataArr[indexPath.row];
+    cell.textLabel.text = self.tableView.dataMarr[indexPath.row];
     return cell;
 }
 
@@ -114,19 +119,40 @@ UITableViewDataSource>
     }
 }
 
+#pragma mark - - 请求数据
+- (void)initData {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [YMMBProgressHUD ymHideLoadingAlert:self.view];
+        [self.tableView.dataMarr removeAllObjects];
+        for (int i = 0; i < self.dataArr.count; i++) {
+            [self.tableView.dataMarr addObject:self.dataArr[i]];
+        }
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+    });
+}
+
 #pragma mark -- lazyLoadUI
-- (UITableView *)tableView {
+- (YMBaseTableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, YMSCROLLVIEW_TOP_MARGIN, MainScreenWidth, MainScreenHeight - NavBarHeight - TabBarHeight) style:UITableViewStylePlain];
+        _tableView = [[YMBaseTableView alloc] initWithFrame:CGRectMake(0, YMSCROLLVIEW_TOP_MARGIN, MainScreenWidth, MainScreenHeight - NavBarHeight - TabBarHeight) style:UITableViewStylePlain];
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever; //UIScrollView也适用
         } else {
             self.automaticallyAdjustsScrollViewInsets = NO;
         }
+        _tableView.emptyDataStyle = YMBaseTableViewEmptyDataStyleXXX;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = 55;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.mj_header = [YMRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(initData)];
+        
+        WS(ws);
+        _tableView.noDataBtnBlock = ^(UIButton * _Nonnull sender) {
+            [YMMBProgressHUD ymShowLoadingAlert:ws.view];
+            [ws initData];
+        };
     }
     return _tableView;
 }
@@ -138,4 +164,12 @@ UITableViewDataSource>
     }
     return _dataArr;
 }
+
+- (YMGifImageView *)gifImageV {
+    if (_gifImageV == nil) {
+        _gifImageV = [[YMGifImageView alloc] initWithFrame:CGRectZero];
+    }
+    return _gifImageV;
+}
+
 @end

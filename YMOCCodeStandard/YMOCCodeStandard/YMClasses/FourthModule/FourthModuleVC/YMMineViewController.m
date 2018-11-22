@@ -8,7 +8,7 @@
 
 #import "YMMineViewController.h"
 #import "YMOrganizationViewController.h"
-
+#import "YMWXPayTool.h"
 
 @interface YMMineViewController ()
 <UITableViewDelegate,
@@ -22,6 +22,30 @@ UITableViewDataSource>
 @end
 
 @implementation YMMineViewController
+
+#pragma mark - - dealloc
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"%s -- %@", __func__, [self class]);
+}
+
+#pragma mark - - init
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        // MARK: 监听微信支付结果通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getOrderPayResult:) name:@"ORDER_PAY_NOTIFICATION" object:nil];
+    }
+    return self;
+}
+
+#pragma mark - - 微信支付结果处理
+- (void)getOrderPayResult:(NSNotification *)notification {
+    if ([notification.object isEqualToString:@"success"]) {
+        NSLog(@"支付成功");
+    } else {
+        NSLog(@"支付失败");
+    }
+}
 
 #pragma mark -- lifeStyle
 - (void)viewDidLoad {
@@ -90,6 +114,12 @@ UITableViewDataSource>
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 2:
+        {
+            // MARK: 点击进行微信支付 [NSDictionary new] 参数
+            [YMWXPayTool ymWXPayWithParameterDict:[NSDictionary new]];
+        }
+            break;
             
         default:
             break;
@@ -116,7 +146,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", @"微信支付", nil];
     }
     return _dataArr;
 }

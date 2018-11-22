@@ -24,6 +24,12 @@
 		8126EB892150E811001647D6 /* UIScrollView+UITouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126EB7B2150E811001647D6 /* UIScrollView+UITouch.m */; };
 		8126EB8A2150E811001647D6 /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126EB802150E811001647D6 /* UIButton+touch.m */; };
 		8126EB8E2150E9AA001647D6 /* NSString+YMTimeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126EB8D2150E9AA001647D6 /* NSString+YMTimeDate.m */; };
+		812F5ABD21A6B4A00072A21E /* YMWXPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5ABC21A6B4A00072A21E /* YMWXPayTool.m */; };
+		812F5AC421A6B59F0072A21E /* YMRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5AC021A6B59F0072A21E /* YMRefreshHeader.m */; };
+		812F5AC521A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5AC121A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.m */; };
+		812F5AC621A6B59F0072A21E /* OARefreshHeader.json in Resources */ = {isa = PBXBuildFile; fileRef = 812F5AC221A6B59F0072A21E /* OARefreshHeader.json */; };
+		812F5ACB21A6B7CB0072A21E /* YMGifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5ACA21A6B7CB0072A21E /* YMGifImageView.m */; };
+		812F5ACE21A6B7FC0072A21E /* YMBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5ACD21A6B7FC0072A21E /* YMBaseTableView.m */; };
 		81595ED3219C0D2100F91316 /* UIFont+YMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 81595ED2219C0D2100F91316 /* UIFont+YMCategory.m */; };
 		816054582194047900AF1E18 /* YMHighlightImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 816054572194047800AF1E18 /* YMHighlightImageView.m */; };
 		816216FB21900FA80001FC5E /* YMPictureViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 816216FA21900FA80001FC5E /* YMPictureViewer.m */; };
@@ -184,6 +190,17 @@
 		8126EB802150E811001647D6 /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
 		8126EB8C2150E9AA001647D6 /* NSString+YMTimeDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YMTimeDate.h"; sourceTree = "<group>"; };
 		8126EB8D2150E9AA001647D6 /* NSString+YMTimeDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMTimeDate.m"; sourceTree = "<group>"; };
+		812F5ABB21A6B4A00072A21E /* YMWXPayTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMWXPayTool.h; sourceTree = "<group>"; };
+		812F5ABC21A6B4A00072A21E /* YMWXPayTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMWXPayTool.m; sourceTree = "<group>"; };
+		812F5ABF21A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MJRefreshHeader+YMRefreshHeader.h"; sourceTree = "<group>"; };
+		812F5AC021A6B59F0072A21E /* YMRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMRefreshHeader.m; sourceTree = "<group>"; };
+		812F5AC121A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MJRefreshHeader+YMRefreshHeader.m"; sourceTree = "<group>"; };
+		812F5AC221A6B59F0072A21E /* OARefreshHeader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OARefreshHeader.json; sourceTree = "<group>"; };
+		812F5AC321A6B59F0072A21E /* YMRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMRefreshHeader.h; sourceTree = "<group>"; };
+		812F5AC921A6B7CB0072A21E /* YMGifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMGifImageView.h; sourceTree = "<group>"; };
+		812F5ACA21A6B7CB0072A21E /* YMGifImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMGifImageView.m; sourceTree = "<group>"; };
+		812F5ACC21A6B7FB0072A21E /* YMBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBaseTableView.h; sourceTree = "<group>"; };
+		812F5ACD21A6B7FC0072A21E /* YMBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBaseTableView.m; sourceTree = "<group>"; };
 		81595ED1219C0D2100F91316 /* UIFont+YMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+YMCategory.h"; sourceTree = "<group>"; };
 		81595ED2219C0D2100F91316 /* UIFont+YMCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YMCategory.m"; sourceTree = "<group>"; };
 		816054562194047800AF1E18 /* YMHighlightImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMHighlightImageView.h; sourceTree = "<group>"; };
@@ -622,6 +639,52 @@
 			path = "处理日期时间";
 			sourceTree = "<group>";
 		};
+		812F5AB921A6B4970072A21E /* 支付相关 */ = {
+			isa = PBXGroup;
+			children = (
+				812F5ABA21A6B4970072A21E /* 微信支付 */,
+			);
+			path = "支付相关";
+			sourceTree = "<group>";
+		};
+		812F5ABA21A6B4970072A21E /* 微信支付 */ = {
+			isa = PBXGroup;
+			children = (
+				812F5ABB21A6B4A00072A21E /* YMWXPayTool.h */,
+				812F5ABC21A6B4A00072A21E /* YMWXPayTool.m */,
+			);
+			path = "微信支付";
+			sourceTree = "<group>";
+		};
+		812F5ABE21A6B59F0072A21E /* 刷新控件 */ = {
+			isa = PBXGroup;
+			children = (
+				812F5ABF21A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.h */,
+				812F5AC121A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.m */,
+				812F5AC221A6B59F0072A21E /* OARefreshHeader.json */,
+				812F5AC321A6B59F0072A21E /* YMRefreshHeader.h */,
+				812F5AC021A6B59F0072A21E /* YMRefreshHeader.m */,
+			);
+			path = "刷新控件";
+			sourceTree = "<group>";
+		};
+		812F5AC721A6B7CB0072A21E /* YMGifTools */ = {
+			isa = PBXGroup;
+			children = (
+				812F5AC821A6B7CB0072A21E /* 基于 lottie */,
+			);
+			path = YMGifTools;
+			sourceTree = "<group>";
+		};
+		812F5AC821A6B7CB0072A21E /* 基于 lottie */ = {
+			isa = PBXGroup;
+			children = (
+				812F5AC921A6B7CB0072A21E /* YMGifImageView.h */,
+				812F5ACA21A6B7CB0072A21E /* YMGifImageView.m */,
+			);
+			path = "基于 lottie";
+			sourceTree = "<group>";
+		};
 		81595ED0219C0D0C00F91316 /* UIFont 分类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1016,6 +1079,9 @@
 		81BF54EC2145ED1F004BC70A /* YMTools */ = {
 			isa = PBXGroup;
 			children = (
+				812F5AC721A6B7CB0072A21E /* YMGifTools */,
+				812F5ABE21A6B59F0072A21E /* 刷新控件 */,
+				812F5AB921A6B4970072A21E /* 支付相关 */,
 				816054552194046E00AF1E18 /* 图片高亮点击控件 */,
 				816216F821900F2E0001FC5E /* 图片浏览器 */,
 				81CA788421882EC6005EFA1A /* SearchBar */,
@@ -1109,6 +1175,8 @@
 		81BF56BC2145F01E004BC70A /* YMBaseMVC */ = {
 			isa = PBXGroup;
 			children = (
+				812F5ACC21A6B7FB0072A21E /* YMBaseTableView.h */,
+				812F5ACD21A6B7FC0072A21E /* YMBaseTableView.m */,
 				81BF56BD2145F01E004BC70A /* YMBaseRootViewController.h */,
 				81BF56BE2145F01E004BC70A /* YMBaseRootViewController.m */,
 				81E41A23217F1B6E00DC9A4A /* YMBaseTableViewCell.h */,
@@ -1325,6 +1393,7 @@
 				81BF54AF2145EC13004BC70A /* Sources */,
 				81BF54B02145EC13004BC70A /* Frameworks */,
 				81BF54B12145EC13004BC70A /* Resources */,
+				F01FE3C674BAAB5D247FEA88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1434,6 +1503,7 @@
 				81EEC0C6219177610087EA72 /* 6.jpg in Resources */,
 				8193D25F2149FF7300EB225D /* YMNewsViewController.xib in Resources */,
 				81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */,
+				812F5AC621A6B59F0072A21E /* OARefreshHeader.json in Resources */,
 				81BF54FF2145ED1F004BC70A /* Assets.xcassets in Resources */,
 				81BF55002145ED1F004BC70A /* LaunchScreen.storyboard in Resources */,
 				81A593CB21998DFB0009669C /* timg.gif in Resources */,
@@ -1477,6 +1547,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F01FE3C674BAAB5D247FEA88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YMOCCodeStandard/Pods-YMOCCodeStandard-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YMOCCodeStandard/Pods-YMOCCodeStandard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1500,6 +1588,7 @@
 				8193D2BD214A008800EB225D /* MASViewAttribute.m in Sources */,
 				8193D2C8214A013F00EB225D /* YMUITextField.m in Sources */,
 				816216FB21900FA80001FC5E /* YMPictureViewer.m in Sources */,
+				812F5AC521A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.m in Sources */,
 				8193D2B6214A008800EB225D /* MASCompositeConstraint.m in Sources */,
 				8101293A214F41D600725BAF /* YMNetworkingSecondaryPackage.m in Sources */,
 				81BF56B92145F012004BC70A /* YMUINavigationController.m in Sources */,
@@ -1533,6 +1622,7 @@
 				81621700219018320001FC5E /* YMPictureViewerDemoViewController.m in Sources */,
 				81937FFD214F37D100EEA717 /* YMNetworkingBaseUtils.m in Sources */,
 				8193D2B9214A008800EB225D /* NSArray+MASAdditions.m in Sources */,
+				812F5AC421A6B59F0072A21E /* YMRefreshHeader.m in Sources */,
 				8193D2BB214A008800EB225D /* MASConstraint.m in Sources */,
 				81937FFA214F370000EEA717 /* AFSecurityPolicy.m in Sources */,
 				81BF56BA2145F012004BC70A /* JTNavigationController.m in Sources */,
@@ -1554,16 +1644,19 @@
 				8126EB842150E811001647D6 /* UIView+YMParentController.m in Sources */,
 				81BF56BF2145F01E004BC70A /* YMBaseRootViewController.m in Sources */,
 				810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */,
+				812F5ACB21A6B7CB0072A21E /* YMGifImageView.m in Sources */,
 				8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */,
 				81A593C2219980F70009669C /* YMBasePickerView.m in Sources */,
 				81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */,
 				81EEC0CD21917CA80087EA72 /* NSString+YMImage.m in Sources */,
 				81BF56BB2145F012004BC70A /* UIViewController+JTNavigationExtension.m in Sources */,
+				812F5ABD21A6B4A00072A21E /* YMWXPayTool.m in Sources */,
 				81E41A14217EFAF000DC9A4A /* YMWKWebView.m in Sources */,
 				81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */,
 				8193D280214A000E00EB225D /* NSObject+MJProperty.m in Sources */,
 				8193D27D214A000E00EB225D /* MJProperty.m in Sources */,
 				81BF55032145ED1F004BC70A /* YMOCCodeStandard.xcdatamodeld in Sources */,
+				812F5ACE21A6B7FC0072A21E /* YMBaseTableView.m in Sources */,
 				8193D27E214A000E00EB225D /* NSObject+MJCoding.m in Sources */,
 				81937FF6214F370000EEA717 /* AFHTTPSessionManager.m in Sources */,
 				81E77EAE21870DD8007CE3FD /* YMOrganizationTableViewCell.m in Sources */,
