@@ -22,7 +22,7 @@
     // MARK: 加载 windows
     [self loadWindows];
     // MARK: 向微信注册
-    [WXApi registerApp:@"wx14fa72d3ae5fb6ce" enableMTA:YES];
+    [WXApi registerApp:@"wx3343434343434" enableMTA:YES];
     
     return YES;
 }
@@ -40,7 +40,7 @@
 #pragma mark - - iOS9 之后使用的方法
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
     
-    if ([url.scheme isEqualToString:@"wx2355549c49f5cf73"]) {
+    if ([url.scheme isEqualToString:@"wx3343434343434"]) {
         return  [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)self];
     }
     return YES;
@@ -48,7 +48,7 @@
 
 #pragma mark - - iOS9 之前使用的方法
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    if ([url.scheme isEqualToString:@"wx2355549c49f5cf73"]) {
+    if ([url.scheme isEqualToString:@"wx3343434343434"]) {
         return  [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)self];
     }
     return YES;
@@ -60,7 +60,7 @@
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
     
-    if ([url.scheme isEqualToString:@"wx2355549c49f5cf73"]) {
+    if ([url.scheme isEqualToString:@"wx3343434343434"]) {
         return  [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)self];
     }
     return YES;

@@ -53,7 +53,10 @@
         
     }];
     [alert addAction:action];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    });
 }
 
 @end
