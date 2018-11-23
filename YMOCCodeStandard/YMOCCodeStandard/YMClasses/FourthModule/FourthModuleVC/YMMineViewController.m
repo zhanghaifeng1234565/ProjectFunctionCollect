@@ -120,6 +120,32 @@ UITableViewDataSource>
             [YMWXPayTool ymWXPayWithParameterDict:[NSDictionary new]];
         }
             break;
+        case 3:
+        {
+            // MARK: 系统分享
+            //分享的标题
+            NSString *textToShare = @"分享的标题。";
+            //分享的图片
+            UIImage *imageToShare = [UIImage imageNamed:@"forward_resumes_blue_btn"];
+            //分享的url
+            NSURL *urlToShare = [NSURL URLWithString:@"http://www.baidu.com"];
+            //在这里呢 如果想分享图片 就把图片添加进去  文字什么的同上
+            NSArray *activityItems = @[textToShare, imageToShare, urlToShare];
+            UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+            //不出现在活动项目
+//            activityVC.excludedActivityTypes = @[UIActivityTypePrint,  UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll];
+            [self presentViewController:activityVC animated:YES completion:nil];
+            // 分享之后的回调
+            activityVC.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
+                if (completed) {
+                    NSLog(@"completed");
+                    //分享 成功
+                } else  {
+                    NSLog(@"cancled");
+                    //分享 取消
+                }
+            };
+        }
             
         default:
             break;
@@ -146,7 +172,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", @"微信支付", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", @"微信支付", @"系统分享", nil];
     }
     return _dataArr;
 }
