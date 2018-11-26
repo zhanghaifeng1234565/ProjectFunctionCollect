@@ -49,6 +49,11 @@
             self.textView.text = model.textViewStr2;
         }
             break;
+        case 11:
+        {
+            self.textView.text = model.textViewStr3;
+        }
+            break;
         default:
             self.textView.text = model.textViewStr;
             break;

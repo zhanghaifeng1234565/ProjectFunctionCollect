@@ -46,6 +46,11 @@
             self.textField.text = model.textFiedStr2;
         }
             break;
+        case 10:
+        {
+            self.textField.text = model.textFiedStr3;
+        }
+            break;
         default:
             self.textField.text = model.textFiedStr;
             break;
