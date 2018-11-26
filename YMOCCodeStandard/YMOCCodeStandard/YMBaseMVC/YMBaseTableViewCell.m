@@ -10,8 +10,7 @@
 
 @interface YMBaseTableViewCell ()
 
-/** 分割线 */
-@property (nonatomic, strong) UILabel *spLine;
+
 
 @end
 
@@ -34,6 +33,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.spLine.frame = CGRectMake(15, self.height - 0.5, self.width - 15, 0.5);
+    
+    [self.contentView bringSubviewToFront:self.spLine];
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {

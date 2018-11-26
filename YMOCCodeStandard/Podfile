@@ -9,5 +9,6 @@ pod 'MJRefresh'
 pod 'YYModel'
 pod 'WechatOpenSDK'
 pod 'lottie-ios'
+pod 'IQKeyboardManager'
 
 end

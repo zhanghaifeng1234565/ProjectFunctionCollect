@@ -1,5 +1,6 @@
 PODS:
   - FBRetainCycleDetector (0.1.4)
+  - IQKeyboardManager (6.2.0)
   - lottie-ios (2.5.2)
   - MJRefresh (3.1.15.7)
   - MLeaksFinder (1.0.0):
@@ -18,6 +19,7 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - lottie-ios
   - MJRefresh
   - MLeaksFinder
@@ -29,6 +31,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FBRetainCycleDetector
+    - IQKeyboardManager
     - lottie-ios
     - MJRefresh
     - MLeaksFinder
@@ -41,6 +44,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
@@ -51,6 +55,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: be22a311de71d9be29fed85602cab85dcee5052f
+PODFILE CHECKSUM: 4bd84ba2cc25321623a0d6b4e56bb1a34bf86d58
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

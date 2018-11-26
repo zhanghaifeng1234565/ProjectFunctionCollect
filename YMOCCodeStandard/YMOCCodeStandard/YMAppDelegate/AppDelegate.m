@@ -23,6 +23,9 @@
     [self loadWindows];
     // MARK: 向微信注册
     [WXApi registerApp:@"wx3343434343434" enableMTA:YES];
+    // MARK: 键盘管理者
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     
     return YES;
 }

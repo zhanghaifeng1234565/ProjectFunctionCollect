@@ -696,6 +696,7 @@ static char firstLetterArray[HANZI_COUNT] =
     return attributedString ;
 }
 
+#pragma mark - - 用来解决表情输入字符大于1是上传表情错乱，
 + (NSString *)subStringWith:(NSString *)string ToIndex:(NSInteger)index {
     NSString *result = string;
     if (result.length > index) {

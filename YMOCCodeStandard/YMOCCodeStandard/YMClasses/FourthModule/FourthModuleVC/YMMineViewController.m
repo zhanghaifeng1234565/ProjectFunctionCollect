@@ -10,6 +10,8 @@
 #import "YMOrganizationViewController.h"
 #import "YMWXPayTool.h"
 
+#import "YMDemoFormViewController.h"
+
 @interface YMMineViewController ()
 <UITableViewDelegate,
 UITableViewDataSource>
@@ -133,7 +135,7 @@ UITableViewDataSource>
             NSArray *activityItems = @[textToShare, imageToShare, urlToShare];
             UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
             //不出现在活动项目
-//            activityVC.excludedActivityTypes = @[UIActivityTypePrint,  UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll];
+            activityVC.excludedActivityTypes = @[UIActivityTypePrint,  UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll];
             [self presentViewController:activityVC animated:YES completion:nil];
             // 分享之后的回调
             activityVC.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
@@ -146,6 +148,14 @@ UITableViewDataSource>
                 }
             };
         }
+            break;
+            case 4:
+        {
+            YMDemoFormViewController *vc = [[YMDemoFormViewController alloc] init];
+            vc.title = @"表单";
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -172,7 +182,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", @"微信支付", @"系统分享", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", @"微信支付", @"系统分享", @"表单", nil];
     }
     return _dataArr;
 }

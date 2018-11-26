@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YMBaseTableViewCell : UITableViewCell
 
+/** 分割线 */
+@property (nonatomic, strong) UILabel *spLine;
+
 @end
 
 NS_ASSUME_NONNULL_END
