@@ -84,6 +84,8 @@
 		8193D2CA214A013F00EB225D /* YMUIPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8193D2C5214A013F00EB225D /* YMUIPlaceholderTextView.m */; };
 		8193D2CD214A6F6300EB225D /* YMDataSaveSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8193D2CC214A6F6300EB225D /* YMDataSaveSingleton.m */; };
 		8194F57B21ABED0A001F2C10 /* YMLimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8194F57A21ABED0A001F2C10 /* YMLimitTextField.m */; };
+		81963E5A21ACEA8D002BFB5C /* QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E5821ACEA8D002BFB5C /* QRCode.m */; };
+		81963E5D21ACF620002BFB5C /* ScanningQRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E5B21ACF620002BFB5C /* ScanningQRVC.m */; };
 		81A593C2219980F70009669C /* YMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C1219980F70009669C /* YMBasePickerView.m */; };
 		81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C4219983B50009669C /* YMPickerToolBarView.m */; };
 		81A593CB21998DFB0009669C /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81A593CA21998DFB0009669C /* timg.gif */; };
@@ -323,6 +325,10 @@
 		8193D2CC214A6F6300EB225D /* YMDataSaveSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDataSaveSingleton.m; sourceTree = "<group>"; };
 		8194F57921ABED0A001F2C10 /* YMLimitTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLimitTextField.h; sourceTree = "<group>"; };
 		8194F57A21ABED0A001F2C10 /* YMLimitTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMLimitTextField.m; sourceTree = "<group>"; };
+		81963E5821ACEA8D002BFB5C /* QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCode.m; sourceTree = "<group>"; };
+		81963E5921ACEA8D002BFB5C /* QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCode.h; sourceTree = "<group>"; };
+		81963E5B21ACF620002BFB5C /* ScanningQRVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningQRVC.m; sourceTree = "<group>"; };
+		81963E5C21ACF620002BFB5C /* ScanningQRVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningQRVC.h; sourceTree = "<group>"; };
 		81A593C0219980F70009669C /* YMBasePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBasePickerView.h; sourceTree = "<group>"; };
 		81A593C1219980F70009669C /* YMBasePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBasePickerView.m; sourceTree = "<group>"; };
 		81A593C3219983B50009669C /* YMPickerToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPickerToolBarView.h; sourceTree = "<group>"; };
@@ -1046,6 +1052,17 @@
 			path = "UITextField 相关";
 			sourceTree = "<group>";
 		};
+		81963E5721ACEA8D002BFB5C /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				81963E5921ACEA8D002BFB5C /* QRCode.h */,
+				81963E5821ACEA8D002BFB5C /* QRCode.m */,
+				81963E5C21ACF620002BFB5C /* ScanningQRVC.h */,
+				81963E5B21ACF620002BFB5C /* ScanningQRVC.m */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		81A593BF219980B10009669C /* PickView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1128,6 +1145,7 @@
 		81BF54EC2145ED1F004BC70A /* YMTools */ = {
 			isa = PBXGroup;
 			children = (
+				81963E5721ACEA8D002BFB5C /* QRCode */,
 				81FA28A221AB7C9700C8FDAB /* YMUI */,
 				812F5AC721A6B7CB0072A21E /* YMGifTools */,
 				812F5ABE21A6B59F0072A21E /* 刷新控件 */,
@@ -1773,6 +1791,7 @@
 				81CA788E21884006005EFA1A /* YMOrganizationSearchTableViewCell.m in Sources */,
 				81BF56B82145F012004BC70A /* YMUITabBarController.m in Sources */,
 				81EEC0B8219173BA0087EA72 /* YMCommonFunc.m in Sources */,
+				81963E5A21ACEA8D002BFB5C /* QRCode.m in Sources */,
 				81E77EB321870FD6007CE3FD /* YMBaseViewController.m in Sources */,
 				8126EB8E2150E9AA001647D6 /* NSString+YMTimeDate.m in Sources */,
 				8101294E214F81BB00725BAF /* YMLoadingView.m in Sources */,
@@ -1789,6 +1808,7 @@
 				81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */,
 				8193D280214A000E00EB225D /* NSObject+MJProperty.m in Sources */,
 				8193D27D214A000E00EB225D /* MJProperty.m in Sources */,
+				81963E5D21ACF620002BFB5C /* ScanningQRVC.m in Sources */,
 				81BF55032145ED1F004BC70A /* YMOCCodeStandard.xcdatamodeld in Sources */,
 				812F5ACE21A6B7FC0072A21E /* YMBaseTableView.m in Sources */,
 				81FA28BF21AB89B200C8FDAB /* YMFormTitleTableViewCell.m in Sources */,

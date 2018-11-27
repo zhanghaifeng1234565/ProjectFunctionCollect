@@ -29,8 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param label 配置的 label
  @param lineSpace  行间距
  @param maxWidth 要展示的最大宽度
+ @param alignment 对齐方式
  */
-+ (void)ym_label:(UILabel *)label lineSpace:(CGFloat)lineSpace maxWidth:(CGFloat)maxWidth;
++ (void)ym_label:(UILabel *)label lineSpace:(CGFloat)lineSpace maxWidth:(CGFloat)maxWidth  alignment:(NSTextAlignment)alignment;
 
 
 /**

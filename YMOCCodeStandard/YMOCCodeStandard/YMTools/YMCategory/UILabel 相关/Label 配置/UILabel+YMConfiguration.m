@@ -16,19 +16,24 @@
     label.textColor = textColor;
     label.textAlignment = NSTextAlignmentLeft;
     label.numberOfLines = 0;
+    label.text = @"- -";
 }
 
 #pragma mark - - 配置 label 行间距
-+ (void)ym_label:(UILabel *)label lineSpace:(CGFloat)lineSpace maxWidth:(CGFloat)maxWidth {
++ (void)ym_label:(UILabel *)label lineSpace:(CGFloat)lineSpace maxWidth:(CGFloat)maxWidth alignment:(NSTextAlignment)alignment {
     CGFloat textDefaultMarginHeiht = (label.font.lineHeight - label.font.pointSize);
     lineSpace = lineSpace - textDefaultMarginHeiht;
     
+    if (label.text == nil) {
+        return;
+    }
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:label.text];
     CGSize size = [label.text boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : label.font} context:nil].size;
     
     NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
     paraStyle.lineBreakMode = label.lineBreakMode;
     paraStyle.lineSpacing = size.height + 1 > label.font.pointSize * 2 ? lineSpace : 0;
+    paraStyle.alignment = alignment;
     
     NSRange range = NSMakeRange(0, [label.text length]);
     [attributedString addAttribute:NSBaselineOffsetAttributeName value:NSBaselineOffsetAttributeName range:range];
@@ -43,6 +48,10 @@
     UIFont *font = [UIFont systemFontOfSize:fontSize];
     CGFloat textDefaultMarginHeiht = (font.lineHeight - font.pointSize);
     lineSpace = lineSpace - textDefaultMarginHeiht;
+    
+    if (string == nil) {
+        return fontSize;
+    }
     
     CGFloat stringHeight = 0.0f;
     CGSize originSize = [string boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size;
