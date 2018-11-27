@@ -54,5 +54,6 @@
 
 /** 当导航是一张图的时候为 0，当导航是颜色的时候是  NavBarHeight*/
 #define YMSCROLLVIEW_TOP_MARGIN 0
+#define YMTABLEVIEW_BOTTOM_INSET TabBarHeight
 
 #endif /* YMOCCodeStandardPrefixHeader_pch */

@@ -21,7 +21,8 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self = [[[NSBundle mainBundle] loadNibNamed:@"YMFormTextViewTableViewCell" owner:nil options:nil] firstObject];
         
-        self.textView.scrollEnabled = NO ;
+        self.textView.scrollEnabled = NO;
+        self.textView.bounces = NO;
         self.textView.maxFontCount = 50;
         self.textView.placeholder = @"请输入 textView";
         self.textView.placeholderFont = 14;

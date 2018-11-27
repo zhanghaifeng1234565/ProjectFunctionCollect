@@ -17,7 +17,7 @@
 
 #pragma mark - - 销毁
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"%s --- %@", __func__, [self class]);
 }
 
 - (void)awakeFromNib {

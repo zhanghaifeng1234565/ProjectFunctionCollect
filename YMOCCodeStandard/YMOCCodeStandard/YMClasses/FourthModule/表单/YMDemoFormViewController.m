@@ -75,8 +75,10 @@
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableView.estimatedRowHeight = 50;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, YMTABLEVIEW_BOTTOM_INSET, 0);
     
     [self.sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+    self.sureBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     self.sureBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     [self.sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.sureBtn addTarget:self action:@selector(sureBtnClick) forControlEvents:UIControlEventTouchUpInside];

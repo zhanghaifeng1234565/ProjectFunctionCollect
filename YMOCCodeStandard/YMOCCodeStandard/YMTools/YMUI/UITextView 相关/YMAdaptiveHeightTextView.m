@@ -15,6 +15,11 @@
 
 @implementation YMAdaptiveHeightTextView
 
+#pragma mark - - 销毁
+- (void)dealloc {
+    NSLog(@"%s --- %@", __func__, [self class]);
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     
@@ -55,4 +60,5 @@
 - (void)setMaxFontCount:(CGFloat)maxFontCount {
     _maxFontCount = maxFontCount;
 }
+
 @end

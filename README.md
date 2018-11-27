@@ -18,6 +18,9 @@ ProjectFunctionCollect 将一些平时的常用功能整合起来现在包含有
 ### 刷新
 ![image](https://github.com/zhanghaifeng1234565/ProjectFunctionCollect/raw/master/刷新.gif)
 
+### 表单
+![image](https://github.com/zhanghaifeng1234565/ProjectFunctionCollect/raw/master/表单.gif)
+
 ## 附言
 
 代码会不定时增加一些新的功能，或者完善。敬请关注😍
