@@ -160,7 +160,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"collectionView web 图片预览", @"collectionView local 图片预览", @"UIView web 图片预览", @"UIView local 图片预览", @"带 logo 的图片", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"collectionView web 图片预览", @"collectionView local 图片预览", @"UIView web 图片预览", @"UIView local 图片预览", @"带 logo 的二维码", nil];
     }
     return _dataArr;
 }

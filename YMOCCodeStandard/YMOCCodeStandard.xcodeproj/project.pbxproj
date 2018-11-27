@@ -86,6 +86,7 @@
 		8194F57B21ABED0A001F2C10 /* YMLimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8194F57A21ABED0A001F2C10 /* YMLimitTextField.m */; };
 		81963E5A21ACEA8D002BFB5C /* QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E5821ACEA8D002BFB5C /* QRCode.m */; };
 		81963E5D21ACF620002BFB5C /* ScanningQRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E5B21ACF620002BFB5C /* ScanningQRVC.m */; };
+		81963E6121AD19ED002BFB5C /* UIButton+YMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E6021AD19ED002BFB5C /* UIButton+YMConfiguration.m */; };
 		81A593C2219980F70009669C /* YMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C1219980F70009669C /* YMBasePickerView.m */; };
 		81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C4219983B50009669C /* YMPickerToolBarView.m */; };
 		81A593CB21998DFB0009669C /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81A593CA21998DFB0009669C /* timg.gif */; };
@@ -329,6 +330,8 @@
 		81963E5921ACEA8D002BFB5C /* QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCode.h; sourceTree = "<group>"; };
 		81963E5B21ACF620002BFB5C /* ScanningQRVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningQRVC.m; sourceTree = "<group>"; };
 		81963E5C21ACF620002BFB5C /* ScanningQRVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningQRVC.h; sourceTree = "<group>"; };
+		81963E5F21AD19ED002BFB5C /* UIButton+YMConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+YMConfiguration.h"; sourceTree = "<group>"; };
+		81963E6021AD19ED002BFB5C /* UIButton+YMConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YMConfiguration.m"; sourceTree = "<group>"; };
 		81A593C0219980F70009669C /* YMBasePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBasePickerView.h; sourceTree = "<group>"; };
 		81A593C1219980F70009669C /* YMBasePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBasePickerView.m; sourceTree = "<group>"; };
 		81A593C3219983B50009669C /* YMPickerToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPickerToolBarView.h; sourceTree = "<group>"; };
@@ -661,6 +664,7 @@
 		8126EB7D2150E811001647D6 /* UIButton 分类 */ = {
 			isa = PBXGroup;
 			children = (
+				81963E5E21AD19D1002BFB5C /* Button 配置 */,
 				8126EB7E2150E811001647D6 /* UIButton+touch */,
 			);
 			path = "UIButton 分类";
@@ -1061,6 +1065,15 @@
 				81963E5B21ACF620002BFB5C /* ScanningQRVC.m */,
 			);
 			path = QRCode;
+			sourceTree = "<group>";
+		};
+		81963E5E21AD19D1002BFB5C /* Button 配置 */ = {
+			isa = PBXGroup;
+			children = (
+				81963E5F21AD19ED002BFB5C /* UIButton+YMConfiguration.h */,
+				81963E6021AD19ED002BFB5C /* UIButton+YMConfiguration.m */,
+			);
+			path = "Button 配置";
 			sourceTree = "<group>";
 		};
 		81A593BF219980B10009669C /* PickView */ = {
@@ -1775,6 +1788,7 @@
 				81FA28C921AB89EC00C8FDAB /* YMFormTextViewTableViewCell.m in Sources */,
 				81937FFD214F37D100EEA717 /* YMNetworkingBaseUtils.m in Sources */,
 				8193D2B9214A008800EB225D /* NSArray+MASAdditions.m in Sources */,
+				81963E6121AD19ED002BFB5C /* UIButton+YMConfiguration.m in Sources */,
 				812F5AC421A6B59F0072A21E /* YMRefreshHeader.m in Sources */,
 				8193D2BB214A008800EB225D /* MASConstraint.m in Sources */,
 				81937FFA214F370000EEA717 /* AFSecurityPolicy.m in Sources */,

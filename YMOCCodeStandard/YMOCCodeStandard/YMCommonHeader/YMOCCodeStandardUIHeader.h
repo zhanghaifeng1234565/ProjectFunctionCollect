@@ -40,6 +40,7 @@
 #import "MJRefreshHeader+YMRefreshHeader.h"
 #import "UIImage+YMGif.h"
 #import "UILabel+YMConfiguration.h"
+#import "UIButton+YMConfiguration.h"
 
 #import "YMRefreshHeader.h"
 #import "AFNetworking.h"

@@ -48,8 +48,19 @@
     [rightBtn setTitle:@"相册" forState:UIControlStateNormal];
     [rightBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(albumClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 40, 40);
+    [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [leftBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
+    
+    UIBarButtonItem *leftBtnBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    [self.navigationItem setLeftBarButtonItem:leftBtnBarButtonItem];
     
     UIView *backView = [[UIView alloc] initWithFrame:self.view.bounds];
     backView.backgroundColor = UIColor.clearColor;
@@ -140,10 +151,12 @@
     }
 }
 
-
+- (void)leftBtnClick {
+    [self pop];
+}
 
 - (void)pop {
-    if (self.navigationController) {
+    if (self.isPush == YES) {
         [self.navigationController popViewControllerAnimated:YES];
     } else {
         [self dismissViewControllerAnimated:YES completion:nil];

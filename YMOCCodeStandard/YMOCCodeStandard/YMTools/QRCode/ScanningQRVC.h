@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void(^scanningSuccess)(NSString *QRCodeStr);
 
+/** 是否是 push */
+@property (nonatomic, assign, getter=isPush) BOOL push;
+
 @end
 
 NS_ASSUME_NONNULL_END

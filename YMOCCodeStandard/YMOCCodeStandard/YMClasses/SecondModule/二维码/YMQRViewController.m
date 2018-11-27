@@ -13,6 +13,8 @@
 #import "QRCode.h"
 #import "ScanningQRVC.h"
 
+static NSString *logoNameStr = @"forward_resumes_blue_btn";
+
 @interface YMQRViewController ()
 <UIGestureRecognizerDelegate>
 
@@ -27,6 +29,8 @@
 @property (nonatomic, strong) UIButton *scannQRCodeBtn;
 /** 二维码标签 */
 @property (nonatomic, strong) UILabel *codeLabel;
+/** 输入要生成的二维码字符串 */
+@property (nonatomic, strong) YMLimitTextField *QRTextField;
 
 @end
 
@@ -41,6 +45,7 @@
 - (void)loadSubviews {
     [super loadSubviews];
     
+    [self.view addSubview:self.QRTextField];
     [self.view addSubview:self.readQRCodeBtn];
     [self.view addSubview:self.scannQRCodeBtn];
     [self.view addSubview:self.QRImageView];
@@ -51,7 +56,22 @@
 - (void)configSubviews {
     [super configSubviews];
     
-    self.QRImageView.image = [UIImage createQRCodeWithUrl:@"https://www.baidu.com" logoImageName:@"forward_resumes_blue_btn"];
+    UIButton *creatBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 35)];
+    [UIButton ym_button:creatBtn title:@"生成二维码" fontSize:14 titleColor:[UIColor magentaColor]];
+    [UIView ym_view:creatBtn backgroundColor:[UIColor whiteColor] cornerRadius:3.0f borderWidth:0.5f borderColor:[UIColor magentaColor]];
+    [creatBtn addTarget:self action:@selector(createBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [UIView ym_view:self.QRTextField backgroundColor:[UIColor whiteColor] cornerRadius:3.0f borderWidth:0.5f borderColor:[UIColor magentaColor]];
+    self.QRTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入要生成二维码的字符串" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14], NSForegroundColorAttributeName : [UIColor magentaColor]}];
+    
+    self.QRTextField.rightView = creatBtn;
+    self.QRTextField.rightViewMode = UITextFieldViewModeAlways;
+    
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 35)];
+    self.QRTextField.leftView = rightView;
+    self.QRTextField.leftViewMode = UITextFieldViewModeAlways;
+    
+    
+    self.QRImageView.image = [UIImage createQRCodeWithUrl:@"https://www.baidu.com" logoImageName:logoNameStr];
     // 一定要将图片转成 二进制 否则不能保存图片
     self.QRImageView.image.ym_imageData = UIImagePNGRepresentation(self.QRImageView.image);
     self.QRImageView.userInteractionEnabled = YES;
@@ -83,14 +103,20 @@
     
     // 二维码
     [UILabel ym_label:self.codeLabel fontSize:15 textColor:[UIColor magentaColor]];
+    self.codeLabel.userInteractionEnabled = YES;
+    // 添加点击手势
+    [self urlLabeltapGesture];
+    // 添加长按手势
+    [self urlLabelLongPressGesture];
 }
 
 #pragma mark - - 布局视图
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.readQRCodeBtn.frame = CGRectMake(30, 30, 100, 45);
-    self.scannQRCodeBtn.frame = CGRectMake(MainScreenWidth - 30 - 100, 30, 100, 45);
+    self.QRTextField.frame = CGRectMake(30, 30, MainScreenWidth - 60, 35);
+    self.readQRCodeBtn.frame = CGRectMake(30, self.QRTextField.bottom + 30, 100, 45);
+    self.scannQRCodeBtn.frame = CGRectMake(MainScreenWidth - 30 - 100, self.readQRCodeBtn.top, 100, 45);
     self.QRImageView.frame = CGRectMake((MainScreenWidth - 150) / 2, self.scannQRCodeBtn.bottom + 30, 150, 150);
     
     [UILabel ym_label:self.codeLabel lineSpace:5 maxWidth:MainScreenWidth - 30 alignment:NSTextAlignmentCenter];
@@ -98,8 +124,20 @@
     self.codeLabel.frame = CGRectMake(15, self.QRImageView.bottom + 30, MainScreenWidth - 30, codeLabelHeight);
 }
 
+#pragma mark - - 生成二维码
+- (void)createBtnClick {
+    [self.view endEditing:YES];
+    
+    NSString *qrStr = [self.QRTextField.text length] > 0 ?  self.QRTextField.text : self.QRTextField.placeholder;
+    self.QRImageView.image = [UIImage createQRCodeWithUrl:qrStr logoImageName:logoNameStr];
+    // 一定要将图片转成 二进制 否则不能保存图片
+    self.QRImageView.image.ym_imageData = UIImagePNGRepresentation(self.QRImageView.image);
+}
+
 #pragma mark - - 图片点击调用
 - (void)tapGest:(UITapGestureRecognizer *)gester {
+    [self.view endEditing:YES];
+    
     YMPictureViewer *browserView = [[YMPictureViewer alloc] init];
     browserView.originalViews = self.imageMarr;
     browserView.currentIndex = [self.imageMarr indexOfObject:gester.view];
@@ -108,7 +146,9 @@
 
 #pragma mark 识别二维码
 - (void)readQRCodeBtnClick {
-   NSString *codeStr = [QRCode readAlbumQRCode:self.QRImageView.image];
+    [self.view endEditing:YES];
+    
+    NSString *codeStr = [QRCode readAlbumQRCode:self.QRImageView.image];
     NSLog(@"codeStr = %@", codeStr);
     self.codeLabel.text = [NSString stringWithFormat:@"%@", codeStr];
     [self layoutSubviews];
@@ -116,8 +156,12 @@
 
 #pragma mark 扫描二维码
 - (void)scannQRCodeBtnClick {
+    [self.view endEditing:YES];
+    
     ScanningQRVC *vc = [[ScanningQRVC alloc] init];
-    [self.navigationController presentViewController:vc animated:YES completion:^{
+    vc.push = NO;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:^{
         
     }];
     
@@ -128,7 +172,103 @@
     };
 }
 
+#pragma mark -- 网址长按复制
+- (void)urlLabelLongPressGesture {
+    UILongPressGestureRecognizer *longPressGest = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(urlLabelLongPressGest:)];
+    longPressGest.minimumPressDuration = 0.5f;
+    longPressGest.delegate = self;
+    [self.codeLabel addGestureRecognizer:longPressGest];
+}
+
+- (void)urlLabelLongPressGest:(UILongPressGestureRecognizer *)longGest {
+    [self.view endEditing:YES];
+    
+    [self.codeLabel becomeFirstResponder]; // 用于UIMenuController显示，缺一不可
+    if (longGest.state == UIGestureRecognizerStateBegan) {
+        self.codeLabel.backgroundColor = [UIColor lightGrayColor];
+        WS(ws);
+        [YMSureCancelAlert alertText:[NSString stringWithFormat:@"确定复制网址？%@", self.codeLabel.text] sureBtnTitle:@"复制" maxHeight:100 alertStyle:YMAlertButtonTypeStyleDefault sureBtnClick:^(UIButton * _Nonnull sureBtn) {
+            ws.codeLabel.backgroundColor = UIColor.clearColor;
+            UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+            pasteBoard.string = self.codeLabel.text;
+            [YMBlackSmallAlert showAlertWithMessage:@"复制成功" time:2.0f];
+        } cancelBtnClick:^(UIButton * _Nonnull cancelBtn) {
+            ws.codeLabel.backgroundColor = UIColor.clearColor;
+        }];
+    }
+}
+
+#pragma mark -- 网址点击跳转
+- (void)urlLabeltapGesture {
+    UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(urlLabeltapGest:)];
+    tapGest.delegate = self;
+    [self.codeLabel addGestureRecognizer:tapGest];
+}
+
+- (void)urlLabeltapGest:(UITapGestureRecognizer *)tapGest {
+    [self.view endEditing:YES];
+    
+    NSURL *url = [self smartURLForString:self.codeLabel.text];
+    [self validateUrl:url];
+}
+
+#pragma mark -- 判断网址格式
+- (NSURL *)smartURLForString:(NSString *)str {
+    NSURL *result;
+    NSString *trimmedStr;
+    NSRange schemeMarkerRange;
+    NSString *scheme;
+    assert(str != nil);
+    result = nil;
+    trimmedStr = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if ( (trimmedStr != nil) && (trimmedStr.length != 0) ) {
+        schemeMarkerRange = [trimmedStr rangeOfString:@"://"];
+        if (schemeMarkerRange.location == NSNotFound) {
+            result = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", trimmedStr]];
+        } else {
+            scheme = [trimmedStr substringWithRange:NSMakeRange(0, schemeMarkerRange.location)];
+            assert(scheme != nil);
+            if ( ([scheme compare:@"http"  options:NSCaseInsensitiveSearch] == NSOrderedSame)
+                || ([scheme compare:@"https" options:NSCaseInsensitiveSearch] == NSOrderedSame) ) {
+                result = [NSURL URLWithString:trimmedStr];
+            } else {
+                // 格式不符合
+                result = [NSURL URLWithString:@"http:www.baidu.com"];
+            }
+        }
+    }
+    return result;
+}
+
+#pragma mark -- 判断网址可不可用
+- (void)validateUrl:(NSURL *)candidate {
+    if ([[UIApplication sharedApplication] canOpenURL:candidate]) {
+        [YMMBProgressHUD ymShowCustomLoadingAlert:self.view text:@"加载中..."];
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:candidate options:[NSMutableDictionary dictionary] completionHandler:^(BOOL success) {
+                [YMMBProgressHUD ymHideLoadingAlert:self.view];
+            }];
+        } else {
+            [[UIApplication sharedApplication] openURL:candidate];
+        }
+    } else {
+        [YMBlackSmallAlert showAlertWithMessage:@"网址无效！" time:2.0f];
+    }
+}
+
+#pragma mark - - touch
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
 #pragma mark - - lazyLoadUI
+- (YMLimitTextField *)QRTextField {
+    if (_QRTextField == nil) {
+        _QRTextField = [[YMLimitTextField alloc] init];
+    }
+    return _QRTextField;
+}
+
 - (YMHighlightImageView *)QRImageView {
     if (_QRImageView == nil) {
         _QRImageView = [[YMHighlightImageView alloc] init];
