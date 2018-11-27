@@ -44,6 +44,18 @@
     [yyCache setObject:self.resultMDict forKey:@"form_dict" withBlock:^{
         NSLog(@"保存成功");
     }];
+    
+    [yyCache containsObjectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, BOOL contains) {
+        NSLog(@"contains : %@", contains ? @"YES" : @"NO");
+    }];
+    
+    [yyCache objectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nonnull object) {
+        NSLog(@"key : %@ -- object : %@", key, object);
+    }];
+    
+    NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *path = [cacheFolder stringByAppendingPathComponent:@"Form.data"];
+    NSLog(@"path : %@", path);
 }
 
 #pragma mark - - 加载视图
@@ -65,6 +77,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     [self.sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+    self.sureBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     [self.sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.sureBtn addTarget:self action:@selector(sureBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -82,10 +95,19 @@
     
     YYCache *yyCache = [YYCache cacheWithName:@"Form.data"];
     
-    WS(ws);
-    //判断缓存是否存在
     [yyCache containsObjectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, BOOL contains) {
-        
+        NSLog(@"contains : %@", contains ? @"YES" : @"NO");
+    }];
+    
+    [yyCache objectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nonnull object) {
+        NSLog(@"key : %@ -- object : %@", key, object);
+    }];
+    
+    
+    WS(ws);
+    // 判断缓存是否存在
+    [yyCache containsObjectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, BOOL contains) {
+        NSLog(@"isContains : %@", contains ? @"YES" : @"NO");
         [ws.tableView.dataMarr removeAllObjects];
         if (contains) {
             [yyCache objectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nonnull object) {
@@ -119,7 +141,6 @@
                                    @"textViewStr3" : @""
                                    };
             
-            NSLog(@"else");
             ws.resultMDict = [[NSMutableDictionary alloc] initWithDictionary:dict];
             for (int i = 0; i < ws.resultMDict.count; i++) {
                 [ws.tableView.dataMarr addObject:@""];
