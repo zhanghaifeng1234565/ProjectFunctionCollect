@@ -11,6 +11,7 @@
 #import "YMWXPayTool.h"
 
 #import "YMDemoFormViewController.h"
+#import "YMNewsDemoViewController.h"
 
 @interface YMMineViewController ()
 <UITableViewDelegate,
@@ -156,6 +157,13 @@ UITableViewDataSource>
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 5:
+        {
+            YMNewsDemoViewController *vc = [[YMNewsDemoViewController alloc] init];
+            vc.title = @"多表单";
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -182,7 +190,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", @"微信支付", @"系统分享", @"表单", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"组织架构【多选】", @"组织架构【单选】", @"微信支付", @"系统分享", @"表单", @"分段控制器", nil];
     }
     return _dataArr;
 }

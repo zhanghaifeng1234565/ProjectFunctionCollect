@@ -87,6 +87,10 @@
 		81963E5A21ACEA8D002BFB5C /* QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E5821ACEA8D002BFB5C /* QRCode.m */; };
 		81963E5D21ACF620002BFB5C /* ScanningQRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E5B21ACF620002BFB5C /* ScanningQRVC.m */; };
 		81963E6121AD19ED002BFB5C /* UIButton+YMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E6021AD19ED002BFB5C /* UIButton+YMConfiguration.m */; };
+		81963E6621AD1F4E002BFB5C /* YMSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E6321AD1F4D002BFB5C /* YMSegmentViewController.m */; };
+		81963E6721AD1F4E002BFB5C /* YMSegmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81963E6421AD1F4D002BFB5C /* YMSegmentViewController.xib */; };
+		81963E6A21AD1FB0002BFB5C /* YMSilderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E6921AD1FB0002BFB5C /* YMSilderView.m */; };
+		81963E6E21AD2200002BFB5C /* YMNewsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963E6D21AD2200002BFB5C /* YMNewsDemoViewController.m */; };
 		81A593C2219980F70009669C /* YMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C1219980F70009669C /* YMBasePickerView.m */; };
 		81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C4219983B50009669C /* YMPickerToolBarView.m */; };
 		81A593CB21998DFB0009669C /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81A593CA21998DFB0009669C /* timg.gif */; };
@@ -332,6 +336,13 @@
 		81963E5C21ACF620002BFB5C /* ScanningQRVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningQRVC.h; sourceTree = "<group>"; };
 		81963E5F21AD19ED002BFB5C /* UIButton+YMConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+YMConfiguration.h"; sourceTree = "<group>"; };
 		81963E6021AD19ED002BFB5C /* UIButton+YMConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YMConfiguration.m"; sourceTree = "<group>"; };
+		81963E6321AD1F4D002BFB5C /* YMSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSegmentViewController.m; sourceTree = "<group>"; };
+		81963E6421AD1F4D002BFB5C /* YMSegmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSegmentViewController.xib; sourceTree = "<group>"; };
+		81963E6521AD1F4D002BFB5C /* YMSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSegmentViewController.h; sourceTree = "<group>"; };
+		81963E6821AD1FB0002BFB5C /* YMSilderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSilderView.h; sourceTree = "<group>"; };
+		81963E6921AD1FB0002BFB5C /* YMSilderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSilderView.m; sourceTree = "<group>"; };
+		81963E6C21AD2200002BFB5C /* YMNewsDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMNewsDemoViewController.h; sourceTree = "<group>"; };
+		81963E6D21AD2200002BFB5C /* YMNewsDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNewsDemoViewController.m; sourceTree = "<group>"; };
 		81A593C0219980F70009669C /* YMBasePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBasePickerView.h; sourceTree = "<group>"; };
 		81A593C1219980F70009669C /* YMBasePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBasePickerView.m; sourceTree = "<group>"; };
 		81A593C3219983B50009669C /* YMPickerToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPickerToolBarView.h; sourceTree = "<group>"; };
@@ -831,6 +842,7 @@
 		8193D2402149FF7200EB225D /* FourthModule */ = {
 			isa = PBXGroup;
 			children = (
+				81963E6B21AD21E2002BFB5C /* 新闻标签 */,
 				811D8EE921A7F5B500053FC1 /* 表单 */,
 				81E77EA021870D6B007CE3FD /* 组织架构 */,
 				8193D2432149FF7200EB225D /* FourthModuleVC */,
@@ -1076,6 +1088,27 @@
 			path = "Button 配置";
 			sourceTree = "<group>";
 		};
+		81963E6221AD1F4D002BFB5C /* 分段控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				81963E6521AD1F4D002BFB5C /* YMSegmentViewController.h */,
+				81963E6321AD1F4D002BFB5C /* YMSegmentViewController.m */,
+				81963E6421AD1F4D002BFB5C /* YMSegmentViewController.xib */,
+				81963E6821AD1FB0002BFB5C /* YMSilderView.h */,
+				81963E6921AD1FB0002BFB5C /* YMSilderView.m */,
+			);
+			path = "分段控制器";
+			sourceTree = "<group>";
+		};
+		81963E6B21AD21E2002BFB5C /* 新闻标签 */ = {
+			isa = PBXGroup;
+			children = (
+				81963E6C21AD2200002BFB5C /* YMNewsDemoViewController.h */,
+				81963E6D21AD2200002BFB5C /* YMNewsDemoViewController.m */,
+			);
+			path = "新闻标签";
+			sourceTree = "<group>";
+		};
 		81A593BF219980B10009669C /* PickView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1158,6 +1191,7 @@
 		81BF54EC2145ED1F004BC70A /* YMTools */ = {
 			isa = PBXGroup;
 			children = (
+				81963E6221AD1F4D002BFB5C /* 分段控制器 */,
 				81963E5721ACEA8D002BFB5C /* QRCode */,
 				81FA28A221AB7C9700C8FDAB /* YMUI */,
 				812F5AC721A6B7CB0072A21E /* YMGifTools */,
@@ -1645,6 +1679,7 @@
 				81EEC0C9219177610087EA72 /* 1.jpg in Resources */,
 				81E77EA521870D94007CE3FD /* YMOrganizationViewController.xib in Resources */,
 				81621701219018320001FC5E /* YMPictureViewerDemoViewController.xib in Resources */,
+				81963E6721AD1F4E002BFB5C /* YMSegmentViewController.xib in Resources */,
 				8193D25D2149FF7300EB225D /* YMMineViewController.xib in Resources */,
 				81E77EB021870DD8007CE3FD /* YMOrganizationTableViewCell.xib in Resources */,
 				81FA28C521AB89D700C8FDAB /* YMFormTextFiledTableViewCell.xib in Resources */,
@@ -1752,6 +1787,7 @@
 				816216FB21900FA80001FC5E /* YMPictureViewer.m in Sources */,
 				81FA28B421AB7CE100C8FDAB /* UIView+YMConfiguration.m in Sources */,
 				812F5AC521A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.m in Sources */,
+				81963E6A21AD1FB0002BFB5C /* YMSilderView.m in Sources */,
 				8193D2B6214A008800EB225D /* MASCompositeConstraint.m in Sources */,
 				8101293A214F41D600725BAF /* YMNetworkingSecondaryPackage.m in Sources */,
 				81BF56B92145F012004BC70A /* YMUINavigationController.m in Sources */,
@@ -1790,6 +1826,7 @@
 				8193D2B9214A008800EB225D /* NSArray+MASAdditions.m in Sources */,
 				81963E6121AD19ED002BFB5C /* UIButton+YMConfiguration.m in Sources */,
 				812F5AC421A6B59F0072A21E /* YMRefreshHeader.m in Sources */,
+				81963E6E21AD2200002BFB5C /* YMNewsDemoViewController.m in Sources */,
 				8193D2BB214A008800EB225D /* MASConstraint.m in Sources */,
 				81937FFA214F370000EEA717 /* AFSecurityPolicy.m in Sources */,
 				81BF56BA2145F012004BC70A /* JTNavigationController.m in Sources */,
@@ -1815,6 +1852,7 @@
 				8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */,
 				81A593C2219980F70009669C /* YMBasePickerView.m in Sources */,
 				81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */,
+				81963E6621AD1F4E002BFB5C /* YMSegmentViewController.m in Sources */,
 				81EEC0CD21917CA80087EA72 /* NSString+YMImage.m in Sources */,
 				81BF56BB2145F012004BC70A /* UIViewController+JTNavigationExtension.m in Sources */,
 				812F5ABD21A6B4A00072A21E /* YMWXPayTool.m in Sources */,
