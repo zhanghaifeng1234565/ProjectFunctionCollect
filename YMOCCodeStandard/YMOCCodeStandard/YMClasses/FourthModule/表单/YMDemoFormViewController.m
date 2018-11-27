@@ -23,6 +23,8 @@
 @property (nonatomic, strong) YMDemoFormModel *model;
 /** 数据结果 */
 @property (nonatomic, strong) NSMutableDictionary *resultMDict;
+/** 确定按钮 */
+@property (nonatomic, strong) UIButton *sureBtn;
 
 @end
 
@@ -38,23 +40,17 @@
     [super viewWillDisappear:animated];
     
     YYCache *yyCache = [YYCache cacheWithName:@"Form.data"];
-    
     self.resultMDict = [self.model yy_modelToJSONObject];
-    NSLog(@"self.resultMDict == %@", self.resultMDict);
-    
     [yyCache setObject:self.resultMDict forKey:@"form_dict" withBlock:^{
         NSLog(@"保存成功");
     }];
-    
-    NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *path = [cacheFolder stringByAppendingPathComponent:@"Form.data"];
-    NSLog(@"path == %@", path);
 }
 
 #pragma mark - - 加载视图
 - (void)loadSubviews {
     [super loadSubviews];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.sureBtn];
     [self.view addSubview:self.tableView];
 }
 
@@ -67,6 +63,10 @@
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableView.estimatedRowHeight = 50;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    [self.sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+    [self.sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.sureBtn addTarget:self action:@selector(sureBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - - 布局视图
@@ -81,32 +81,27 @@
     [super loadData];
     
     YYCache *yyCache = [YYCache cacheWithName:@"Form.data"];
-    NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *path = [cacheFolder stringByAppendingPathComponent:@"Form.data"];
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSLog(@"dict == %@", dict);
     
-    
-    [yyCache objectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nonnull object) {
-        NSLog(@"object === %@", object);
-    }];
+    WS(ws);
     //判断缓存是否存在
     [yyCache containsObjectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, BOOL contains) {
-        NSLog(@"containsObject =====: %@", contains ? @"YES" : @"NO");
+        
+        [ws.tableView.dataMarr removeAllObjects];
         if (contains) {
-            [self.tableView.dataMarr removeAllObjects];
             [yyCache objectForKey:@"form_dict" withBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nonnull object) {
                 
                 NSDictionary *objectDict = (NSDictionary *)object;
                 NSLog(@"objectDict --- %@", objectDict);
-                self.resultMDict = [[NSMutableDictionary alloc] initWithDictionary:objectDict];
-                for (int i = 0; i < self.resultMDict.count; i++) {
-                    [self.tableView.dataMarr addObject:@""];
+                ws.resultMDict = [[NSMutableDictionary alloc] initWithDictionary:objectDict];
+                for (int i = 0; i < ws.resultMDict.count; i++) {
+                    [ws.tableView.dataMarr addObject:@""];
                 }
                 
-                YMDemoFormModel *model = [YMDemoFormModel yy_modelWithJSON:self.resultMDict];
-                self.model = model;
-                [self.tableView reloadData];
+                YMDemoFormModel *model = [YMDemoFormModel yy_modelWithJSON:ws.resultMDict];
+                ws.model = model;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [ws.tableView reloadData];
+                });
             }];
         } else {
             NSDictionary *dict = @{
@@ -125,14 +120,16 @@
                                    };
             
             NSLog(@"else");
-            self.resultMDict = [[NSMutableDictionary alloc] initWithDictionary:dict];
-            for (int i = 0; i < self.resultMDict.count; i++) {
-                [self.tableView.dataMarr addObject:@""];
+            ws.resultMDict = [[NSMutableDictionary alloc] initWithDictionary:dict];
+            for (int i = 0; i < ws.resultMDict.count; i++) {
+                [ws.tableView.dataMarr addObject:@""];
             }
             
-            YMDemoFormModel *model = [YMDemoFormModel yy_modelWithJSON:self.resultMDict];
-            self.model = model;
-            [self.tableView reloadData];
+            YMDemoFormModel *model = [YMDemoFormModel yy_modelWithJSON:ws.resultMDict];
+            ws.model = model;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [ws.tableView reloadData];
+            });
         }
     }];
 }
@@ -265,12 +262,43 @@
     return reCell;
 }
 
+#pragma mark - - 确定按钮店家调用
+- (void)sureBtnClick {
+    [YMMBProgressHUD ymShowLoadingAlert:self.view];
+    
+    WS(ws);
+    YYCache *yyCache = [YYCache cacheWithName:@"Form.data"];
+    
+    //移除所有缓存带进度
+    [yyCache removeAllObjectsWithProgressBlock:^(int removedCount, int totalCount) {
+        NSLog(@"removeAllObjects removedCount :%d  totalCount : %d", removedCount, totalCount);
+    } endBlock:^(BOOL error) {
+        if(!error){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [YMMBProgressHUD ymHideLoadingAlert:ws.view];
+                
+                [ws loadData];
+            });
+            NSLog(@"removeAllObjects sucess");
+        } else {
+            NSLog(@"removeAllObjects error");
+        }
+    }];
+}
+
 #pragma mark - - lazyLoadUI
 - (YMBaseTableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[YMBaseTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     }
     return _tableView;
+}
+
+- (UIButton *)sureBtn {
+    if (_sureBtn == nil) {
+        _sureBtn = [[UIButton alloc] init];
+    }
+    return _sureBtn;
 }
 
 @end
