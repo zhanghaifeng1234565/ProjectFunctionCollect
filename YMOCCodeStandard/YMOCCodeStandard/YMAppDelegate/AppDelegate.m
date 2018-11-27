@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppDelegate+YMLocalNotification.h"
 #import "YMUITabBarController.h"
 #import <WXApi.h>
 
@@ -19,6 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    // MARK: pushKit
+    [self registerPushKit];
     // MARK: 加载 windows
     [self loadWindows];
     // MARK: 向微信注册

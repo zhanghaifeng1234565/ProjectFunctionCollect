@@ -96,6 +96,7 @@
 		81963EBA21AD273B002BFB5C /* UIImage+YMGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963EA321AD273B002BFB5C /* UIImage+YMGif.m */; };
 		81963EBB21AD273B002BFB5C /* UILabel+YMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963EA621AD273B002BFB5C /* UILabel+YMConfiguration.m */; };
 		81963EBC21AD273B002BFB5C /* UIViewController+YMBackToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963EAA21AD273B002BFB5C /* UIViewController+YMBackToViewController.m */; };
+		81963EBF21AD2915002BFB5C /* AppDelegate+YMLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 81963EBE21AD2915002BFB5C /* AppDelegate+YMLocalNotification.m */; };
 		81A593C2219980F70009669C /* YMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C1219980F70009669C /* YMBasePickerView.m */; };
 		81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C4219983B50009669C /* YMPickerToolBarView.m */; };
 		81A593CB21998DFB0009669C /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81A593CA21998DFB0009669C /* timg.gif */; };
@@ -353,6 +354,8 @@
 		81963EA721AD273B002BFB5C /* UILabel+YMConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YMConfiguration.h"; sourceTree = "<group>"; };
 		81963EAA21AD273B002BFB5C /* UIViewController+YMBackToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YMBackToViewController.m"; sourceTree = "<group>"; };
 		81963EAB21AD273B002BFB5C /* UIViewController+YMBackToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YMBackToViewController.h"; sourceTree = "<group>"; };
+		81963EBD21AD2915002BFB5C /* AppDelegate+YMLocalNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+YMLocalNotification.h"; sourceTree = "<group>"; };
+		81963EBE21AD2915002BFB5C /* AppDelegate+YMLocalNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+YMLocalNotification.m"; sourceTree = "<group>"; };
 		81A593C0219980F70009669C /* YMBasePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBasePickerView.h; sourceTree = "<group>"; };
 		81A593C1219980F70009669C /* YMBasePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBasePickerView.m; sourceTree = "<group>"; };
 		81A593C3219983B50009669C /* YMPickerToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPickerToolBarView.h; sourceTree = "<group>"; };
@@ -1310,6 +1313,8 @@
 			children = (
 				81BF54F12145ED1F004BC70A /* AppDelegate.h */,
 				81BF54F22145ED1F004BC70A /* AppDelegate.m */,
+				81963EBD21AD2915002BFB5C /* AppDelegate+YMLocalNotification.h */,
+				81963EBE21AD2915002BFB5C /* AppDelegate+YMLocalNotification.m */,
 			);
 			path = YMAppDelegate;
 			sourceTree = "<group>";
@@ -1802,6 +1807,7 @@
 				81621705219018CB0001FC5E /* YMPictureTestCollectionViewCell.m in Sources */,
 				8193D2622149FF7300EB225D /* YMWorkbenchViewController.m in Sources */,
 				81E41A17217EFB2200DC9A4A /* YMWKWebViewViewController.m in Sources */,
+				81963EBF21AD2915002BFB5C /* AppDelegate+YMLocalNotification.m in Sources */,
 				8193D2B5214A008800EB225D /* ViewController+MASAdditions.m in Sources */,
 				81012946214F7E2900725BAF /* YMNetworkJudgeUtils.m in Sources */,
 				811D8EEC21A7F60B00053FC1 /* YMDemoFormViewController.m in Sources */,
