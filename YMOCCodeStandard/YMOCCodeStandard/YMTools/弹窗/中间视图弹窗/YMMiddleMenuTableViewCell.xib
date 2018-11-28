@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YMMiddleMenuTableViewCellId" id="KGk-i7-Jjw" customClass="YMMiddleMenuTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOT-5k-CZx">
+                        <rect key="frame" x="0.0" y="12" width="320" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnt-Cy-vKz">
+                        <rect key="frame" x="0.0" y="43" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="rXT-GY-zZU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LOT-5k-CZx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5kY-YQ-Vdm"/>
+                    <constraint firstAttribute="trailing" secondItem="LOT-5k-CZx" secondAttribute="trailing" id="Lgb-b8-9Gb"/>
+                    <constraint firstItem="Wnt-Cy-vKz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SuM-3a-YTJ"/>
+                    <constraint firstAttribute="bottom" secondItem="Wnt-Cy-vKz" secondAttribute="bottom" id="bfW-v9-hpl"/>
+                    <constraint firstAttribute="trailing" secondItem="Wnt-Cy-vKz" secondAttribute="trailing" id="nQI-bT-uV2"/>
+                    <constraint firstItem="LOT-5k-CZx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wXj-OP-j4X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="menuTitleLab" destination="LOT-5k-CZx" id="KpF-pG-bCB"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

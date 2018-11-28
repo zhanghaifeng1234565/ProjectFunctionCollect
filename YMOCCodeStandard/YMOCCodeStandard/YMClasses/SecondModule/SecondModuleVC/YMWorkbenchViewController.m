@@ -35,6 +35,8 @@ UITableViewDataSource>
     [self loadNavUIData];
     // 加载视图
     [self loadSubviews];
+    // 加载数据
+    [self initData];
 }
 
 #pragma mark -- 加载导航数据
@@ -119,7 +121,7 @@ UITableViewDataSource>
     }
 }
 
-#pragma mark - - 请求数据
+#pragma mark 请求数据
 - (void)initData {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [YMMBProgressHUD ymHideLoadingAlert:self.view];

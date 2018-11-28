@@ -26,8 +26,6 @@ static CGFloat kRowHeight = 48.0f;
 @end
 
 @implementation YMCountryPickerView {
-    /** 这一行是否选中 */
-    BOOL _rowIsSelect;
     /** 第一组当前选中的行 */
     NSInteger _firstComponentCurrentRow;
     /** 第二组当前选中的行 */
@@ -94,6 +92,9 @@ static CGFloat kRowHeight = 48.0f;
     }
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.width / 3 - 20, kRowHeight)];
+    label.adjustsFontSizeToFitWidth = YES;
+    label.textAlignment = NSTextAlignmentCenter;
+    
     if (component == 0) {
         label.text = self.model.province[row].name;
         if (row == _firstComponentCurrentRow) {
@@ -123,7 +124,6 @@ static CGFloat kRowHeight = 48.0f;
         }
     }
     
-    label.textAlignment = NSTextAlignmentCenter;
     return label;
 }
 

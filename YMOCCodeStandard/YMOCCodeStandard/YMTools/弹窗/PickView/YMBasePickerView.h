@@ -21,6 +21,8 @@ static CGFloat kToolBarViewHeight = 48;
 @optional;
 /** 按钮点击代理方法 */
 - (void)actionWithButton:(UIButton *)sender;
+/** 标题带出 */
+- (void)actionWithButton:(UIButton *)sender title:(NSString *)title;
 
 @end
 

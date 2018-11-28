@@ -19,7 +19,8 @@
 
 @interface YMNewsViewController ()
 <UITableViewDelegate, UITableViewDataSource,
-YMBasePickerViewDelegate>
+YMBasePickerViewDelegate,
+UIGestureRecognizerDelegate>
 
 /** 列表 */
 @property (nonatomic, strong) UITableView *tableView;
@@ -32,7 +33,14 @@ YMBasePickerViewDelegate>
 
 @end
 
-@implementation YMNewsViewController
+@implementation YMNewsViewController{
+    /** tableView 内容偏移 */
+    CGFloat _tableViewContentOffSet;
+    /** 触摸点 X */
+    CGFloat _touchScreenX;
+    /** 触摸点 Y */
+    CGFloat _touchScreenY;
+}
 
 #pragma mark -- lifeStyle
 - (void)viewDidLoad {
@@ -68,6 +76,10 @@ YMBasePickerViewDelegate>
     if (cell == nil) {
         cell = [[YMBaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELLID"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        UILongPressGestureRecognizer *longPressGesture =         [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(cellLongPress:)];
+        cell.tag = indexPath.row;
+        [cell addGestureRecognizer:longPressGesture];
     }
 
     cell.textLabel.text = self.dataArr[indexPath.row];
@@ -187,13 +199,25 @@ YMBasePickerViewDelegate>
             [pickerView show];
         }
             break;
+        case 12:
+        {
+            // pickView
+            YMTimerPickerView *pickerView = [[YMTimerPickerView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, MainScreenHeight) delegate:self title:@"时间选择" leftBtnTitle:@"取消" rightBtnTitle:@"确定"];
+            self.resultDict = pickerView.resultDict;
+            __weak typeof(&*self) ws = self;
+            pickerView.resultBlock = ^(NSDictionary * _Nonnull dict) {
+                ws.resultDict = [[NSDictionary alloc] initWithDictionary:dict];
+            };
+            [pickerView show];
+        }
+            break;
         default:
             break;
     }
 }
 
 #pragma mark - - YMBasePickerViewDelegate
-- (void)actionWithButton:(UIButton *)sender {
+- (void)actionWithButton:(UIButton *)sender title:(nonnull NSString *)title {
     switch (sender.tag) {
         case 100:
         {
@@ -203,10 +227,12 @@ YMBasePickerViewDelegate>
         case 101:
         {
             NSLog(@"self.resultDict-- == %@", self.resultDict);
-            NSString *title = self.resultDict[@"pickerViewTitle"];
-            [YMBlackSmallAlert showAlertWithMessage:title time:2.0f];
+            NSString *pickerViewTitle = self.resultDict[@"pickerViewTitle"];
+            [YMBlackSmallAlert showAlertWithMessage:pickerViewTitle time:2.0f];
             
-            [[YMObtainUserLocationManager shareManager] transferMapWithAddress:title view:self.view];
+            if (![title isEqualToString:@"时间选择"]) {
+                [[YMObtainUserLocationManager shareManager] transferMapWithAddress:title view:self.view];
+            }
         }
             break;
         default:
@@ -219,7 +245,46 @@ YMBasePickerViewDelegate>
     [YMMBProgressHUD ymHideLoadingAlert:self.view];
 }
 
-#pragma mark -- lazyLoadUI
+#pragma mark  cell 长按
+- (void)cellLongPress:(UILongPressGestureRecognizer *)recognizer {
+    YMBaseTableViewCell *cell = (YMBaseTableViewCell *)recognizer.view;
+    CGPoint point = [recognizer locationInView:[recognizer view]]; //返回触摸点在视图中的当前坐标
+    CGFloat x = point.x;
+    CGFloat y = point.y;
+    _touchScreenX = x;
+    _touchScreenY = y;
+    if (cell.top - _tableViewContentOffSet > (MainScreenWidth - NavBarHeight) / 2) {
+        _touchScreenY = cell.top - _tableViewContentOffSet - cell.height - cell.height / 2;
+    } else {
+        _touchScreenY = cell.top - _tableViewContentOffSet + cell.height + cell.height / 2;
+    }
+    
+    if (_touchScreenX > MainScreenWidth / 2) {
+        _touchScreenX = _touchScreenX - 130;
+    }
+    
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        
+        NSMutableArray *listMarr = @[].mutableCopy;
+        for (int i = 0; i < 3; i++) {
+            NSMutableDictionary *dictM = @{}.mutableCopy;
+            [dictM setObject:[NSString stringWithFormat:@"至尊王者 - %d", i + 1] forKey:@"filtratename"];
+            [dictM setObject:[NSString stringWithFormat:@"%d", i] forKey:@"filtrateid"];
+            [listMarr addObject:dictM];
+        }
+        
+        YMMiddleMenuView *menuView = [[YMMiddleMenuView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, MainScreenHeight)];
+        menuView.tabFrame = CGRectMake(_touchScreenX, _touchScreenY, 130, 100);
+        menuView.titleArray = listMarr;
+        [[UIApplication sharedApplication].keyWindow addSubview:menuView];
+        
+        menuView.blockSelectedMenu = ^(NSInteger menuRow, NSString *filtratename, NSString *filtrateid) {
+            [YMBlackSmallAlert showAlertWithMessage:filtratename time:2.0f];
+        };
+    }
+}
+
+#pragma mark - - lazyLoadUI
 - (UITableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, YMSCROLLVIEW_TOP_MARGIN, MainScreenWidth, MainScreenHeight - NavBarHeight - TabBarHeight) style:UITableViewStylePlain];
@@ -250,7 +315,7 @@ YMBasePickerViewDelegate>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"系统富文本【中间】", @"系统富文本【底部】", @"自定义确定取消", @"自定义确定", @"webView 活动页", @"自定义黑色小弹窗", @"基于 HUD 黑色小弹窗", @"基于 HUD loading 有文字", @"基于 HUD loading 无文字", @"基于 HUD 系统菊花 loading", @"pickerView", @"省市区 pickerView", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"系统富文本【中间】", @"系统富文本【底部】", @"自定义确定取消", @"自定义确定", @"webView 活动页", @"自定义黑色小弹窗", @"基于 HUD 黑色小弹窗", @"基于 HUD loading 有文字", @"基于 HUD loading 无文字", @"基于 HUD 系统菊花 loading", @"pickerView", @"省市区 pickerView", @"时间选择", nil];
     }
     return _dataArr;
 }

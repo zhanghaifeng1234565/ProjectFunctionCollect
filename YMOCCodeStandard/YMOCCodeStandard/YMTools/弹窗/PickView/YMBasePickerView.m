@@ -130,6 +130,10 @@
         if ([ws.delegate respondsToSelector:@selector(actionWithButton:)]) {
             [ws.delegate actionWithButton:sender];
         }
+        
+        if ([ws.delegate respondsToSelector:@selector(actionWithButton:title:)]) {
+            [ws.delegate actionWithButton:sender title:ws.title];
+        }
         [ws hide];
     };
     
@@ -137,6 +141,10 @@
     self.toolBarView.rightBtnClickBlcok = ^(UIButton * _Nonnull sender) {
         if ([ws.delegate respondsToSelector:@selector(actionWithButton:)]) {
             [ws.delegate actionWithButton:sender];
+        }
+        
+        if ([ws.delegate respondsToSelector:@selector(actionWithButton:title:)]) {
+            [ws.delegate actionWithButton:sender title:ws.title];
         }
         [ws hide];
     };

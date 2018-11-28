@@ -8,7 +8,7 @@
 
 #import "YMBaseRootViewController.h"
 
-/** 消息 */
+/** 消息 ----> 弹窗 */
 @interface YMNewsViewController : YMBaseRootViewController
 
 @end
