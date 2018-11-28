@@ -61,5 +61,6 @@
 #import "YMGifImageView.h"
 #import "YMAdaptiveHeightTextView.h"
 #import "YMLimitTextField.h"
+#import "YMObtainUserLocationManager.h"
 
 #endif /* YMOCCodeStandardUIHeader_h */

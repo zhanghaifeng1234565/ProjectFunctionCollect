@@ -8,7 +8,7 @@
 
 #import "YMBaseRootViewController.h"
 
-/** 工作台 */
+/** 工作台 ---> 图片 */
 @interface YMWorkbenchViewController : YMBaseRootViewController
 
 @end

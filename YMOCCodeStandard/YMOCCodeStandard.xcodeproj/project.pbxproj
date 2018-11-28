@@ -139,6 +139,7 @@
 		81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E77EA921870DD8007CE3FD /* YMOrganizationSectionHeaderView.m */; };
 		81E77EB021870DD8007CE3FD /* YMOrganizationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E77EAC21870DD8007CE3FD /* YMOrganizationTableViewCell.xib */; };
 		81E77EB321870FD6007CE3FD /* YMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E77EB221870FD6007CE3FD /* YMBaseViewController.m */; };
+		81EDE1AC21AE6E51008DCC8A /* YMObtainUserLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1AB21AE6E51008DCC8A /* YMObtainUserLocationManager.m */; };
 		81EEC0B8219173BA0087EA72 /* YMCommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0B7219173BA0087EA72 /* YMCommonFunc.m */; };
 		81EEC0BC219175EC0087EA72 /* YMSystemAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0BA219175EC0087EA72 /* YMSystemAlertViewController.m */; };
 		81EEC0C4219177610087EA72 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0BE219177610087EA72 /* 4.jpg */; };
@@ -434,6 +435,8 @@
 		81E77EAC21870DD8007CE3FD /* YMOrganizationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMOrganizationTableViewCell.xib; sourceTree = "<group>"; };
 		81E77EB121870FD6007CE3FD /* YMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBaseViewController.h; sourceTree = "<group>"; };
 		81E77EB221870FD6007CE3FD /* YMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBaseViewController.m; sourceTree = "<group>"; };
+		81EDE1AA21AE6E51008DCC8A /* YMObtainUserLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMObtainUserLocationManager.h; sourceTree = "<group>"; };
+		81EDE1AB21AE6E51008DCC8A /* YMObtainUserLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMObtainUserLocationManager.m; sourceTree = "<group>"; };
 		81EEC0B4219142C10087EA72 /* YMOCCodeStandardPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOCCodeStandardPrefixHeader.pch; sourceTree = "<group>"; };
 		81EEC0B5219143340087EA72 /* YMOCCodeStandardUIHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOCCodeStandardUIHeader.h; sourceTree = "<group>"; };
 		81EEC0B6219173BA0087EA72 /* YMCommonFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCommonFunc.h; sourceTree = "<group>"; };
@@ -1275,6 +1278,7 @@
 		81BF54EC2145ED1F004BC70A /* YMTools */ = {
 			isa = PBXGroup;
 			children = (
+				81EDE1A921AE6E51008DCC8A /* 管理用户位置 */,
 				81963E6221AD1F4D002BFB5C /* 分段控制器 */,
 				81963E5721ACEA8D002BFB5C /* QRCode */,
 				81FA28A221AB7C9700C8FDAB /* YMUI */,
@@ -1516,6 +1520,15 @@
 				81CA7891218844A8005EFA1A /* YMOrganizationSearchModel.m */,
 			);
 			path = "组织架构";
+			sourceTree = "<group>";
+		};
+		81EDE1A921AE6E51008DCC8A /* 管理用户位置 */ = {
+			isa = PBXGroup;
+			children = (
+				81EDE1AA21AE6E51008DCC8A /* YMObtainUserLocationManager.h */,
+				81EDE1AB21AE6E51008DCC8A /* YMObtainUserLocationManager.m */,
+			);
+			path = "管理用户位置";
 			sourceTree = "<group>";
 		};
 		81EEC0B9219175EC0087EA72 /* 基于系统的弹窗 */ = {
@@ -1873,6 +1886,7 @@
 				81963EAE21AD273B002BFB5C /* UIScrollView+UITouch.m in Sources */,
 				812F5ACE21A6B7FC0072A21E /* YMBaseTableView.m in Sources */,
 				81FA28BF21AB89B200C8FDAB /* YMFormTitleTableViewCell.m in Sources */,
+				81EDE1AC21AE6E51008DCC8A /* YMObtainUserLocationManager.m in Sources */,
 				8193D27E214A000E00EB225D /* NSObject+MJCoding.m in Sources */,
 				81937FF6214F370000EEA717 /* AFHTTPSessionManager.m in Sources */,
 				81E77EAE21870DD8007CE3FD /* YMOrganizationTableViewCell.m in Sources */,

@@ -205,6 +205,8 @@ YMBasePickerViewDelegate>
             NSLog(@"self.resultDict-- == %@", self.resultDict);
             NSString *title = self.resultDict[@"pickerViewTitle"];
             [YMBlackSmallAlert showAlertWithMessage:title time:2.0f];
+            
+            [[YMObtainUserLocationManager shareManager] transferMapWithAddress:title view:self.view];
         }
             break;
         default:

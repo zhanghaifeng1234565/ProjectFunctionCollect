@@ -78,7 +78,6 @@ static NSString *logoNameStr = @"forward_resumes_blue_btn";
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGest:)];
     tap.delegate = self;
     [self.QRImageView addGestureRecognizer:tap];
-    
     [self.imageMarr addObject:self.QRImageView];
     
     // 识别二维码
