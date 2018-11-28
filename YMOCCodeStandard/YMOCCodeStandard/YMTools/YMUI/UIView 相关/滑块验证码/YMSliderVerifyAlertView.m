@@ -94,7 +94,7 @@
     [_contentView addSubview:({
         _puzzleView = [[YMPuzzleVerifyView alloc] init];
         _puzzleView.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.00];
-        _puzzleView.image = [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%zd.jpg", (NSInteger)(1 + (arc4random() % 5))]]];
+        _puzzleView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%zd.jpg", (NSInteger)(1 + (arc4random() % 5))]];
         _puzzleView;
     })];
     
@@ -213,7 +213,7 @@
     _slider.enabled = YES;
     _resultImageView.hidden = YES;
     _resultImageView.image = nil;
-    _puzzleView.image = [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%zd.jpg", (NSInteger)(1 + (arc4random() % 12))]]];
+    _puzzleView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%zd.jpg", (NSInteger)(1 + (arc4random() % 5))]];
     [_puzzleView refresh];
 }
 
