@@ -64,5 +64,6 @@
 #import "YMObtainUserLocationManager.h"
 #import "YMMiddleMenuView.h"
 #import "YMTimerPickerView.h"
+#import "YMStarControlView.h"
 
 #endif /* YMOCCodeStandardUIHeader_h */

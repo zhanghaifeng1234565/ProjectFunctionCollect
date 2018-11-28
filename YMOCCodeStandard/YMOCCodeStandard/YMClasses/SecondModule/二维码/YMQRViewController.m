@@ -16,8 +16,11 @@
 static NSString *logoNameStr = @"forward_resumes_blue_btn";
 
 @interface YMQRViewController ()
-<UIGestureRecognizerDelegate>
+<UIGestureRecognizerDelegate,
+YMStarControlViewDelegate>
 
+/** 滚动视图 */
+@property (nonatomic, strong) UIScrollView *scrollView;
 /** 二维码 */
 @property (nonatomic, strong) YMHighlightImageView *QRImageView;
 /** 图片数组 */
@@ -32,6 +35,9 @@ static NSString *logoNameStr = @"forward_resumes_blue_btn";
 /** 输入要生成的二维码字符串 */
 @property (nonatomic, strong) YMLimitTextField *QRTextField;
 
+/** 星星控件 */
+@property (nonatomic, strong) YMStarControlView *starView;
+
 @end
 
 @implementation YMQRViewController
@@ -39,22 +45,31 @@ static NSString *logoNameStr = @"forward_resumes_blue_btn";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"二维码";
 }
 
 #pragma mark - - 加载视图
 - (void)loadSubviews {
     [super loadSubviews];
     
-    [self.view addSubview:self.QRTextField];
-    [self.view addSubview:self.readQRCodeBtn];
-    [self.view addSubview:self.scannQRCodeBtn];
-    [self.view addSubview:self.QRImageView];
-    [self.view addSubview:self.codeLabel];
+    [self.view addSubview:self.scrollView];
+    [self.scrollView addSubview:self.QRTextField];
+    [self.scrollView addSubview:self.readQRCodeBtn];
+    [self.scrollView addSubview:self.scannQRCodeBtn];
+    [self.scrollView addSubview:self.QRImageView];
+    [self.scrollView addSubview:self.codeLabel];
+    [self.scrollView addSubview:self.starView];
 }
 
 #pragma mark - - 配置视图
 - (void)configSubviews {
     [super configSubviews];
+    
+    if (@available(iOS 11.0, *)) {
+        self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     
     UIButton *creatBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 35)];
     [UIButton ym_button:creatBtn title:@"生成二维码" fontSize:14 titleColor:[UIColor magentaColor]];
@@ -113,6 +128,7 @@ static NSString *logoNameStr = @"forward_resumes_blue_btn";
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    self.scrollView.frame = CGRectMake(0, 0, MainScreenWidth, MainScreenHeight - NavBarHeight);
     self.QRTextField.frame = CGRectMake(30, 30, MainScreenWidth - 60, 35);
     self.readQRCodeBtn.frame = CGRectMake(30, self.QRTextField.bottom + 30, 100, 45);
     self.scannQRCodeBtn.frame = CGRectMake(MainScreenWidth - 30 - 100, self.readQRCodeBtn.top, 100, 45);
@@ -121,6 +137,11 @@ static NSString *logoNameStr = @"forward_resumes_blue_btn";
     [UILabel ym_label:self.codeLabel lineSpace:5 maxWidth:MainScreenWidth - 30 alignment:NSTextAlignmentCenter];
     CGFloat codeLabelHeight = [UILabel ym_getHeightWithString:self.codeLabel.text fontSize:15 lineSpace:5 maxWidth:MainScreenWidth - 30];
     self.codeLabel.frame = CGRectMake(15, self.QRImageView.bottom + 30, MainScreenWidth - 30, codeLabelHeight);
+    
+    self.starView.frame = CGRectMake((MainScreenWidth - 80) / 2, self.codeLabel.bottom + 30, 80, 15);
+    
+    BOOL isOverScreenHeight = (self.starView.bottom + 30) - (MainScreenHeight - NavBarHeight) > 0 ? YES : NO;
+    self.scrollView.contentSize = CGSizeMake(MainScreenWidth, isOverScreenHeight ? self.starView.bottom + 30 : MainScreenHeight - NavBarHeight);
 }
 
 #pragma mark - - 生成二维码
@@ -255,12 +276,24 @@ static NSString *logoNameStr = @"forward_resumes_blue_btn";
     }
 }
 
+#pragma mark - - YMStarControlViewDelegate
+- (void)starRatingView:(YMStarControlView *)view score:(CGFloat)score{
+    NSLog(@"score = %f",score);
+}
+
 #pragma mark - - touch
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
 
 #pragma mark - - lazyLoadUI
+- (UIScrollView *)scrollView {
+    if (_scrollView == nil) {
+        _scrollView = [[UIScrollView alloc] init];
+    }
+    return _scrollView;
+}
+
 - (YMLimitTextField *)QRTextField {
     if (_QRTextField == nil) {
         _QRTextField = [[YMLimitTextField alloc] init];
@@ -294,6 +327,15 @@ static NSString *logoNameStr = @"forward_resumes_blue_btn";
         _codeLabel = [[UILabel alloc] init];
     }
     return _codeLabel;
+}
+
+- (YMStarControlView *)starView {
+    if (_starView == nil) {
+        _starView = [[YMStarControlView alloc] initWithFrame:CGRectMake((MainScreenWidth - 80) / 2, self.codeLabel.bottom + 30, 80, 15) delegate:self touchMoveIsEnable:YES fullStarName:@"yellow_star" emptyStarName:@"gray_star" maxScore:5 sartMargin:2];
+        
+        [_starView setScore:3];
+    }
+    return _starView;
 }
 
 #pragma mark - - lazyLoadData
