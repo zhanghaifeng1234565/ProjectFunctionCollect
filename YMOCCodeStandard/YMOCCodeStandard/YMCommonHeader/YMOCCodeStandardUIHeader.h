@@ -65,5 +65,6 @@
 #import "YMMiddleMenuView.h"
 #import "YMTimerPickerView.h"
 #import "YMStarControlView.h"
+#import "YMSliderVerifyAlertView.h"
 
 #endif /* YMOCCodeStandardUIHeader_h */

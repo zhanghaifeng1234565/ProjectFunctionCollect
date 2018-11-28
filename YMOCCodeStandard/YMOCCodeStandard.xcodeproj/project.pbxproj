@@ -145,6 +145,22 @@
 		81EDE1B521AE7966008DCC8A /* YMMiddleMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1B221AE7966008DCC8A /* YMMiddleMenuTableViewCell.m */; };
 		81EDE1B921AE7C8B008DCC8A /* YMTimerPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1B821AE7C8B008DCC8A /* YMTimerPickerView.m */; };
 		81EDE1BE21AE8631008DCC8A /* YMStarControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1BC21AE8631008DCC8A /* YMStarControlView.m */; };
+		81EDE1C221AE90B5008DCC8A /* YMSliderVerifyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1C121AE90B5008DCC8A /* YMSliderVerifyAlertView.m */; };
+		81EDE1C821AE9167008DCC8A /* YMPuzzlePathMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1C721AE9167008DCC8A /* YMPuzzlePathMaker.m */; };
+		81EDE1CB21AE917B008DCC8A /* YMPuzzleVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1CA21AE917B008DCC8A /* YMPuzzleVerifyView.m */; };
+		81EDE1CE21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1CD21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.m */; };
+		81EDE1DC21AE92A9008DCC8A /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D021AE92A9008DCC8A /* 8.jpg */; };
+		81EDE1DD21AE92A9008DCC8A /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D121AE92A9008DCC8A /* 9.jpg */; };
+		81EDE1DE21AE92A9008DCC8A /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D221AE92A9008DCC8A /* 12.jpg */; };
+		81EDE1DF21AE92A9008DCC8A /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D321AE92A9008DCC8A /* 11.jpg */; };
+		81EDE1E021AE92A9008DCC8A /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D421AE92A9008DCC8A /* 10.jpg */; };
+		81EDE1E121AE92A9008DCC8A /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D521AE92A9008DCC8A /* 4.jpg */; };
+		81EDE1E221AE92A9008DCC8A /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D621AE92A9008DCC8A /* 5.jpg */; };
+		81EDE1E321AE92A9008DCC8A /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D721AE92A9008DCC8A /* 7.jpg */; };
+		81EDE1E421AE92A9008DCC8A /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D821AE92A9008DCC8A /* 6.jpg */; };
+		81EDE1E521AE92A9008DCC8A /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1D921AE92A9008DCC8A /* 2.jpg */; };
+		81EDE1E621AE92A9008DCC8A /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1DA21AE92A9008DCC8A /* 3.jpg */; };
+		81EDE1E721AE92A9008DCC8A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1DB21AE92A9008DCC8A /* 1.jpg */; };
 		81EEC0B8219173BA0087EA72 /* YMCommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0B7219173BA0087EA72 /* YMCommonFunc.m */; };
 		81EEC0BC219175EC0087EA72 /* YMSystemAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EEC0BA219175EC0087EA72 /* YMSystemAlertViewController.m */; };
 		81EEC0C4219177610087EA72 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0BE219177610087EA72 /* 4.jpg */; };
@@ -451,6 +467,26 @@
 		81EDE1B821AE7C8B008DCC8A /* YMTimerPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTimerPickerView.m; sourceTree = "<group>"; };
 		81EDE1BC21AE8631008DCC8A /* YMStarControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMStarControlView.m; sourceTree = "<group>"; };
 		81EDE1BD21AE8631008DCC8A /* YMStarControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMStarControlView.h; sourceTree = "<group>"; };
+		81EDE1C021AE90B5008DCC8A /* YMSliderVerifyAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSliderVerifyAlertView.h; sourceTree = "<group>"; };
+		81EDE1C121AE90B5008DCC8A /* YMSliderVerifyAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSliderVerifyAlertView.m; sourceTree = "<group>"; };
+		81EDE1C621AE9167008DCC8A /* YMPuzzlePathMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPuzzlePathMaker.h; sourceTree = "<group>"; };
+		81EDE1C721AE9167008DCC8A /* YMPuzzlePathMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPuzzlePathMaker.m; sourceTree = "<group>"; };
+		81EDE1C921AE917B008DCC8A /* YMPuzzleVerifyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPuzzleVerifyView.h; sourceTree = "<group>"; };
+		81EDE1CA21AE917B008DCC8A /* YMPuzzleVerifyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPuzzleVerifyView.m; sourceTree = "<group>"; };
+		81EDE1CC21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+YMPuzzlePathMaker.h"; sourceTree = "<group>"; };
+		81EDE1CD21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+YMPuzzlePathMaker.m"; sourceTree = "<group>"; };
+		81EDE1D021AE92A9008DCC8A /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		81EDE1D121AE92A9008DCC8A /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		81EDE1D221AE92A9008DCC8A /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		81EDE1D321AE92A9008DCC8A /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		81EDE1D421AE92A9008DCC8A /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		81EDE1D521AE92A9008DCC8A /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		81EDE1D621AE92A9008DCC8A /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		81EDE1D721AE92A9008DCC8A /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		81EDE1D821AE92A9008DCC8A /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		81EDE1D921AE92A9008DCC8A /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		81EDE1DA21AE92A9008DCC8A /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		81EDE1DB21AE92A9008DCC8A /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		81EEC0B4219142C10087EA72 /* YMOCCodeStandardPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOCCodeStandardPrefixHeader.pch; sourceTree = "<group>"; };
 		81EEC0B5219143340087EA72 /* YMOCCodeStandardUIHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOCCodeStandardUIHeader.h; sourceTree = "<group>"; };
 		81EEC0B6219173BA0087EA72 /* YMCommonFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCommonFunc.h; sourceTree = "<group>"; };
@@ -1571,6 +1607,7 @@
 		81EDE1BA21AE861F008DCC8A /* UIView 相关 */ = {
 			isa = PBXGroup;
 			children = (
+				81EDE1BF21AE906B008DCC8A /* 滑块验证码 */,
 				81EDE1BB21AE8631008DCC8A /* 星星控件 */,
 			);
 			path = "UIView 相关";
@@ -1583,6 +1620,41 @@
 				81EDE1BC21AE8631008DCC8A /* YMStarControlView.m */,
 			);
 			path = "星星控件";
+			sourceTree = "<group>";
+		};
+		81EDE1BF21AE906B008DCC8A /* 滑块验证码 */ = {
+			isa = PBXGroup;
+			children = (
+				81EDE1CF21AE92A9008DCC8A /* Images */,
+				81EDE1C021AE90B5008DCC8A /* YMSliderVerifyAlertView.h */,
+				81EDE1C121AE90B5008DCC8A /* YMSliderVerifyAlertView.m */,
+				81EDE1C921AE917B008DCC8A /* YMPuzzleVerifyView.h */,
+				81EDE1CA21AE917B008DCC8A /* YMPuzzleVerifyView.m */,
+				81EDE1C621AE9167008DCC8A /* YMPuzzlePathMaker.h */,
+				81EDE1C721AE9167008DCC8A /* YMPuzzlePathMaker.m */,
+				81EDE1CC21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.h */,
+				81EDE1CD21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.m */,
+			);
+			path = "滑块验证码";
+			sourceTree = "<group>";
+		};
+		81EDE1CF21AE92A9008DCC8A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				81EDE1DB21AE92A9008DCC8A /* 1.jpg */,
+				81EDE1D921AE92A9008DCC8A /* 2.jpg */,
+				81EDE1DA21AE92A9008DCC8A /* 3.jpg */,
+				81EDE1D521AE92A9008DCC8A /* 4.jpg */,
+				81EDE1D621AE92A9008DCC8A /* 5.jpg */,
+				81EDE1D821AE92A9008DCC8A /* 6.jpg */,
+				81EDE1D721AE92A9008DCC8A /* 7.jpg */,
+				81EDE1D021AE92A9008DCC8A /* 8.jpg */,
+				81EDE1D121AE92A9008DCC8A /* 9.jpg */,
+				81EDE1D421AE92A9008DCC8A /* 10.jpg */,
+				81EDE1D321AE92A9008DCC8A /* 11.jpg */,
+				81EDE1D221AE92A9008DCC8A /* 12.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		81EEC0B9219175EC0087EA72 /* 基于系统的弹窗 */ = {
@@ -1748,6 +1820,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81EDE1E121AE92A9008DCC8A /* 4.jpg in Resources */,
 				81CA788F21884006005EFA1A /* YMOrganizationSearchTableViewCell.xib in Resources */,
 				81EEC0C9219177610087EA72 /* 1.jpg in Resources */,
 				81E77EA521870D94007CE3FD /* YMOrganizationViewController.xib in Resources */,
@@ -1757,22 +1830,33 @@
 				8193D25D2149FF7300EB225D /* YMMineViewController.xib in Resources */,
 				81E77EB021870DD8007CE3FD /* YMOrganizationTableViewCell.xib in Resources */,
 				81FA28C521AB89D700C8FDAB /* YMFormTextFiledTableViewCell.xib in Resources */,
+				81EDE1E521AE92A9008DCC8A /* 2.jpg in Resources */,
 				81EEC0C7219177610087EA72 /* 2.jpg in Resources */,
 				81621706219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib in Resources */,
 				81EEC0C5219177610087EA72 /* 5.jpg in Resources */,
 				81BF55042145ED1F004BC70A /* Info.plist in Resources */,
 				81EEC0C8219177610087EA72 /* 3.jpg in Resources */,
 				81BF55012145ED1F004BC70A /* Main.storyboard in Resources */,
+				81EDE1E621AE92A9008DCC8A /* 3.jpg in Resources */,
 				81EEC0C4219177610087EA72 /* 4.jpg in Resources */,
+				81EDE1E321AE92A9008DCC8A /* 7.jpg in Resources */,
+				81EDE1E421AE92A9008DCC8A /* 6.jpg in Resources */,
 				81EEC0C6219177610087EA72 /* 6.jpg in Resources */,
+				81EDE1DF21AE92A9008DCC8A /* 11.jpg in Resources */,
 				8193D25F2149FF7300EB225D /* YMNewsViewController.xib in Resources */,
 				81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */,
 				812F5AC621A6B59F0072A21E /* OARefreshHeader.json in Resources */,
+				81EDE1DE21AE92A9008DCC8A /* 12.jpg in Resources */,
+				81EDE1E721AE92A9008DCC8A /* 1.jpg in Resources */,
+				81EDE1E021AE92A9008DCC8A /* 10.jpg in Resources */,
+				81EDE1DC21AE92A9008DCC8A /* 8.jpg in Resources */,
+				81EDE1E221AE92A9008DCC8A /* 5.jpg in Resources */,
 				81BF54FF2145ED1F004BC70A /* Assets.xcassets in Resources */,
 				81BF55002145ED1F004BC70A /* LaunchScreen.storyboard in Resources */,
 				81A593CB21998DFB0009669C /* timg.gif in Resources */,
 				81FA28CA21AB89EC00C8FDAB /* YMFormTextViewTableViewCell.xib in Resources */,
 				81FA28C021AB89B200C8FDAB /* YMFormTitleTableViewCell.xib in Resources */,
+				81EDE1DD21AE92A9008DCC8A /* 9.jpg in Resources */,
 				8193D2632149FF7300EB225D /* YMWorkbenchViewController.xib in Resources */,
 				8193D2612149FF7300EB225D /* YMHomeViewController.xib in Resources */,
 			);
@@ -1847,6 +1931,7 @@
 				8193D2BC214A008800EB225D /* MASViewConstraint.m in Sources */,
 				81FA28C421AB89D700C8FDAB /* YMFormTextFiledTableViewCell.m in Sources */,
 				8193D281214A000E00EB225D /* NSObject+MJClass.m in Sources */,
+				81EDE1C821AE9167008DCC8A /* YMPuzzlePathMaker.m in Sources */,
 				81963EAD21AD273B002BFB5C /* UINavigationBar+Awesome.m in Sources */,
 				81CA77A62187E6DD005EFA1A /* YMOrganizationViewModel.m in Sources */,
 				81BF54FE2145ED1F004BC70A /* AppDelegate.m in Sources */,
@@ -1901,6 +1986,7 @@
 				81937FFD214F37D100EEA717 /* YMNetworkingBaseUtils.m in Sources */,
 				81963EBA21AD273B002BFB5C /* UIImage+YMGif.m in Sources */,
 				8193D2B9214A008800EB225D /* NSArray+MASAdditions.m in Sources */,
+				81EDE1CE21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.m in Sources */,
 				812F5AC421A6B59F0072A21E /* YMRefreshHeader.m in Sources */,
 				81963E6E21AD2200002BFB5C /* YMNewsDemoViewController.m in Sources */,
 				8193D2BB214A008800EB225D /* MASConstraint.m in Sources */,
@@ -1915,6 +2001,7 @@
 				81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */,
 				81EDE1B521AE7966008DCC8A /* YMMiddleMenuTableViewCell.m in Sources */,
 				81963EB221AD273B002BFB5C /* UIFont+YMCategory.m in Sources */,
+				81EDE1CB21AE917B008DCC8A /* YMPuzzleVerifyView.m in Sources */,
 				8193D283214A000E00EB225D /* MJPropertyKey.m in Sources */,
 				81DAA58D219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m in Sources */,
 				8193D2B7214A008800EB225D /* MASConstraintMaker.m in Sources */,
@@ -1962,6 +2049,7 @@
 				81937FF5214F370000EEA717 /* AFURLResponseSerialization.m in Sources */,
 				81963EB521AD273B002BFB5C /* UIView+YMParentController.m in Sources */,
 				8193D2CA214A013F00EB225D /* YMUIPlaceholderTextView.m in Sources */,
+				81EDE1C221AE90B5008DCC8A /* YMSliderVerifyAlertView.m in Sources */,
 				81CA788A21883115005EFA1A /* YMOrganizationSearchTableView.m in Sources */,
 				81EEC0BC219175EC0087EA72 /* YMSystemAlertViewController.m in Sources */,
 			);

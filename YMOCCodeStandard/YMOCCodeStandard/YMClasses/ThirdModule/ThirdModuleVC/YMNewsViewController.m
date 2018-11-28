@@ -211,6 +211,38 @@ UIGestureRecognizerDelegate>
             [pickerView show];
         }
             break;
+        case 13:
+        {
+            YMSliderVerifyAlertView *verifyView = [[YMSliderVerifyAlertView alloc] initWithMaximumVerifyNumber:3 results:^(YMSliderVerifyState state) {
+                NSLog(@"%zd", state);
+                switch (state) {
+                    case YMSliderVerifyStateNot:
+                    {
+                        [YMBlackSmallAlert showAlertWithMessage:@"未验证" time:2.0f];
+                    }
+                        break;
+                    case YMSliderVerifyStateFail:
+                    {
+                        [YMBlackSmallAlert showAlertWithMessage:@"验证失败" time:2.0f];
+                    }
+                        break;
+                    case YMSliderVerifyStateSuccess:
+                    {
+                        [YMBlackSmallAlert showAlertWithMessage:@"验证成功" time:2.0f];
+                    }
+                        break;
+                    case YMSliderVerifyStateIncomplete:
+                    {
+                        [YMBlackSmallAlert showAlertWithMessage:@"未完成验证" time:2.0f];
+                    }
+                        break;
+                    default:
+                        break;
+                }
+            }];
+            [verifyView show];
+        }
+            break;
         default:
             break;
     }
@@ -315,7 +347,7 @@ UIGestureRecognizerDelegate>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"系统富文本【中间】", @"系统富文本【底部】", @"自定义确定取消", @"自定义确定", @"webView 活动页", @"自定义黑色小弹窗", @"基于 HUD 黑色小弹窗", @"基于 HUD loading 有文字", @"基于 HUD loading 无文字", @"基于 HUD 系统菊花 loading", @"pickerView", @"省市区 pickerView", @"时间选择", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"系统富文本【中间】", @"系统富文本【底部】", @"自定义确定取消", @"自定义确定", @"webView 活动页", @"自定义黑色小弹窗", @"基于 HUD 黑色小弹窗", @"基于 HUD loading 有文字", @"基于 HUD loading 无文字", @"基于 HUD 系统菊花 loading", @"pickerView", @"省市区 pickerView", @"时间选择", @"滑块验证码", nil];
     }
     return _dataArr;
 }
