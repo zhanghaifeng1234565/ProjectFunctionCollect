@@ -77,7 +77,8 @@
     
     [_contentView addSubview:({
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_closeButton setBackgroundImage:[UIImage imageNamed:@"ic_channel_close"] forState:UIControlStateNormal];
+        [_closeButton setTitle:@"关闭" forState:UIControlStateNormal];
+        [_closeButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [_closeButton addTarget:self action:@selector(closeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         _closeButton;
     })];
@@ -93,7 +94,7 @@
     [_contentView addSubview:({
         _puzzleView = [[YMPuzzleVerifyView alloc] init];
         _puzzleView.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.00];
-        _puzzleView.image = [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%zd.jpg", (NSInteger)(1 + (arc4random() % 12))]]];
+        _puzzleView.image = [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%zd.jpg", (NSInteger)(1 + (arc4random() % 5))]]];
         _puzzleView;
     })];
     
@@ -125,7 +126,8 @@
     
     [_contentView addSubview:({
         _refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_refreshButton setImage:[UIImage imageNamed:@"ic_refresh"] forState:UIControlStateNormal];
+        [_refreshButton setTitle:@"刷新" forState:UIControlStateNormal];
+        [_refreshButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [_refreshButton addTarget:self action:@selector(refreshButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         _refreshButton;
     })];
@@ -158,7 +160,7 @@
         _contentView.frame = CGRectMake(contentViewX, contentViewY, contentViewW, contentViewH);
     }
     
-    CGFloat closeButtonW = 25.f;
+    CGFloat closeButtonW = 40.f;
     CGFloat closeButtonX = safeWidth + margin - closeButtonW;
     _closeButton.frame = CGRectMake(closeButtonX, margin, closeButtonW, closeButtonW);
     
@@ -174,9 +176,9 @@
     CGFloat messageLabelY = CGRectGetMaxY(_slider.frame) + 25.f;
     _messageLabel.frame = CGRectMake(margin, messageLabelY, safeWidth, messageLabelH);
     
-    CGFloat refreshButtonX = CGRectGetWidth(_contentView.frame) - margin - 18.f;
+    CGFloat refreshButtonX = CGRectGetWidth(_contentView.frame) - margin - 40.f;
     CGFloat refreshButtonY = contentViewH - 49.f;
-    _refreshButton.frame = CGRectMake(refreshButtonX, refreshButtonY, 18.f, 20.f);
+    _refreshButton.frame = CGRectMake(refreshButtonX, refreshButtonY, 40.f, 20.f);
     
     CGFloat tipLabelW = safeWidth - 34.f;
     _tipLabel.frame = CGRectMake(margin, refreshButtonY, tipLabelW, 25.f);
@@ -277,7 +279,7 @@
                 } else {
                     self->_slider.enabled = NO;
                     self->_puzzleView.enable = NO;
-                    self->_messageLabel.text = [NSString stringWithFormat:@"验证失败，您还有%zd次机会！请点击刷新按钮，刷新验证码。", _remainingVerifyNumber];
+                    self->_messageLabel.text = [NSString stringWithFormat:@"验证失败，您还有%zd次机会！请点击刷新按钮，刷新验证码。", self->_remainingVerifyNumber];
                 }
                 [self updateLayout:YES];
             }
