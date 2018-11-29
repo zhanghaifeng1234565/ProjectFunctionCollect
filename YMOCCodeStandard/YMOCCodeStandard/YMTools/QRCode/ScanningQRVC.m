@@ -46,14 +46,16 @@
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 40, 40);
     [rightBtn setTitle:@"相册" forState:UIControlStateNormal];
-    [rightBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [rightBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     [rightBtn addTarget:self action:@selector(albumClick:) forControlEvents:UIControlEventTouchUpInside];
     
     
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.frame = CGRectMake(0, 0, 40, 40);
     [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [leftBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    leftBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [leftBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     [leftBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
@@ -132,12 +134,24 @@
     imagePicker.delegate = self;
     imagePicker.allowsEditing = YES;
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self presentViewController:imagePicker animated:YES completion:nil];
+    [self presentViewController:imagePicker animated:YES completion:^{
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    }];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self.qrCodeManager starScanning];
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    }];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-    [picker dismissViewControllerAnimated:YES completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self.qrCodeManager starScanning];
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    }];
     //获取到的图片
     UIImage * image = [info valueForKey:UIImagePickerControllerEditedImage];
     NSString *QRCodeStr = [QRCode readAlbumQRCode:image];
@@ -174,7 +188,8 @@
         }
     }];
     [alert addAction:action];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    
+    [self.navigationController presentViewController:alert animated:YES completion:nil] ;
 }
 
 /*

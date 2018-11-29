@@ -180,7 +180,7 @@ YMStarControlViewDelegate>
     
     ScanningQRVC *vc = [[ScanningQRVC alloc] init];
     vc.push = NO;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    YMUINavigationController *nav = [[YMUINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nav animated:YES completion:^{
         
     }];
