@@ -29,7 +29,10 @@
 
 @end
 
-@implementation YMPictureViewerDemoViewController
+@implementation YMPictureViewerDemoViewController {
+    /** 标记使得加载数据只执行一次 */
+    BOOL _flag;
+}
 
 #pragma mark - - init
 - (void)viewDidLoad {
@@ -37,6 +40,20 @@
     
     // MARK: 初始化导航
     [self initNavData];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (!_flag) {
+        if ([self.isCollectionView isEqualToString:@"1"]) {
+            [self.view addSubview:self.testView];
+        } else {
+            [self.view addSubview:self.collectionView];
+        }
+        
+        [self initData];
+    }
 }
 
 #pragma mark - - 初始化导航
@@ -47,12 +64,7 @@
 #pragma mark - - 加载视图
 - (void)loadSubviews {
     [super loadSubviews];
-    
-    if ([self.isCollectionView isEqualToString:@"1"]) {
-        [self.view addSubview:self.testView];
-    } else {
-        [self.view addSubview:self.collectionView];
-    }
+
 }
 
 #pragma mark - - delegate && dataSource
@@ -118,34 +130,32 @@
 }
 
 #pragma mark -- 初始化数据
-- (void)loadData {
-    [super loadData];
+- (void)initData {
     
     [self.dataMArr removeAllObjects];
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSString *gifPath = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541501024814&di=468b91018f102112e7ce25e0d6ccb20d&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201603%2F08%2F20160308174903_X2Vnc.gif";
-        if ([self.imageType isEqualToString:@"1"]) {
-            for (int i = 0; i < 6; i++) {
-                if (i % 2 == 0) {
-                    [self.dataMArr addObject:gifPath];
-                } else {
-                    [self.dataMArr addObject:[NSString stringWithFormat:@"%d.jpg", i + 1]];
-                }
-            }
-        } else {
-            for (int i = 0; i < 9; i++) {
-                if (i % 2 == 0) {
-                    [self.dataMArr addObject:gifPath];
-                } else {
-                    [self.dataMArr addObject:[NSString stringWithFormat:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
-                }
+    NSString *gifPath = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541501024814&di=468b91018f102112e7ce25e0d6ccb20d&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201603%2F08%2F20160308174903_X2Vnc.gif";
+    if ([self.imageType isEqualToString:@"1"]) {
+        for (int i = 0; i < 6; i++) {
+            if (i % 2 == 0) {
+                [self.dataMArr addObject:gifPath];
+            } else {
+                [self.dataMArr addObject:[NSString stringWithFormat:@"%d.jpg", i + 1]];
             }
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
-        });
-    });
+    } else {
+        for (int i = 0; i < 9; i++) {
+            if (i % 2 == 0) {
+                [self.dataMArr addObject:gifPath];
+            } else {
+                [self.dataMArr addObject:[NSString stringWithFormat:@"http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg"]];
+            }
+        }
+    }
+    
+    [self.collectionView reloadData];
+    
+    _flag = YES;
 }
 
 #pragma mark - - lazyLoadUI
