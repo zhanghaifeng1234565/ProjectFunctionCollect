@@ -13,6 +13,8 @@
 #import "QRCode.h"
 #import "ScanningQRVC.h"
 
+#import "YMLoadingShimmer.h"
+
 static NSString *logoNameStr = @"forward_resumes_blue_btn";
 
 @interface YMQRViewController ()
@@ -142,6 +144,11 @@ YMStarControlViewDelegate>
     
     BOOL isOverScreenHeight = (self.starView.bottom + 30) - (MainScreenHeight - NavBarHeight) > 0 ? YES : NO;
     self.scrollView.contentSize = CGSizeMake(MainScreenWidth, isOverScreenHeight ? self.starView.bottom + 30 : MainScreenHeight - NavBarHeight);
+    
+    [YMLoadingShimmer startCovering:self.scrollView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [YMLoadingShimmer stopCovering:self.scrollView];
+    });
 }
 
 #pragma mark - - 生成二维码

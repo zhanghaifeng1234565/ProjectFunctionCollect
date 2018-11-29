@@ -157,6 +157,7 @@
 		81EEC0C7219177610087EA72 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C1219177610087EA72 /* 2.jpg */; };
 		81EEC0C8219177610087EA72 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C2219177610087EA72 /* 3.jpg */; };
 		81EEC0C9219177610087EA72 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81EEC0C3219177610087EA72 /* 1.jpg */; };
+		81F3A54E21AFF7D200F4B0FB /* YMLoadingShimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F3A54D21AFF7D200F4B0FB /* YMLoadingShimmer.m */; };
 		81FA28BB21AB7DE000C8FDAB /* YMAdaptiveHeightTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FA28BA21AB7DE000C8FDAB /* YMAdaptiveHeightTextView.m */; };
 		81FA28BF21AB89B200C8FDAB /* YMFormTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FA28BD21AB89B200C8FDAB /* YMFormTitleTableViewCell.m */; };
 		81FA28C021AB89B200C8FDAB /* YMFormTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81FA28BE21AB89B200C8FDAB /* YMFormTitleTableViewCell.xib */; };
@@ -475,6 +476,8 @@
 		81EEC0C1219177610087EA72 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		81EEC0C2219177610087EA72 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		81EEC0C3219177610087EA72 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		81F3A54C21AFF7D200F4B0FB /* YMLoadingShimmer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLoadingShimmer.h; sourceTree = "<group>"; };
+		81F3A54D21AFF7D200F4B0FB /* YMLoadingShimmer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMLoadingShimmer.m; sourceTree = "<group>"; };
 		81FA28B921AB7DE000C8FDAB /* YMAdaptiveHeightTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAdaptiveHeightTextView.h; sourceTree = "<group>"; };
 		81FA28BA21AB7DE000C8FDAB /* YMAdaptiveHeightTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAdaptiveHeightTextView.m; sourceTree = "<group>"; };
 		81FA28BC21AB89B200C8FDAB /* YMFormTitleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFormTitleTableViewCell.h; sourceTree = "<group>"; };
@@ -1305,6 +1308,7 @@
 		81BF54EC2145ED1F004BC70A /* YMTools */ = {
 			isa = PBXGroup;
 			children = (
+				81F3A54B21AFF7A400F4B0FB /* 主流 app 加载动画 */,
 				81EDE1A921AE6E51008DCC8A /* 管理用户位置 */,
 				81963E6221AD1F4D002BFB5C /* 分段控制器 */,
 				81963E5721ACEA8D002BFB5C /* QRCode */,
@@ -1635,6 +1639,15 @@
 			path = "图片预览 image";
 			sourceTree = "<group>";
 		};
+		81F3A54B21AFF7A400F4B0FB /* 主流 app 加载动画 */ = {
+			isa = PBXGroup;
+			children = (
+				81F3A54C21AFF7D200F4B0FB /* YMLoadingShimmer.h */,
+				81F3A54D21AFF7D200F4B0FB /* YMLoadingShimmer.m */,
+			);
+			path = "主流 app 加载动画";
+			sourceTree = "<group>";
+		};
 		81FA28A221AB7C9700C8FDAB /* YMUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1891,6 +1904,7 @@
 				8193D2BD214A008800EB225D /* MASViewAttribute.m in Sources */,
 				81963EB021AD273B002BFB5C /* NSString+HelpeTools.m in Sources */,
 				8193D2C8214A013F00EB225D /* YMUITextField.m in Sources */,
+				81F3A54E21AFF7D200F4B0FB /* YMLoadingShimmer.m in Sources */,
 				816216FB21900FA80001FC5E /* YMPictureViewer.m in Sources */,
 				812F5AC521A6B59F0072A21E /* MJRefreshHeader+YMRefreshHeader.m in Sources */,
 				81963E6A21AD1FB0002BFB5C /* YMSilderView.m in Sources */,
