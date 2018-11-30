@@ -15,6 +15,7 @@
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:color forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:fontSize];
+    [button setBackgroundImage:[UIImage yy_imageWithColor:[UIColor colorWithHexString:@"f0f0f0"]] forState:UIControlStateHighlighted];
 }
 
 @end

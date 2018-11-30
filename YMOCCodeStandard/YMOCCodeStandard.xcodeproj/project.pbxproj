@@ -120,6 +120,11 @@
 		81CA788E21884006005EFA1A /* YMOrganizationSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CA788C21884006005EFA1A /* YMOrganizationSearchTableViewCell.m */; };
 		81CA788F21884006005EFA1A /* YMOrganizationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81CA788D21884006005EFA1A /* YMOrganizationSearchTableViewCell.xib */; };
 		81CA7892218844A8005EFA1A /* YMOrganizationSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CA7891218844A8005EFA1A /* YMOrganizationSearchModel.m */; };
+		81D1D19821B0C56B000687CA /* MVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D19721B0C56B000687CA /* MVVMViewController.m */; };
+		81D1D19B21B0C583000687CA /* MVVMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D19A21B0C583000687CA /* MVVMModel.m */; };
+		81D1D19E21B0C598000687CA /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D19D21B0C598000687CA /* MVVMViewModel.m */; };
+		81D1D1A121B0C667000687CA /* MVVMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D1A021B0C667000687CA /* MVVMView.m */; };
+		81D1D1A621B0C95B000687CA /* UITextField+YMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D1A521B0C95B000687CA /* UITextField+YMConfiguration.m */; };
 		81DAA58D219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */; };
 		81DAA594219A70AD00705A1A /* YMUniversalSingleSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */; };
 		81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81DAA598219AA15400705A1A /* CityPropertyList.plist */; };
@@ -410,6 +415,16 @@
 		81CA788D21884006005EFA1A /* YMOrganizationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YMOrganizationSearchTableViewCell.xib; sourceTree = "<group>"; };
 		81CA7890218844A8005EFA1A /* YMOrganizationSearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOrganizationSearchModel.h; sourceTree = "<group>"; };
 		81CA7891218844A8005EFA1A /* YMOrganizationSearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMOrganizationSearchModel.m; sourceTree = "<group>"; };
+		81D1D19621B0C56B000687CA /* MVVMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewController.h; sourceTree = "<group>"; };
+		81D1D19721B0C56B000687CA /* MVVMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewController.m; sourceTree = "<group>"; };
+		81D1D19921B0C583000687CA /* MVVMModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMModel.h; sourceTree = "<group>"; };
+		81D1D19A21B0C583000687CA /* MVVMModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMModel.m; sourceTree = "<group>"; };
+		81D1D19C21B0C598000687CA /* MVVMViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewModel.h; sourceTree = "<group>"; };
+		81D1D19D21B0C598000687CA /* MVVMViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewModel.m; sourceTree = "<group>"; };
+		81D1D19F21B0C667000687CA /* MVVMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMView.h; sourceTree = "<group>"; };
+		81D1D1A021B0C667000687CA /* MVVMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMView.m; sourceTree = "<group>"; };
+		81D1D1A421B0C95B000687CA /* UITextField+YMConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+YMConfiguration.h"; sourceTree = "<group>"; };
+		81D1D1A521B0C95B000687CA /* UITextField+YMConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+YMConfiguration.m"; sourceTree = "<group>"; };
 		81DAA58B219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUniversalSingleSelectionPickerView.h; sourceTree = "<group>"; };
 		81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUniversalSingleSelectionPickerView.m; sourceTree = "<group>"; };
 		81DAA592219A70AD00705A1A /* YMUniversalSingleSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUniversalSingleSelectModel.h; sourceTree = "<group>"; };
@@ -788,6 +803,7 @@
 		8193D24E2149FF7200EB225D /* FirstModule */ = {
 			isa = PBXGroup;
 			children = (
+				81D1D19121B0C4D9000687CA /* MVVM Demo */,
 				8193D2502149FF7200EB225D /* FirstModuleVC */,
 				8193D24F2149FF7200EB225D /* FirstModuleView */,
 				8193D2542149FF7300EB225D /* FirstModuleModel */,
@@ -978,6 +994,8 @@
 		81963E6F21AD273B002BFB5C /* YMCategory */ = {
 			isa = PBXGroup;
 			children = (
+				81D1D1A721B0E942000687CA /* UIControl 分类 */,
+				81D1D1A221B0C928000687CA /* UITextField 分类 */,
 				81963E7021AD273B002BFB5C /* UIColor 分类 */,
 				81963E7421AD273B002BFB5C /* UINavigationBar 分类 */,
 				81963E7821AD273B002BFB5C /* UIScrollView 分类 */,
@@ -1429,6 +1447,69 @@
 				81CA788521882EC6005EFA1A /* YMUISearchBar.m */,
 			);
 			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		81D1D19121B0C4D9000687CA /* MVVM Demo */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D19521B0C521000687CA /* View-Controller */,
+				81D1D19421B0C4FA000687CA /* Model */,
+				81D1D19321B0C4FA000687CA /* ViewModel */,
+			);
+			path = "MVVM Demo";
+			sourceTree = "<group>";
+		};
+		81D1D19321B0C4FA000687CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D19C21B0C598000687CA /* MVVMViewModel.h */,
+				81D1D19D21B0C598000687CA /* MVVMViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		81D1D19421B0C4FA000687CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D19921B0C583000687CA /* MVVMModel.h */,
+				81D1D19A21B0C583000687CA /* MVVMModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81D1D19521B0C521000687CA /* View-Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D19621B0C56B000687CA /* MVVMViewController.h */,
+				81D1D19721B0C56B000687CA /* MVVMViewController.m */,
+				81D1D19F21B0C667000687CA /* MVVMView.h */,
+				81D1D1A021B0C667000687CA /* MVVMView.m */,
+			);
+			path = "View-Controller";
+			sourceTree = "<group>";
+		};
+		81D1D1A221B0C928000687CA /* UITextField 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D1A321B0C928000687CA /* 配置 */,
+			);
+			path = "UITextField 分类";
+			sourceTree = "<group>";
+		};
+		81D1D1A321B0C928000687CA /* 配置 */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D1A421B0C95B000687CA /* UITextField+YMConfiguration.h */,
+				81D1D1A521B0C95B000687CA /* UITextField+YMConfiguration.m */,
+			);
+			path = "配置";
+			sourceTree = "<group>";
+		};
+		81D1D1A721B0E942000687CA /* UIControl 分类 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UIControl 分类";
 			sourceTree = "<group>";
 		};
 		81DAA58A219A5AF100705A1A /* 通用单选 pickerView */ = {
@@ -1911,6 +1992,7 @@
 				8193D2B6214A008800EB225D /* MASCompositeConstraint.m in Sources */,
 				8101293A214F41D600725BAF /* YMNetworkingSecondaryPackage.m in Sources */,
 				81963EB321AD273B002BFB5C /* UIButton+touch.m in Sources */,
+				81D1D19821B0C56B000687CA /* MVVMViewController.m in Sources */,
 				81BF56B92145F012004BC70A /* YMUINavigationController.m in Sources */,
 				8193D27C214A000E00EB225D /* NSObject+MJKeyValue.m in Sources */,
 				81937FF8214F370000EEA717 /* AFURLRequestSerialization.m in Sources */,
@@ -1936,6 +2018,7 @@
 				81012952214F87A000725BAF /* YMLoadingViewNetworkUtils.m in Sources */,
 				816054582194047900AF1E18 /* YMHighlightImageView.m in Sources */,
 				81E41A22217F0E0D00DC9A4A /* YMMBProgressHUD.m in Sources */,
+				81D1D19E21B0C598000687CA /* MVVMViewModel.m in Sources */,
 				81963EB621AD273B002BFB5C /* UIView+YMFrame.m in Sources */,
 				8193D2CD214A6F6300EB225D /* YMDataSaveSingleton.m in Sources */,
 				81621700219018320001FC5E /* YMPictureViewerDemoViewController.m in Sources */,
@@ -1954,6 +2037,7 @@
 				8193D25E2149FF7300EB225D /* YMNewsViewController.m in Sources */,
 				81E41A10217EECD100DC9A4A /* YMActiveAlertView.m in Sources */,
 				81EDE1B921AE7C8B008DCC8A /* YMTimerPickerView.m in Sources */,
+				81D1D1A121B0C667000687CA /* MVVMView.m in Sources */,
 				81963EB121AD273B002BFB5C /* NSString+YMImage.m in Sources */,
 				8193D2C9214A013F00EB225D /* YMUIConstumButton.m in Sources */,
 				81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */,
@@ -1982,6 +2066,7 @@
 				81963EB821AD273B002BFB5C /* UIImage+Tools.m in Sources */,
 				81E41A14217EFAF000DC9A4A /* YMWKWebView.m in Sources */,
 				81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */,
+				81D1D1A621B0C95B000687CA /* UITextField+YMConfiguration.m in Sources */,
 				8193D280214A000E00EB225D /* NSObject+MJProperty.m in Sources */,
 				8193D27D214A000E00EB225D /* MJProperty.m in Sources */,
 				81963EB721AD273B002BFB5C /* UIView+YMConfiguration.m in Sources */,
@@ -1997,6 +2082,7 @@
 				81E77EAE21870DD8007CE3FD /* YMOrganizationTableViewCell.m in Sources */,
 				817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */,
 				81CA7892218844A8005EFA1A /* YMOrganizationSearchModel.m in Sources */,
+				81D1D19B21B0C583000687CA /* MVVMModel.m in Sources */,
 				8193D27F214A000E00EB225D /* MJExtensionConst.m in Sources */,
 				8193D282214A000E00EB225D /* NSString+MJExtension.m in Sources */,
 				8193D2B4214A008800EB225D /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

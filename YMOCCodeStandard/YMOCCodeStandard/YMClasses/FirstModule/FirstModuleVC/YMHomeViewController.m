@@ -520,6 +520,8 @@
 #import "YMTouchMoveView.h"
 #import "YMHomeModel.h"
 
+#import "MVVMViewController.h"
+
 @interface YMHomeViewController ()
 
 /** 标题 */
@@ -544,6 +546,9 @@
 
 /** 数据模型 */
 @property (nonatomic, strong) YMHomeModel *model;
+
+/// MVVM 按钮
+@property (nonatomic, readwrite, strong) UIButton *mvvmBtn;
 
 @end
 
@@ -596,6 +601,10 @@
 #pragma mark - - 导航数据
 - (void)loadNavData {
     self.navigationItem.title = @"首页";
+    
+    [UIButton ym_button:self.mvvmBtn title:@"mvvm" fontSize:15 titleColor:[UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.mvvmBtn];
+    [self.mvvmBtn addTarget:self action:@selector(mvvmBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark -- 加载视图
@@ -661,6 +670,13 @@
           [YMDataSaveSingleton shareManager].idMArr);
 }
 
+#pragma mark - - mvvmBtnClick
+- (void)mvvmBtnClick {
+    MVVMViewController *vc = [[MVVMViewController alloc] init];
+    vc.title = @"MVVMDemo";
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - - lazyLoadUI
 - (YMTouchMoveView *)testView {
     if (_testView == nil) {
@@ -688,5 +704,12 @@
         _moneyLabel = [[UILabel alloc] init];
     }
     return _moneyLabel;
+}
+
+- (UIButton *)mvvmBtn {
+    if (_mvvmBtn == nil) {
+        _mvvmBtn = [[UIButton alloc] init];
+    }
+    return _mvvmBtn;
 }
 @end

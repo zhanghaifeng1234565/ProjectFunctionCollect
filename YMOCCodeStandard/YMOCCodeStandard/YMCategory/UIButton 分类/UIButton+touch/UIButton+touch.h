@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#define defaultInterval 0.0  //默认时间间隔
-
 @interface UIButton (touch)
 
 /** 设置点击时间间隔 */
-@property (nonatomic, assign) NSTimeInterval ym_timeInterval;
+@property (nonatomic, assign) CGFloat ym_timeInterval;
 
 @end
