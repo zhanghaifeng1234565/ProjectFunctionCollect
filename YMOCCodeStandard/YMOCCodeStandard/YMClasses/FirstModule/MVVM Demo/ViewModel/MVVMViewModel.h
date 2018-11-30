@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 数据模型
 @property (nonatomic, readwrite, strong) MVVMModel *model;
 
+
 /**
  请求数据
 

@@ -125,6 +125,10 @@
 		81D1D19E21B0C598000687CA /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D19D21B0C598000687CA /* MVVMViewModel.m */; };
 		81D1D1A121B0C667000687CA /* MVVMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D1A021B0C667000687CA /* MVVMView.m */; };
 		81D1D1A621B0C95B000687CA /* UITextField+YMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D1A521B0C95B000687CA /* UITextField+YMConfiguration.m */; };
+		81D1D1B221B12541000687CA /* YMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D1B121B12541000687CA /* YMPerson.m */; };
+		81D1D1B521B12927000687CA /* YMSQLite3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D1B421B12927000687CA /* YMSQLite3ViewController.m */; };
+		81D1D1B721B12961000687CA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D1D1B621B12961000687CA /* libsqlite3.0.tbd */; };
+		81D1D1BA21B129BC000687CA /* YMSQLit3Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D1B921B129BC000687CA /* YMSQLit3Tools.m */; };
 		81DAA58D219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */; };
 		81DAA594219A70AD00705A1A /* YMUniversalSingleSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */; };
 		81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81DAA598219AA15400705A1A /* CityPropertyList.plist */; };
@@ -425,6 +429,13 @@
 		81D1D1A021B0C667000687CA /* MVVMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMView.m; sourceTree = "<group>"; };
 		81D1D1A421B0C95B000687CA /* UITextField+YMConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+YMConfiguration.h"; sourceTree = "<group>"; };
 		81D1D1A521B0C95B000687CA /* UITextField+YMConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+YMConfiguration.m"; sourceTree = "<group>"; };
+		81D1D1B021B12541000687CA /* YMPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPerson.h; sourceTree = "<group>"; };
+		81D1D1B121B12541000687CA /* YMPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPerson.m; sourceTree = "<group>"; };
+		81D1D1B321B12927000687CA /* YMSQLite3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSQLite3ViewController.h; sourceTree = "<group>"; };
+		81D1D1B421B12927000687CA /* YMSQLite3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSQLite3ViewController.m; sourceTree = "<group>"; };
+		81D1D1B621B12961000687CA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		81D1D1B821B129BC000687CA /* YMSQLit3Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSQLit3Tools.h; sourceTree = "<group>"; };
+		81D1D1B921B129BC000687CA /* YMSQLit3Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSQLit3Tools.m; sourceTree = "<group>"; };
 		81DAA58B219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUniversalSingleSelectionPickerView.h; sourceTree = "<group>"; };
 		81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUniversalSingleSelectionPickerView.m; sourceTree = "<group>"; };
 		81DAA592219A70AD00705A1A /* YMUniversalSingleSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUniversalSingleSelectModel.h; sourceTree = "<group>"; };
@@ -512,6 +523,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D1D1B721B12961000687CA /* libsqlite3.0.tbd in Frameworks */,
 				DAD33FBFD5D6F131DA50A2C3 /* libPods-YMOCCodeStandard.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,6 +815,7 @@
 		8193D24E2149FF7200EB225D /* FirstModule */ = {
 			isa = PBXGroup;
 			children = (
+				81D1D1AC21B1250C000687CA /* 数据存储 */,
 				81D1D19121B0C4D9000687CA /* MVVM Demo */,
 				8193D2502149FF7200EB225D /* FirstModuleVC */,
 				8193D24F2149FF7200EB225D /* FirstModuleView */,
@@ -1512,6 +1525,43 @@
 			path = "UIControl 分类";
 			sourceTree = "<group>";
 		};
+		81D1D1AC21B1250C000687CA /* 数据存储 */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D1AD21B1250C000687CA /* SQLite3 */,
+				81D1D1AE21B1250C000687CA /* 归档解档 */,
+				81D1D1AF21B1250C000687CA /* FMDB */,
+			);
+			path = "数据存储";
+			sourceTree = "<group>";
+		};
+		81D1D1AD21B1250C000687CA /* SQLite3 */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D1B321B12927000687CA /* YMSQLite3ViewController.h */,
+				81D1D1B421B12927000687CA /* YMSQLite3ViewController.m */,
+				81D1D1B821B129BC000687CA /* YMSQLit3Tools.h */,
+				81D1D1B921B129BC000687CA /* YMSQLit3Tools.m */,
+			);
+			path = SQLite3;
+			sourceTree = "<group>";
+		};
+		81D1D1AE21B1250C000687CA /* 归档解档 */ = {
+			isa = PBXGroup;
+			children = (
+				81D1D1B021B12541000687CA /* YMPerson.h */,
+				81D1D1B121B12541000687CA /* YMPerson.m */,
+			);
+			path = "归档解档";
+			sourceTree = "<group>";
+		};
+		81D1D1AF21B1250C000687CA /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
 		81DAA58A219A5AF100705A1A /* 通用单选 pickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1751,6 +1801,7 @@
 		AA28EB3A2249A79ACBB2E7B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81D1D1B621B12961000687CA /* libsqlite3.0.tbd */,
 				86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */,
 			);
 			name = Frameworks;
@@ -1972,6 +2023,7 @@
 				81EDE1C821AE9167008DCC8A /* YMPuzzlePathMaker.m in Sources */,
 				81963EAD21AD273B002BFB5C /* UINavigationBar+Awesome.m in Sources */,
 				81CA77A62187E6DD005EFA1A /* YMOrganizationViewModel.m in Sources */,
+				81D1D1B221B12541000687CA /* YMPerson.m in Sources */,
 				81BF54FE2145ED1F004BC70A /* AppDelegate.m in Sources */,
 				811D8EEF21A7F65300053FC1 /* YMDemoFormModel.m in Sources */,
 				8193D25C2149FF7300EB225D /* YMMineViewController.m in Sources */,
@@ -2048,6 +2100,7 @@
 				81DAA58D219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m in Sources */,
 				8193D2B7214A008800EB225D /* MASConstraintMaker.m in Sources */,
 				8193D27B214A000E00EB225D /* MJPropertyType.m in Sources */,
+				81D1D1BA21B129BC000687CA /* YMSQLit3Tools.m in Sources */,
 				81CA788E21884006005EFA1A /* YMOrganizationSearchTableViewCell.m in Sources */,
 				81BF56B82145F012004BC70A /* YMUITabBarController.m in Sources */,
 				81EEC0B8219173BA0087EA72 /* YMCommonFunc.m in Sources */,
@@ -2071,6 +2124,7 @@
 				8193D27D214A000E00EB225D /* MJProperty.m in Sources */,
 				81963EB721AD273B002BFB5C /* UIView+YMConfiguration.m in Sources */,
 				81963EAF21AD273B002BFB5C /* NSString+YMTimeDate.m in Sources */,
+				81D1D1B521B12927000687CA /* YMSQLite3ViewController.m in Sources */,
 				81963E5D21ACF620002BFB5C /* ScanningQRVC.m in Sources */,
 				81BF55032145ED1F004BC70A /* YMOCCodeStandard.xcdatamodeld in Sources */,
 				81963EAE21AD273B002BFB5C /* UIScrollView+UITouch.m in Sources */,

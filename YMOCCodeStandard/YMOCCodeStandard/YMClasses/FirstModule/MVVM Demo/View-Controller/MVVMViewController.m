@@ -55,9 +55,7 @@
     
     __weak typeof(&*self) wsSelf = self;
     [self.viewModel requestDataSuccess:^(MVVMViewModel * _Nonnull viewModel) {
-        __strong typeof(&*wsSelf) self = wsSelf;
-        
-        self.mvvmView.viewModel = viewModel;
+        wsSelf.mvvmView.viewModel = viewModel;
     }];
 }
 

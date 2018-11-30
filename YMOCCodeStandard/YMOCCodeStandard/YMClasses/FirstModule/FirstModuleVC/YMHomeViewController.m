@@ -602,7 +602,7 @@
 - (void)loadNavData {
     self.navigationItem.title = @"首页";
     
-    [UIButton ym_button:self.mvvmBtn title:@"mvvm" fontSize:15 titleColor:[UIColor whiteColor]];
+    [UIButton ym_button:self.mvvmBtn title:@"MVVM" fontSize:15 titleColor:[UIColor whiteColor]];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.mvvmBtn];
     [self.mvvmBtn addTarget:self action:@selector(mvvmBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
