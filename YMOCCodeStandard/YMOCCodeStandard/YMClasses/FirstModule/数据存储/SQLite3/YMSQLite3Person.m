@@ -21,7 +21,12 @@ static int count = 0;
     } else {
         count++;
     }
+    NSLog(@"itemid = %@", [NSString stringWithFormat:@"%d", count]);
     return [NSString stringWithFormat:@"%d", count];
+}
+
+- (void)setItemid:(NSString *)itemid {
+    count = [itemid intValue];
 }
 
 - (void)setDelete_data:(BOOL)delete_data {

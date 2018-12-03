@@ -134,6 +134,7 @@
 		81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81DAA598219AA15400705A1A /* CityPropertyList.plist */; };
 		81DE382221B4C95600550D60 /* YMDataStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE382121B4C95600550D60 /* YMDataStoreViewController.m */; };
 		81DE382521B4CF5600550D60 /* YMSQLite3Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE382421B4CF5600550D60 /* YMSQLite3Person.m */; };
+		81DE382B21B4F93D00550D60 /* YMArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE382A21B4F93D00550D60 /* YMArchiveViewController.m */; };
 		81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */; };
 		81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A07217EAC6E00DC9A4A /* YMSureCancelAlert.m */; };
 		81E41A10217EECD100DC9A4A /* YMActiveAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A0F217EECD100DC9A4A /* YMActiveAlertView.m */; };
@@ -447,6 +448,8 @@
 		81DE382121B4C95600550D60 /* YMDataStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDataStoreViewController.m; sourceTree = "<group>"; };
 		81DE382321B4CF5600550D60 /* YMSQLite3Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSQLite3Person.h; sourceTree = "<group>"; };
 		81DE382421B4CF5600550D60 /* YMSQLite3Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSQLite3Person.m; sourceTree = "<group>"; };
+		81DE382921B4F93D00550D60 /* YMArchiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMArchiveViewController.h; sourceTree = "<group>"; };
+		81DE382A21B4F93D00550D60 /* YMArchiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMArchiveViewController.m; sourceTree = "<group>"; };
 		81E41A02217EAA1600DC9A4A /* YMBlackSmallAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBlackSmallAlert.h; sourceTree = "<group>"; };
 		81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBlackSmallAlert.m; sourceTree = "<group>"; };
 		81E41A06217EAC6E00DC9A4A /* YMSureCancelAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSureCancelAlert.h; sourceTree = "<group>"; };
@@ -1561,6 +1564,8 @@
 			children = (
 				81D1D1B021B12541000687CA /* YMPerson.h */,
 				81D1D1B121B12541000687CA /* YMPerson.m */,
+				81DE382921B4F93D00550D60 /* YMArchiveViewController.h */,
+				81DE382A21B4F93D00550D60 /* YMArchiveViewController.m */,
 			);
 			path = "归档解档";
 			sourceTree = "<group>";
@@ -2074,6 +2079,7 @@
 				8193D2BA214A008800EB225D /* View+MASAdditions.m in Sources */,
 				81E41A1A217F051A00DC9A4A /* YMWeakScriptMessageDelegate.m in Sources */,
 				8162171621903E170001FC5E /* YMPictureTestView.m in Sources */,
+				81DE382B21B4F93D00550D60 /* YMArchiveViewController.m in Sources */,
 				81963EB421AD273B002BFB5C /* UIButton+YMConfiguration.m in Sources */,
 				8193D2B8214A008800EB225D /* MASLayoutConstraint.m in Sources */,
 				817A61DA219BCC4900DE3B52 /* YMCountryPickerView.m in Sources */,

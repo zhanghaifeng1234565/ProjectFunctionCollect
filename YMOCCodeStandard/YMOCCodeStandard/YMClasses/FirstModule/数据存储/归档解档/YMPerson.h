@@ -24,16 +24,27 @@ NS_ASSUME_NONNULL_BEGIN
  通过归档保存自定义对象
 
  @param person 自定义对象
+ @param fileName 文件名字
  */
-+ (void)savePerson:(YMPerson *)person;
++ (void)savePerson:(YMPerson *)person fileName:(NSString *)fileName;
+
 
 
 /**
- 通过解档获取自定义对象
+ 获取自定义对象
 
+ @param fileName 文件名字
  @return 自定义对象
  */
-+ (YMPerson *)getPerson;
++ (YMPerson *)getPersonWithFileName:(NSString *)fileName;
+
+
+/**
+ 清除指定目录下的文件
+
+ @param fileName 文件名字
+ */
++ (void)removeDocumentWithFileName:(NSString *)fileName;
 
 @end
 

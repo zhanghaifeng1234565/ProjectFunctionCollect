@@ -9,6 +9,7 @@
 #import "YMDataStoreViewController.h"
 
 #import "YMSQLite3ViewController.h"
+#import "YMArchiveViewController.h"
 
 @interface YMDataStoreViewController ()
 <UITableViewDelegate,
@@ -64,7 +65,9 @@ UITableViewDataSource>
             break;
         case 1:
         {
-            
+            YMArchiveViewController *vc = [[YMArchiveViewController alloc] init];
+            vc.title = @"归档解档";
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 2:

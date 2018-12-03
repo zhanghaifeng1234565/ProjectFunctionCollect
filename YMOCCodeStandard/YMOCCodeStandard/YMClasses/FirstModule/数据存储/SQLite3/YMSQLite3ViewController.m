@@ -104,8 +104,10 @@ UITableViewDataSource>
             break;
         case 5:
         {
-            [[YMSQLit3Tools shareManager] selectTable:@"t_person" paramNames:@"id, name, age, height, weight" condition:@"age < 20" success:^(id  _Nonnull result) {
-                NSLog(@"result = %@", result);
+            WS(ws);
+            [[YMSQLit3Tools shareManager] selectTable:@"t_person" paramNames:@"id, name, age, height, weight" condition:@"age < 20" success:^(id  _Nonnull result, NSInteger itemid) {
+                ws.person.itemid = [NSString stringWithFormat:@"%zd", itemid + 1];
+                NSLog(@"result = %@ -- itemid = %zd", result, itemid);
             }];
         }
             break;

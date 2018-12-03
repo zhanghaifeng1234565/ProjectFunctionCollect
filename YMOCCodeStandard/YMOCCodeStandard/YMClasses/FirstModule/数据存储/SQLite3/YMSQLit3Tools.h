@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param condition 查询条件 eg: @"age<20";
  @param success 成功回调
  */
-- (void)selectTable:(NSString *)tableName paramNames:(NSString *)paramNames condition:(NSString *)condition success:(void(^)(id result))success;
+- (void)selectTable:(NSString *)tableName paramNames:(NSString *)paramNames condition:(NSString *)condition success:(void(^)(id result, NSInteger itemid))success;
 
 
 /**

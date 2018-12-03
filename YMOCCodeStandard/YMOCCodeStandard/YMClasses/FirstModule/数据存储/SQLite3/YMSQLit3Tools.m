@@ -32,15 +32,15 @@ static YMSQLit3Tools *_instance = nil;
 
 #pragma mark - - 打开数据库
 - (void)openSQLite3WithName:(NSString *)sqName success:(void (^)(void))success {
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *filePath = [documentPath stringByAppendingPathComponent:sqName];
+    NSLog(@"filePath == %@", filePath);
+    
     if (db != nil) {
         NSLog(@"数据库已打开");
         success();
         return;
     }
-    
-    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *filePath = [documentPath stringByAppendingPathComponent:sqName];
-    NSLog(@"filePath == %@", filePath);
     
     int result = sqlite3_open(filePath.UTF8String, &db);
     if (result == SQLITE_OK) {
@@ -116,8 +116,7 @@ static YMSQLit3Tools *_instance = nil;
 }
 
 #pragma mark - - 查询语句
-- (void)selectTable:(NSString *)tableName paramNames:(NSString *)paramNames condition:(NSString *)condition success:(void (^)(id _Nonnull))success {
-    
+- (void)selectTable:(NSString *)tableName paramNames:(NSString *)paramNames condition:(NSString *)condition success:(void (^)(id _Nonnull, NSInteger))success {
     NSString *sql = [NSString stringWithFormat:@"SELECT %@ FROM %@ WHERE %@", paramNames, tableName, condition];
     
     sqlite3_stmt *stmt = NULL;
@@ -125,6 +124,7 @@ static YMSQLit3Tools *_instance = nil;
     if (sqlite3_prepare_v2(db, sql.UTF8String, -1, &stmt, NULL) == SQLITE_OK) {//SQL语句没有问题
         NSLog(@"查询语句没有问题");
         //每调用一次sqlite3_step函数，stmt就会指向下一条记录
+        
         while (sqlite3_step(stmt) == SQLITE_ROW) {//找到一条记录
             //取出数据
             //(1)取出第0列字段的值（int类型的值）
@@ -139,15 +139,14 @@ static YMSQLit3Tools *_instance = nil;
             float weight = sqlite3_column_double(stmt, 4);
             NSString *result = [NSString stringWithFormat:@"%d %@ %d %f %f", ID, [NSString stringWithUTF8String:name], age, height, weight];
             NSLog(@"%@", result);
-            success(result);
+            success(result, ID);
         }
     } else {
-       NSLog(@"查询语句有问题");
+        NSLog(@"查询语句有问题");
     }
     
     sqlite3_finalize(stmt);
 }
-
 
 #pragma mark - 4.关闭数据库
 - (void)closeSqlite {
