@@ -132,6 +132,8 @@
 		81DAA58D219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */; };
 		81DAA594219A70AD00705A1A /* YMUniversalSingleSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */; };
 		81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81DAA598219AA15400705A1A /* CityPropertyList.plist */; };
+		81DE382221B4C95600550D60 /* YMDataStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE382121B4C95600550D60 /* YMDataStoreViewController.m */; };
+		81DE382521B4CF5600550D60 /* YMSQLite3Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE382421B4CF5600550D60 /* YMSQLite3Person.m */; };
 		81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */; };
 		81E41A08217EAC6E00DC9A4A /* YMSureCancelAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A07217EAC6E00DC9A4A /* YMSureCancelAlert.m */; };
 		81E41A10217EECD100DC9A4A /* YMActiveAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E41A0F217EECD100DC9A4A /* YMActiveAlertView.m */; };
@@ -441,6 +443,10 @@
 		81DAA592219A70AD00705A1A /* YMUniversalSingleSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUniversalSingleSelectModel.h; sourceTree = "<group>"; };
 		81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUniversalSingleSelectModel.m; sourceTree = "<group>"; };
 		81DAA598219AA15400705A1A /* CityPropertyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CityPropertyList.plist; sourceTree = "<group>"; };
+		81DE382021B4C95600550D60 /* YMDataStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDataStoreViewController.h; sourceTree = "<group>"; };
+		81DE382121B4C95600550D60 /* YMDataStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDataStoreViewController.m; sourceTree = "<group>"; };
+		81DE382321B4CF5600550D60 /* YMSQLite3Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSQLite3Person.h; sourceTree = "<group>"; };
+		81DE382421B4CF5600550D60 /* YMSQLite3Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSQLite3Person.m; sourceTree = "<group>"; };
 		81E41A02217EAA1600DC9A4A /* YMBlackSmallAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBlackSmallAlert.h; sourceTree = "<group>"; };
 		81E41A03217EAA1600DC9A4A /* YMBlackSmallAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBlackSmallAlert.m; sourceTree = "<group>"; };
 		81E41A06217EAC6E00DC9A4A /* YMSureCancelAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSureCancelAlert.h; sourceTree = "<group>"; };
@@ -1531,6 +1537,8 @@
 				81D1D1AD21B1250C000687CA /* SQLite3 */,
 				81D1D1AE21B1250C000687CA /* 归档解档 */,
 				81D1D1AF21B1250C000687CA /* FMDB */,
+				81DE382021B4C95600550D60 /* YMDataStoreViewController.h */,
+				81DE382121B4C95600550D60 /* YMDataStoreViewController.m */,
 			);
 			path = "数据存储";
 			sourceTree = "<group>";
@@ -1542,6 +1550,8 @@
 				81D1D1B421B12927000687CA /* YMSQLite3ViewController.m */,
 				81D1D1B821B129BC000687CA /* YMSQLit3Tools.h */,
 				81D1D1B921B129BC000687CA /* YMSQLit3Tools.m */,
+				81DE382321B4CF5600550D60 /* YMSQLite3Person.h */,
+				81DE382421B4CF5600550D60 /* YMSQLite3Person.m */,
 			);
 			path = SQLite3;
 			sourceTree = "<group>";
@@ -2107,6 +2117,7 @@
 				81963E5A21ACEA8D002BFB5C /* QRCode.m in Sources */,
 				81E77EB321870FD6007CE3FD /* YMBaseViewController.m in Sources */,
 				8101294E214F81BB00725BAF /* YMLoadingView.m in Sources */,
+				81DE382221B4C95600550D60 /* YMDataStoreViewController.m in Sources */,
 				81BF56BF2145F01E004BC70A /* YMBaseRootViewController.m in Sources */,
 				810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */,
 				812F5ACB21A6B7CB0072A21E /* YMGifImageView.m in Sources */,
@@ -2132,6 +2143,7 @@
 				81FA28BF21AB89B200C8FDAB /* YMFormTitleTableViewCell.m in Sources */,
 				81EDE1AC21AE6E51008DCC8A /* YMObtainUserLocationManager.m in Sources */,
 				8193D27E214A000E00EB225D /* NSObject+MJCoding.m in Sources */,
+				81DE382521B4CF5600550D60 /* YMSQLite3Person.m in Sources */,
 				81937FF6214F370000EEA717 /* AFHTTPSessionManager.m in Sources */,
 				81E77EAE21870DD8007CE3FD /* YMOrganizationTableViewCell.m in Sources */,
 				817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */,

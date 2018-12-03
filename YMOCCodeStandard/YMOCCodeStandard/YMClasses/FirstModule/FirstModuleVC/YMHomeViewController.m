@@ -521,6 +521,7 @@
 #import "YMHomeModel.h"
 
 #import "MVVMViewController.h"
+#import "YMDataStoreViewController.h"
 
 @interface YMHomeViewController ()
 
@@ -549,6 +550,8 @@
 
 /// MVVM 按钮
 @property (nonatomic, readwrite, strong) UIButton *mvvmBtn;
+/// 数据库 按钮
+@property (nonatomic, readwrite, strong) UIButton *dataBtn;
 
 @end
 
@@ -605,6 +608,10 @@
     [UIButton ym_button:self.mvvmBtn title:@"MVVM" fontSize:15 titleColor:[UIColor whiteColor]];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.mvvmBtn];
     [self.mvvmBtn addTarget:self action:@selector(mvvmBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    [UIButton ym_button:self.dataBtn title:@"DataStore" fontSize:15 titleColor:[UIColor whiteColor]];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.dataBtn];
+    [self.dataBtn addTarget:self action:@selector(dataBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark -- 加载视图
@@ -677,6 +684,13 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark 数据库
+- (void)dataBtnClick {
+    YMDataStoreViewController *vc = [[YMDataStoreViewController alloc] init];
+    vc.title = @"数据存储";
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - - lazyLoadUI
 - (YMTouchMoveView *)testView {
     if (_testView == nil) {
@@ -711,5 +725,12 @@
         _mvvmBtn = [[UIButton alloc] init];
     }
     return _mvvmBtn;
+}
+
+- (UIButton *)dataBtn {
+    if (_dataBtn == nil) {
+        _dataBtn = [[UIButton alloc] init];
+    }
+    return _dataBtn;
 }
 @end
