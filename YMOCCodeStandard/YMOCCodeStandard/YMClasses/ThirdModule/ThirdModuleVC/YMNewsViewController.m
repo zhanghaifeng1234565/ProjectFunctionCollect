@@ -263,7 +263,7 @@ UIGestureRecognizerDelegate>
             [YMBlackSmallAlert showAlertWithMessage:pickerViewTitle time:2.0f];
             
             if (![title isEqualToString:@"时间选择"]) {
-                [[YMObtainUserLocationManager shareManager] transferMapWithAddress:title view:self.view];
+                [[YMObtainUserLocationManager shareManager] transferMapWithAddress:pickerViewTitle view:self.view];
             }
         }
             break;

@@ -10,5 +10,6 @@ pod 'YYModel'
 pod 'WechatOpenSDK'
 pod 'lottie-ios'
 pod 'IQKeyboardManager'
+pod 'FMDB'
 
 end

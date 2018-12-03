@@ -1,5 +1,8 @@
 PODS:
   - FBRetainCycleDetector (0.1.4)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - IQKeyboardManager (6.2.0)
   - lottie-ios (2.5.2)
   - MJRefresh (3.1.15.7)
@@ -19,6 +22,7 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
+  - FMDB
   - IQKeyboardManager
   - lottie-ios
   - MJRefresh
@@ -31,6 +35,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FBRetainCycleDetector
+    - FMDB
     - IQKeyboardManager
     - lottie-ios
     - MJRefresh
@@ -44,6 +49,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
@@ -55,6 +61,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 4bd84ba2cc25321623a0d6b4e56bb1a34bf86d58
+PODFILE CHECKSUM: 37c31555ad409c2e453b36a745636cafcdedbdb2
 
 COCOAPODS: 1.6.0.beta.2

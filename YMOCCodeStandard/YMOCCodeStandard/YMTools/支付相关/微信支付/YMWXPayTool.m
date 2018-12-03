@@ -13,7 +13,7 @@
 
 #pragma mark - 微信支付判断是否安装微信
 + (void)ymWXPayWithParameterDict:(NSDictionary *)paramDict {
-    if (![WXApi isWXAppInstalled]) {
+    if (![WXApi isWXAppInstalled]) { // 只有配置的白名单有效才会有效
         [self showAlertWithTitle:@"支付失败！" message:@"抱歉！您未安装微信"];
         return;
     } else {
