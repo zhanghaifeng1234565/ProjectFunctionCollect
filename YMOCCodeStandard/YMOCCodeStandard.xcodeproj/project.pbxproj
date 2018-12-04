@@ -21,6 +21,12 @@
 		812F5AC621A6B59F0072A21E /* OARefreshHeader.json in Resources */ = {isa = PBXBuildFile; fileRef = 812F5AC221A6B59F0072A21E /* OARefreshHeader.json */; };
 		812F5ACB21A6B7CB0072A21E /* YMGifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5ACA21A6B7CB0072A21E /* YMGifImageView.m */; };
 		812F5ACE21A6B7FC0072A21E /* YMBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5ACD21A6B7FC0072A21E /* YMBaseTableView.m */; };
+		812FA3D921B60B7100A9A732 /* YMFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 812FA3D821B60B7100A9A732 /* YMFMDBViewController.m */; };
+		812FA3DC21B60DA100A9A732 /* YMFMDBPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 812FA3DB21B60DA100A9A732 /* YMFMDBPerson.m */; };
+		812FA3DF21B60E3B00A9A732 /* YMFMDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 812FA3DE21B60E3B00A9A732 /* YMFMDBTools.m */; };
+		812FA3E321B61EA600A9A732 /* YMKeychainTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 812FA3E221B61EA600A9A732 /* YMKeychainTools.m */; };
+		812FA3E621B61EBD00A9A732 /* YMKeychainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 812FA3E521B61EBD00A9A732 /* YMKeychainViewController.m */; };
+		812FA3E921B61F3100A9A732 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812FA3E821B61F3100A9A732 /* Security.framework */; };
 		816054582194047900AF1E18 /* YMHighlightImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 816054572194047800AF1E18 /* YMHighlightImageView.m */; };
 		816216FB21900FA80001FC5E /* YMPictureViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 816216FA21900FA80001FC5E /* YMPictureViewer.m */; };
 		81621700219018320001FC5E /* YMPictureViewerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816216FE219018320001FC5E /* YMPictureViewerDemoViewController.m */; };
@@ -227,6 +233,18 @@
 		812F5ACA21A6B7CB0072A21E /* YMGifImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMGifImageView.m; sourceTree = "<group>"; };
 		812F5ACC21A6B7FB0072A21E /* YMBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBaseTableView.h; sourceTree = "<group>"; };
 		812F5ACD21A6B7FC0072A21E /* YMBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBaseTableView.m; sourceTree = "<group>"; };
+		812FA3D721B60B7100A9A732 /* YMFMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFMDBViewController.h; sourceTree = "<group>"; };
+		812FA3D821B60B7100A9A732 /* YMFMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFMDBViewController.m; sourceTree = "<group>"; };
+		812FA3DA21B60DA100A9A732 /* YMFMDBPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFMDBPerson.h; sourceTree = "<group>"; };
+		812FA3DB21B60DA100A9A732 /* YMFMDBPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFMDBPerson.m; sourceTree = "<group>"; };
+		812FA3DD21B60E3B00A9A732 /* YMFMDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFMDBTools.h; sourceTree = "<group>"; };
+		812FA3DE21B60E3B00A9A732 /* YMFMDBTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFMDBTools.m; sourceTree = "<group>"; };
+		812FA3E121B61EA600A9A732 /* YMKeychainTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMKeychainTools.h; sourceTree = "<group>"; };
+		812FA3E221B61EA600A9A732 /* YMKeychainTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMKeychainTools.m; sourceTree = "<group>"; };
+		812FA3E421B61EBD00A9A732 /* YMKeychainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMKeychainViewController.h; sourceTree = "<group>"; };
+		812FA3E521B61EBD00A9A732 /* YMKeychainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMKeychainViewController.m; sourceTree = "<group>"; };
+		812FA3E721B61F0E00A9A732 /* YMOCCodeStandard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YMOCCodeStandard.entitlements; sourceTree = "<group>"; };
+		812FA3E821B61F3100A9A732 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		816054562194047800AF1E18 /* YMHighlightImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMHighlightImageView.h; sourceTree = "<group>"; };
 		816054572194047800AF1E18 /* YMHighlightImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMHighlightImageView.m; sourceTree = "<group>"; };
 		816216F921900FA80001FC5E /* YMPictureViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPictureViewer.h; sourceTree = "<group>"; };
@@ -532,6 +550,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812FA3E921B61F3100A9A732 /* Security.framework in Frameworks */,
 				81D1D1B721B12961000687CA /* libsqlite3.0.tbd in Frameworks */,
 				DAD33FBFD5D6F131DA50A2C3 /* libPods-YMOCCodeStandard.a in Frameworks */,
 			);
@@ -663,6 +682,17 @@
 				812F5ACA21A6B7CB0072A21E /* YMGifImageView.m */,
 			);
 			path = "基于 lottie";
+			sourceTree = "<group>";
+		};
+		812FA3E021B61E8A00A9A732 /* 钥匙串 */ = {
+			isa = PBXGroup;
+			children = (
+				812FA3E121B61EA600A9A732 /* YMKeychainTools.h */,
+				812FA3E221B61EA600A9A732 /* YMKeychainTools.m */,
+				812FA3E421B61EBD00A9A732 /* YMKeychainViewController.h */,
+				812FA3E521B61EBD00A9A732 /* YMKeychainViewController.m */,
+			);
+			path = "钥匙串";
 			sourceTree = "<group>";
 		};
 		816054552194046E00AF1E18 /* 图片高亮点击控件 */ = {
@@ -1303,6 +1333,7 @@
 		81BF54B52145EC13004BC70A /* YMOCCodeStandard */ = {
 			isa = PBXGroup;
 			children = (
+				812FA3E721B61F0E00A9A732 /* YMOCCodeStandard.entitlements */,
 				81BF54F02145ED1F004BC70A /* YMAppDelegate */,
 				81BF54ED2145ED1F004BC70A /* YMRootVC */,
 				81BF54EB2145ED1E004BC70A /* YMClasses */,
@@ -1537,6 +1568,7 @@
 		81D1D1AC21B1250C000687CA /* 数据存储 */ = {
 			isa = PBXGroup;
 			children = (
+				812FA3E021B61E8A00A9A732 /* 钥匙串 */,
 				81D1D1AD21B1250C000687CA /* SQLite3 */,
 				81D1D1AE21B1250C000687CA /* 归档解档 */,
 				81D1D1AF21B1250C000687CA /* FMDB */,
@@ -1573,6 +1605,12 @@
 		81D1D1AF21B1250C000687CA /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
+				812FA3D721B60B7100A9A732 /* YMFMDBViewController.h */,
+				812FA3D821B60B7100A9A732 /* YMFMDBViewController.m */,
+				812FA3DA21B60DA100A9A732 /* YMFMDBPerson.h */,
+				812FA3DB21B60DA100A9A732 /* YMFMDBPerson.m */,
+				812FA3DD21B60E3B00A9A732 /* YMFMDBTools.h */,
+				812FA3DE21B60E3B00A9A732 /* YMFMDBTools.m */,
 			);
 			path = FMDB;
 			sourceTree = "<group>";
@@ -1816,6 +1854,7 @@
 		AA28EB3A2249A79ACBB2E7B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				812FA3E821B61F3100A9A732 /* Security.framework */,
 				81D1D1B621B12961000687CA /* libsqlite3.0.tbd */,
 				86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */,
 			);
@@ -1900,6 +1939,11 @@
 				TargetAttributes = {
 					81BF54B22145EC13004BC70A = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					81BF54CD2145EC15004BC70A = {
 						CreatedOnToolsVersion = 9.4;
@@ -2091,6 +2135,7 @@
 				8193D2CD214A6F6300EB225D /* YMDataSaveSingleton.m in Sources */,
 				81621700219018320001FC5E /* YMPictureViewerDemoViewController.m in Sources */,
 				81963EBC21AD273B002BFB5C /* UIViewController+YMBackToViewController.m in Sources */,
+				812FA3E321B61EA600A9A732 /* YMKeychainTools.m in Sources */,
 				81FA28C921AB89EC00C8FDAB /* YMFormTextViewTableViewCell.m in Sources */,
 				81937FFD214F37D100EEA717 /* YMNetworkingBaseUtils.m in Sources */,
 				81963EBA21AD273B002BFB5C /* UIImage+YMGif.m in Sources */,
@@ -2105,6 +2150,8 @@
 				8193D25E2149FF7300EB225D /* YMNewsViewController.m in Sources */,
 				81E41A10217EECD100DC9A4A /* YMActiveAlertView.m in Sources */,
 				81EDE1B921AE7C8B008DCC8A /* YMTimerPickerView.m in Sources */,
+				812FA3DF21B60E3B00A9A732 /* YMFMDBTools.m in Sources */,
+				812FA3DC21B60DA100A9A732 /* YMFMDBPerson.m in Sources */,
 				81D1D1A121B0C667000687CA /* MVVMView.m in Sources */,
 				81963EB121AD273B002BFB5C /* NSString+YMImage.m in Sources */,
 				8193D2C9214A013F00EB225D /* YMUIConstumButton.m in Sources */,
@@ -2145,11 +2192,13 @@
 				81963E5D21ACF620002BFB5C /* ScanningQRVC.m in Sources */,
 				81BF55032145ED1F004BC70A /* YMOCCodeStandard.xcdatamodeld in Sources */,
 				81963EAE21AD273B002BFB5C /* UIScrollView+UITouch.m in Sources */,
+				812FA3E621B61EBD00A9A732 /* YMKeychainViewController.m in Sources */,
 				812F5ACE21A6B7FC0072A21E /* YMBaseTableView.m in Sources */,
 				81FA28BF21AB89B200C8FDAB /* YMFormTitleTableViewCell.m in Sources */,
 				81EDE1AC21AE6E51008DCC8A /* YMObtainUserLocationManager.m in Sources */,
 				8193D27E214A000E00EB225D /* NSObject+MJCoding.m in Sources */,
 				81DE382521B4CF5600550D60 /* YMSQLite3Person.m in Sources */,
+				812FA3D921B60B7100A9A732 /* YMFMDBViewController.m in Sources */,
 				81937FF6214F370000EEA717 /* AFHTTPSessionManager.m in Sources */,
 				81E77EAE21870DD8007CE3FD /* YMOrganizationTableViewCell.m in Sources */,
 				817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */,
@@ -2337,6 +2386,7 @@
 			baseConfigurationReference = 4B0C89B5E1B2F67C717A1110 /* Pods-YMOCCodeStandard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YMOCCodeStandard/YMOCCodeStandard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JZQVBBZQ7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2358,6 +2408,7 @@
 			baseConfigurationReference = 3A9133D0BF3B0676CB7707AE /* Pods-YMOCCodeStandard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YMOCCodeStandard/YMOCCodeStandard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JZQVBBZQ7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

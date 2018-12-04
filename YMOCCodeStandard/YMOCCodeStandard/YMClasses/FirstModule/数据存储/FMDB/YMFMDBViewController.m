@@ -1,19 +1,14 @@
 //
-//  YMDataStoreViewController.m
+//  YMFMDBViewController.m
 //  YMOCCodeStandard
 //
-//  Created by iOS on 2018/12/3.
+//  Created by iOS on 2018/12/4.
 //  Copyright © 2018 iOS. All rights reserved.
 //
 
-#import "YMDataStoreViewController.h"
-
-#import "YMSQLite3ViewController.h"
-#import "YMArchiveViewController.h"
 #import "YMFMDBViewController.h"
-#import "YMKeychainViewController.h"
 
-@interface YMDataStoreViewController ()
+@interface YMFMDBViewController ()
 <UITableViewDelegate,
 UITableViewDataSource>
 
@@ -24,7 +19,7 @@ UITableViewDataSource>
 
 @end
 
-@implementation YMDataStoreViewController
+@implementation YMFMDBViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,30 +55,41 @@ UITableViewDataSource>
     switch (indexPath.row) {
         case 0:
         {
-            YMSQLite3ViewController *vc = [[YMSQLite3ViewController alloc] init];
-            vc.title = @"SQLite3";
-            [self.navigationController pushViewController:vc animated:YES];
+            // MARK: 打开数据库
+            
         }
             break;
         case 1:
         {
-            YMArchiveViewController *vc = [[YMArchiveViewController alloc] init];
-            vc.title = @"归档解档";
-            [self.navigationController pushViewController:vc animated:YES];
+            // MARK: 创建表格 ---> 数据库已经打开
+            
         }
             break;
         case 2:
         {
-            YMFMDBViewController *vc = [[YMFMDBViewController alloc] init];
-            vc.title = @"FMDB";
-            [self.navigationController pushViewController:vc animated:YES];
+            // MARK: 插入数据
+            
         }
             break;
         case 3:
         {
-            YMKeychainViewController *vc = [[YMKeychainViewController alloc] init];
-            vc.title = @"钥匙串";
-            [self.navigationController pushViewController:vc animated:YES];
+            // MARK: 删除数据
+            
+        }
+            break;
+        case 4:
+        {
+            
+        }
+            break;
+        case 5:
+        {
+            
+        }
+            break;
+        case 6:
+        {
+            
         }
             break;
         default:
@@ -111,7 +117,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"SQLite", @"归档解档", @"FMDB", @"钥匙串", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"打开数据库", @"创建表格", @"增加", @"删除", @"修改", @"查询", @"关闭数据库", nil];
     }
     return _dataArr;
 }
