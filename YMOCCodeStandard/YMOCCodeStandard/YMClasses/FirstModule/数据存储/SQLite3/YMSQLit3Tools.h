@@ -27,7 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param sqName 数据库名字
  @param success 成功回调
  */
-- (void)openSQLite3WithName:(NSString *)sqName success:(void(^)(void))success;
+- (void)openSQLite3WithName:(NSString *)sqName
+                    success:(void(^)(void))success;
 
 
 
@@ -38,7 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param param 参数 eg: @"name text not null, age integer"
  @param success 成功回调
  */
-- (void)createTable:(NSString *)tableName param:(NSString *)param success:(void(^)(void))success;
+- (void)createTable:(NSString *)tableName
+              param:(NSString *)param
+            success:(void(^)(void))success;
 
 
 
@@ -50,7 +53,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param vaules 插入数据值 eg: @"张三, 16"
  @param success 成功回调
  */
-- (void)insertTable:(NSString *)tableName paramNames:(NSString *)paramNames vaules:(NSString *)vaules success:(void(^)(void))success;
+- (void)insertTable:(NSString *)tableName
+         paramNames:(NSString *)paramNames
+             vaules:(NSString *)vaules
+            success:(void(^)(void))success;
 
 
 /**
@@ -60,7 +66,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param condition 删除条件 eg: @"number = '0'"
  @param success 成功回调
  */
-- (void)deleteTable:(NSString *)tableName condition:(NSString *)condition success:(void(^)(void))success;
+- (void)deleteTable:(NSString *)tableName
+          condition:(NSString *)condition
+            success:(void(^)(void))success;
 
 
 /**
@@ -70,7 +78,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param condition 条件 eg: @"name = 'zhangsan', age = '17'";
  @param success 成功回调
  */
-- (void)updataTable:(NSString *)tableName condition:(NSString *)condition where:(NSString *)where success:(void(^)(void))success;
+- (void)updataTable:(NSString *)tableName
+          condition:(NSString *)condition
+              where:(NSString *)where
+            success:(void(^)(void))success;
 
 
 /**
@@ -81,7 +92,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param condition 查询条件 eg: @"age<20";
  @param success 成功回调
  */
-- (void)selectTable:(NSString *)tableName paramNames:(NSString *)paramNames condition:(NSString *)condition success:(void(^)(id result, NSInteger itemid))success;
+- (void)selectTable:(NSString *)tableName
+         paramNames:(NSString *)paramNames
+          condition:(NSString *)condition
+            success:(void(^)(id result, NSInteger itemid))success;
 
 
 /**

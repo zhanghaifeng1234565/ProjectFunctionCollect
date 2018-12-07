@@ -92,7 +92,6 @@ static NSString *const ageKey = @"ageKey";
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
     
-    
     self.nameTextField.text = @"";
     self.ageTextField.text = @"";
     [YMKeychainTools deleteKeychainValue:nameKey];

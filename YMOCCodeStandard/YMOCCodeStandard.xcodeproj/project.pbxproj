@@ -1568,12 +1568,12 @@
 		81D1D1AC21B1250C000687CA /* 数据存储 */ = {
 			isa = PBXGroup;
 			children = (
+				81DE382021B4C95600550D60 /* YMDataStoreViewController.h */,
+				81DE382121B4C95600550D60 /* YMDataStoreViewController.m */,
 				812FA3E021B61E8A00A9A732 /* 钥匙串 */,
 				81D1D1AD21B1250C000687CA /* SQLite3 */,
 				81D1D1AE21B1250C000687CA /* 归档解档 */,
 				81D1D1AF21B1250C000687CA /* FMDB */,
-				81DE382021B4C95600550D60 /* YMDataStoreViewController.h */,
-				81DE382121B4C95600550D60 /* YMDataStoreViewController.m */,
 			);
 			path = "数据存储";
 			sourceTree = "<group>";

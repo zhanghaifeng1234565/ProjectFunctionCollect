@@ -277,6 +277,13 @@ UIGestureRecognizerDelegate>
     [YMMBProgressHUD ymHideLoadingAlert:self.view];
 }
 
+#pragma mark - - scrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView == self.tableView) {
+        _tableViewContentOffSet = self.tableView.contentOffset.y;
+    }
+}
+
 #pragma mark  cell 长按
 - (void)cellLongPress:(UILongPressGestureRecognizer *)recognizer {
     YMBaseTableViewCell *cell = (YMBaseTableViewCell *)recognizer.view;

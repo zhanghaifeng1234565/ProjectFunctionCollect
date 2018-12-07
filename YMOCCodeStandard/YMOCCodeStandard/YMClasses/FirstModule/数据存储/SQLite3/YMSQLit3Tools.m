@@ -31,7 +31,8 @@ static YMSQLit3Tools *_instance = nil;
 }
 
 #pragma mark - - 打开数据库
-- (void)openSQLite3WithName:(NSString *)sqName success:(void (^)(void))success {
+- (void)openSQLite3WithName:(NSString *)sqName
+                    success:(void (^)(void))success {
     NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     NSString *filePath = [documentPath stringByAppendingPathComponent:sqName];
     NSLog(@"filePath == %@", filePath);
@@ -52,7 +53,9 @@ static YMSQLit3Tools *_instance = nil;
 }
 
 #pragma mark - - 建表
-- (void)createTable:(NSString *)tableName param:(NSString *)param success:(void (^)(void))success {
+- (void)createTable:(NSString *)tableName
+              param:(NSString *)param
+            success:(void (^)(void))success {
     NSString *sqlite = [NSString stringWithFormat:@"create table if not exists '%@'('id' integer primary key autoincrement not null, %@)", tableName, param];
     
     // 用来记录错误信息
@@ -70,7 +73,10 @@ static YMSQLit3Tools *_instance = nil;
 }
 
 #pragma mark - - 插入数据
-- (void)insertTable:(NSString *)tableName paramNames:(NSString *)paramNames vaules:(NSString *)vaules success:(void (^)(void))success {
+- (void)insertTable:(NSString *)tableName
+         paramNames:(NSString *)paramNames
+             vaules:(NSString *)vaules
+            success:(void (^)(void))success {
     
      NSString *sql = [NSString stringWithFormat:@"insert into %@ (%@) values (%@)", tableName, paramNames, vaules];
     //2.执行SQL语句
@@ -85,7 +91,9 @@ static YMSQLit3Tools *_instance = nil;
 }
 
 #pragma mark - - 删除语句
-- (void)deleteTable:(NSString *)tableName condition:(NSString *)condition success:(void (^)(void))success {
+- (void)deleteTable:(NSString *)tableName
+          condition:(NSString *)condition
+            success:(void (^)(void))success {
     //1.准备sqlite语句
     NSString *sqlite = [NSString stringWithFormat:@"delete from %@ where %@", tableName, condition];
     //2.执行sqlite语句
@@ -100,7 +108,10 @@ static YMSQLit3Tools *_instance = nil;
 }
 
 #pragma mark - - 更新数据
-- (void)updataTable:(NSString *)tableName condition:(NSString *)condition where:(NSString *)where success:(void (^)(void))success {
+- (void)updataTable:(NSString *)tableName
+          condition:(NSString *)condition
+              where:(NSString *)where
+            success:(void (^)(void))success {
     //1.sqlite语句
     NSString *sqlite = [NSString stringWithFormat:@"update %@ set %@ where %@", tableName, condition, where];
     //2.执行sqlite语句
@@ -116,7 +127,10 @@ static YMSQLit3Tools *_instance = nil;
 }
 
 #pragma mark - - 查询语句
-- (void)selectTable:(NSString *)tableName paramNames:(NSString *)paramNames condition:(NSString *)condition success:(void (^)(id _Nonnull, NSInteger))success {
+- (void)selectTable:(NSString *)tableName
+         paramNames:(NSString *)paramNames
+          condition:(NSString *)condition
+            success:(void (^)(id _Nonnull, NSInteger))success {
     NSString *sql = [NSString stringWithFormat:@"SELECT %@ FROM %@ WHERE %@", paramNames, tableName, condition];
     
     sqlite3_stmt *stmt = NULL;

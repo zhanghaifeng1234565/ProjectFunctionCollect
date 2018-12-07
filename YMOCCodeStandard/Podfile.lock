@@ -8,6 +8,7 @@ PODS:
   - MJRefresh (3.1.15.7)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - ReactiveObjC (3.1.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - lottie-ios
   - MJRefresh
   - MLeaksFinder
+  - ReactiveObjC (~> 3.1.0)
   - SDWebImage
   - WechatOpenSDK
   - YYModel
@@ -40,6 +42,7 @@ SPEC REPOS:
     - lottie-ios
     - MJRefresh
     - MLeaksFinder
+    - ReactiveObjC
     - SDWebImage
     - WechatOpenSDK
     - YYCache
@@ -54,6 +57,7 @@ SPEC CHECKSUMS:
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   WechatOpenSDK: 3117412f8aafde4758cac1e8d20b93c67cafcfef
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 37c31555ad409c2e453b36a745636cafcdedbdb2
+PODFILE CHECKSUM: 9d8c5745ce83a6fddf382df9a9f7ad5a8fb2b1ed
 
 COCOAPODS: 1.6.0.beta.2

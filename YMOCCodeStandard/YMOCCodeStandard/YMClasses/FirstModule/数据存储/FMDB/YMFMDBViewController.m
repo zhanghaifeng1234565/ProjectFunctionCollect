@@ -89,7 +89,15 @@ UITableViewDataSource>
             break;
         case 6:
         {
+            RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                NSLog(@"hello world!");
+                [subscriber sendNext:@"This is RAC"];
+                return nil;
+            }];
             
+            [signal subscribeNext:^(id  _Nullable x) {
+                NSLog(@"%@", x);
+            }];
         }
             break;
         default:
