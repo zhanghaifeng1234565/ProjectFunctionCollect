@@ -84,6 +84,7 @@ UITableViewDataSource>
             break;
             
         default:
+            [YMBlackSmallAlert showAlertWithMessage:@"敬请期待！" time:2.0f];
             break;
     }
 }
