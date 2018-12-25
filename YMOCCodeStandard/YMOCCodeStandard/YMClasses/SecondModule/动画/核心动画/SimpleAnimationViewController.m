@@ -11,6 +11,7 @@
 #import "LayerTreeViewController.h"
 #import "BoardingMapViewController.h"
 #import "YMLayerGeometryViewController.h"
+#import "VisualEffectsViewController.h"
 
 @interface SimpleAnimationViewController ()
 <UITableViewDelegate,
@@ -82,7 +83,13 @@ UITableViewDataSource>
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-            
+        case 3:
+        {
+            // 视觉效果
+            VisualEffectsViewController *vc = [[VisualEffectsViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             [YMBlackSmallAlert showAlertWithMessage:@"敬请期待！" time:2.0f];
             break;

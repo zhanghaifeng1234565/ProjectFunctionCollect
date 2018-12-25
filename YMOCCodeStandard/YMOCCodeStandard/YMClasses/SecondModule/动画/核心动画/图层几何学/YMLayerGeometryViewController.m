@@ -21,9 +21,19 @@
 /// 秒针
 @property (nonatomic, readwrite, strong) UIImageView *secondHandImageV;
 
+/// 绿色视图
+@property (nonatomic, readwrite, strong) UIView *greenView;
+/// 红色视图
+@property (nonatomic, readwrite, strong) UIView *redView;
+/// 蓝色图层
+@property (nonatomic, readwrite, strong) CALayer *blueLayer;
+
 @end
 
-@implementation YMLayerGeometryViewController
+@implementation YMLayerGeometryViewController {
+    /// 是否是 hitTest
+    BOOL _isHitTest;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,6 +50,11 @@
     [self.view addSubview:self.hourHandImageV];
     [self.view addSubview:self.minuteHandImageV];
     [self.view addSubview:self.secondHandImageV];
+    
+    [self.view addSubview:self.greenView];
+    [self.view addSubview:self.redView];
+    
+    [self.greenView.layer addSublayer:self.blueLayer];
 }
 
 #pragma mark - - 配置视图
@@ -50,6 +65,11 @@
     self.hourHandImageV.image = [UIImage imageNamed:@"hourhand"];
     self.minuteHandImageV.image = [UIImage imageNamed:@"minutehand"];
     self.secondHandImageV.image = [UIImage imageNamed:@"secondhand"];
+    
+    self.greenView.backgroundColor = [UIColor greenColor];
+    self.redView.backgroundColor = [UIColor redColor];
+    
+    self.blueLayer.backgroundColor = [UIColor blueColor].CGColor;
 }
 
 #pragma mark - - 布局
@@ -70,6 +90,13 @@
     // 添加定时任务
     [TimeWeakTarget scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:@{} repeats:YES];
     [self tick];
+    
+    // 视图层次修改
+    self.greenView.frame = CGRectMake(15, self.clockImageV.bottom + 30, MainScreenWidth - 30, 50);
+    self.redView.frame = CGRectMake(15, self.greenView.bottom - 15, MainScreenWidth - 30, 50);
+    self.greenView.layer.zPosition = 1.0;
+    
+    self.blueLayer.frame = CGRectMake(15, 10, self.greenView.width - 30, 30);
 }
 
 #pragma mark - - 定时任务
@@ -90,6 +117,54 @@
     self.hourHandImageV.transform = CGAffineTransformMakeRotation(hoursAngle);
     self.minuteHandImageV.transform = CGAffineTransformMakeRotation(minsAngle);
     self.secondHandImageV.transform = CGAffineTransformMakeRotation(secsAngle);
+}
+
+#pragma mark - - touch
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    if (_isHitTest == YES) {
+        // 通过 hitTest: 获取
+        [self obtainThroughHitTest:touches];
+    } else {
+        // 通过 containsPoint 获取
+        [self obtainThroughContainsPoint:touches];
+    }
+}
+
+#pragma mark 通过 containsPoint 获取图层
+- (void)obtainThroughContainsPoint:(NSSet<UITouch *> *)touches {
+    // get touch position relative to main view
+    CGPoint point = [[touches anyObject] locationInView:self.view];
+    // convert point to the white layer's coordinates
+    point = [self.greenView.layer convertPoint:point fromLayer:self.view.layer];
+    // get layer using containsPoint:
+    if ([self.greenView.layer containsPoint:point]) {
+        // convert point to blueLayer's coordinates
+        point = [self.blueLayer convertPoint:point fromLayer:self.greenView.layer];
+        if ([self.blueLayer containsPoint:point]) {
+            [YMBlackSmallAlert showAlertWithMessage:@"在蓝色图层里" time:2.0f];
+        } else {
+            [YMBlackSmallAlert showAlertWithMessage:@"在绿色图层里" time:2.0f];
+        }
+    } else {
+        [YMBlackSmallAlert showAlertWithMessage:@"在白色图层里" time:2.0f];
+    }
+}
+
+#pragma mark 通过 hitTest:
+- (void)obtainThroughHitTest:(NSSet<UITouch *> *)touches {
+    // get touch position
+    CGPoint point = [[touches anyObject] locationInView:self.view];
+    // get touched layer
+    CALayer *layer = [self.greenView.layer hitTest:point];
+    // get layer using hitTest:
+    if (layer == self.blueLayer) {
+        [YMBlackSmallAlert showAlertWithMessage:@"在蓝色图层里" time:2.0f];
+    } else if (layer == self.greenView.layer) {
+        [YMBlackSmallAlert showAlertWithMessage:@"在绿色图层里" time:2.0f];
+    } else {
+        [YMBlackSmallAlert showAlertWithMessage:@"在白色图层里" time:2.0f];
+    }
 }
 
 #pragma mark - - lazyLoadUI
@@ -119,6 +194,27 @@
         _secondHandImageV = [[UIImageView alloc] init];
     }
     return _secondHandImageV;
+}
+
+- (UIView *)greenView {
+    if (_greenView == nil) {
+        _greenView = [[UIView alloc] init];
+    }
+    return _greenView;
+}
+
+- (UIView *)redView {
+    if (_redView == nil) {
+        _redView = [[UIView alloc] init];
+    }
+    return _redView;
+}
+
+- (CALayer *)blueLayer {
+    if (_blueLayer == nil) {
+        _blueLayer = [[CALayer alloc] init];
+    }
+    return _blueLayer;
 }
 
 /*

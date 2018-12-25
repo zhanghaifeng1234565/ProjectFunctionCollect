@@ -15,6 +15,7 @@
 		810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E5CD5219EB88500DA5935 /* YMQRViewController.m */; };
 		81111C7621D1CA280051B2C3 /* YMLayerGeometryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7521D1CA280051B2C3 /* YMLayerGeometryViewController.m */; };
 		81111C7921D1F8D50051B2C3 /* TimeWeakTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7821D1F8D50051B2C3 /* TimeWeakTarget.m */; };
+		81111C7D21D21F200051B2C3 /* VisualEffectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7C21D21F200051B2C3 /* VisualEffectsViewController.m */; };
 		811D8EEC21A7F60B00053FC1 /* YMDemoFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D8EEB21A7F60B00053FC1 /* YMDemoFormViewController.m */; };
 		811D8EEF21A7F65300053FC1 /* YMDemoFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D8EEE21A7F65300053FC1 /* YMDemoFormModel.m */; };
 		812F5ABD21A6B4A00072A21E /* YMWXPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5ABC21A6B4A00072A21E /* YMWXPayTool.m */; };
@@ -227,6 +228,8 @@
 		81111C7521D1CA280051B2C3 /* YMLayerGeometryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMLayerGeometryViewController.m; sourceTree = "<group>"; };
 		81111C7721D1F8D50051B2C3 /* TimeWeakTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeWeakTarget.h; sourceTree = "<group>"; };
 		81111C7821D1F8D50051B2C3 /* TimeWeakTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeWeakTarget.m; sourceTree = "<group>"; };
+		81111C7B21D21F200051B2C3 /* VisualEffectsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisualEffectsViewController.h; sourceTree = "<group>"; };
+		81111C7C21D21F200051B2C3 /* VisualEffectsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualEffectsViewController.m; sourceTree = "<group>"; };
 		811D8EEA21A7F60B00053FC1 /* YMDemoFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDemoFormViewController.h; sourceTree = "<group>"; };
 		811D8EEB21A7F60B00053FC1 /* YMDemoFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDemoFormViewController.m; sourceTree = "<group>"; };
 		811D8EED21A7F65300053FC1 /* YMDemoFormModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDemoFormModel.h; sourceTree = "<group>"; };
@@ -644,6 +647,15 @@
 			path = "图层几何学";
 			sourceTree = "<group>";
 		};
+		81111C7A21D21F0A0051B2C3 /* 视觉效果 */ = {
+			isa = PBXGroup;
+			children = (
+				81111C7B21D21F200051B2C3 /* VisualEffectsViewController.h */,
+				81111C7C21D21F200051B2C3 /* VisualEffectsViewController.m */,
+			);
+			path = "视觉效果";
+			sourceTree = "<group>";
+		};
 		811D8EE921A7F5B500053FC1 /* 表单 */ = {
 			isa = PBXGroup;
 			children = (
@@ -767,6 +779,7 @@
 		8168B7E821D08792000D271D /* 核心动画 */ = {
 			isa = PBXGroup;
 			children = (
+				81111C7A21D21F0A0051B2C3 /* 视觉效果 */,
 				81111C7021D1C1FC0051B2C3 /* 图层几何学 */,
 				8168B7F021D0ADE6000D271D /* 寄宿图 */,
 				8168B7EC21D08A0A000D271D /* 图层树 */,
@@ -2200,6 +2213,7 @@
 				81E41A22217F0E0D00DC9A4A /* YMMBProgressHUD.m in Sources */,
 				81D1D19E21B0C598000687CA /* MVVMViewModel.m in Sources */,
 				81963EB621AD273B002BFB5C /* UIView+YMFrame.m in Sources */,
+				81111C7D21D21F200051B2C3 /* VisualEffectsViewController.m in Sources */,
 				8193D2CD214A6F6300EB225D /* YMDataSaveSingleton.m in Sources */,
 				81621700219018320001FC5E /* YMPictureViewerDemoViewController.m in Sources */,
 				81963EBC21AD273B002BFB5C /* UIViewController+YMBackToViewController.m in Sources */,
