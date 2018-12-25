@@ -18,7 +18,7 @@
     return self;
 }
 
-- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     [self.scriptDelegate userContentController:userContentController didReceiveScriptMessage:message];
 }
 @end

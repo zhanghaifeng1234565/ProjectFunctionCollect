@@ -13,6 +13,8 @@
 		81012952214F87A000725BAF /* YMLoadingViewNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 81012951214F87A000725BAF /* YMLoadingViewNetworkUtils.m */; };
 		81012955214FABEF00725BAF /* YMHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81012954214FABEF00725BAF /* YMHomeModel.m */; };
 		810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E5CD5219EB88500DA5935 /* YMQRViewController.m */; };
+		81111C7621D1CA280051B2C3 /* YMLayerGeometryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7521D1CA280051B2C3 /* YMLayerGeometryViewController.m */; };
+		81111C7921D1F8D50051B2C3 /* TimeWeakTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7821D1F8D50051B2C3 /* TimeWeakTarget.m */; };
 		811D8EEC21A7F60B00053FC1 /* YMDemoFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D8EEB21A7F60B00053FC1 /* YMDemoFormViewController.m */; };
 		811D8EEF21A7F65300053FC1 /* YMDemoFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D8EEE21A7F65300053FC1 /* YMDemoFormModel.m */; };
 		812F5ABD21A6B4A00072A21E /* YMWXPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5ABC21A6B4A00072A21E /* YMWXPayTool.m */; };
@@ -34,6 +36,9 @@
 		81621705219018CB0001FC5E /* YMPictureTestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81621703219018CB0001FC5E /* YMPictureTestCollectionViewCell.m */; };
 		81621706219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81621704219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib */; };
 		8162171621903E170001FC5E /* YMPictureTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8162171521903E170001FC5E /* YMPictureTestView.m */; };
+		8168B7EB21D087E1000D271D /* SimpleAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8168B7EA21D087E1000D271D /* SimpleAnimationViewController.m */; };
+		8168B7EF21D08A19000D271D /* LayerTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8168B7EE21D08A19000D271D /* LayerTreeViewController.m */; };
+		8168B7F321D0AE0F000D271D /* BoardingMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8168B7F221D0AE0F000D271D /* BoardingMapViewController.m */; };
 		8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8178E933214B443900D16102 /* YMTouchMoveView.m */; };
 		817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61D6219BC85700DE3B52 /* YMCountryModel.m */; };
 		817A61DA219BCC4900DE3B52 /* YMCountryPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61D9219BCC4900DE3B52 /* YMCountryPickerView.m */; };
@@ -218,6 +223,10 @@
 		81012954214FABEF00725BAF /* YMHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMHomeModel.m; sourceTree = "<group>"; };
 		810E5CD4219EB88500DA5935 /* YMQRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMQRViewController.h; sourceTree = "<group>"; };
 		810E5CD5219EB88500DA5935 /* YMQRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMQRViewController.m; sourceTree = "<group>"; };
+		81111C7421D1CA280051B2C3 /* YMLayerGeometryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLayerGeometryViewController.h; sourceTree = "<group>"; };
+		81111C7521D1CA280051B2C3 /* YMLayerGeometryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMLayerGeometryViewController.m; sourceTree = "<group>"; };
+		81111C7721D1F8D50051B2C3 /* TimeWeakTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeWeakTarget.h; sourceTree = "<group>"; };
+		81111C7821D1F8D50051B2C3 /* TimeWeakTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeWeakTarget.m; sourceTree = "<group>"; };
 		811D8EEA21A7F60B00053FC1 /* YMDemoFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDemoFormViewController.h; sourceTree = "<group>"; };
 		811D8EEB21A7F60B00053FC1 /* YMDemoFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDemoFormViewController.m; sourceTree = "<group>"; };
 		811D8EED21A7F65300053FC1 /* YMDemoFormModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDemoFormModel.h; sourceTree = "<group>"; };
@@ -257,6 +266,12 @@
 		81621704219018CB0001FC5E /* YMPictureTestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YMPictureTestCollectionViewCell.xib; sourceTree = "<group>"; };
 		8162171421903E170001FC5E /* YMPictureTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPictureTestView.h; sourceTree = "<group>"; };
 		8162171521903E170001FC5E /* YMPictureTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPictureTestView.m; sourceTree = "<group>"; };
+		8168B7E921D087E1000D271D /* SimpleAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleAnimationViewController.h; sourceTree = "<group>"; };
+		8168B7EA21D087E1000D271D /* SimpleAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAnimationViewController.m; sourceTree = "<group>"; };
+		8168B7ED21D08A19000D271D /* LayerTreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerTreeViewController.h; sourceTree = "<group>"; };
+		8168B7EE21D08A19000D271D /* LayerTreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerTreeViewController.m; sourceTree = "<group>"; };
+		8168B7F121D0AE0F000D271D /* BoardingMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardingMapViewController.h; sourceTree = "<group>"; };
+		8168B7F221D0AE0F000D271D /* BoardingMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoardingMapViewController.m; sourceTree = "<group>"; };
 		8178E932214B443900D16102 /* YMTouchMoveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMTouchMoveView.h; sourceTree = "<group>"; };
 		8178E933214B443900D16102 /* YMTouchMoveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMTouchMoveView.m; sourceTree = "<group>"; };
 		817A61D5219BC85700DE3B52 /* YMCountryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCountryModel.h; sourceTree = "<group>"; };
@@ -618,6 +633,17 @@
 			path = "二维码";
 			sourceTree = "<group>";
 		};
+		81111C7021D1C1FC0051B2C3 /* 图层几何学 */ = {
+			isa = PBXGroup;
+			children = (
+				81111C7421D1CA280051B2C3 /* YMLayerGeometryViewController.h */,
+				81111C7521D1CA280051B2C3 /* YMLayerGeometryViewController.m */,
+				81111C7721D1F8D50051B2C3 /* TimeWeakTarget.h */,
+				81111C7821D1F8D50051B2C3 /* TimeWeakTarget.m */,
+			);
+			path = "图层几何学";
+			sourceTree = "<group>";
+		};
 		811D8EE921A7F5B500053FC1 /* 表单 */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,6 +754,44 @@
 				81A593CA21998DFB0009669C /* timg.gif */,
 			);
 			path = "图片预览 demo";
+			sourceTree = "<group>";
+		};
+		8168B7E721D08792000D271D /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				8168B7E821D08792000D271D /* 核心动画 */,
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
+		8168B7E821D08792000D271D /* 核心动画 */ = {
+			isa = PBXGroup;
+			children = (
+				81111C7021D1C1FC0051B2C3 /* 图层几何学 */,
+				8168B7F021D0ADE6000D271D /* 寄宿图 */,
+				8168B7EC21D08A0A000D271D /* 图层树 */,
+				8168B7E921D087E1000D271D /* SimpleAnimationViewController.h */,
+				8168B7EA21D087E1000D271D /* SimpleAnimationViewController.m */,
+			);
+			path = "核心动画";
+			sourceTree = "<group>";
+		};
+		8168B7EC21D08A0A000D271D /* 图层树 */ = {
+			isa = PBXGroup;
+			children = (
+				8168B7ED21D08A19000D271D /* LayerTreeViewController.h */,
+				8168B7EE21D08A19000D271D /* LayerTreeViewController.m */,
+			);
+			path = "图层树";
+			sourceTree = "<group>";
+		};
+		8168B7F021D0ADE6000D271D /* 寄宿图 */ = {
+			isa = PBXGroup;
+			children = (
+				8168B7F121D0AE0F000D271D /* BoardingMapViewController.h */,
+				8168B7F221D0AE0F000D271D /* BoardingMapViewController.m */,
+			);
+			path = "寄宿图";
 			sourceTree = "<group>";
 		};
 		81937FE6214F370000EEA717 /* YMNetworkingUtils */ = {
@@ -894,6 +958,7 @@
 		8193D2552149FF7300EB225D /* SecondModule */ = {
 			isa = PBXGroup;
 			children = (
+				8168B7E721D08792000D271D /* 动画 */,
 				810E5CD3219EB86200DA5935 /* 二维码 */,
 				816216FC219018060001FC5E /* 图片预览 demo */,
 				8193D2582149FF7300EB225D /* SecondModuleVC */,
@@ -2126,7 +2191,10 @@
 				81DE382B21B4F93D00550D60 /* YMArchiveViewController.m in Sources */,
 				81963EB421AD273B002BFB5C /* UIButton+YMConfiguration.m in Sources */,
 				8193D2B8214A008800EB225D /* MASLayoutConstraint.m in Sources */,
+				81111C7621D1CA280051B2C3 /* YMLayerGeometryViewController.m in Sources */,
 				817A61DA219BCC4900DE3B52 /* YMCountryPickerView.m in Sources */,
+				8168B7EB21D087E1000D271D /* SimpleAnimationViewController.m in Sources */,
+				81111C7921D1F8D50051B2C3 /* TimeWeakTarget.m in Sources */,
 				81012952214F87A000725BAF /* YMLoadingViewNetworkUtils.m in Sources */,
 				816054582194047900AF1E18 /* YMHighlightImageView.m in Sources */,
 				81E41A22217F0E0D00DC9A4A /* YMMBProgressHUD.m in Sources */,
@@ -2143,6 +2211,7 @@
 				81EDE1CE21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.m in Sources */,
 				812F5AC421A6B59F0072A21E /* YMRefreshHeader.m in Sources */,
 				81963E6E21AD2200002BFB5C /* YMNewsDemoViewController.m in Sources */,
+				8168B7EF21D08A19000D271D /* LayerTreeViewController.m in Sources */,
 				8193D2BB214A008800EB225D /* MASConstraint.m in Sources */,
 				81937FFA214F370000EEA717 /* AFSecurityPolicy.m in Sources */,
 				81BF56BA2145F012004BC70A /* JTNavigationController.m in Sources */,
@@ -2179,6 +2248,7 @@
 				81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */,
 				81963E6621AD1F4E002BFB5C /* YMSegmentViewController.m in Sources */,
 				81BF56BB2145F012004BC70A /* UIViewController+JTNavigationExtension.m in Sources */,
+				8168B7F321D0AE0F000D271D /* BoardingMapViewController.m in Sources */,
 				812F5ABD21A6B4A00072A21E /* YMWXPayTool.m in Sources */,
 				81963EB821AD273B002BFB5C /* UIImage+Tools.m in Sources */,
 				81E41A14217EFAF000DC9A4A /* YMWKWebView.m in Sources */,
