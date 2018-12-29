@@ -12,6 +12,7 @@
 #import "BoardingMapViewController.h"
 #import "YMLayerGeometryViewController.h"
 #import "VisualEffectsViewController.h"
+#import "ChangeViewController.h"
 
 @interface SimpleAnimationViewController ()
 <UITableViewDelegate,
@@ -90,6 +91,14 @@ UITableViewDataSource>
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 4:
+        {
+            // 变换
+            ChangeViewController *vc = [[ChangeViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+
         default:
             [YMBlackSmallAlert showAlertWithMessage:@"敬请期待！" time:2.0f];
             break;

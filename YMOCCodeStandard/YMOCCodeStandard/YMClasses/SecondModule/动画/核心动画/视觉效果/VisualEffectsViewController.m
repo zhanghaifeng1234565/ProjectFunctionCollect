@@ -17,6 +17,14 @@
 /// 阴影视图
 @property (nonatomic, readwrite, strong) UIView *shadowView;
 
+/// 蒙板
+@property (nonatomic, readwrite, strong) CALayer *maskLayer;
+
+/// 容器视图
+@property (nonatomic, readwrite, strong) UIView *containView;
+/// 显示文字
+@property (nonatomic, readwrite, strong) UILabel *showLabel;
+
 @end
 
 @implementation VisualEffectsViewController
@@ -35,6 +43,8 @@
     [self.view addSubview:self.shadowView];
     [self.shadowView addSubview:self.redView];
     [self.redView addSubview:self.blueView];
+    [self.view addSubview:self.containView];
+    [self.containView addSubview:self.showLabel];
 }
 
 #pragma mark - - 配置视图
@@ -44,6 +54,17 @@
     self.shadowView.backgroundColor = [UIColor whiteColor];
     self.blueView.backgroundColor = [UIColor blueColor];
     self.redView.backgroundColor = [UIColor redColor];
+    self.containView.backgroundColor = [UIColor blackColor];
+    
+    self.showLabel.text = @"我是透明视图的子视图";
+    self.showLabel.textAlignment = NSTextAlignmentCenter;
+    self.showLabel.textColor = [UIColor whiteColor];
+    self.showLabel.backgroundColor = [UIColor clearColor];
+    
+    // 设置视图透明度不影响子视图显示
+    self.containView.alpha = 0.5f;
+    self.containView.layer.shouldRasterize = YES;
+    self.containView.layer.rasterizationScale = [UIScreen mainScreen].scale;
 }
 
 #pragma mark - - 布局视图
@@ -53,6 +74,8 @@
     self.shadowView.frame = CGRectMake(55, 55, 110, 110);
     self.blueView.frame = CGRectMake(-50, -50, 100, 100);
     self.redView.frame = CGRectMake(-5, -5, 110, 110);
+    self.containView.frame = CGRectMake(15, self.shadowView.center.y - 30, MainScreenWidth - 30, 60);
+    self.showLabel.frame = CGRectMake(30, 15, self.containView.width - 30, 30);
     
     self.shadowView.layer.shadowOpacity = 0.5;
     self.shadowView.layer.shadowOffset = CGSizeMake(0, 3);
@@ -75,6 +98,12 @@
     
     self.redView.layer.borderWidth = 3.0f;
     self.redView.layer.borderColor = [UIColor magentaColor].CGColor;
+    
+    // 蒙板
+    UIImage *maskImage = [UIImage imageNamed:@"secondhand"];
+    self.maskLayer.contents = (__bridge id)maskImage.CGImage;
+    self.maskLayer.frame = self.redView.bounds;
+    self.redView.layer.mask = self.maskLayer;
 }
 
 #pragma mark - - lazyLoadUI
@@ -97,6 +126,27 @@
         _shadowView = [[UIView alloc] init];
     }
     return _shadowView;
+}
+
+- (CALayer *)maskLayer {
+    if (_maskLayer == nil) {
+        _maskLayer = [[CALayer alloc] init];
+    }
+    return _maskLayer;
+}
+
+- (UIView *)containView {
+    if (_containView == nil) {
+        _containView = [[UIView alloc] init];
+    }
+    return _containView;
+}
+
+- (UILabel *)showLabel {
+    if (_showLabel == nil) {
+        _showLabel = [[UILabel alloc] init];
+    }
+    return _showLabel;
 }
 
 /*
