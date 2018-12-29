@@ -8,6 +8,8 @@
 
 #import "ChangeViewController.h"
 
+#import "ChangeView.h"
+
 @interface ChangeViewController ()
 
 /// 背景滚动视图
@@ -23,6 +25,11 @@
 @property (nonatomic, readwrite, strong) UIView *outterView;
 /// 内部视图
 @property (nonatomic, readwrite, strong) UIView *innerView;
+
+/// 视图结婚
+@property (nonatomic, readwrite, strong) NSMutableArray <ChangeView *> *viewMarr;
+/// cube 视图
+@property (nonatomic, readwrite, strong) UIView *cubeView;
 
 @end
 
@@ -45,6 +52,7 @@
     [self.containerView addSubview:self.compareView];
     [self.scrollView addSubview:self.outterView];
     [self.outterView addSubview:self.innerView];
+    [self.scrollView addSubview:self.cubeView];
 }
 
 #pragma mark - - 配置属性
@@ -56,6 +64,7 @@
     self.compareView.backgroundColor = [UIColor blueColor];
     self.outterView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.innerView.backgroundColor = [UIColor magentaColor];
+    self.cubeView.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 
 #pragma mark - - 布局视图
@@ -68,8 +77,9 @@
     self.compareView.frame = CGRectMake(self.testView.right + 15, self.testView.top, self.testView.width, self.testView.height);
     self.outterView.frame = CGRectMake((MainScreenWidth - 200) / 2, self.containerView.bottom + 30, 200, 200);
     self.innerView.frame = CGRectMake(50, 50, 100, 100);
+    self.cubeView.frame = CGRectMake(15, self.outterView.bottom + 30, MainScreenWidth - 30, 400);
     
-    self.scrollView.contentSize = CGSizeMake(MainScreenWidth, self.outterView.bottom + 100);
+    self.scrollView.contentSize = CGSizeMake(MainScreenWidth, self.cubeView.bottom + 100);
     
     // 2D
 //    [self transform];
@@ -81,6 +91,11 @@
 //    [self flatLayer];
     // 扁平化 3D
     [self flatLayer3D];
+    
+    // 创建固态视图
+    [self createCubeView];
+    // 翻转每一面
+    [self transformCubeFace];
 }
 
 #pragma mark 2D
@@ -141,6 +156,60 @@
     self.innerView.layer.transform = transform2;
 }
 
+#pragma mark - - 生成六个视图
+- (void)createCubeView {
+    [self.viewMarr removeAllObjects];
+    for (int i = 0; i < 6; i++) {
+        ChangeView *view = [[ChangeView alloc] init];
+        view.width = 100;
+        view.height = 100;
+        view.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+        view.label.text = [NSString stringWithFormat:@"%d", i];
+        [self.viewMarr addObject:view];
+     }
+}
+
+#pragma mark 设置每一面
+- (void)transformCubeFace {
+    CATransform3D perspective = CATransform3DIdentity;
+    perspective.m34 = -1.0 / 500.0;
+    perspective = CATransform3DRotate(perspective, -M_PI_4, 1, 0, 0);
+    perspective = CATransform3DRotate(perspective, -M_PI_4, 0, 1, 0);
+    self.cubeView.layer.sublayerTransform = perspective;
+    
+    CATransform3D transform = CATransform3DIdentity;
+    transform = CATransform3DMakeTranslation(0, 0, 100);
+    [self addFace:0 withTransform:transform];
+    
+    transform = CATransform3DMakeTranslation(100, 0, 0);
+    transform = CATransform3DRotate(transform, M_PI_2, 0, 1, 0);
+    [self addFace:1 withTransform:transform];
+    
+    transform = CATransform3DMakeTranslation(0, -100, 0);
+    transform = CATransform3DRotate(transform, M_PI_2, 1, 0, 0);
+    [self addFace:2 withTransform:transform];
+    
+    transform = CATransform3DMakeTranslation(0, 100, 0);
+    transform = CATransform3DRotate(transform, -M_PI_2, 1, 0, 0);
+    [self addFace:3 withTransform:transform];
+    
+    transform = CATransform3DMakeTranslation(-100, 0, 0);
+    transform = CATransform3DRotate(transform, -M_PI_2, 0, 1, 0);
+    [self addFace:4 withTransform:transform];
+    
+    transform = CATransform3DMakeTranslation(0, 0, -100);
+    transform = CATransform3DRotate(transform, M_PI_2, 0, 1, 0);
+    [self addFace:5 withTransform:transform];
+}
+
+- (void)addFace:(NSInteger)index withTransform:(CATransform3D)transform {
+    ChangeView *face = self.viewMarr[index];
+    [self.cubeView addSubview:face];
+    CGSize containerSize = self.cubeView.bounds.size;
+    face.center = CGPointMake(containerSize.width / 2, containerSize.height / 2);
+    face.layer.transform = transform;
+}
+
 #pragma mark - - lazyLoadUI
 - (UIScrollView *)scrollView {
     if (_scrollView == nil) {
@@ -182,6 +251,21 @@
         _innerView = [[UIView alloc] init];
     }
     return _innerView;
+}
+
+- (UIView *)cubeView {
+    if (_cubeView == nil) {
+        _cubeView = [[UIView alloc] init];
+    }
+    return _cubeView;
+}
+
+#pragma mark - - getter
+- (NSMutableArray<ChangeView *> *)viewMarr {
+    if (_viewMarr == nil) {
+        _viewMarr = [[NSMutableArray alloc] init];
+    }
+    return _viewMarr;
 }
 
 /*

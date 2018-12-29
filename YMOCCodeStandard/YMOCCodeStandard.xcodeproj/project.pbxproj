@@ -163,6 +163,7 @@
 		81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E77EA921870DD8007CE3FD /* YMOrganizationSectionHeaderView.m */; };
 		81E77EB021870DD8007CE3FD /* YMOrganizationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E77EAC21870DD8007CE3FD /* YMOrganizationTableViewCell.xib */; };
 		81E77EB321870FD6007CE3FD /* YMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E77EB221870FD6007CE3FD /* YMBaseViewController.m */; };
+		81ED981521D70F4B00BE2CE1 /* ChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ED981421D70F4B00BE2CE1 /* ChangeView.m */; };
 		81EDE1AC21AE6E51008DCC8A /* YMObtainUserLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1AB21AE6E51008DCC8A /* YMObtainUserLocationManager.m */; };
 		81EDE1B321AE7966008DCC8A /* YMMiddleMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EDE1AE21AE7966008DCC8A /* YMMiddleMenuView.m */; };
 		81EDE1B421AE7966008DCC8A /* YMMiddleMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81EDE1AF21AE7966008DCC8A /* YMMiddleMenuTableViewCell.xib */; };
@@ -517,6 +518,8 @@
 		81E77EAC21870DD8007CE3FD /* YMOrganizationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMOrganizationTableViewCell.xib; sourceTree = "<group>"; };
 		81E77EB121870FD6007CE3FD /* YMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBaseViewController.h; sourceTree = "<group>"; };
 		81E77EB221870FD6007CE3FD /* YMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBaseViewController.m; sourceTree = "<group>"; };
+		81ED981321D70F4B00BE2CE1 /* ChangeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeView.h; sourceTree = "<group>"; };
+		81ED981421D70F4B00BE2CE1 /* ChangeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeView.m; sourceTree = "<group>"; };
 		81EDE1AA21AE6E51008DCC8A /* YMObtainUserLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMObtainUserLocationManager.h; sourceTree = "<group>"; };
 		81EDE1AB21AE6E51008DCC8A /* YMObtainUserLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMObtainUserLocationManager.m; sourceTree = "<group>"; };
 		81EDE1AE21AE7966008DCC8A /* YMMiddleMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMMiddleMenuView.m; sourceTree = "<group>"; };
@@ -1938,6 +1941,8 @@
 			children = (
 				81FF736F21D5B4DD00A68D9D /* ChangeViewController.h */,
 				81FF737021D5B4DD00A68D9D /* ChangeViewController.m */,
+				81ED981321D70F4B00BE2CE1 /* ChangeView.h */,
+				81ED981421D70F4B00BE2CE1 /* ChangeView.m */,
 			);
 			path = "变换";
 			sourceTree = "<group>";
@@ -2240,6 +2245,7 @@
 				81963E6E21AD2200002BFB5C /* YMNewsDemoViewController.m in Sources */,
 				8168B7EF21D08A19000D271D /* LayerTreeViewController.m in Sources */,
 				8193D2BB214A008800EB225D /* MASConstraint.m in Sources */,
+				81ED981521D70F4B00BE2CE1 /* ChangeView.m in Sources */,
 				81937FFA214F370000EEA717 /* AFSecurityPolicy.m in Sources */,
 				81BF56BA2145F012004BC70A /* JTNavigationController.m in Sources */,
 				81937FF7214F370000EEA717 /* AFURLSessionManager.m in Sources */,
