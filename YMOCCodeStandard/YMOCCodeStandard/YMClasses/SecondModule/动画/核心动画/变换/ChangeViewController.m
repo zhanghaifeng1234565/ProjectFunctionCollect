@@ -164,7 +164,7 @@
         view.width = 100;
         view.height = 100;
         view.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
-        view.label.text = [NSString stringWithFormat:@"%d", i];
+        view.label.text = [NSString stringWithFormat:@"%d", i + 1];
         [self.viewMarr addObject:view];
      }
 }
@@ -200,6 +200,7 @@
     transform = CATransform3DMakeTranslation(0, 0, -100);
     transform = CATransform3DRotate(transform, M_PI_2, 0, 1, 0);
     [self addFace:5 withTransform:transform];
+    
 }
 
 - (void)addFace:(NSInteger)index withTransform:(CATransform3D)transform {

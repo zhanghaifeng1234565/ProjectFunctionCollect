@@ -12,6 +12,8 @@
 		8101294E214F81BB00725BAF /* YMLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8101294D214F81BB00725BAF /* YMLoadingView.m */; };
 		81012952214F87A000725BAF /* YMLoadingViewNetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 81012951214F87A000725BAF /* YMLoadingViewNetworkUtils.m */; };
 		81012955214FABEF00725BAF /* YMHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81012954214FABEF00725BAF /* YMHomeModel.m */; };
+		8107282C21DC4BC6004B24F3 /* SpecialLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8107282B21DC4BC6004B24F3 /* SpecialLayerViewController.m */; };
+		8107282F21DCB7B4004B24F3 /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8107282E21DCB7B4004B24F3 /* LayerLabel.m */; };
 		810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E5CD5219EB88500DA5935 /* YMQRViewController.m */; };
 		81111C7621D1CA280051B2C3 /* YMLayerGeometryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7521D1CA280051B2C3 /* YMLayerGeometryViewController.m */; };
 		81111C7921D1F8D50051B2C3 /* TimeWeakTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7821D1F8D50051B2C3 /* TimeWeakTarget.m */; };
@@ -224,6 +226,10 @@
 		81012951214F87A000725BAF /* YMLoadingViewNetworkUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMLoadingViewNetworkUtils.m; sourceTree = "<group>"; };
 		81012953214FABEF00725BAF /* YMHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMHomeModel.h; sourceTree = "<group>"; };
 		81012954214FABEF00725BAF /* YMHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMHomeModel.m; sourceTree = "<group>"; };
+		8107282A21DC4BC6004B24F3 /* SpecialLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialLayerViewController.h; sourceTree = "<group>"; };
+		8107282B21DC4BC6004B24F3 /* SpecialLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialLayerViewController.m; sourceTree = "<group>"; };
+		8107282D21DCB7B4004B24F3 /* LayerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
+		8107282E21DCB7B4004B24F3 /* LayerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
 		810E5CD4219EB88500DA5935 /* YMQRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMQRViewController.h; sourceTree = "<group>"; };
 		810E5CD5219EB88500DA5935 /* YMQRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMQRViewController.m; sourceTree = "<group>"; };
 		81111C7421D1CA280051B2C3 /* YMLayerGeometryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLayerGeometryViewController.h; sourceTree = "<group>"; };
@@ -633,6 +639,17 @@
 			path = "带有 loadingView 的网络加载";
 			sourceTree = "<group>";
 		};
+		8107282921DC4B96004B24F3 /* 专用图层 */ = {
+			isa = PBXGroup;
+			children = (
+				8107282A21DC4BC6004B24F3 /* SpecialLayerViewController.h */,
+				8107282B21DC4BC6004B24F3 /* SpecialLayerViewController.m */,
+				8107282D21DCB7B4004B24F3 /* LayerLabel.h */,
+				8107282E21DCB7B4004B24F3 /* LayerLabel.m */,
+			);
+			path = "专用图层";
+			sourceTree = "<group>";
+		};
 		810E5CD3219EB86200DA5935 /* 二维码 */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,6 +802,7 @@
 		8168B7E821D08792000D271D /* 核心动画 */ = {
 			isa = PBXGroup;
 			children = (
+				8107282921DC4B96004B24F3 /* 专用图层 */,
 				81FF736E21D5B4CD00A68D9D /* 变换 */,
 				81111C7A21D21F0A0051B2C3 /* 视觉效果 */,
 				81111C7021D1C1FC0051B2C3 /* 图层几何学 */,
@@ -2174,6 +2192,7 @@
 				81963EBB21AD273B002BFB5C /* UILabel+YMConfiguration.m in Sources */,
 				8193D2BC214A008800EB225D /* MASViewConstraint.m in Sources */,
 				81FA28C421AB89D700C8FDAB /* YMFormTextFiledTableViewCell.m in Sources */,
+				8107282C21DC4BC6004B24F3 /* SpecialLayerViewController.m in Sources */,
 				8193D281214A000E00EB225D /* NSObject+MJClass.m in Sources */,
 				81EDE1C821AE9167008DCC8A /* YMPuzzlePathMaker.m in Sources */,
 				81963EAD21AD273B002BFB5C /* UINavigationBar+Awesome.m in Sources */,
@@ -2258,6 +2277,7 @@
 				81963EB121AD273B002BFB5C /* NSString+YMImage.m in Sources */,
 				8193D2C9214A013F00EB225D /* YMUIConstumButton.m in Sources */,
 				81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */,
+				8107282F21DCB7B4004B24F3 /* LayerLabel.m in Sources */,
 				81EDE1B521AE7966008DCC8A /* YMMiddleMenuTableViewCell.m in Sources */,
 				81963EB221AD273B002BFB5C /* UIFont+YMCategory.m in Sources */,
 				81EDE1CB21AE917B008DCC8A /* YMPuzzleVerifyView.m in Sources */,
