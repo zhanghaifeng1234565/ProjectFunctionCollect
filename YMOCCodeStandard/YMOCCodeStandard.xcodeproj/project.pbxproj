@@ -146,6 +146,10 @@
 		81DAA58D219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA58C219A5B4B00705A1A /* YMUniversalSingleSelectionPickerView.m */; };
 		81DAA594219A70AD00705A1A /* YMUniversalSingleSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */; };
 		81DAA599219AA15400705A1A /* CityPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81DAA598219AA15400705A1A /* CityPropertyList.plist */; };
+		81DDA7F421DDBB68004DF92A /* RefectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DDA7F321DDBB68004DF92A /* RefectionView.m */; };
+		81DDA7F721DDDFDD004DF92A /* LayerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DDA7F621DDDFDD004DF92A /* LayerScrollView.m */; };
+		81DDA7F921DE0F58004DF92A /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDA7F821DE0F58004DF92A /* GLKit.framework */; };
+		81DDA7FB21DE0F62004DF92A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDA7FA21DE0F62004DF92A /* OpenGLES.framework */; };
 		81DE382221B4C95600550D60 /* YMDataStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE382121B4C95600550D60 /* YMDataStoreViewController.m */; };
 		81DE382521B4CF5600550D60 /* YMSQLite3Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE382421B4CF5600550D60 /* YMSQLite3Person.m */; };
 		81DE382B21B4F93D00550D60 /* YMArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE382A21B4F93D00550D60 /* YMArchiveViewController.m */; };
@@ -488,6 +492,12 @@
 		81DAA592219A70AD00705A1A /* YMUniversalSingleSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUniversalSingleSelectModel.h; sourceTree = "<group>"; };
 		81DAA593219A70AD00705A1A /* YMUniversalSingleSelectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUniversalSingleSelectModel.m; sourceTree = "<group>"; };
 		81DAA598219AA15400705A1A /* CityPropertyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CityPropertyList.plist; sourceTree = "<group>"; };
+		81DDA7F221DDBB68004DF92A /* RefectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefectionView.h; sourceTree = "<group>"; };
+		81DDA7F321DDBB68004DF92A /* RefectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefectionView.m; sourceTree = "<group>"; };
+		81DDA7F521DDDFDD004DF92A /* LayerScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerScrollView.h; sourceTree = "<group>"; };
+		81DDA7F621DDDFDD004DF92A /* LayerScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerScrollView.m; sourceTree = "<group>"; };
+		81DDA7F821DE0F58004DF92A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		81DDA7FA21DE0F62004DF92A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		81DE382021B4C95600550D60 /* YMDataStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDataStoreViewController.h; sourceTree = "<group>"; };
 		81DE382121B4C95600550D60 /* YMDataStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDataStoreViewController.m; sourceTree = "<group>"; };
 		81DE382321B4CF5600550D60 /* YMSQLite3Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSQLite3Person.h; sourceTree = "<group>"; };
@@ -580,6 +590,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DDA7FB21DE0F62004DF92A /* OpenGLES.framework in Frameworks */,
+				81DDA7F921DE0F58004DF92A /* GLKit.framework in Frameworks */,
 				812FA3E921B61F3100A9A732 /* Security.framework in Frameworks */,
 				81D1D1B721B12961000687CA /* libsqlite3.0.tbd in Frameworks */,
 				DAD33FBFD5D6F131DA50A2C3 /* libPods-YMOCCodeStandard.a in Frameworks */,
@@ -646,6 +658,10 @@
 				8107282B21DC4BC6004B24F3 /* SpecialLayerViewController.m */,
 				8107282D21DCB7B4004B24F3 /* LayerLabel.h */,
 				8107282E21DCB7B4004B24F3 /* LayerLabel.m */,
+				81DDA7F221DDBB68004DF92A /* RefectionView.h */,
+				81DDA7F321DDBB68004DF92A /* RefectionView.m */,
+				81DDA7F521DDDFDD004DF92A /* LayerScrollView.h */,
+				81DDA7F621DDDFDD004DF92A /* LayerScrollView.m */,
 			);
 			path = "专用图层";
 			sourceTree = "<group>";
@@ -1968,6 +1984,8 @@
 		AA28EB3A2249A79ACBB2E7B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81DDA7FA21DE0F62004DF92A /* OpenGLES.framework */,
+				81DDA7F821DE0F58004DF92A /* GLKit.framework */,
 				812FA3E821B61F3100A9A732 /* Security.framework */,
 				81D1D1B621B12961000687CA /* libsqlite3.0.tbd */,
 				86B9D07206D5CB9F5F61A5E8 /* libPods-YMOCCodeStandard.a */,
@@ -2190,6 +2208,7 @@
 				81963EAC21AD273B002BFB5C /* UIColor+Hex.m in Sources */,
 				81EDE1BE21AE8631008DCC8A /* YMStarControlView.m in Sources */,
 				81963EBB21AD273B002BFB5C /* UILabel+YMConfiguration.m in Sources */,
+				81DDA7F421DDBB68004DF92A /* RefectionView.m in Sources */,
 				8193D2BC214A008800EB225D /* MASViewConstraint.m in Sources */,
 				81FA28C421AB89D700C8FDAB /* YMFormTextFiledTableViewCell.m in Sources */,
 				8107282C21DC4BC6004B24F3 /* SpecialLayerViewController.m in Sources */,
@@ -2297,6 +2316,7 @@
 				810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */,
 				812F5ACB21A6B7CB0072A21E /* YMGifImageView.m in Sources */,
 				8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */,
+				81DDA7F721DDDFDD004DF92A /* LayerScrollView.m in Sources */,
 				81A593C2219980F70009669C /* YMBasePickerView.m in Sources */,
 				81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */,
 				81963E6621AD1F4E002BFB5C /* YMSegmentViewController.m in Sources */,

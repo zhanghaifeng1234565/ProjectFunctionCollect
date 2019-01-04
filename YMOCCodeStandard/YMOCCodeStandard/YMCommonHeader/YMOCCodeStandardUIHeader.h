@@ -27,6 +27,8 @@
 #import <YYCache.h>
 #import <FMDB.h>
 #import <ReactiveObjC.h>
+#import <GLKit/GLKit.h>
+#import <OpenGLES/OpenGLESAvailability.h>
 
 
 #import "UIColor+Hex.h"
