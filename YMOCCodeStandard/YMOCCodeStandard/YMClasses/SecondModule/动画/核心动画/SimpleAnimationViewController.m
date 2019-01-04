@@ -14,6 +14,8 @@
 #import "VisualEffectsViewController.h"
 #import "ChangeViewController.h"
 #import "SpecialLayerViewController.h"
+#import "ImplicitAnimationViewController.h"
+#import "ExplicitAnimationViewController.h"
 
 @interface SimpleAnimationViewController ()
 <UITableViewDelegate,
@@ -103,6 +105,20 @@ UITableViewDataSource>
         {
             // 专用图层
             SpecialLayerViewController *vc = [[SpecialLayerViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 6:
+        {
+            // 隐式动画
+            ImplicitAnimationViewController *vc = [[ImplicitAnimationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 7:
+        {
+            // 显式动画
+            ExplicitAnimationViewController *vc = [[ExplicitAnimationViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

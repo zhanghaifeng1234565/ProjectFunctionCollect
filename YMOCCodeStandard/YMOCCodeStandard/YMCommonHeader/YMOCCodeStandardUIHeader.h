@@ -29,6 +29,7 @@
 #import <ReactiveObjC.h>
 #import <GLKit/GLKit.h>
 #import <OpenGLES/OpenGLESAvailability.h>
+#import <AVFoundation/AVFoundation.h>
 
 
 #import "UIColor+Hex.h"

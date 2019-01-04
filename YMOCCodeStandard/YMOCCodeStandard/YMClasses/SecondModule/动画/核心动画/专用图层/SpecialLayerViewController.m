@@ -34,6 +34,8 @@
 @property (nonatomic, readwrite, assign) GLint framebufferHeight;
 @property (nonatomic, readwrite, strong) GLKBaseEffect *effect;
 
+/// 视频播放视图
+@property (nonatomic, readwrite, strong) UIView *playerView;
 
 @end
 
@@ -73,6 +75,7 @@
     [self.scrollView addSubview:self.repeatView];
     [self.scrollView addSubview:self.emitterView];
     [self.scrollView addSubview:self.glView];
+    [self.scrollView addSubview:self.playerView];
 }
 
 #pragma mark - - 配置属性
@@ -84,6 +87,7 @@
     self.repeatView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.emitterView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.glView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.playerView.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 
 #pragma mark - - 布局视图
@@ -97,8 +101,9 @@
     self.repeatView.frame = CGRectMake((MainScreenWidth - 50) / 2, self.gradientView.bottom + 30, 50, 50);
     self.emitterView.frame = CGRectMake(0, self.repeatView.bottom + 100, MainScreenWidth, 100);
     self.glView.frame = CGRectMake(15, self.emitterView.bottom + 30, MainScreenWidth - 30, 300);
+    self.playerView.frame = CGRectMake(15, self.glView.bottom + 30, MainScreenWidth - 30, 300);
     
-    self.scrollView.contentSize = CGSizeMake(MainScreenWidth, self.glView.bottom + 50);
+    self.scrollView.contentSize = CGSizeMake(MainScreenWidth, self.playerView.bottom + 50);
     
     // 绘制火柴人
     [self graphicsMatches];
@@ -116,6 +121,8 @@
     [self emitterLayer];
     // gl 视图
     [self graphicsGLView];
+    // 视频播放
+    [self graphicsPlayerLayer];
 }
 
 #pragma mark - - 绘制火柴人
@@ -363,6 +370,29 @@
     [self.glContent presentRenderbuffer:GL_RENDERBUFFER];
 }
 
+#pragma mark 视频播放
+- (void)graphicsPlayerLayer {
+    NSURL *URL = [[NSBundle mainBundle] URLForResource:@"IMG_4303" withExtension:@"MOV"];
+    
+    AVPlayer *player = [AVPlayer playerWithURL:URL];
+    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
+    
+    playerLayer.frame = self.playerView.bounds;
+    [self.playerView.layer addSublayer:playerLayer];
+    
+    CATransform3D transfrom = CATransform3DIdentity;
+    transfrom.m34 = -1.0 / 500.0;
+    transfrom = CATransform3DRotate(transfrom, M_PI_4, 1, 1, 1);
+    playerLayer.transform = transfrom;
+    
+    playerLayer.masksToBounds = YES;
+    playerLayer.cornerRadius = 20.0f;
+    playerLayer.borderColor = [UIColor redColor].CGColor;
+    playerLayer.borderWidth = 5.0f;
+    
+    [player play];
+}
+
 #pragma mark - - lazyLoadUI
 - (UIScrollView *)scrollView {
     if (_scrollView == nil) {
@@ -411,6 +441,13 @@
         _glView = [[UIView alloc] init];
     }
     return _glView;
+}
+
+- (UIView *)playerView {
+    if (_playerView == nil) {
+        _playerView = [[UIView alloc] init];
+    }
+    return _playerView;
 }
 
 @end
