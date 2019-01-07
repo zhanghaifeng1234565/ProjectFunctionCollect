@@ -133,6 +133,11 @@ enum { // 控制器枚举
 }
 
 - (void)tabBarSelected:(UIButton*)touchButton {
+    // 点击 tabbar 加入过渡动画
+    CATransition *transition = [[CATransition alloc] init];
+    transition.type = kCATransitionFade;
+    [self.view.layer addAnimation:transition forKey:nil];
+    
     for (UITabBarItem * tabBarItem in self.tabBar.items) {
         if (tabBarItem.tag == touchButton.tag) {
             [self tabBar:self.tabBar didSelectItem:tabBarItem];

@@ -100,7 +100,7 @@
 }
 
 #pragma mark - - 定时任务
-- (void)tick{
+- (void)tick {
     // NSCalendarIdentifierGregorian : 指定日历的算法
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     // NSDateComponents封装了日期的组件,年月日时分秒等(个人感觉像是平时用的model模型)

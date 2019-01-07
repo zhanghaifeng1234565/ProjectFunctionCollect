@@ -148,7 +148,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"图层树", @"寄宿图", @"图层几何学", @"视觉效果", @"变换", @"专用图层", @"隐式动画", @"显示动画", @"图层时间", @"缓冲", @"基于定时器的动画", @"性能优化", @"高效绘图", @"图像 IO", @"图层性能", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"图层树", @"寄宿图", @"图层几何学", @"视觉效果", @"变换", @"专用图层", @"隐式动画", @"显式动画", @"图层时间", @"缓冲", @"基于定时器的动画", @"性能优化", @"高效绘图", @"图像 IO", @"图层性能", nil];
     }
     return _dataArr;
 }
