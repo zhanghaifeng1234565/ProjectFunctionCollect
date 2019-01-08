@@ -16,6 +16,7 @@
 #import "SpecialLayerViewController.h"
 #import "ImplicitAnimationViewController.h"
 #import "ExplicitAnimationViewController.h"
+#import "LayerTimeViewController.h"
 
 @interface SimpleAnimationViewController ()
 <UITableViewDelegate,
@@ -119,6 +120,13 @@ UITableViewDataSource>
         {
             // 显式动画
             ExplicitAnimationViewController *vc = [[ExplicitAnimationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 8:
+        {
+            // 图层时间
+            LayerTimeViewController *vc = [[LayerTimeViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

@@ -34,6 +34,8 @@
 
 /// 宇宙飞船视图
 @property (nonatomic, readwrite, strong) UIView *spacecraftView;
+/// 宇宙飞船
+@property (nonatomic, readwrite, strong) CALayer *shipLayer;
 
 /// 过渡动画
 @property (nonatomic, readwrite, strong) UIImageView *transitionImageView;
@@ -41,6 +43,14 @@
 @property (nonatomic, readwrite, strong) NSArray *imagesArr;
 /// 变换图片按钮
 @property (nonatomic, readwrite, strong) UIButton *changeImageBtn;
+
+/// 自定义动画按钮
+@property (nonatomic, readwrite, strong) UIButton *diyAnimationBtn;
+
+/// 开始按钮
+@property (nonatomic, readwrite, strong) UIButton *startBtn;
+/// 结束按钮
+@property (nonatomic, readwrite, strong) UIButton *stopBtn;
 
 @end
 
@@ -65,7 +75,10 @@
     [self.clockView addSubview:self.hourHandImageV];
     [self.clockView addSubview:self.minuteHandImageV];
     [self.clockView addSubview:self.secondHandImageV];
+    [self.clockView addSubview:self.diyAnimationBtn];
     [self.scrollView addSubview:self.spacecraftView];
+    [self.spacecraftView addSubview:self.startBtn];
+    [self.spacecraftView addSubview:self.stopBtn];
     [self.scrollView addSubview:self.transitionImageView];
     [self.transitionImageView addSubview:self.changeImageBtn];
 }
@@ -97,10 +110,26 @@
                       [UIImage imageNamed:@"minutehand"],
                       [UIImage imageNamed:@"secondhand"], nil];
    
+    self.changeImageBtn.tag = 100;
     self.transitionImageView.userInteractionEnabled = YES;
-    [UIButton ym_button:self.changeImageBtn title:@"改变图片" fontSize:17 titleColor:[UIColor magentaColor]];
+    [UIButton ym_button:self.changeImageBtn title:@"过渡动画" fontSize:17 titleColor:[UIColor magentaColor]];
     [UIButton ym_view:self.changeImageBtn backgroundColor:[UIColor whiteColor] cornerRadius:6.0f borderWidth:1.0f borderColor:[UIColor magentaColor]];
     [self.changeImageBtn addTarget:self action:@selector(changeImageBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [UIButton ym_button:self.diyAnimationBtn title:@"自定义动画" fontSize:17 titleColor:[UIColor magentaColor]];
+    [UIButton ym_view:self.diyAnimationBtn backgroundColor:[UIColor whiteColor] cornerRadius:6.0f borderWidth:1.0f borderColor:[UIColor magentaColor]];
+    self.diyAnimationBtn.tag = 100;
+    [self.diyAnimationBtn addTarget:self action:@selector(diyAnimationBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [UIButton ym_button:self.startBtn title:@"开始" fontSize:17 titleColor:[UIColor magentaColor]];
+    [UIButton ym_view:self.startBtn backgroundColor:[UIColor whiteColor] cornerRadius:6.0f borderWidth:1.0f borderColor:[UIColor magentaColor]];
+    self.startBtn.tag = 100;
+    [self.startBtn addTarget:self action:@selector(startBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [UIButton ym_button:self.stopBtn title:@"停止" fontSize:17 titleColor:[UIColor magentaColor]];
+    [UIButton ym_view:self.stopBtn backgroundColor:[UIColor whiteColor] cornerRadius:6.0f borderWidth:1.0f borderColor:[UIColor magentaColor]];
+    self.stopBtn.tag = 100;
+    [self.stopBtn addTarget:self action:@selector(stopBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - - 布局视图
@@ -111,7 +140,10 @@
     self.colorView.frame = CGRectMake((MainScreenWidth - 100) / 2, 30, 100, 150);
     self.changeColorBtn.frame = CGRectMake(15, self.colorView.height - 40, self.colorView.width - 30, 30);
     self.clockView.frame = CGRectMake(15, self.colorView.bottom + 30, MainScreenWidth - 30, 281.5);
+    self.diyAnimationBtn.frame = CGRectMake(0, 0, 100, 50);
     self.spacecraftView.frame = CGRectMake(15, self.clockView.bottom + 30, MainScreenWidth - 30, MainScreenWidth - 30);
+    self.startBtn.frame = CGRectMake(0, 0, 80, 40);
+    self.stopBtn.frame = CGRectMake(self.spacecraftView.width - 80, 0, 80, 40);
     self.transitionImageView.frame = CGRectMake(15, self.spacecraftView.bottom + 30, MainScreenWidth - 30, MainScreenWidth - 30);
     self.changeImageBtn.frame = CGRectMake(0, 0, 100, 50);
     
@@ -293,6 +325,7 @@
     shipLayer.position = CGPointMake(0, 300);
     shipLayer.backgroundColor = [UIColor greenColor].CGColor;
     [self.spacecraftView.layer addSublayer:shipLayer];
+    self.shipLayer = shipLayer;
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.keyPath = @"position";
@@ -314,8 +347,25 @@
     [shipLayer addAnimation:groupAnimation forKey:nil];
 }
 
+#pragma mark 开始按钮点击调用
+- (void)startBtnClick:(UIButton *)sender {
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"transform.rotation";
+    animation.duration = 2.0f;
+    animation.byValue = @(M_PI * 2);
+    animation.delegate = self;
+    [self.shipLayer addAnimation:animation forKey:@"rotaionAnimation"];
+}
+
+#pragma mark 结束按钮点击调用
+- (void)stopBtnClick:(UIButton *)sender {
+    [self.shipLayer removeAnimationForKey:@"rotaionAnimation"];
+}
+
 #pragma mark CAAnimationDelegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    NSLog(@"The animation stop is %@", flag ? @"YES" : @"NO");
+    
     CABasicAnimation *basicAnim = (CABasicAnimation *)anim;
     
     if ([basicAnim.keyPath isEqualToString:@"backgroundColor"]) {
@@ -331,14 +381,61 @@
 
 #pragma mark 改变图片按钮点击调用
 - (void)changeImageBtnClick:(UIButton *)sender {
-    CATransition *transition = [[CATransition alloc] init];
-    transition.type = kCATransitionFade;
-    [self.transitionImageView.layer addAnimation:transition forKey:nil];
+    switch (sender.tag) {
+        case 100:
+        {
+            // 过渡动画
+            CATransition *transition = [[CATransition alloc] init];
+            transition.type = kCATransitionFade;
+            [self.transitionImageView.layer addAnimation:transition forKey:nil];
+            
+            UIImage *currentImage = self.transitionImageView.image;
+            NSUInteger index = [self.imagesArr indexOfObject:currentImage];
+            index = (index + 1) % [self.imagesArr count];
+            self.transitionImageView.image = self.imagesArr[index];
+            
+            [sender setTitle:@"UIKit动画" forState:UIControlStateNormal];
+            sender.tag = 101;
+        }
+            break;
+        case 101:
+        {
+            // UIKit动画
+            [UIView transitionWithView:self.transitionImageView duration:2.0f options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+                UIImage *currentImage = self.transitionImageView.image;
+                NSUInteger index = [self.imagesArr indexOfObject:currentImage];
+                index = (index + 1) % [self.imagesArr count];
+                self.transitionImageView.image = self.imagesArr[index];
+            } completion:^(BOOL finished) {
+                [sender setTitle:@"过渡动画" forState:UIControlStateNormal];
+                sender.tag = 100;
+            }];
+        }
+            break;
+        default:
+            [YMBlackSmallAlert showAlertWithMessage:@"未知错误！" time:0.5f];
+            break;
+    }
+}
+
+#pragma mark 自定义动画按钮点击调用
+- (void)diyAnimationBtnClick:(UIButton *)sender {
+    UIGraphicsBeginImageContextWithOptions(self.scrollView.bounds.size, YES, [UIScreen mainScreen].scale);
+    [self.scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *coverImage = UIGraphicsGetImageFromCurrentImageContext();
     
-    UIImage *currentImage = self.transitionImageView.image;
-    NSUInteger index = [self.imagesArr indexOfObject:currentImage];
-    index = (index + 1) % [self.imagesArr count];
-    self.transitionImageView.image = self.imagesArr[index];
+    UIView *coverView = [[UIImageView alloc] initWithImage:coverImage];
+    coverView.frame = self.scrollView.bounds;
+    [self.scrollView addSubview:coverView];
+    
+    [UIView animateWithDuration:1.0f animations:^{
+        CGAffineTransform transform = CGAffineTransformMakeScale(0.5, 0.5);
+        transform = CGAffineTransformRotate(transform, M_PI_2);
+        coverView.transform = transform;
+        coverView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [coverView removeFromSuperview];
+    }];
 }
 
 #pragma mark - - lazyLoadUI
@@ -417,6 +514,27 @@
         _changeImageBtn = [[UIButton alloc] init];
     }
     return _changeImageBtn;
+}
+
+- (UIButton *)diyAnimationBtn {
+    if (_diyAnimationBtn == nil) {
+        _diyAnimationBtn = [[UIButton alloc] init];
+    }
+    return _diyAnimationBtn;
+}
+
+- (UIButton *)startBtn {
+    if (_startBtn == nil) {
+        _startBtn = [[UIButton alloc] init];
+    }
+    return _startBtn;
+}
+
+- (UIButton *)stopBtn {
+    if (_stopBtn == nil) {
+        _stopBtn = [[UIButton alloc] init];
+    }
+    return _stopBtn;
 }
 
 /*

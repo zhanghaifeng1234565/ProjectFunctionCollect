@@ -118,6 +118,7 @@
 		81A593C2219980F70009669C /* YMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C1219980F70009669C /* YMBasePickerView.m */; };
 		81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C4219983B50009669C /* YMPickerToolBarView.m */; };
 		81A593CB21998DFB0009669C /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81A593CA21998DFB0009669C /* timg.gif */; };
+		81B81DB121E4446F0001C9C1 /* LayerTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */; };
 		81BF54D32145EC15004BC70A /* YMOCCodeStandardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54D22145EC15004BC70A /* YMOCCodeStandardTests.m */; };
 		81BF54DE2145EC15004BC70A /* YMOCCodeStandardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54DD2145EC15004BC70A /* YMOCCodeStandardUITests.m */; };
 		81BF54FE2145ED1F004BC70A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54F22145ED1F004BC70A /* AppDelegate.m */; };
@@ -442,6 +443,8 @@
 		81A593C3219983B50009669C /* YMPickerToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPickerToolBarView.h; sourceTree = "<group>"; };
 		81A593C4219983B50009669C /* YMPickerToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPickerToolBarView.m; sourceTree = "<group>"; };
 		81A593CA21998DFB0009669C /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
+		81B81DAF21E4446F0001C9C1 /* LayerTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerTimeViewController.h; sourceTree = "<group>"; };
+		81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerTimeViewController.m; sourceTree = "<group>"; };
 		81BF54B32145EC13004BC70A /* YMOCCodeStandard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMOCCodeStandard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BF54CE2145EC15004BC70A /* YMOCCodeStandardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMOCCodeStandardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BF54D22145EC15004BC70A /* YMOCCodeStandardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMOCCodeStandardTests.m; sourceTree = "<group>"; };
@@ -848,6 +851,7 @@
 		8168B7E821D08792000D271D /* 核心动画 */ = {
 			isa = PBXGroup;
 			children = (
+				81B81DAE21E444610001C9C1 /* 图层时间 */,
 				8103C33821DF4BD500BDF781 /* 显式动画 */,
 				8103C33421DEF17200BDF781 /* 隐式动画 */,
 				8107282921DC4B96004B24F3 /* 专用图层 */,
@@ -1457,6 +1461,15 @@
 				81A593C4219983B50009669C /* YMPickerToolBarView.m */,
 			);
 			path = PickView;
+			sourceTree = "<group>";
+		};
+		81B81DAE21E444610001C9C1 /* 图层时间 */ = {
+			isa = PBXGroup;
+			children = (
+				81B81DAF21E4446F0001C9C1 /* LayerTimeViewController.h */,
+				81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */,
+			);
+			path = "图层时间";
 			sourceTree = "<group>";
 		};
 		81BF54AA2145EC13004BC70A = {
@@ -2397,6 +2410,7 @@
 				81EDE1C221AE90B5008DCC8A /* YMSliderVerifyAlertView.m in Sources */,
 				81CA788A21883115005EFA1A /* YMOrganizationSearchTableView.m in Sources */,
 				81EEC0BC219175EC0087EA72 /* YMSystemAlertViewController.m in Sources */,
+				81B81DB121E4446F0001C9C1 /* LayerTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
