@@ -22,6 +22,12 @@
 		81111C7621D1CA280051B2C3 /* YMLayerGeometryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7521D1CA280051B2C3 /* YMLayerGeometryViewController.m */; };
 		81111C7921D1F8D50051B2C3 /* TimeWeakTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7821D1F8D50051B2C3 /* TimeWeakTarget.m */; };
 		81111C7D21D21F200051B2C3 /* VisualEffectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81111C7C21D21F200051B2C3 /* VisualEffectsViewController.m */; };
+		811160CF21E6DC740031180E /* PerformanceTuningUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811160CE21E6DC740031180E /* PerformanceTuningUViewController.m */; };
+		811160D321E734330031180E /* EfficientDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811160D221E734330031180E /* EfficientDrawingViewController.m */; };
+		811160D621E734C00031180E /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 811160D521E734C00031180E /* DrawingView.m */; };
+		811160D921E73D390031180E /* BlackBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 811160D821E73D390031180E /* BlackBoardView.m */; };
+		811160DD21E74FFB0031180E /* ImageIOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811160DC21E74FFB0031180E /* ImageIOViewController.m */; };
+		811160E121E750C40031180E /* LayerPerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811160E021E750C40031180E /* LayerPerformanceViewController.m */; };
 		811D8EEC21A7F60B00053FC1 /* YMDemoFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D8EEB21A7F60B00053FC1 /* YMDemoFormViewController.m */; };
 		811D8EEF21A7F65300053FC1 /* YMDemoFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 811D8EEE21A7F65300053FC1 /* YMDemoFormModel.m */; };
 		812F5ABD21A6B4A00072A21E /* YMWXPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 812F5ABC21A6B4A00072A21E /* YMWXPayTool.m */; };
@@ -50,6 +56,7 @@
 		817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61D6219BC85700DE3B52 /* YMCountryModel.m */; };
 		817A61DA219BCC4900DE3B52 /* YMCountryPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61D9219BCC4900DE3B52 /* YMCountryPickerView.m */; };
 		817A61DD219BCEEF00DE3B52 /* YMCountryDataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61DC219BCEEF00DE3B52 /* YMCountryDataTools.m */; };
+		817D59A621E5C89E009F2C85 /* TimerBasedAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817D59A521E5C89E009F2C85 /* TimerBasedAnimationViewController.m */; };
 		81937FF5214F370000EEA717 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 81937FEC214F370000EEA717 /* AFURLResponseSerialization.m */; };
 		81937FF6214F370000EEA717 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81937FED214F370000EEA717 /* AFHTTPSessionManager.m */; };
 		81937FF7214F370000EEA717 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81937FEF214F370000EEA717 /* AFURLSessionManager.m */; };
@@ -118,7 +125,9 @@
 		81A593C2219980F70009669C /* YMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C1219980F70009669C /* YMBasePickerView.m */; };
 		81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C4219983B50009669C /* YMPickerToolBarView.m */; };
 		81A593CB21998DFB0009669C /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81A593CA21998DFB0009669C /* timg.gif */; };
+		81AF824321E82920002ECDB1 /* ImageIOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF824221E82920002ECDB1 /* ImageIOCollectionViewCell.m */; };
 		81B81DB121E4446F0001C9C1 /* LayerTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */; };
+		81B81DB521E4942F0001C9C1 /* BufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B81DB421E4942F0001C9C1 /* BufferViewController.m */; };
 		81BF54D32145EC15004BC70A /* YMOCCodeStandardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54D22145EC15004BC70A /* YMOCCodeStandardTests.m */; };
 		81BF54DE2145EC15004BC70A /* YMOCCodeStandardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54DD2145EC15004BC70A /* YMOCCodeStandardUITests.m */; };
 		81BF54FE2145ED1F004BC70A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54F22145ED1F004BC70A /* AppDelegate.m */; };
@@ -253,6 +262,18 @@
 		81111C7821D1F8D50051B2C3 /* TimeWeakTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeWeakTarget.m; sourceTree = "<group>"; };
 		81111C7B21D21F200051B2C3 /* VisualEffectsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisualEffectsViewController.h; sourceTree = "<group>"; };
 		81111C7C21D21F200051B2C3 /* VisualEffectsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualEffectsViewController.m; sourceTree = "<group>"; };
+		811160CD21E6DC740031180E /* PerformanceTuningUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformanceTuningUViewController.h; sourceTree = "<group>"; };
+		811160CE21E6DC740031180E /* PerformanceTuningUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceTuningUViewController.m; sourceTree = "<group>"; };
+		811160D121E734330031180E /* EfficientDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EfficientDrawingViewController.h; sourceTree = "<group>"; };
+		811160D221E734330031180E /* EfficientDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EfficientDrawingViewController.m; sourceTree = "<group>"; };
+		811160D421E734C00031180E /* DrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		811160D521E734C00031180E /* DrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		811160D721E73D390031180E /* BlackBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackBoardView.h; sourceTree = "<group>"; };
+		811160D821E73D390031180E /* BlackBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlackBoardView.m; sourceTree = "<group>"; };
+		811160DB21E74FFB0031180E /* ImageIOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageIOViewController.h; sourceTree = "<group>"; };
+		811160DC21E74FFB0031180E /* ImageIOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageIOViewController.m; sourceTree = "<group>"; };
+		811160DF21E750C40031180E /* LayerPerformanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerPerformanceViewController.h; sourceTree = "<group>"; };
+		811160E021E750C40031180E /* LayerPerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerPerformanceViewController.m; sourceTree = "<group>"; };
 		811D8EEA21A7F60B00053FC1 /* YMDemoFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDemoFormViewController.h; sourceTree = "<group>"; };
 		811D8EEB21A7F60B00053FC1 /* YMDemoFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDemoFormViewController.m; sourceTree = "<group>"; };
 		811D8EED21A7F65300053FC1 /* YMDemoFormModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDemoFormModel.h; sourceTree = "<group>"; };
@@ -306,6 +327,8 @@
 		817A61D9219BCC4900DE3B52 /* YMCountryPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCountryPickerView.m; sourceTree = "<group>"; };
 		817A61DB219BCEEF00DE3B52 /* YMCountryDataTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCountryDataTools.h; sourceTree = "<group>"; };
 		817A61DC219BCEEF00DE3B52 /* YMCountryDataTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCountryDataTools.m; sourceTree = "<group>"; };
+		817D59A421E5C89E009F2C85 /* TimerBasedAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerBasedAnimationViewController.h; sourceTree = "<group>"; };
+		817D59A521E5C89E009F2C85 /* TimerBasedAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerBasedAnimationViewController.m; sourceTree = "<group>"; };
 		81937FE8214F370000EEA717 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		81937FE9214F370000EEA717 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		81937FEA214F370000EEA717 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -443,8 +466,12 @@
 		81A593C3219983B50009669C /* YMPickerToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPickerToolBarView.h; sourceTree = "<group>"; };
 		81A593C4219983B50009669C /* YMPickerToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPickerToolBarView.m; sourceTree = "<group>"; };
 		81A593CA21998DFB0009669C /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
+		81AF824121E82920002ECDB1 /* ImageIOCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageIOCollectionViewCell.h; sourceTree = "<group>"; };
+		81AF824221E82920002ECDB1 /* ImageIOCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageIOCollectionViewCell.m; sourceTree = "<group>"; };
 		81B81DAF21E4446F0001C9C1 /* LayerTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerTimeViewController.h; sourceTree = "<group>"; };
 		81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerTimeViewController.m; sourceTree = "<group>"; };
+		81B81DB321E4942F0001C9C1 /* BufferViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BufferViewController.h; sourceTree = "<group>"; };
+		81B81DB421E4942F0001C9C1 /* BufferViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BufferViewController.m; sourceTree = "<group>"; };
 		81BF54B32145EC13004BC70A /* YMOCCodeStandard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMOCCodeStandard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BF54CE2145EC15004BC70A /* YMOCCodeStandardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMOCCodeStandardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BF54D22145EC15004BC70A /* YMOCCodeStandardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMOCCodeStandardTests.m; sourceTree = "<group>"; };
@@ -728,6 +755,48 @@
 			path = "视觉效果";
 			sourceTree = "<group>";
 		};
+		811160CC21E6DC380031180E /* 性能调优 */ = {
+			isa = PBXGroup;
+			children = (
+				811160CD21E6DC740031180E /* PerformanceTuningUViewController.h */,
+				811160CE21E6DC740031180E /* PerformanceTuningUViewController.m */,
+			);
+			path = "性能调优";
+			sourceTree = "<group>";
+		};
+		811160D021E734160031180E /* 高效绘图 */ = {
+			isa = PBXGroup;
+			children = (
+				811160D121E734330031180E /* EfficientDrawingViewController.h */,
+				811160D221E734330031180E /* EfficientDrawingViewController.m */,
+				811160D421E734C00031180E /* DrawingView.h */,
+				811160D521E734C00031180E /* DrawingView.m */,
+				811160D721E73D390031180E /* BlackBoardView.h */,
+				811160D821E73D390031180E /* BlackBoardView.m */,
+			);
+			path = "高效绘图";
+			sourceTree = "<group>";
+		};
+		811160DA21E74FE10031180E /* 图像 IO */ = {
+			isa = PBXGroup;
+			children = (
+				811160DB21E74FFB0031180E /* ImageIOViewController.h */,
+				811160DC21E74FFB0031180E /* ImageIOViewController.m */,
+				81AF824121E82920002ECDB1 /* ImageIOCollectionViewCell.h */,
+				81AF824221E82920002ECDB1 /* ImageIOCollectionViewCell.m */,
+			);
+			path = "图像 IO";
+			sourceTree = "<group>";
+		};
+		811160DE21E7509E0031180E /* 图层性能 */ = {
+			isa = PBXGroup;
+			children = (
+				811160DF21E750C40031180E /* LayerPerformanceViewController.h */,
+				811160E021E750C40031180E /* LayerPerformanceViewController.m */,
+			);
+			path = "图层性能";
+			sourceTree = "<group>";
+		};
 		811D8EE921A7F5B500053FC1 /* 表单 */ = {
 			isa = PBXGroup;
 			children = (
@@ -851,6 +920,12 @@
 		8168B7E821D08792000D271D /* 核心动画 */ = {
 			isa = PBXGroup;
 			children = (
+				811160DE21E7509E0031180E /* 图层性能 */,
+				811160DA21E74FE10031180E /* 图像 IO */,
+				811160D021E734160031180E /* 高效绘图 */,
+				811160CC21E6DC380031180E /* 性能调优 */,
+				817D59A021E5C843009F2C85 /* 基于定时器动画 */,
+				81B81DB221E494010001C9C1 /* 缓冲 */,
 				81B81DAE21E444610001C9C1 /* 图层时间 */,
 				8103C33821DF4BD500BDF781 /* 显式动画 */,
 				8103C33421DEF17200BDF781 /* 隐式动画 */,
@@ -882,6 +957,15 @@
 				8168B7F221D0AE0F000D271D /* BoardingMapViewController.m */,
 			);
 			path = "寄宿图";
+			sourceTree = "<group>";
+		};
+		817D59A021E5C843009F2C85 /* 基于定时器动画 */ = {
+			isa = PBXGroup;
+			children = (
+				817D59A421E5C89E009F2C85 /* TimerBasedAnimationViewController.h */,
+				817D59A521E5C89E009F2C85 /* TimerBasedAnimationViewController.m */,
+			);
+			path = "基于定时器动画";
 			sourceTree = "<group>";
 		};
 		81937FE6214F370000EEA717 /* YMNetworkingUtils */ = {
@@ -1470,6 +1554,15 @@
 				81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */,
 			);
 			path = "图层时间";
+			sourceTree = "<group>";
+		};
+		81B81DB221E494010001C9C1 /* 缓冲 */ = {
+			isa = PBXGroup;
+			children = (
+				81B81DB321E4942F0001C9C1 /* BufferViewController.h */,
+				81B81DB421E4942F0001C9C1 /* BufferViewController.m */,
+			);
+			path = "缓冲";
 			sourceTree = "<group>";
 		};
 		81BF54AA2145EC13004BC70A = {
@@ -2269,6 +2362,7 @@
 				8193D25C2149FF7300EB225D /* YMMineViewController.m in Sources */,
 				8193D285214A000E00EB225D /* MJFoundation.m in Sources */,
 				81E77EAD21870DD8007CE3FD /* YMOrganizationModel.m in Sources */,
+				811160E121E750C40031180E /* LayerPerformanceViewController.m in Sources */,
 				81FA28BB21AB7DE000C8FDAB /* YMAdaptiveHeightTextView.m in Sources */,
 				81CA788721882EC6005EFA1A /* YMUISearchBar.m in Sources */,
 				81963EB921AD273B002BFB5C /* UIImage+YMHDQRcode.m in Sources */,
@@ -2297,6 +2391,7 @@
 				8193D2622149FF7300EB225D /* YMWorkbenchViewController.m in Sources */,
 				81E41A17217EFB2200DC9A4A /* YMWKWebViewViewController.m in Sources */,
 				81963EBF21AD2915002BFB5C /* AppDelegate+YMLocalNotification.m in Sources */,
+				811160CF21E6DC740031180E /* PerformanceTuningUViewController.m in Sources */,
 				8193D2B5214A008800EB225D /* ViewController+MASAdditions.m in Sources */,
 				81012946214F7E2900725BAF /* YMNetworkJudgeUtils.m in Sources */,
 				811D8EEC21A7F60B00053FC1 /* YMDemoFormViewController.m in Sources */,
@@ -2307,7 +2402,9 @@
 				8162171621903E170001FC5E /* YMPictureTestView.m in Sources */,
 				81DE382B21B4F93D00550D60 /* YMArchiveViewController.m in Sources */,
 				81963EB421AD273B002BFB5C /* UIButton+YMConfiguration.m in Sources */,
+				811160D921E73D390031180E /* BlackBoardView.m in Sources */,
 				8193D2B8214A008800EB225D /* MASLayoutConstraint.m in Sources */,
+				811160D321E734330031180E /* EfficientDrawingViewController.m in Sources */,
 				81111C7621D1CA280051B2C3 /* YMLayerGeometryViewController.m in Sources */,
 				817A61DA219BCC4900DE3B52 /* YMCountryPickerView.m in Sources */,
 				8168B7EB21D087E1000D271D /* SimpleAnimationViewController.m in Sources */,
@@ -2317,6 +2414,7 @@
 				81E41A22217F0E0D00DC9A4A /* YMMBProgressHUD.m in Sources */,
 				81D1D19E21B0C598000687CA /* MVVMViewModel.m in Sources */,
 				81963EB621AD273B002BFB5C /* UIView+YMFrame.m in Sources */,
+				811160D621E734C00031180E /* DrawingView.m in Sources */,
 				81111C7D21D21F200051B2C3 /* VisualEffectsViewController.m in Sources */,
 				8193D2CD214A6F6300EB225D /* YMDataSaveSingleton.m in Sources */,
 				81621700219018320001FC5E /* YMPictureViewerDemoViewController.m in Sources */,
@@ -2326,6 +2424,7 @@
 				81937FFD214F37D100EEA717 /* YMNetworkingBaseUtils.m in Sources */,
 				81963EBA21AD273B002BFB5C /* UIImage+YMGif.m in Sources */,
 				8193D2B9214A008800EB225D /* NSArray+MASAdditions.m in Sources */,
+				81B81DB521E4942F0001C9C1 /* BufferViewController.m in Sources */,
 				81EDE1CE21AE91A8008DCC8A /* UIBezierPath+YMPuzzlePathMaker.m in Sources */,
 				812F5AC421A6B59F0072A21E /* YMRefreshHeader.m in Sources */,
 				81963E6E21AD2200002BFB5C /* YMNewsDemoViewController.m in Sources */,
@@ -2363,6 +2462,7 @@
 				81BF56BF2145F01E004BC70A /* YMBaseRootViewController.m in Sources */,
 				810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */,
 				812F5ACB21A6B7CB0072A21E /* YMGifImageView.m in Sources */,
+				81AF824321E82920002ECDB1 /* ImageIOCollectionViewCell.m in Sources */,
 				8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */,
 				81DDA7F721DDDFDD004DF92A /* LayerScrollView.m in Sources */,
 				81A593C2219980F70009669C /* YMBasePickerView.m in Sources */,
@@ -2391,7 +2491,9 @@
 				81EDE1AC21AE6E51008DCC8A /* YMObtainUserLocationManager.m in Sources */,
 				8193D27E214A000E00EB225D /* NSObject+MJCoding.m in Sources */,
 				81DE382521B4CF5600550D60 /* YMSQLite3Person.m in Sources */,
+				817D59A621E5C89E009F2C85 /* TimerBasedAnimationViewController.m in Sources */,
 				812FA3D921B60B7100A9A732 /* YMFMDBViewController.m in Sources */,
+				811160DD21E74FFB0031180E /* ImageIOViewController.m in Sources */,
 				81937FF6214F370000EEA717 /* AFHTTPSessionManager.m in Sources */,
 				81E77EAE21870DD8007CE3FD /* YMOrganizationTableViewCell.m in Sources */,
 				817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */,

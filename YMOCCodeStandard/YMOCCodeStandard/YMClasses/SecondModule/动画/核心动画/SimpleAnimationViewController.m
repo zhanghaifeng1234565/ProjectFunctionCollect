@@ -17,6 +17,12 @@
 #import "ImplicitAnimationViewController.h"
 #import "ExplicitAnimationViewController.h"
 #import "LayerTimeViewController.h"
+#import "BufferViewController.h"
+#import "TimerBasedAnimationViewController.h"
+#import "PerformanceTuningUViewController.h"
+#import "EfficientDrawingViewController.h"
+#import "ImageIOViewController.h"
+#import "LayerPerformanceViewController.h"
 
 @interface SimpleAnimationViewController ()
 <UITableViewDelegate,
@@ -130,6 +136,48 @@ UITableViewDataSource>
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 9:
+        {
+            // 缓冲
+            BufferViewController *vc = [[BufferViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 10:
+        {
+            // 基于定时器动画
+            TimerBasedAnimationViewController *vc = [[TimerBasedAnimationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 11:
+        {
+            // 性能调优
+            PerformanceTuningUViewController *vc = [[PerformanceTuningUViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 12:
+        {
+            // 高效绘图
+            EfficientDrawingViewController *vc = [[EfficientDrawingViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 13:
+        {
+            // 图像 IO
+            ImageIOViewController *vc = [[ImageIOViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 14:
+        {
+            // 图层性能
+            LayerPerformanceViewController *vc = [[LayerPerformanceViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             [YMBlackSmallAlert showAlertWithMessage:@"敬请期待！" time:2.0f];
             break;
@@ -145,6 +193,7 @@ UITableViewDataSource>
         } else {
             self.automaticallyAdjustsScrollViewInsets = NO;
         }
+        _tableView.contentInset = UIEdgeInsetsMake(0, 0, TabBarHeight, 0);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = 55;

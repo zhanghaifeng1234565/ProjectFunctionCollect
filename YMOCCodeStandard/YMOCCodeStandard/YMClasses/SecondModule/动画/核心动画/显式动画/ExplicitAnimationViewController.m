@@ -251,14 +251,24 @@
 - (void)setAngle:(CGFloat)angle forHand:(UIView *)handView animated:(BOOL)animated {
     CATransform3D transform = CATransform3DMakeRotation(angle, 0, 0, 1);
     if (animated) {
+//        CABasicAnimation *animation = [CABasicAnimation animation];
+//        [self updateHandAnimated:NO];
+//        animation.keyPath = @"transform";
+//        animation.toValue = [NSValue valueWithCATransform3D:transform];
+//        animation.duration = 0.5;
+//        animation.delegate = self;
+//        animation.fillMode = kCAFillModeForwards;
+//        [animation setValue:handView forKey:@"handView"];
+//        [handView.layer addAnimation:animation forKey:nil];
+        
         CABasicAnimation *animation = [CABasicAnimation animation];
-        [self updateHandAnimated:NO];
         animation.keyPath = @"transform";
+        animation.fromValue = [handView.layer.presentationLayer valueForKeyPath:@"transform"];
         animation.toValue = [NSValue valueWithCATransform3D:transform];
-        animation.duration = 0.5;
+        animation.duration = 0.5f;
         animation.delegate = self;
-        animation.fillMode = kCAFillModeForwards;
-        [animation setValue:handView forKey:@"handView"];
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        handView.layer.transform = transform;
         [handView.layer addAnimation:animation forKey:nil];
     } else {
         handView.layer.transform = transform;
