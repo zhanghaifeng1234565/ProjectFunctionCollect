@@ -125,6 +125,12 @@
 		81A593C2219980F70009669C /* YMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C1219980F70009669C /* YMBasePickerView.m */; };
 		81A593C5219983B50009669C /* YMPickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A593C4219983B50009669C /* YMPickerToolBarView.m */; };
 		81A593CB21998DFB0009669C /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 81A593CA21998DFB0009669C /* timg.gif */; };
+		81ADA7CA21EDB3EA00F4DBAE /* PlayAndRecordAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ADA7C921EDB3EA00F4DBAE /* PlayAndRecordAudioViewController.m */; };
+		81ADA7CC21EDB56F00F4DBAE /* BEYOND - 海阔天空 (KTV版伴奏).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81ADA7CB21EDB56F00F4DBAE /* BEYOND - 海阔天空 (KTV版伴奏).mp3 */; };
+		81ADA7CF21EDBE4400F4DBAE /* THSpeechController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ADA7CE21EDBE4400F4DBAE /* THSpeechController.m */; };
+		81ADA7D221EDBE6E00F4DBAE /* THPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ADA7D121EDBE6E00F4DBAE /* THPlayerController.m */; };
+		81ADCC1C21EC9B10003F37CB /* AVFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ADCC1B21EC9B10003F37CB /* AVFoundationViewController.m */; };
+		81ADCC2021EC9C3D003F37CB /* FirstKnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ADCC1F21EC9C3D003F37CB /* FirstKnowledgeViewController.m */; };
 		81AF824321E82920002ECDB1 /* ImageIOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF824221E82920002ECDB1 /* ImageIOCollectionViewCell.m */; };
 		81B81DB121E4446F0001C9C1 /* LayerTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */; };
 		81B81DB521E4942F0001C9C1 /* BufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B81DB421E4942F0001C9C1 /* BufferViewController.m */; };
@@ -466,6 +472,17 @@
 		81A593C3219983B50009669C /* YMPickerToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPickerToolBarView.h; sourceTree = "<group>"; };
 		81A593C4219983B50009669C /* YMPickerToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPickerToolBarView.m; sourceTree = "<group>"; };
 		81A593CA21998DFB0009669C /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
+		81ADA7C821EDB3E900F4DBAE /* PlayAndRecordAudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayAndRecordAudioViewController.h; sourceTree = "<group>"; };
+		81ADA7C921EDB3EA00F4DBAE /* PlayAndRecordAudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayAndRecordAudioViewController.m; sourceTree = "<group>"; };
+		81ADA7CB21EDB56F00F4DBAE /* BEYOND - 海阔天空 (KTV版伴奏).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "BEYOND - 海阔天空 (KTV版伴奏).mp3"; sourceTree = "<group>"; };
+		81ADA7CD21EDBE4300F4DBAE /* THSpeechController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THSpeechController.h; sourceTree = "<group>"; };
+		81ADA7CE21EDBE4400F4DBAE /* THSpeechController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THSpeechController.m; sourceTree = "<group>"; };
+		81ADA7D021EDBE6E00F4DBAE /* THPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THPlayerController.h; sourceTree = "<group>"; };
+		81ADA7D121EDBE6E00F4DBAE /* THPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THPlayerController.m; sourceTree = "<group>"; };
+		81ADCC1A21EC9B10003F37CB /* AVFoundationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFoundationViewController.h; sourceTree = "<group>"; };
+		81ADCC1B21EC9B10003F37CB /* AVFoundationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVFoundationViewController.m; sourceTree = "<group>"; };
+		81ADCC1E21EC9C3D003F37CB /* FirstKnowledgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstKnowledgeViewController.h; sourceTree = "<group>"; };
+		81ADCC1F21EC9C3D003F37CB /* FirstKnowledgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstKnowledgeViewController.m; sourceTree = "<group>"; };
 		81AF824121E82920002ECDB1 /* ImageIOCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageIOCollectionViewCell.h; sourceTree = "<group>"; };
 		81AF824221E82920002ECDB1 /* ImageIOCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageIOCollectionViewCell.m; sourceTree = "<group>"; };
 		81B81DAF21E4446F0001C9C1 /* LayerTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerTimeViewController.h; sourceTree = "<group>"; };
@@ -1132,6 +1149,7 @@
 		8193D2552149FF7300EB225D /* SecondModule */ = {
 			isa = PBXGroup;
 			children = (
+				81ADCC1921EC9AF8003F37CB /* AV Foundation */,
 				8168B7E721D08792000D271D /* 动画 */,
 				810E5CD3219EB86200DA5935 /* 二维码 */,
 				816216FC219018060001FC5E /* 图片预览 demo */,
@@ -1545,6 +1563,40 @@
 				81A593C4219983B50009669C /* YMPickerToolBarView.m */,
 			);
 			path = PickView;
+			sourceTree = "<group>";
+		};
+		81ADA7C721EDB3AD00F4DBAE /* 播放和录制音频 */ = {
+			isa = PBXGroup;
+			children = (
+				81ADA7CB21EDB56F00F4DBAE /* BEYOND - 海阔天空 (KTV版伴奏).mp3 */,
+				81ADA7C821EDB3E900F4DBAE /* PlayAndRecordAudioViewController.h */,
+				81ADA7C921EDB3EA00F4DBAE /* PlayAndRecordAudioViewController.m */,
+				81ADA7D021EDBE6E00F4DBAE /* THPlayerController.h */,
+				81ADA7D121EDBE6E00F4DBAE /* THPlayerController.m */,
+			);
+			path = "播放和录制音频";
+			sourceTree = "<group>";
+		};
+		81ADCC1921EC9AF8003F37CB /* AV Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				81ADA7C721EDB3AD00F4DBAE /* 播放和录制音频 */,
+				81ADCC1D21EC9C13003F37CB /* 初识 AVFoundation */,
+				81ADCC1A21EC9B10003F37CB /* AVFoundationViewController.h */,
+				81ADCC1B21EC9B10003F37CB /* AVFoundationViewController.m */,
+			);
+			path = "AV Foundation";
+			sourceTree = "<group>";
+		};
+		81ADCC1D21EC9C13003F37CB /* 初识 AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				81ADA7CD21EDBE4300F4DBAE /* THSpeechController.h */,
+				81ADA7CE21EDBE4400F4DBAE /* THSpeechController.m */,
+				81ADCC1E21EC9C3D003F37CB /* FirstKnowledgeViewController.h */,
+				81ADCC1F21EC9C3D003F37CB /* FirstKnowledgeViewController.m */,
+			);
+			path = "初识 AVFoundation";
 			sourceTree = "<group>";
 		};
 		81B81DAE21E444610001C9C1 /* 图层时间 */ = {
@@ -2279,6 +2331,7 @@
 				81FA28C021AB89B200C8FDAB /* YMFormTitleTableViewCell.xib in Resources */,
 				8193D2632149FF7300EB225D /* YMWorkbenchViewController.xib in Resources */,
 				8193D2612149FF7300EB225D /* YMHomeViewController.xib in Resources */,
+				81ADA7CC21EDB56F00F4DBAE /* BEYOND - 海阔天空 (KTV版伴奏).mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2394,12 +2447,14 @@
 				811160CF21E6DC740031180E /* PerformanceTuningUViewController.m in Sources */,
 				8193D2B5214A008800EB225D /* ViewController+MASAdditions.m in Sources */,
 				81012946214F7E2900725BAF /* YMNetworkJudgeUtils.m in Sources */,
+				81ADA7D221EDBE6E00F4DBAE /* THPlayerController.m in Sources */,
 				811D8EEC21A7F60B00053FC1 /* YMDemoFormViewController.m in Sources */,
 				81DAA594219A70AD00705A1A /* YMUniversalSingleSelectModel.m in Sources */,
 				81E41A1E217F0DC900DC9A4A /* MBProgressHUD.m in Sources */,
 				8193D2BA214A008800EB225D /* View+MASAdditions.m in Sources */,
 				81E41A1A217F051A00DC9A4A /* YMWeakScriptMessageDelegate.m in Sources */,
 				8162171621903E170001FC5E /* YMPictureTestView.m in Sources */,
+				81ADCC2021EC9C3D003F37CB /* FirstKnowledgeViewController.m in Sources */,
 				81DE382B21B4F93D00550D60 /* YMArchiveViewController.m in Sources */,
 				81963EB421AD273B002BFB5C /* UIButton+YMConfiguration.m in Sources */,
 				811160D921E73D390031180E /* BlackBoardView.m in Sources */,
@@ -2442,6 +2497,7 @@
 				81D1D1A121B0C667000687CA /* MVVMView.m in Sources */,
 				81963EB121AD273B002BFB5C /* NSString+YMImage.m in Sources */,
 				8193D2C9214A013F00EB225D /* YMUIConstumButton.m in Sources */,
+				81ADA7CA21EDB3EA00F4DBAE /* PlayAndRecordAudioViewController.m in Sources */,
 				81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */,
 				8107282F21DCB7B4004B24F3 /* LayerLabel.m in Sources */,
 				81EDE1B521AE7966008DCC8A /* YMMiddleMenuTableViewCell.m in Sources */,
@@ -2460,6 +2516,7 @@
 				8101294E214F81BB00725BAF /* YMLoadingView.m in Sources */,
 				81DE382221B4C95600550D60 /* YMDataStoreViewController.m in Sources */,
 				81BF56BF2145F01E004BC70A /* YMBaseRootViewController.m in Sources */,
+				81ADA7CF21EDBE4400F4DBAE /* THSpeechController.m in Sources */,
 				810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */,
 				812F5ACB21A6B7CB0072A21E /* YMGifImageView.m in Sources */,
 				81AF824321E82920002ECDB1 /* ImageIOCollectionViewCell.m in Sources */,
@@ -2512,6 +2569,7 @@
 				81EDE1C221AE90B5008DCC8A /* YMSliderVerifyAlertView.m in Sources */,
 				81CA788A21883115005EFA1A /* YMOrganizationSearchTableView.m in Sources */,
 				81EEC0BC219175EC0087EA72 /* YMSystemAlertViewController.m in Sources */,
+				81ADCC1C21EC9B10003F37CB /* AVFoundationViewController.m in Sources */,
 				81B81DB121E4446F0001C9C1 /* LayerTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

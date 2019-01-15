@@ -20,6 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    // MARK: 配置音频会话
+    [self configAudioSession];
     // MARK: pushKit
     [self registerPushKit];
     // MARK: 加载 windows
@@ -90,6 +92,19 @@
             }
                 break;
         }
+    }
+}
+
+#pragma mark 配置音频会话
+- (void)configAudioSession {
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    NSError *error;
+    if (![session setCategory:AVAudioSessionCategoryPlayback error:&error]) {
+        NSLog(@"Category Error: %@", [error localizedDescription]);
+    }
+    
+    if (![session setActive:YES error:&error]) {
+        NSLog(@"Activation Error: %@", [error localizedDescription]);
     }
 }
 

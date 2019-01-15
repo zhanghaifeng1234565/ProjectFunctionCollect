@@ -11,6 +11,7 @@
 #import "YMPictureViewerDemoViewController.h"
 #import "YMQRViewController.h"
 #import "SimpleAnimationViewController.h"
+#import "AVFoundationViewController.h"
 
 @interface YMWorkbenchViewController ()
 <UITableViewDelegate,
@@ -122,6 +123,13 @@ UITableViewDataSource>
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 6:
+        {
+            AVFoundationViewController *vc = [[AVFoundationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+
             
         default:
             break;
@@ -169,7 +177,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"collectionView web 图片预览", @"collectionView local 图片预览", @"UIView web 图片预览", @"UIView local 图片预览", @"带 logo 的二维码", @"动画", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"collectionView web 图片预览", @"collectionView local 图片预览", @"UIView web 图片预览", @"UIView local 图片预览", @"带 logo 的二维码", @"动画", @"AVFoundation", nil];
     }
     return _dataArr;
 }
