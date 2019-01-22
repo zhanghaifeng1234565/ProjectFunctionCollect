@@ -12,6 +12,8 @@
 
 /// 音频播放器
 @property (nonatomic, readwrite, strong) AVAudioPlayer *player;
+/// 音频录制
+@property (nonatomic, readwrite, strong) AVAudioRecorder *recorder;
 
 @end
 
@@ -26,6 +28,14 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self palyAudio];
+    
+    NSString *str = @"({[)]})";
+    BOOL isRight = [self isCorrectExpression:str];
+    if (isRight) {
+        NSLog(@"符合规则");
+    } else {
+        NSLog(@"不符合规则");
+    }
 }
 
 #pragma mark 播放音频
@@ -35,6 +45,65 @@
     if (self.player) {
         [self.player prepareToPlay];
     }
+}
+
+#pragma mark 录制音频
+- (void)recorderAudio {
+    NSString *directory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *filePath = [directory stringByAppendingPathComponent:directory];
+    NSURL *url = [NSURL fileURLWithPath:filePath];
+    
+    NSDictionary *settings = @{AVFormatIDKey : @(kAudioFormatMPEG4AAC),
+                               AVSampleRateKey : @22050.0f,
+                               AVNumberOfChannelsKey : @1};
+    
+    NSError *error;
+    self.recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
+    if (self.recorder) {
+        [self.recorder prepareToRecord];
+    } else {
+        // error
+    }
+}
+
+- (BOOL)isCorrectExpression:(NSString *)exp {
+    
+    NSLog(@"%@", exp);
+    
+    NSMutableArray *arr = @[].mutableCopy;
+    
+    for (int i = 0; i < exp.length; i++) {
+        NSString *str = [exp substringWithRange:NSMakeRange(i, 1)];
+        NSLog(@"%@", [exp substringWithRange:NSMakeRange(i, 1)]);
+        
+        if (!arr.count) {
+            [arr addObject:str];
+        } else {
+            if ([self isSuccessWithOneStr:arr.lastObject two:str]) {
+                [arr removeLastObject];
+            } else {
+                [arr addObject:str];
+            }
+        }
+    }
+    
+    if (!arr.count) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+
+- (BOOL)isSuccessWithOneStr:(NSString *)one two:(NSString *)two  {
+    if ([one isEqualToString:@"{"] && [two isEqualToString:@"}"]) {
+        return YES;
+    } else if ([one isEqualToString:@"["] && [two isEqualToString:@"]"]) {
+        return YES;
+    } else if ([one isEqualToString:@"("] && [two isEqualToString:@")"]) {
+        return YES;
+    }
+    return NO;
 }
 
 /*

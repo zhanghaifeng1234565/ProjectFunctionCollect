@@ -10,6 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class THPlayerController;
+@protocol THPlayerControllerDelegate <NSObject>
+
+- (void)palybackStopped;
+- (void)playbackBegan;
+
+@end
+
 @interface THPlayerController : NSObject
 
 /// 播放
@@ -21,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)adjustPan:(float)pan forPlayerAtIndex:(NSUInteger)index;
 - (void)adjustVolume:(float)volume forPlayerAtIndex:(NSUInteger)index;
+
+@property (nonatomic, readwrite, weak) id<THPlayerControllerDelegate> delegate;
 
 @end
 

@@ -18,14 +18,60 @@
 
 @implementation THPlayerController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         AVAudioPlayer *guitarPlayer = [self playerForFile:@"guitar"];
         AVAudioPlayer *bassPlayer = [self playerForFile:@"bass"];
         AVAudioPlayer *drumsPlayer = [self playerForFile:@"drums"];
         _playersArr = @[guitarPlayer, bassPlayer, drumsPlayer];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleRouteChange:) name:AVAudioSessionRouteChangeNotification object:[AVAudioSession sharedInstance]];
     }
     return self;
+}
+
+- (void)handleInterruption:(NSNotification *)noti {
+    NSDictionary *info = noti.userInfo;
+    AVAudioSessionInterruptionType type = [info[AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+    if (type == AVAudioSessionInterruptionTypeBegan) {
+        // AVAudioSessionInterruptionTypeBegan 开始
+        [self stop];
+        if ([self.delegate respondsToSelector:@selector(palybackStopped)]) {
+            [self.delegate palybackStopped];
+        }
+    } else {
+        // AVAudioSessionInterruptionTypeEnded 结束
+        AVAudioSessionInterruptionOptions options = [info[AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
+        if (options == AVAudioSessionInterruptionOptionShouldResume) {
+            [self play];
+            if ([self.delegate respondsToSelector:@selector(playbackBegan)]) {
+                [self.delegate playbackBegan];
+            }
+        }
+    }
+}
+
+- (void)handleRouteChange:(NSNotification *)noti {
+    NSDictionary *info = noti.userInfo;
+    AVAudioSessionRouteChangeReason reason = [info[AVAudioSessionRouteChangeReasonKey] unsignedIntegerValue];
+    if (reason == AVAudioSessionRouteChangeReasonOldDeviceUnavailable) {
+        AVAudioSessionRouteDescription *previousRoute = info[AVAudioSessionRouteChangePreviousRouteKey];
+        
+        AVAudioSessionPortDescription *previousOutput = previousRoute.outputs[0];
+        NSString *portType = previousOutput.portType;
+        
+        if ([portType isEqualToString:AVAudioSessionPortHeadphones]) {
+            [self stop];
+            if ([self.delegate respondsToSelector:@selector(palybackStopped)]) {
+                [self.delegate palybackStopped];
+            }
+        }
+    }
 }
 
 - (AVAudioPlayer *)playerForFile:(NSString *)name {

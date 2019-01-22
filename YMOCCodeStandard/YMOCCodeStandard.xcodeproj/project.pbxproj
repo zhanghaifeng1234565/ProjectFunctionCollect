@@ -16,6 +16,7 @@
 		8103C33321DEEC4900BDF781 /* IMG_4303.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 8103C33221DEEC4900BDF781 /* IMG_4303.MOV */; };
 		8103C33721DEF1B100BDF781 /* ImplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8103C33621DEF1B100BDF781 /* ImplicitAnimationViewController.m */; };
 		8103C33B21DF4BE700BDF781 /* ExplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8103C33A21DF4BE700BDF781 /* ExplicitAnimationViewController.m */; };
+		8105672121F053A80080EC73 /* THRecorderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8105672021F053A80080EC73 /* THRecorderController.m */; };
 		8107282C21DC4BC6004B24F3 /* SpecialLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8107282B21DC4BC6004B24F3 /* SpecialLayerViewController.m */; };
 		8107282F21DCB7B4004B24F3 /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8107282E21DCB7B4004B24F3 /* LayerLabel.m */; };
 		810E5CD6219EB88500DA5935 /* YMQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E5CD5219EB88500DA5935 /* YMQRViewController.m */; };
@@ -53,6 +54,8 @@
 		8168B7EF21D08A19000D271D /* LayerTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8168B7EE21D08A19000D271D /* LayerTreeViewController.m */; };
 		8168B7F321D0AE0F000D271D /* BoardingMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8168B7F221D0AE0F000D271D /* BoardingMapViewController.m */; };
 		8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8178E933214B443900D16102 /* YMTouchMoveView.m */; };
+		8179437421F16FEE001D9386 /* ResourcesAndMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8179437321F16FEE001D9386 /* ResourcesAndMetadataViewController.m */; };
+		8179437621F1A0CF001D9386 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8179437521F1A0CF001D9386 /* MediaPlayer.framework */; };
 		817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61D6219BC85700DE3B52 /* YMCountryModel.m */; };
 		817A61DA219BCC4900DE3B52 /* YMCountryPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61D9219BCC4900DE3B52 /* YMCountryPickerView.m */; };
 		817A61DD219BCEEF00DE3B52 /* YMCountryDataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 817A61DC219BCEEF00DE3B52 /* YMCountryDataTools.m */; };
@@ -132,6 +135,11 @@
 		81ADCC1C21EC9B10003F37CB /* AVFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ADCC1B21EC9B10003F37CB /* AVFoundationViewController.m */; };
 		81ADCC2021EC9C3D003F37CB /* FirstKnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ADCC1F21EC9C3D003F37CB /* FirstKnowledgeViewController.m */; };
 		81AF824321E82920002ECDB1 /* ImageIOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AF824221E82920002ECDB1 /* ImageIOCollectionViewCell.m */; };
+		81B0799A21F6B6790036E31C /* AVMetadataItem+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B0799921F6B6790036E31C /* AVMetadataItem+THAdditions.m */; };
+		81B0799D21F6E89F0036E31C /* THMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B0799C21F6E89F0036E31C /* THMediaItem.m */; };
+		81B079A021F6E9C80036E31C /* THMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B0799F21F6E9C80036E31C /* THMetadata.m */; };
+		81B079A321F6ECF20036E31C /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B079A221F6ECF20036E31C /* NSFileManager+DirectoryLocations.m */; };
+		81B079A621F700E30036E31C /* THGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B079A521F700E30036E31C /* THGenre.m */; };
 		81B81DB121E4446F0001C9C1 /* LayerTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */; };
 		81B81DB521E4942F0001C9C1 /* BufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B81DB421E4942F0001C9C1 /* BufferViewController.m */; };
 		81BF54D32145EC15004BC70A /* YMOCCodeStandardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BF54D22145EC15004BC70A /* YMOCCodeStandardTests.m */; };
@@ -256,6 +264,8 @@
 		8103C33621DEF1B100BDF781 /* ImplicitAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationViewController.m; sourceTree = "<group>"; };
 		8103C33921DF4BE700BDF781 /* ExplicitAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExplicitAnimationViewController.h; sourceTree = "<group>"; };
 		8103C33A21DF4BE700BDF781 /* ExplicitAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExplicitAnimationViewController.m; sourceTree = "<group>"; };
+		8105671F21F053A80080EC73 /* THRecorderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THRecorderController.h; sourceTree = "<group>"; };
+		8105672021F053A80080EC73 /* THRecorderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THRecorderController.m; sourceTree = "<group>"; };
 		8107282A21DC4BC6004B24F3 /* SpecialLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialLayerViewController.h; sourceTree = "<group>"; };
 		8107282B21DC4BC6004B24F3 /* SpecialLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialLayerViewController.m; sourceTree = "<group>"; };
 		8107282D21DCB7B4004B24F3 /* LayerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
@@ -327,6 +337,9 @@
 		8168B7F221D0AE0F000D271D /* BoardingMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoardingMapViewController.m; sourceTree = "<group>"; };
 		8178E932214B443900D16102 /* YMTouchMoveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMTouchMoveView.h; sourceTree = "<group>"; };
 		8178E933214B443900D16102 /* YMTouchMoveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMTouchMoveView.m; sourceTree = "<group>"; };
+		8179437221F16FEE001D9386 /* ResourcesAndMetadataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourcesAndMetadataViewController.h; sourceTree = "<group>"; };
+		8179437321F16FEE001D9386 /* ResourcesAndMetadataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResourcesAndMetadataViewController.m; sourceTree = "<group>"; };
+		8179437521F1A0CF001D9386 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		817A61D5219BC85700DE3B52 /* YMCountryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCountryModel.h; sourceTree = "<group>"; };
 		817A61D6219BC85700DE3B52 /* YMCountryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCountryModel.m; sourceTree = "<group>"; };
 		817A61D8219BCC4900DE3B52 /* YMCountryPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCountryPickerView.h; sourceTree = "<group>"; };
@@ -485,6 +498,16 @@
 		81ADCC1F21EC9C3D003F37CB /* FirstKnowledgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstKnowledgeViewController.m; sourceTree = "<group>"; };
 		81AF824121E82920002ECDB1 /* ImageIOCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageIOCollectionViewCell.h; sourceTree = "<group>"; };
 		81AF824221E82920002ECDB1 /* ImageIOCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageIOCollectionViewCell.m; sourceTree = "<group>"; };
+		81B0799821F6B6790036E31C /* AVMetadataItem+THAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVMetadataItem+THAdditions.h"; sourceTree = "<group>"; };
+		81B0799921F6B6790036E31C /* AVMetadataItem+THAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AVMetadataItem+THAdditions.m"; sourceTree = "<group>"; };
+		81B0799B21F6E89F0036E31C /* THMediaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THMediaItem.h; sourceTree = "<group>"; };
+		81B0799C21F6E89F0036E31C /* THMediaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THMediaItem.m; sourceTree = "<group>"; };
+		81B0799E21F6E9C80036E31C /* THMetadata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THMetadata.h; sourceTree = "<group>"; };
+		81B0799F21F6E9C80036E31C /* THMetadata.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THMetadata.m; sourceTree = "<group>"; };
+		81B079A121F6ECF20036E31C /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
+		81B079A221F6ECF20036E31C /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
+		81B079A421F700E20036E31C /* THGenre.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THGenre.h; sourceTree = "<group>"; };
+		81B079A521F700E30036E31C /* THGenre.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THGenre.m; sourceTree = "<group>"; };
 		81B81DAF21E4446F0001C9C1 /* LayerTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerTimeViewController.h; sourceTree = "<group>"; };
 		81B81DB021E4446F0001C9C1 /* LayerTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerTimeViewController.m; sourceTree = "<group>"; };
 		81B81DB321E4942F0001C9C1 /* BufferViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BufferViewController.h; sourceTree = "<group>"; };
@@ -647,6 +670,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8179437621F1A0CF001D9386 /* MediaPlayer.framework in Frameworks */,
 				8103C33121DEEA3E00BDF781 /* AVFoundation.framework in Frameworks */,
 				81DDA7FB21DE0F62004DF92A /* OpenGLES.framework in Frameworks */,
 				81DDA7F921DE0F58004DF92A /* GLKit.framework in Frameworks */,
@@ -974,6 +998,25 @@
 				8168B7F221D0AE0F000D271D /* BoardingMapViewController.m */,
 			);
 			path = "寄宿图";
+			sourceTree = "<group>";
+		};
+		8179437121F16FB7001D9386 /* 资源和元数据 */ = {
+			isa = PBXGroup;
+			children = (
+				8179437221F16FEE001D9386 /* ResourcesAndMetadataViewController.h */,
+				8179437321F16FEE001D9386 /* ResourcesAndMetadataViewController.m */,
+				81B0799821F6B6790036E31C /* AVMetadataItem+THAdditions.h */,
+				81B0799921F6B6790036E31C /* AVMetadataItem+THAdditions.m */,
+				81B079A121F6ECF20036E31C /* NSFileManager+DirectoryLocations.h */,
+				81B079A221F6ECF20036E31C /* NSFileManager+DirectoryLocations.m */,
+				81B0799B21F6E89F0036E31C /* THMediaItem.h */,
+				81B0799C21F6E89F0036E31C /* THMediaItem.m */,
+				81B0799E21F6E9C80036E31C /* THMetadata.h */,
+				81B0799F21F6E9C80036E31C /* THMetadata.m */,
+				81B079A421F700E20036E31C /* THGenre.h */,
+				81B079A521F700E30036E31C /* THGenre.m */,
+			);
+			path = "资源和元数据";
 			sourceTree = "<group>";
 		};
 		817D59A021E5C843009F2C85 /* 基于定时器动画 */ = {
@@ -1573,6 +1616,8 @@
 				81ADA7C921EDB3EA00F4DBAE /* PlayAndRecordAudioViewController.m */,
 				81ADA7D021EDBE6E00F4DBAE /* THPlayerController.h */,
 				81ADA7D121EDBE6E00F4DBAE /* THPlayerController.m */,
+				8105671F21F053A80080EC73 /* THRecorderController.h */,
+				8105672021F053A80080EC73 /* THRecorderController.m */,
 			);
 			path = "播放和录制音频";
 			sourceTree = "<group>";
@@ -1580,6 +1625,7 @@
 		81ADCC1921EC9AF8003F37CB /* AV Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				8179437121F16FB7001D9386 /* 资源和元数据 */,
 				81ADA7C721EDB3AD00F4DBAE /* 播放和录制音频 */,
 				81ADCC1D21EC9C13003F37CB /* 初识 AVFoundation */,
 				81ADCC1A21EC9B10003F37CB /* AVFoundationViewController.h */,
@@ -2174,6 +2220,7 @@
 		AA28EB3A2249A79ACBB2E7B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8179437521F1A0CF001D9386 /* MediaPlayer.framework */,
 				8103C33021DEEA3E00BDF781 /* AVFoundation.framework */,
 				81DDA7FA21DE0F62004DF92A /* OpenGLES.framework */,
 				81DDA7F821DE0F58004DF92A /* GLKit.framework */,
@@ -2494,9 +2541,11 @@
 				81EDE1B921AE7C8B008DCC8A /* YMTimerPickerView.m in Sources */,
 				812FA3DF21B60E3B00A9A732 /* YMFMDBTools.m in Sources */,
 				812FA3DC21B60DA100A9A732 /* YMFMDBPerson.m in Sources */,
+				81B079A021F6E9C80036E31C /* THMetadata.m in Sources */,
 				81D1D1A121B0C667000687CA /* MVVMView.m in Sources */,
 				81963EB121AD273B002BFB5C /* NSString+YMImage.m in Sources */,
 				8193D2C9214A013F00EB225D /* YMUIConstumButton.m in Sources */,
+				81B079A321F6ECF20036E31C /* NSFileManager+DirectoryLocations.m in Sources */,
 				81ADA7CA21EDB3EA00F4DBAE /* PlayAndRecordAudioViewController.m in Sources */,
 				81E41A04217EAA1600DC9A4A /* YMBlackSmallAlert.m in Sources */,
 				8107282F21DCB7B4004B24F3 /* LayerLabel.m in Sources */,
@@ -2522,6 +2571,7 @@
 				81AF824321E82920002ECDB1 /* ImageIOCollectionViewCell.m in Sources */,
 				8178E934214B443900D16102 /* YMTouchMoveView.m in Sources */,
 				81DDA7F721DDDFDD004DF92A /* LayerScrollView.m in Sources */,
+				8179437421F16FEE001D9386 /* ResourcesAndMetadataViewController.m in Sources */,
 				81A593C2219980F70009669C /* YMBasePickerView.m in Sources */,
 				81E77EAF21870DD8007CE3FD /* YMOrganizationSectionHeaderView.m in Sources */,
 				81963E6621AD1F4E002BFB5C /* YMSegmentViewController.m in Sources */,
@@ -2541,7 +2591,9 @@
 				81D1D1B521B12927000687CA /* YMSQLite3ViewController.m in Sources */,
 				81963E5D21ACF620002BFB5C /* ScanningQRVC.m in Sources */,
 				81BF55032145ED1F004BC70A /* YMOCCodeStandard.xcdatamodeld in Sources */,
+				81B0799D21F6E89F0036E31C /* THMediaItem.m in Sources */,
 				81963EAE21AD273B002BFB5C /* UIScrollView+UITouch.m in Sources */,
+				8105672121F053A80080EC73 /* THRecorderController.m in Sources */,
 				812FA3E621B61EBD00A9A732 /* YMKeychainViewController.m in Sources */,
 				812F5ACE21A6B7FC0072A21E /* YMBaseTableView.m in Sources */,
 				81FA28BF21AB89B200C8FDAB /* YMFormTitleTableViewCell.m in Sources */,
@@ -2555,6 +2607,7 @@
 				81E77EAE21870DD8007CE3FD /* YMOrganizationTableViewCell.m in Sources */,
 				817A61D7219BC85700DE3B52 /* YMCountryModel.m in Sources */,
 				81CA7892218844A8005EFA1A /* YMOrganizationSearchModel.m in Sources */,
+				81B0799A21F6B6790036E31C /* AVMetadataItem+THAdditions.m in Sources */,
 				81D1D19B21B0C583000687CA /* MVVMModel.m in Sources */,
 				8193D27F214A000E00EB225D /* MJExtensionConst.m in Sources */,
 				8193D282214A000E00EB225D /* NSString+MJExtension.m in Sources */,
@@ -2570,6 +2623,7 @@
 				81CA788A21883115005EFA1A /* YMOrganizationSearchTableView.m in Sources */,
 				81EEC0BC219175EC0087EA72 /* YMSystemAlertViewController.m in Sources */,
 				81ADCC1C21EC9B10003F37CB /* AVFoundationViewController.m in Sources */,
+				81B079A621F700E30036E31C /* THGenre.m in Sources */,
 				81B81DB121E4446F0001C9C1 /* LayerTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

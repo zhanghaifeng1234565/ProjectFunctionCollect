@@ -10,6 +10,7 @@
 
 #import "FirstKnowledgeViewController.h"
 #import "PlayAndRecordAudioViewController.h"
+#import "ResourcesAndMetadataViewController.h"
 
 @interface AVFoundationViewController ()
 <UITableViewDelegate,
@@ -69,8 +70,15 @@ UITableViewDataSource>
             break;
         case 1:
         {
-            // 播放和录制音频
+            // 播放和录制音频 资源和元数据
             PlayAndRecordAudioViewController *vc = [[PlayAndRecordAudioViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 2:
+        {
+            // 资源和元数据
+            ResourcesAndMetadataViewController *vc = [[ResourcesAndMetadataViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
@@ -101,7 +109,7 @@ UITableViewDataSource>
 #pragma mark -- getter
 - (NSArray *)dataArr {
     if (_dataArr == nil) {
-        _dataArr = [[NSArray alloc] initWithObjects:@"初识 AVFoundation", @"播放和录制音频", nil];
+        _dataArr = [[NSArray alloc] initWithObjects:@"初识 AVFoundation", @"播放和录制音频", @"资源和元数据", nil];
     }
     return _dataArr;
 }

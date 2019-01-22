@@ -30,6 +30,7 @@
 #import <GLKit/GLKit.h>
 #import <OpenGLES/OpenGLESAvailability.h>
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 
 #import "UIColor+Hex.h"

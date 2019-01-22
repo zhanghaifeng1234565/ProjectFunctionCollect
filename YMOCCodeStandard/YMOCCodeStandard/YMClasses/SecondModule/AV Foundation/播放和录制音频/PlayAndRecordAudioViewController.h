@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 播放和录制音频
 @interface PlayAndRecordAudioViewController : YMBaseViewController
 
+
+@property (nonatomic, readwrite, strong) NSURL *url;
++ (id)memoWithTitle:(NSString *)name URL:(NSURL *)url;
+
 @end
 
 NS_ASSUME_NONNULL_END

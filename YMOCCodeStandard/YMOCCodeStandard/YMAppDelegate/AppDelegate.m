@@ -10,6 +10,7 @@
 #import "AppDelegate+YMLocalNotification.h"
 #import "YMUITabBarController.h"
 #import <WXApi.h>
+#import <objc/runtime.h>
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -99,7 +100,7 @@
 - (void)configAudioSession {
     AVAudioSession *session = [AVAudioSession sharedInstance];
     NSError *error;
-    if (![session setCategory:AVAudioSessionCategoryPlayback error:&error]) {
+    if (![session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error]) {
         NSLog(@"Category Error: %@", [error localizedDescription]);
     }
     
